@@ -1,0 +1,110 @@
+{
+ "story": {
+  "ok": true,
+  "at": "2026-11-26 12:04:58",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "2d8117892cd6",
+  "facts": {
+   "locations": 4,
+   "scenes": 4,
+   "shots": 24,
+   "beats": 7,
+   "shot_sizes": [
+    "cu",
+    "ecu",
+    "fs",
+    "mcu",
+    "ms",
+    "two",
+    "ws"
+   ],
+   "lead_expressions": [
+    "cry",
+    "cry_smile",
+    "determined",
+    "happy",
+    "hopeful",
+    "hurt",
+    "joy",
+    "neutral",
+    "sad",
+    "shock",
+    "surprise",
+    "teary",
+    "worried"
+   ],
+   "duration": 63.64,
+   "shots_per_minute": 22.6,
+   "longest_shot": 5.01,
+   "words_per_minute": 106.5
+  }
+ },
+ "voice": {
+  "ok": true,
+  "at": "2026-11-26 03:20:48",
+  "screenplay": "8d16f003acbf",
+  "kit": "09d0f6468b93",
+  "lines": 18,
+  "unclear": []
+ },
+ "layout": {
+  "ok": true,
+  "at": "2026-11-26 03:22:43",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "09d0f6468b93",
+  "errors": 0,
+  "warns": 15,
+  "seconds": 35.3
+ },
+ "render.preview": {
+  "ok": true,
+  "at": "2026-11-26 03:36:01",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "09d0f6468b93",
+  "frames": 1527,
+  "expected": 1527
+ },
+ "sound.preview": {
+  "ok": true,
+  "at": "2026-11-26 03:36:49",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "09d0f6468b93",
+  "worst_line_match": 1.0
+ },
+ "deliver.preview": {
+  "ok": true,
+  "at": "2026-11-26 03:38:24",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "070bbc1cebd8",
+  "movie": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/preview/one-hug-left-preview.mp4"
+ },
+ "board": {
+  "ok": true,
+  "at": "2026-11-26 03:42:19",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "d52c541e8962",
+  "sheet": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/board/storyboard.jpg"
+ },
+ "render.final": {
+  "ok": true,
+  "at": "2026-11-26 04:27:14",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "2d8117892cd6",
+  "frames": 1527,
+  "expected": 1527
+ },
+ "sound.final": {
+  "ok": true,
+  "at": "2026-11-26 04:28:27",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "2d8117892cd6",
+  "worst_line_match": 1.0
+ },
+ "deliver.final": {
+  "ok": true,
+  "at": "2026-11-26 04:30:15",
+  "screenplay": "cc0dd7d45ad7",
+  "kit": "2d8117892cd6",
+  "movie": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/final/one-hug-left-final.mp4"
+ }
+}

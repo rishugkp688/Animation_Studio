@@ -1,0 +1,128 @@
+{
+ "n01": {
+  "key": "35de4246b468",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "In my town, everyone is born with a number of hugs."
+ },
+ "n02": {
+  "key": "7d005baf87ab",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Most people get hundreds."
+ },
+ "n03": {
+  "key": "5d4dff6a7f04",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "I got zero."
+ },
+ "n04": {
+  "key": "03f082ade2f3",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Zero means you can't give one. Not even to your mom."
+ },
+ "n05": {
+  "key": "9e3942d69332",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "So every morning, she messes up my hair instead."
+ },
+ "n06": {
+  "key": "2d3fc8791dd7",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Grandpa had one hug left."
+ },
+ "n07": {
+  "key": "76ce1bdc9c2f",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "He'd been saving it for ten years."
+ },
+ "k01": {
+  "key": "f6b701098264",
+  "voice": "kai_child",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Who's it for, Grandpa?"
+ },
+ "g01": {
+  "key": "72acd220dbe0",
+  "voice": "grandpa",
+  "engine": "qwen3",
+  "speaker": "ryan",
+  "text": "Not yet, kiddo."
+ },
+ "n08": {
+  "key": "1e50108b3eb0",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Everyone said he was just cold."
+ },
+ "n09": {
+  "key": "0f594ae4e5c9",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Then, one winter night, Grandpa got sick."
+ },
+ "g02": {
+  "key": "f8807b9beb26",
+  "voice": "grandpa",
+  "engine": "qwen3",
+  "speaker": "ryan",
+  "text": "Come here, kiddo."
+ },
+ "n10": {
+  "key": "4da06aea5fc1",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "That's when I learned the rule nobody tells you."
+ },
+ "n11": {
+  "key": "5cd78c8826c9",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "You can't use your last hug."
+ },
+ "n12": {
+  "key": "ecdba4338c73",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "You can only give it away."
+ },
+ "g03": {
+  "key": "3011708760c0",
+  "voice": "grandpa",
+  "engine": "qwen3",
+  "speaker": "ryan",
+  "text": "It was always yours."
+ },
+ "n13": {
+  "key": "fb00d9c1c486",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Grandpa saved his last hug for ten years."
+ },
+ "n14": {
+  "key": "420c53d37bad",
+  "voice": "kai",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "I only saved mine for ten seconds."
+ }
+}

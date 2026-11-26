@@ -1,0 +1,38 @@
+{
+ "errors": [],
+ "warns": [],
+ "facts": {
+  "locations": 4,
+  "scenes": 4,
+  "shots": 24,
+  "beats": 7,
+  "shot_sizes": [
+   "cu",
+   "ecu",
+   "fs",
+   "mcu",
+   "ms",
+   "two",
+   "ws"
+  ],
+  "lead_expressions": [
+   "cry",
+   "cry_smile",
+   "determined",
+   "happy",
+   "hopeful",
+   "hurt",
+   "joy",
+   "neutral",
+   "sad",
+   "shock",
+   "surprise",
+   "teary",
+   "worried"
+  ],
+  "duration": 63.64,
+  "shots_per_minute": 22.6,
+  "longest_shot": 5.01,
+  "words_per_minute": 106.5
+ }
+}

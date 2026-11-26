@@ -1,0 +1,148 @@
+{
+  "movie": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/final/one-hug-left-final-clean.mp4",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24.0,
+  "duration": 63.625,
+  "has_audio": true,
+  "shots": 24,
+  "cuts_per_minute": 21.7,
+  "median_shot_s": 2.25,
+  "longest_shot_s": 5.0,
+  "mean_motion": 3.145,
+  "static_shot_ratio": 0.0,
+  "frozen_spans": [],
+  "frozen_seconds": 0,
+  "first_second_motion": 0.636,
+  "flash_frames": [],
+  "black_frames_s": [],
+  "shot_list": [
+    {
+      "start": 0.0,
+      "length": 3.96,
+      "motion": 0.964
+    },
+    {
+      "start": 3.96,
+      "length": 2.04,
+      "motion": 1.108
+    },
+    {
+      "start": 6.0,
+      "length": 1.58,
+      "motion": 2.424
+    },
+    {
+      "start": 7.58,
+      "length": 5.0,
+      "motion": 3.317
+    },
+    {
+      "start": 12.58,
+      "length": 1.38,
+      "motion": 2.001
+    },
+    {
+      "start": 13.96,
+      "length": 4.04,
+      "motion": 1.981
+    },
+    {
+      "start": 18.0,
+      "length": 2.21,
+      "motion": 0.814
+    },
+    {
+      "start": 20.21,
+      "length": 2.75,
+      "motion": 2.042
+    },
+    {
+      "start": 22.96,
+      "length": 1.71,
+      "motion": 2.114
+    },
+    {
+      "start": 24.67,
+      "length": 1.83,
+      "motion": 1.565
+    },
+    {
+      "start": 26.5,
+      "length": 2.33,
+      "motion": 1.388
+    },
+    {
+      "start": 28.83,
+      "length": 3.33,
+      "motion": 0.937
+    },
+    {
+      "start": 32.17,
+      "length": 1.88,
+      "motion": 2.166
+    },
+    {
+      "start": 34.04,
+      "length": 2.12,
+      "motion": 4.615
+    },
+    {
+      "start": 36.17,
+      "length": 4.08,
+      "motion": 1.471
+    },
+    {
+      "start": 40.25,
+      "length": 2.04,
+      "motion": 4.879
+    },
+    {
+      "start": 42.29,
+      "length": 2.29,
+      "motion": 0.393
+    },
+    {
+      "start": 44.58,
+      "length": 3.29,
+      "motion": 0.924
+    },
+    {
+      "start": 47.88,
+      "length": 2.17,
+      "motion": 6.352
+    },
+    {
+      "start": 50.04,
+      "length": 2.0,
+      "motion": 7.133
+    },
+    {
+      "start": 52.04,
+      "length": 1.38,
+      "motion": 8.768
+    },
+    {
+      "start": 53.42,
+      "length": 2.58,
+      "motion": 4.705
+    },
+    {
+      "start": 56.0,
+      "length": 3.42,
+      "motion": 0.956
+    },
+    {
+      "start": 59.42,
+      "length": 4.21,
+      "motion": 0.509
+    }
+  ],
+  "silent_gaps": [],
+  "lufs": -14.1,
+  "peak_dbfs": -1.3,
+  "fails": [],
+  "warnings": [
+    "first second barely moves; the hook needs motion or a strong still image"
+  ]
+}

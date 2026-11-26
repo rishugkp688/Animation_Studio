@@ -1,0 +1,284 @@
+{
+ "duration": 66.8733,
+ "shots": 22,
+ "errors": [],
+ "warns": [
+  {
+   "rule": "collision.self",
+   "severity": "warn",
+   "shot": "sh01",
+   "msg": "mia_mom.arm_r inside own torso",
+   "depth": 0.232,
+   "t0": 0.375,
+   "t1": 0.458,
+   "count": 3
+  },
+  {
+   "rule": "collision.self",
+   "severity": "warn",
+   "shot": "sh02",
+   "msg": "mia_mom.arm_r inside own torso",
+   "depth": 0.24,
+   "t0": 5.375,
+   "t1": 5.458,
+   "count": 3
+  },
+  {
+   "rule": "collision.self",
+   "severity": "warn",
+   "shot": "sh03",
+   "msg": "sam_dad.arm_l inside own torso",
+   "depth": 0.252,
+   "t0": 7.042,
+   "t1": 7.083,
+   "count": 2
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh04",
+   "msg": "leo face out of frame at t=9.44",
+   "t0": 9.42,
+   "t1": 9.42,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh04",
+   "msg": "leo face out of frame at t=10.27",
+   "t0": 9.42,
+   "t1": 9.42,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh05",
+   "msg": "camera adjusted by +0 deg, +0 deg up, distance x0.85 to clear the view",
+   "t0": 14.53,
+   "t1": 14.53,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh06",
+   "msg": "camera adjusted by -24 deg, +0 deg up, distance x1.0 to clear the view",
+   "t0": 16.23,
+   "t1": 16.23,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh07",
+   "msg": "camera adjusted by +50 deg, +0 deg up, distance x1.0 to clear the view",
+   "t0": 19.23,
+   "t1": 19.23,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh10",
+   "msg": "camera adjusted by -65 deg, +20 deg up, distance x0.72 to clear the view",
+   "t0": 29.1,
+   "t1": 29.1,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh13",
+   "msg": "camera adjusted by +50 deg, +0 deg up, distance x1.0 to clear the view",
+   "t0": 37.23,
+   "t1": 37.23,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh16",
+   "msg": "camera adjusted by -24 deg, +0 deg up, distance x1.0 to clear the view",
+   "t0": 45.613,
+   "t1": 45.613,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh20",
+   "msg": "camera adjusted by +65 deg, +0 deg up, distance x1.0 to clear the view",
+   "t0": 56.103,
+   "t1": 56.103,
+   "count": 1
+  },
+  {
+   "rule": "camera.solve",
+   "severity": "warn",
+   "shot": "sh21",
+   "msg": "camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+   "t0": 60.973,
+   "t1": 60.973,
+   "count": 1
+  }
+ ],
+ "cameras": {
+  "sh01": {
+   "size": "fs",
+   "side": -12,
+   "report": [],
+   "hide": []
+  },
+  "sh02": {
+   "size": "mcu",
+   "side": 40,
+   "report": [],
+   "hide": []
+  },
+  "sh03": {
+   "size": "mcu",
+   "side": 0,
+   "report": [],
+   "hide": []
+  },
+  "sh04": {
+   "size": "two",
+   "side": -65,
+   "report": [
+    "leo face out of frame at t=9.44",
+    "leo face out of frame at t=10.27"
+   ],
+   "hide": []
+  },
+  "sh05": {
+   "size": "mcu",
+   "side": -30,
+   "report": [
+    "camera adjusted by +0 deg, +0 deg up, distance x0.85 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh06": {
+   "size": "ws",
+   "side": 6,
+   "report": [
+    "camera adjusted by -24 deg, +0 deg up, distance x1.0 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh07": {
+   "size": "ws",
+   "side": 78,
+   "report": [
+    "camera adjusted by +50 deg, +0 deg up, distance x1.0 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh08": {
+   "size": "mcu",
+   "side": -20,
+   "report": [],
+   "hide": []
+  },
+  "sh09": {
+   "size": "cu",
+   "side": 0,
+   "report": [],
+   "hide": []
+  },
+  "sh10": {
+   "size": "ms",
+   "side": -5,
+   "report": [
+    "camera adjusted by -65 deg, +20 deg up, distance x0.72 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh11": {
+   "size": "mcu",
+   "side": -20,
+   "report": [],
+   "hide": []
+  },
+  "sh12": {
+   "size": "ws",
+   "side": 0,
+   "report": [],
+   "hide": [
+    "wall_front.0"
+   ]
+  },
+  "sh13": {
+   "size": "mcu",
+   "side": 15,
+   "report": [
+    "camera adjusted by +50 deg, +0 deg up, distance x1.0 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh14": {
+   "size": "ws",
+   "side": 40,
+   "report": [],
+   "hide": []
+  },
+  "sh15": {
+   "size": "mcu",
+   "side": -25,
+   "report": [],
+   "hide": []
+  },
+  "sh16": {
+   "size": "ms",
+   "side": -4,
+   "report": [
+    "camera adjusted by -24 deg, +0 deg up, distance x1.0 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh17": {
+   "size": "cu",
+   "side": 20,
+   "report": [],
+   "hide": []
+  },
+  "sh18": {
+   "size": "two",
+   "side": -40,
+   "report": [],
+   "hide": [
+    "wall_front.0"
+   ]
+  },
+  "sh19": {
+   "size": "cu",
+   "side": -30,
+   "report": [],
+   "hide": []
+  },
+  "sh20": {
+   "size": "two",
+   "side": 125,
+   "report": [
+    "camera adjusted by +65 deg, +0 deg up, distance x1.0 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh21": {
+   "size": "cu",
+   "side": 42,
+   "report": [
+    "camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view"
+   ],
+   "hide": []
+  },
+  "sh22": {
+   "size": "ws",
+   "side": 70,
+   "report": [],
+   "hide": []
+  }
+ }
+}

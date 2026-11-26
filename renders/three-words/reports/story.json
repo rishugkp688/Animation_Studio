@@ -1,0 +1,34 @@
+{
+ "errors": [],
+ "warns": [],
+ "facts": {
+  "locations": 4,
+  "scenes": 4,
+  "shots": 22,
+  "beats": 7,
+  "shot_sizes": [
+   "cu",
+   "fs",
+   "mcu",
+   "ms",
+   "two",
+   "ws"
+  ],
+  "lead_expressions": [
+   "cry",
+   "cry_smile",
+   "determined",
+   "hurt",
+   "neutral",
+   "peaceful",
+   "sad",
+   "scared",
+   "teary",
+   "worried"
+  ],
+  "duration": 66.67,
+  "shots_per_minute": 19.8,
+  "longest_shot": 5.11,
+  "words_per_minute": 110.7
+ }
+}

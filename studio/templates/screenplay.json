@@ -1,0 +1,213 @@
+{
+ "_guide": "Write with studio/departments/01-story.md. Replace every TODO. Gate: python3 scripts/studio.py story SLUG",
+ "title": "TODO",
+ "logline": "TODO: In a town where <visible rule>, <hero> who <exception> learns <truth> when <event>.",
+ "theme": "TODO: the one-sentence truth the ending proves.",
+ "audience": "Instagram Reels / TikTok, phone in hand.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "hero",
+ "cast": {
+  "hero": {
+   "name": "TODO",
+   "role": "lead, narrator",
+   "scale": 0.8,
+   "look": {
+    "skin": "#E9BE95",
+    "hair": {
+     "style": "spiky",
+     "color": "#2B211D"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#3D72D9",
+       "trim": "#E9EEF7"
+      },
+      "pants": "#24272E",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": false
+  },
+  "other": {
+   "name": "TODO",
+   "role": "the person who seems wrong",
+   "scale": 0.98,
+   "look": {
+    "skin": "#E3B48F",
+    "hair": {
+     "style": "short",
+     "color": "#3A2A22"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#7B5A44",
+       "trim": "#D9D1C2"
+      },
+      "pants": "#4B4F58",
+      "shoes": "#3A2A22"
+     }
+    }
+   },
+   "badge": false
+  }
+ },
+ "voices": {
+  "hero": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A young man remembering his childhood, warm and gentle, quiet, close to the microphone, natural storytelling, never an announcer.",
+   "seed": 211
+  },
+  "other": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "instruct": "TODO: who, to whom, how loud, what feeling.",
+   "seed": 97
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "hero",
+   "kind": "vo",
+   "text": "TODO: In my town, <the rule>."
+  },
+  {
+   "id": "d01",
+   "who": "other",
+   "kind": "dialogue",
+   "text": "TODO: one short spoken line."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "Show the rule working on someone else in 2 s.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "The hero's exception and what it costs.",
+   "emotion": -2
+  },
+  {
+   "id": "mystery",
+   "purpose": "The person who seems wrong; an unanswered question.",
+   "emotion": -1
+  },
+  {
+   "id": "turn",
+   "purpose": "Circumstances force the moment.",
+   "emotion": 3
+  },
+  {
+   "id": "reveal",
+   "purpose": "The answer; the rule nobody told you.",
+   "emotion": -3
+  },
+  {
+   "id": "choice",
+   "purpose": "The hero acts immediately, at a cost.",
+   "emotion": 5
+  },
+  {
+   "id": "button",
+   "purpose": "One line that reframes everything.",
+   "emotion": 4
+  }
+ ],
+ "setups": [
+  {
+   "id": "TODO",
+   "setup": "sh01",
+   "payoff": "sh02",
+   "note": "A visual plant and its payoff."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "hook",
+   "ambience": "living_room",
+   "cast": {
+    "other": "armchair",
+    "hero": {
+     "at": [
+      -2.45,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_expr": {
+    "other": "grumpy",
+    "hero": "neutral"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "cam": {
+      "size": "ws",
+      "on": "other",
+      "side": 28,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.55,
+        0.15
+       ],
+       "face": "other",
+       "look": "other",
+       "expr": "hopeful"
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "wound",
+     "lines": [
+      "d01"
+     ],
+     "cam": {
+      "size": "cu",
+      "on": "other",
+      "side": -20,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "other",
+       "t": 0.0,
+       "look": "hero",
+       "expr": "tender"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

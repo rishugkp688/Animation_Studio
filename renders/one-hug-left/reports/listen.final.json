@@ -1,0 +1,77 @@
+{
+ "worst": 1.0,
+ "lines": {
+  "n01": {
+   "match": 1.0,
+   "heard": "In my town, everyone is born with a number of hugs."
+  },
+  "n02": {
+   "match": 1.0,
+   "heard": "Most people get hundreds."
+  },
+  "n03": {
+   "match": 1.0,
+   "heard": "I got zero."
+  },
+  "n04": {
+   "match": 1.0,
+   "heard": "Zero means you can't give one, not even to your mom."
+  },
+  "n05": {
+   "match": 1.0,
+   "heard": "So every morning, she messes up my hair instead."
+  },
+  "n06": {
+   "match": 1.0,
+   "heard": "Grandpa had one hug left."
+  },
+  "n07": {
+   "match": 1.0,
+   "heard": "He'd been saving it for 10 years."
+  },
+  "k01": {
+   "match": 1.0,
+   "heard": "Who is it for, Grandpa?"
+  },
+  "g01": {
+   "match": 1.0,
+   "heard": "Not yet, kiddo."
+  },
+  "n08": {
+   "match": 1.0,
+   "heard": "Everyone said he was just cold"
+  },
+  "n09": {
+   "match": 1.0,
+   "heard": "Then, one winter night, Grandpa got sick."
+  },
+  "g02": {
+   "match": 1.0,
+   "heard": "Come here kiddo"
+  },
+  "n10": {
+   "match": 1.0,
+   "heard": "That's when I learned the rule nobody tells you."
+  },
+  "n11": {
+   "match": 1.0,
+   "heard": "You can't use your last hug."
+  },
+  "n12": {
+   "match": 1.0,
+   "heard": "You can only give it away."
+  },
+  "g03": {
+   "match": 1.0,
+   "heard": "It was always yours."
+  },
+  "n13": {
+   "match": 1.0,
+   "heard": "Grandpa saved his last hug for 10 years!"
+  },
+  "n14": {
+   "match": 1.0,
+   "heard": "I only saved mine for 10 seconds."
+  }
+ }
+}

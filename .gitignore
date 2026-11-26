@@ -1,0 +1,26 @@
+# Reference reels (third-party videos, kept local)
+guides/*.mp4
+
+# Old films from before the studio, kept local for comparison
+archive/
+
+# Local tooling, models and caches
+.agents/
+.aws/
+.codex/
+.commandcode/
+.audio-tools/
+**/__pycache__/
+*.py[cod]
+.directory
+.DS_Store
+
+# Rebuildable render intermediates
+renders/**/frames/
+renders/**/stills/
+renders/**/textures/
+renders/**/sound/
+renders/**/dev/
+renders/**/*.wav
+*.blend1
+*.blend2

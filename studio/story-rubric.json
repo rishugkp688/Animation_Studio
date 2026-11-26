@@ -1,0 +1,147 @@
+{
+  "version": 2,
+  "revision_note": "v2 fixes two instrument bugs found by cold-reading real drafts. (1) 'withholding' punished a spoken world-rule, contradicting the story method; rule clarity is now scored separately. (2) 'cliche_audit' demanded 0-1 familiar items, which no genre film can pass; it now scores load-bearing dependence instead.",
+  "applies_to": "Blocky Studio emotional shorts, 45-65 s, narrated with sparse dialogue",
+  "gate": {
+    "minimum_each": 2,
+    "minimum_mean": 2.5,
+    "scale": [0, 3],
+    "note": "Do not enter production below the gate. Revise the lowest two dimensions only, then rescore. If three or more dimensions score 0, the draft needs a structural rewrite from the premise, not a polish pass."
+  },
+  "dimensions": [
+    {
+      "id": "specificity",
+      "name": "Specificity",
+      "question": "Could these nouns belong to any other film, or only this one?",
+      "zero": "Generic nouns: a room, a cup, a parent.",
+      "three": "Three details that could belong to no other film: an occupation, a dated object, a ritual with a history.",
+      "reject_if": "Any beat could be swapped into another short unchanged."
+    },
+    {
+      "id": "agency",
+      "name": "Agency",
+      "question": "Does the protagonist make one irreversible choice?",
+      "zero": "The protagonist reacts while others cause the change.",
+      "three": "The protagonist chooses between two losses and cannot take it back.",
+      "reject_if": "The turn is performed on the protagonist by someone else."
+    },
+    {
+      "id": "dilemma",
+      "name": "Dilemma",
+      "question": "Is there a choice where both options cost something real?",
+      "zero": "No choice, only a feeling or a consequence.",
+      "three": "Both options lose something the protagonist cannot recover.",
+      "reject_if": "One option is obviously correct."
+    },
+    {
+      "id": "subtext",
+      "name": "Subtext",
+      "question": "Does any line state the film's theme, moral, or the character's feeling?",
+      "zero": "A line names the theme, the moral, or how someone feels.",
+      "three": "Theme and feeling are never named; visible action and contradiction carry them.",
+      "reject_if": "A line explains what the picture already showed, or a line announces what the scene is about."
+    },
+    {
+      "id": "withholding",
+      "name": "Withholding (character)",
+      "question": "Is what the PROTAGONIST is hiding held back from the audience until they can infer it?",
+      "zero": "The protagonist volunteers their inner state in dialogue.",
+      "three": "The audience infers the protagonist's secret one beat before the film ends, and the film never names it.",
+      "scope": "Applies to character secrets and theme. It does NOT apply to the world's rule.",
+      "reject_if": "The protagonist's secret is spoken aloud, or the audience needs it spelled out.",
+      "note": "The world's rule is the opposite of a secret. The story method requires the rule spoken and shown in the first seconds, so a clearly stated rule is a pass on rule clarity and must never be scored as a failure here. Keep the two separate: state the rule plainly, withhold the person."
+    },
+    {
+      "id": "rule_clarity",
+      "name": "Rule clarity",
+      "question": "Is the world's rule established in the first seconds, and demonstrated twice so it needs no later explanation?",
+      "zero": "The rule is never stated or only inferable from a single ambiguous event.",
+      "three": "The rule is stated once, early, in the fiction's own voice, and the film shows both states of it before the turn.",
+      "reject_if": "The rule has to be re-explained after the midway point, or the film shows only one state of it.",
+      "note": "Inverted compared to withholding: clarity here is good. A rule taught by a character using it as a weapon is stronger than narration."
+    },
+    {
+      "id": "prop_transformation",
+      "name": "Prop transformation",
+      "question": "Is one prop used twice from the same angle with a new meaning?",
+      "zero": "Props are decoration.",
+      "three": "Same prop, same angle, opposite meaning on the second use.",
+      "reject_if": "The second use needs a caption or a new camera."
+    },
+    {
+      "id": "cost",
+      "name": "Cost",
+      "question": "What is lost, and is it recovered?",
+      "zero": "Nothing is lost; the ending restores the opening.",
+      "three": "Something is lost and stays lost, while the protagonist gains something smaller.",
+      "reject_if": "The ending undoes the price."
+    },
+    {
+      "id": "open_question",
+      "name": "Open question",
+      "question": "What is deliberately left unresolved?",
+      "zero": "Everything is tied off and explained.",
+      "three": "The action resolves; one relationship question is left standing.",
+      "reject_if": "The film ends on an explanation."
+    },
+    {
+      "id": "producibility",
+      "name": "Producibility",
+      "question": "Can the climax be carried by a hold, a light change, or a hand?",
+      "zero": "The climax needs fluid physical performance the rig cannot deliver.",
+      "three": "The climax is a held look, a still hand, or a light that changes.",
+      "reject_if": "The emotional peak depends on motion quality."
+    }
+  ],
+  "adversarial_tests": [
+    {
+      "id": "muted_retell",
+      "test": "Mute the sound, cover the captions and play the timed board once.",
+      "pass": "A stranger retells what happened, including the turn.",
+      "fail": "The turn needs narration to be legible."
+    },
+    {
+      "id": "blind_sound",
+      "test": "Cover the picture and play only the audio.",
+      "pass": "One sound change alone shifts the meaning.",
+      "fail": "Nothing in the sound distinguishes before from after."
+    },
+    {
+      "id": "cliche_audit",
+      "test": "Classify every familiar element as furniture or load-bearing.",
+      "pass": "Furniture: the genre's unavoidable scenery (a bed, rain, a lamp). The story's meaning rests on something only this film has.",
+      "fail": "Load-bearing: the premise, the turn, or the ending is itself a familiar element. The film would still work if the familiar element were removed and nothing replaced it.",
+      "note": "An earlier version asked for '0 or 1 familiar items', which no genre film can pass: a hospice short will always list a bed, rain and a lamp, and that is not a defect. Count only load-bearing dependence, and require at most one. List the furniture without penalty so it stays visible to the art department."
+    },
+    {
+      "id": "read_aloud",
+      "test": "Read every line aloud. Mark where attention drops.",
+      "pass": "No drop; every line carries new information.",
+      "fail": "Any line that restates an earlier line. Cut it."
+    },
+    {
+      "id": "adjective_embargo",
+      "test": "Scan the beat sheet for interior states.",
+      "pass": "Every beat names a visible action, object, or light.",
+      "fail": "Any beat describes a feeling without a visible cause. Convert it."
+    }
+  ],
+  "sound_rules": [
+    "Audition a break in the score against a sustained cue at the turn.",
+    "One sound carries meaning twice, like the prop.",
+    "Try a 1.5-2 second gap and record what the listener notices.",
+    "Try a 6 dB level change and assess its effect on perspective.",
+    "The protagonist has a subjective sound layer.",
+    "Room tone survives every cut."
+  ],
+  "process": [
+    "Write the constraint sheet before inventing anything.",
+    "For an open brief, compare a batch of premises on specificity, dilemma and producibility.",
+    "Test the rule: literal, visual, one sentence, carries a price, hides a loophole in its wording.",
+    "Write want, need, lie, and the action that proves the lie broke.",
+    "Build the silent ki/sho/ten/ketsu beat sheet with timestamps.",
+    "After writing the beats, assemble a timed board with scratch sound and run the picture-only and sound-only tests.",
+    "Critique in a fresh context with this rubric and no knowledge of intent; revise the lowest two dimensions; rescore.",
+    "If three or more dimensions score 0, rebuild from the premise instead of revising."
+  ]
+}

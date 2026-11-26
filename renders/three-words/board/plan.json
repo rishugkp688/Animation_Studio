@@ -1,0 +1,2439 @@
+{
+ "title": "Three Words",
+ "narrator": "leo",
+ "fps": 24,
+ "duration": 66.8733,
+ "frames": 1605,
+ "scratch_timing": false,
+ "shots": [
+  {
+   "id": "sh01",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "hook",
+   "t0": 0.0,
+   "t1": 3.85,
+   "f0": 1,
+   "f1": 92,
+   "size": "fs",
+   "ambience": "schoolyard",
+   "reverb": [
+    0.6,
+    0.06
+   ],
+   "subjects": [
+    "sam_dad"
+   ]
+  },
+  {
+   "id": "sh02",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "hook",
+   "t0": 3.85,
+   "t1": 6.67,
+   "f0": 93,
+   "f1": 160,
+   "size": "mcu",
+   "ambience": "schoolyard",
+   "reverb": [
+    0.6,
+    0.06
+   ],
+   "subjects": [
+    "sam_dad"
+   ]
+  },
+  {
+   "id": "sh03",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "wound",
+   "t0": 6.67,
+   "t1": 9.42,
+   "f0": 161,
+   "f1": 226,
+   "size": "mcu",
+   "ambience": "schoolyard",
+   "reverb": [
+    0.6,
+    0.06
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh04",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "wound",
+   "t0": 9.42,
+   "t1": 14.53,
+   "f0": 227,
+   "f1": 349,
+   "size": "two",
+   "ambience": "schoolyard",
+   "reverb": [
+    0.6,
+    0.06
+   ],
+   "subjects": [
+    "leo",
+    "ava"
+   ]
+  },
+  {
+   "id": "sh05",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "wound",
+   "t0": 14.53,
+   "t1": 16.23,
+   "f0": 350,
+   "f1": 390,
+   "size": "mcu",
+   "ambience": "schoolyard",
+   "reverb": [
+    0.6,
+    0.06
+   ],
+   "subjects": [
+    "ava"
+   ]
+  },
+  {
+   "id": "sh06",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "wound",
+   "t0": 16.23,
+   "t1": 19.23,
+   "f0": 391,
+   "f1": 462,
+   "size": "ws",
+   "ambience": "schoolyard",
+   "reverb": [
+    0.6,
+    0.06
+   ],
+   "subjects": [
+    "ava"
+   ]
+  },
+  {
+   "id": "sh07",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 19.23,
+   "t1": 22.84,
+   "f0": 463,
+   "f1": 548,
+   "size": "ws",
+   "ambience": "living_room",
+   "reverb": [
+    0.5,
+    0.1
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh08",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 22.84,
+   "t1": 25.17,
+   "f0": 549,
+   "f1": 604,
+   "size": "mcu",
+   "ambience": "living_room",
+   "reverb": [
+    0.5,
+    0.1
+   ],
+   "subjects": [
+    "ava"
+   ]
+  },
+  {
+   "id": "sh09",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 25.17,
+   "t1": 29.1,
+   "f0": 605,
+   "f1": 698,
+   "size": "cu",
+   "ambience": "living_room",
+   "reverb": [
+    0.5,
+    0.1
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh10",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 29.1,
+   "t1": 32.73,
+   "f0": 699,
+   "f1": 786,
+   "size": "ms",
+   "ambience": "living_room",
+   "reverb": [
+    0.5,
+    0.1
+   ],
+   "subjects": [
+    "ava"
+   ]
+  },
+  {
+   "id": "sh11",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 32.73,
+   "t1": 34.63,
+   "f0": 787,
+   "f1": 831,
+   "size": "mcu",
+   "ambience": "living_room",
+   "reverb": [
+    0.5,
+    0.1
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh12",
+   "scene": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "t0": 34.63,
+   "t1": 37.23,
+   "f0": 832,
+   "f1": 894,
+   "size": "ws",
+   "ambience": "corridor",
+   "reverb": [
+    1.6,
+    0.18
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh13",
+   "scene": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "t0": 37.23,
+   "t1": 39.03,
+   "f0": 895,
+   "f1": 937,
+   "size": "mcu",
+   "ambience": "corridor",
+   "reverb": [
+    1.6,
+    0.18
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh14",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "turn",
+   "t0": 39.03,
+   "t1": 41.63,
+   "f0": 938,
+   "f1": 999,
+   "size": "ws",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh15",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "t0": 41.63,
+   "t1": 45.6133,
+   "f0": 1000,
+   "f1": 1095,
+   "size": "mcu",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh16",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "t0": 45.6133,
+   "t1": 48.5433,
+   "f0": 1096,
+   "f1": 1165,
+   "size": "ms",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "ava"
+   ]
+  },
+  {
+   "id": "sh17",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "t0": 48.5433,
+   "t1": 50.5433,
+   "f0": 1166,
+   "f1": 1213,
+   "size": "cu",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "leo"
+   ]
+  },
+  {
+   "id": "sh18",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "choice",
+   "t0": 50.5433,
+   "t1": 53.4333,
+   "f0": 1214,
+   "f1": 1282,
+   "size": "two",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "leo",
+    "ava"
+   ]
+  },
+  {
+   "id": "sh19",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "choice",
+   "t0": 53.4333,
+   "t1": 56.1033,
+   "f0": 1283,
+   "f1": 1346,
+   "size": "cu",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "ava"
+   ]
+  },
+  {
+   "id": "sh20",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "choice",
+   "t0": 56.1033,
+   "t1": 60.9733,
+   "f0": 1347,
+   "f1": 1463,
+   "size": "two",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "leo",
+    "ava"
+   ]
+  },
+  {
+   "id": "sh21",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "button",
+   "t0": 60.9733,
+   "t1": 63.8733,
+   "f0": 1464,
+   "f1": 1533,
+   "size": "cu",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh22",
+   "scene": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "button",
+   "t0": 63.8733,
+   "t1": 66.8733,
+   "f0": 1534,
+   "f1": 1605,
+   "size": "ws",
+   "ambience": "hospital_room",
+   "reverb": [
+    0.7,
+    0.12
+   ],
+   "subjects": [
+    "ava"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": "n01",
+   "who": "leo",
+   "kind": "vo",
+   "text": "In my town, your head shows the last thing you said.",
+   "t0": 0.25,
+   "t1": 3.65,
+   "shot": "sh01",
+   "file": "voice/takes/n01.wav",
+   "words": [
+    {
+     "w": "In",
+     "s": 0.25,
+     "e": 0.43
+    },
+    {
+     "w": "my",
+     "s": 0.43,
+     "e": 0.61
+    },
+    {
+     "w": "town,",
+     "s": 0.61,
+     "e": 0.93
+    },
+    {
+     "w": "your",
+     "s": 1.59,
+     "e": 1.69
+    },
+    {
+     "w": "head",
+     "s": 1.69,
+     "e": 1.93
+    },
+    {
+     "w": "shows",
+     "s": 1.93,
+     "e": 2.25
+    },
+    {
+     "w": "the",
+     "s": 2.25,
+     "e": 2.51
+    },
+    {
+     "w": "last",
+     "s": 2.51,
+     "e": 2.73
+    },
+    {
+     "w": "thing",
+     "s": 2.73,
+     "e": 3.01
+    },
+    {
+     "w": "you",
+     "s": 3.01,
+     "e": 3.21
+    },
+    {
+     "w": "said.",
+     "s": 3.21,
+     "e": 3.49
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n02",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Most of the time, it's something nice.",
+   "t0": 3.97,
+   "t1": 6.42,
+   "shot": "sh02",
+   "file": "voice/takes/n02.wav",
+   "words": [
+    {
+     "w": "Most",
+     "s": 3.97,
+     "e": 4.23
+    },
+    {
+     "w": "of",
+     "s": 4.23,
+     "e": 4.39
+    },
+    {
+     "w": "the",
+     "s": 4.39,
+     "e": 4.51
+    },
+    {
+     "w": "time,",
+     "s": 4.51,
+     "e": 4.85
+    },
+    {
+     "w": "it's",
+     "s": 5.35,
+     "e": 5.59
+    },
+    {
+     "w": "something",
+     "s": 5.59,
+     "e": 5.77
+    },
+    {
+     "w": "nice.",
+     "s": 5.77,
+     "e": 6.13
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n03",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Mine said I hate you.",
+   "t0": 6.79,
+   "t1": 8.92,
+   "shot": "sh03",
+   "file": "voice/takes/n03.wav",
+   "words": [
+    {
+     "w": "Mine",
+     "s": 6.79,
+     "e": 7.15
+    },
+    {
+     "w": "said",
+     "s": 7.15,
+     "e": 7.57
+    },
+    {
+     "w": "I",
+     "s": 8.11,
+     "e": 8.33
+    },
+    {
+     "w": "hate",
+     "s": 8.33,
+     "e": 8.53
+    },
+    {
+     "w": "you.",
+     "s": 8.53,
+     "e": 8.79
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n04",
+   "who": "leo",
+   "kind": "vo",
+   "text": "I said it to my sister, three weeks ago.",
+   "t0": 9.54,
+   "t1": 11.58,
+   "shot": "sh04",
+   "file": "voice/takes/n04.wav",
+   "words": [
+    {
+     "w": "I",
+     "s": 9.54,
+     "e": 9.68
+    },
+    {
+     "w": "said",
+     "s": 9.68,
+     "e": 9.86
+    },
+    {
+     "w": "it",
+     "s": 9.86,
+     "e": 9.98
+    },
+    {
+     "w": "to",
+     "s": 9.98,
+     "e": 10.08
+    },
+    {
+     "w": "my",
+     "s": 10.08,
+     "e": 10.22
+    },
+    {
+     "w": "sister,",
+     "s": 10.22,
+     "e": 10.56
+    },
+    {
+     "w": "three",
+     "s": 10.56,
+     "e": 10.86
+    },
+    {
+     "w": "weeks",
+     "s": 10.86,
+     "e": 11.12
+    },
+    {
+     "w": "ago.",
+     "s": 11.12,
+     "e": 11.4
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n05",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Then I stopped talking. So it stayed.",
+   "t0": 11.72,
+   "t1": 14.33,
+   "shot": "sh04",
+   "file": "voice/takes/n05.wav",
+   "words": [
+    {
+     "w": "Then",
+     "s": 11.72,
+     "e": 11.94
+    },
+    {
+     "w": "I",
+     "s": 11.94,
+     "e": 12.12
+    },
+    {
+     "w": "stopped",
+     "s": 12.12,
+     "e": 12.38
+    },
+    {
+     "w": "talking.",
+     "s": 12.38,
+     "e": 12.86
+    },
+    {
+     "w": "So",
+     "s": 13.32,
+     "e": 13.56
+    },
+    {
+     "w": "it",
+     "s": 13.56,
+     "e": 13.7
+    },
+    {
+     "w": "stayed.",
+     "s": 13.7,
+     "e": 14.06
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "a01",
+   "who": "ava",
+   "kind": "dialogue",
+   "text": "Hurry up, Leo.",
+   "t0": 14.65,
+   "t1": 15.78,
+   "shot": "sh05",
+   "file": "voice/takes/a01.wav",
+   "words": [
+    {
+     "w": "Hurry",
+     "s": 14.65,
+     "e": 15.05
+    },
+    {
+     "w": "up,",
+     "s": 15.05,
+     "e": 15.21
+    },
+    {
+     "w": "Leo.",
+     "s": 15.37,
+     "e": 15.47
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n06",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Since Mom got sick, Ava did everything.",
+   "t0": 19.35,
+   "t1": 22.44,
+   "shot": "sh07",
+   "file": "voice/takes/n06.wav",
+   "words": [
+    {
+     "w": "Since",
+     "s": 19.35,
+     "e": 19.63
+    },
+    {
+     "w": "Mom",
+     "s": 19.63,
+     "e": 19.87
+    },
+    {
+     "w": "got",
+     "s": 19.87,
+     "e": 20.15
+    },
+    {
+     "w": "sick,",
+     "s": 20.15,
+     "e": 20.59
+    },
+    {
+     "w": "Ava",
+     "s": 21.25,
+     "e": 21.41
+    },
+    {
+     "w": "did",
+     "s": 21.41,
+     "e": 21.57
+    },
+    {
+     "w": "everything.",
+     "s": 21.57,
+     "e": 22.05
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "a02",
+   "who": "ava",
+   "kind": "dialogue",
+   "text": "Eat your dinner. I'll be back late.",
+   "t0": 22.96,
+   "t1": 24.82,
+   "shot": "sh08",
+   "file": "voice/takes/a02.wav",
+   "words": [
+    {
+     "w": "Eat",
+     "s": 22.96,
+     "e": 23.14
+    },
+    {
+     "w": "your",
+     "s": 23.14,
+     "e": 23.3
+    },
+    {
+     "w": "dinner.",
+     "s": 23.3,
+     "e": 23.56
+    },
+    {
+     "w": "I'll",
+     "s": 23.8,
+     "e": 23.98
+    },
+    {
+     "w": "be",
+     "s": 23.98,
+     "e": 24.08
+    },
+    {
+     "w": "back",
+     "s": 24.08,
+     "e": 24.26
+    },
+    {
+     "w": "late.",
+     "s": 24.26,
+     "e": 24.52
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n07",
+   "who": "leo",
+   "kind": "vo",
+   "text": "She never smiled. She never said anything nice.",
+   "t0": 25.29,
+   "t1": 28.7,
+   "shot": "sh09",
+   "file": "voice/takes/n07.wav",
+   "words": [
+    {
+     "w": "She",
+     "s": 25.29,
+     "e": 25.57
+    },
+    {
+     "w": "never",
+     "s": 25.57,
+     "e": 25.97
+    },
+    {
+     "w": "smiled.",
+     "s": 25.97,
+     "e": 26.45
+    },
+    {
+     "w": "She",
+     "s": 27.17,
+     "e": 27.29
+    },
+    {
+     "w": "never",
+     "s": 27.29,
+     "e": 27.49
+    },
+    {
+     "w": "said",
+     "s": 27.49,
+     "e": 27.79
+    },
+    {
+     "w": "anything",
+     "s": 27.79,
+     "e": 28.15
+    },
+    {
+     "w": "nice.",
+     "s": 28.15,
+     "e": 28.45
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n08",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Every night she left. So one night, I followed her.",
+   "t0": 29.22,
+   "t1": 32.53,
+   "shot": "sh10",
+   "file": "voice/takes/n08.wav",
+   "words": [
+    {
+     "w": "Every",
+     "s": 29.22,
+     "e": 29.48
+    },
+    {
+     "w": "night",
+     "s": 29.48,
+     "e": 29.72
+    },
+    {
+     "w": "she",
+     "s": 29.72,
+     "e": 29.88
+    },
+    {
+     "w": "left.",
+     "s": 29.88,
+     "e": 30.14
+    },
+    {
+     "w": "So",
+     "s": 30.66,
+     "e": 30.82
+    },
+    {
+     "w": "one",
+     "s": 30.82,
+     "e": 31.06
+    },
+    {
+     "w": "night,",
+     "s": 31.06,
+     "e": 31.34
+    },
+    {
+     "w": "I",
+     "s": 31.34,
+     "e": 31.94
+    },
+    {
+     "w": "followed",
+     "s": 31.94,
+     "e": 32.22
+    },
+    {
+     "w": "her.",
+     "s": 32.22,
+     "e": 32.44
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n09",
+   "who": "leo",
+   "kind": "vo",
+   "text": "She went to the hospital. To Mom.",
+   "t0": 34.75,
+   "t1": 36.64,
+   "shot": "sh12",
+   "file": "voice/takes/n09.wav",
+   "words": [
+    {
+     "w": "She",
+     "s": 34.75,
+     "e": 34.91
+    },
+    {
+     "w": "went",
+     "s": 34.91,
+     "e": 35.05
+    },
+    {
+     "w": "to",
+     "s": 35.05,
+     "e": 35.19
+    },
+    {
+     "w": "the",
+     "s": 35.19,
+     "e": 35.31
+    },
+    {
+     "w": "hospital.",
+     "s": 35.31,
+     "e": 35.75
+    },
+    {
+     "w": "To",
+     "s": 36.13,
+     "e": 36.23
+    },
+    {
+     "w": "Mom.",
+     "s": 36.23,
+     "e": 36.45
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "m01",
+   "who": "mom",
+   "kind": "dialogue",
+   "text": "She comes every night. She only ever talks about you.",
+   "t0": 41.75,
+   "t1": 45.1633,
+   "shot": "sh15",
+   "file": "voice/takes/m01.wav",
+   "words": [
+    {
+     "w": "She",
+     "s": 41.75,
+     "e": 41.97
+    },
+    {
+     "w": "comes",
+     "s": 41.97,
+     "e": 42.23
+    },
+    {
+     "w": "every",
+     "s": 42.23,
+     "e": 42.57
+    },
+    {
+     "w": "night.",
+     "s": 42.57,
+     "e": 42.93
+    },
+    {
+     "w": "She",
+     "s": 43.47,
+     "e": 43.59
+    },
+    {
+     "w": "only",
+     "s": 43.59,
+     "e": 43.81
+    },
+    {
+     "w": "ever",
+     "s": 43.81,
+     "e": 44.11
+    },
+    {
+     "w": "talks",
+     "s": 44.11,
+     "e": 44.37
+    },
+    {
+     "w": "about",
+     "s": 44.37,
+     "e": 44.67
+    },
+    {
+     "w": "you.",
+     "s": 44.67,
+     "e": 44.97
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n10",
+   "who": "leo",
+   "kind": "vo",
+   "text": "The last thing she said was about me.",
+   "t0": 45.7333,
+   "t1": 47.9433,
+   "shot": "sh16",
+   "file": "voice/takes/n10.wav",
+   "words": [
+    {
+     "w": "The",
+     "s": 45.7333,
+     "e": 45.9133
+    },
+    {
+     "w": "last",
+     "s": 45.9133,
+     "e": 46.1533
+    },
+    {
+     "w": "thing",
+     "s": 46.1533,
+     "e": 46.4733
+    },
+    {
+     "w": "she",
+     "s": 46.4733,
+     "e": 46.7133
+    },
+    {
+     "w": "said",
+     "s": 46.7133,
+     "e": 46.9933
+    },
+    {
+     "w": "was",
+     "s": 46.9933,
+     "e": 47.2333
+    },
+    {
+     "w": "about",
+     "s": 47.2333,
+     "e": 47.5133
+    },
+    {
+     "w": "me.",
+     "s": 47.5133,
+     "e": 47.7933
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "k01",
+   "who": "leo",
+   "kind": "dialogue",
+   "text": "I love you, Ava.",
+   "t0": 51.7433,
+   "t1": 52.9333,
+   "shot": "sh18",
+   "file": "voice/takes/k01.wav",
+   "words": [
+    {
+     "w": "I",
+     "s": 51.7433,
+     "e": 51.9833
+    },
+    {
+     "w": "love",
+     "s": 51.9833,
+     "e": 52.1833
+    },
+    {
+     "w": "you,",
+     "s": 52.1833,
+     "e": 52.4233
+    },
+    {
+     "w": "Ava.",
+     "s": 52.5633,
+     "e": 52.8233
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "a03",
+   "who": "ava",
+   "kind": "dialogue",
+   "text": "Leo? You talked.",
+   "t0": 54.4333,
+   "t1": 55.7033,
+   "shot": "sh19",
+   "file": "voice/takes/a03.wav",
+   "words": [
+    {
+     "w": "Leo?",
+     "s": 54.4333,
+     "e": 54.8533
+    },
+    {
+     "w": "You",
+     "s": 55.0733,
+     "e": 55.1133
+    },
+    {
+     "w": "talked.",
+     "s": 55.1133,
+     "e": 55.4133
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n11",
+   "who": "leo",
+   "kind": "vo",
+   "text": "For three weeks, my head said I hate you.",
+   "t0": 57.9033,
+   "t1": 60.6733,
+   "shot": "sh20",
+   "file": "voice/takes/n11.wav",
+   "words": [
+    {
+     "w": "For",
+     "s": 57.9033,
+     "e": 58.0833
+    },
+    {
+     "w": "three",
+     "s": 58.0833,
+     "e": 58.4633
+    },
+    {
+     "w": "weeks,",
+     "s": 58.4633,
+     "e": 58.9033
+    },
+    {
+     "w": "my",
+     "s": 59.2033,
+     "e": 59.2233
+    },
+    {
+     "w": "head",
+     "s": 59.2233,
+     "e": 59.4233
+    },
+    {
+     "w": "said",
+     "s": 59.4233,
+     "e": 59.6633
+    },
+    {
+     "w": "I",
+     "s": 59.6633,
+     "e": 59.9033
+    },
+    {
+     "w": "hate",
+     "s": 59.9033,
+     "e": 60.1833
+    },
+    {
+     "w": "you.",
+     "s": 60.1833,
+     "e": 60.5233
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n12",
+   "who": "leo",
+   "kind": "vo",
+   "text": "It only took three words to fix it.",
+   "t0": 61.0933,
+   "t1": 63.3733,
+   "shot": "sh21",
+   "file": "voice/takes/n12.wav",
+   "words": [
+    {
+     "w": "It",
+     "s": 61.0933,
+     "e": 61.2533
+    },
+    {
+     "w": "only",
+     "s": 61.2533,
+     "e": 61.4533
+    },
+    {
+     "w": "took",
+     "s": 61.4533,
+     "e": 61.7333
+    },
+    {
+     "w": "three",
+     "s": 61.7333,
+     "e": 62.1933
+    },
+    {
+     "w": "words",
+     "s": 62.1933,
+     "e": 62.5533
+    },
+    {
+     "w": "to",
+     "s": 62.5533,
+     "e": 62.9133
+    },
+    {
+     "w": "fix",
+     "s": 62.9133,
+     "e": 63.0933
+    },
+    {
+     "w": "it.",
+     "s": 63.0933,
+     "e": 63.3533
+    }
+   ],
+   "gain": 0.0
+  }
+ ],
+ "events": [
+  {
+   "t": 0.2338,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.4328,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.5,
+   "kind": "cloth",
+   "who": "mia",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.74
+  },
+  {
+   "t": 0.5,
+   "kind": "cloth",
+   "who": "mia_mom",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.96
+  },
+  {
+   "t": 0.6279,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.6577,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.8231,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.995,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.0183,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.2,
+   "kind": "badge",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.2134,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.3317,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.4086,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.6,
+   "kind": "cloth",
+   "who": "sam_dad",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 1.0
+  },
+  {
+   "t": 1.6038,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.6683,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.8,
+   "kind": "badge",
+   "who": "sam_dad",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 1.0
+  },
+  {
+   "t": 1.8028,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.005,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.0365,
+   "kind": "run_step",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.3423,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.6365,
+   "kind": "cloth",
+   "who": "sam",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.7,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 4.15,
+   "kind": "badge",
+   "who": "mia",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh02",
+   "scale": 0.74
+  },
+  {
+   "t": 9.7717,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 10.0982,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 10.4236,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 10.7491,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 11.0745,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 11.3999,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 11.7254,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 12.0508,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 12.3773,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 12.729,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.76
+  },
+  {
+   "t": 14.65,
+   "kind": "badge",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh05",
+   "scale": 0.95
+  },
+  {
+   "t": 16.6196,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 17.0189,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 17.3276,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.76
+  },
+  {
+   "t": 17.4181,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 17.7429,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.76
+  },
+  {
+   "t": 17.8174,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 18.1582,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.76
+  },
+  {
+   "t": 18.2166,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 18.5735,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.76
+  },
+  {
+   "t": 18.6159,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 18.9888,
+   "kind": "step",
+   "who": "leo",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.76
+  },
+  {
+   "t": 19.0151,
+   "kind": "step",
+   "who": "ava",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.95
+  },
+  {
+   "t": 19.4041,
+   "kind": "step",
+   "who": "leo",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.76
+  },
+  {
+   "t": 19.4144,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 19.6237,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 19.804,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 19.8194,
+   "kind": "step",
+   "who": "leo",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.76
+  },
+  {
+   "t": 20.0311,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 20.2347,
+   "kind": "step",
+   "who": "leo",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.76
+  },
+  {
+   "t": 20.4385,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 20.6324,
+   "kind": "step",
+   "who": "leo",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.76
+  },
+  {
+   "t": 20.8459,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 21.2533,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 21.6607,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 22.0681,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 22.4618,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.95
+  },
+  {
+   "t": 24.82,
+   "kind": "badge",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh08",
+   "scale": 0.95
+  },
+  {
+   "t": 29.495,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 29.905,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 30.315,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 30.725,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 31.135,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 31.545,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 31.955,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 32.35,
+   "kind": "step",
+   "who": "ava",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh10",
+   "scale": 0.95
+  },
+  {
+   "t": 34.8401,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 34.9939,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.1104,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.2265,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.3427,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.4588,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.575,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.6912,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.8073,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 35.9235,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.0396,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.1558,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.2719,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.3881,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.5042,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.6204,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.7365,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.8527,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 36.9688,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 37.085,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 37.2012,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh12",
+   "scale": 0.76
+  },
+  {
+   "t": 37.3173,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 37.4335,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 37.5496,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 37.6661,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 37.8199,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 38.03,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 38.055,
+   "kind": "shuffle",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh13",
+   "scale": 0.76
+  },
+  {
+   "t": 39.4199,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh14",
+   "scale": 0.76
+  },
+  {
+   "t": 39.8196,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh14",
+   "scale": 0.76
+  },
+  {
+   "t": 40.2193,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh14",
+   "scale": 0.76
+  },
+  {
+   "t": 40.619,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh14",
+   "scale": 0.76
+  },
+  {
+   "t": 41.0187,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh14",
+   "scale": 0.76
+  },
+  {
+   "t": 41.4184,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh14",
+   "scale": 0.76
+  },
+  {
+   "t": 41.8181,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.76
+  },
+  {
+   "t": 42.2178,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.76
+  },
+  {
+   "t": 42.6077,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.76
+  },
+  {
+   "t": 50.8427,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh18",
+   "scale": 0.76
+  },
+  {
+   "t": 51.0933,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh18",
+   "scale": 0.76
+  },
+  {
+   "t": 51.3439,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh18",
+   "scale": 0.76
+  },
+  {
+   "t": 51.6433,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh18",
+   "scale": 0.76
+  },
+  {
+   "t": 51.7433,
+   "kind": "badge",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh18",
+   "scale": 0.76
+  },
+  {
+   "t": 54.4333,
+   "kind": "badge",
+   "who": "ava",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh19",
+   "scale": 0.95
+  },
+  {
+   "t": 57.1333,
+   "kind": "shuffle",
+   "who": "ava",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.95
+  },
+  {
+   "t": 57.6301,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.76
+  },
+  {
+   "t": 57.7658,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.76
+  },
+  {
+   "t": 57.8908,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.76
+  },
+  {
+   "t": 58.0265,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.76
+  },
+  {
+   "t": 58.2033,
+   "kind": "step",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.76
+  },
+  {
+   "t": 58.6033,
+   "kind": "cloth",
+   "who": "leo",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.76
+  },
+  {
+   "t": 58.7533,
+   "kind": "cloth",
+   "who": "ava",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh20",
+   "scale": 0.95
+  }
+ ],
+ "fx": [],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm",
+   "t": 0.0
+  },
+  {
+   "at": "sh03",
+   "mood": "pensive",
+   "t": 6.67
+  },
+  {
+   "at": "sh07",
+   "mood": "sparse",
+   "t": 19.23
+  },
+  {
+   "at": "sh12",
+   "mood": "pensive",
+   "t": 34.63
+  },
+  {
+   "at": "sh14",
+   "mood": "hush",
+   "t": 39.03
+  },
+  {
+   "at": "sh16",
+   "mood": "swell",
+   "offset": 0.4,
+   "t": 46.0133
+  },
+  {
+   "at": "sh18",
+   "mood": "hush",
+   "t": 50.5433
+  },
+  {
+   "at": "sh20",
+   "mood": "resolve",
+   "offset": 0.5,
+   "t": 56.6033
+  },
+  {
+   "at": "sh22",
+   "mood": "outro",
+   "offset": 0.6,
+   "t": 64.4733
+  }
+ ],
+ "notes": [
+  "scene sc1 at school_gate afternoon: 0.00-19.23s",
+  "scene sc2 at grandpa_living afternoon: 19.23-34.63s",
+  "scene sc3 at hospital_corridor night: 34.63-39.03s",
+  "scene sc4 at hospital_room night: 39.03-66.87s"
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "story": {
+  "ok": true,
+  "at": "2026-11-26 12:33:01",
+  "screenplay": "daee97298a86",
+  "kit": "ed047b2acc96",
+  "facts": {
+   "locations": 4,
+   "scenes": 4,
+   "shots": 22,
+   "beats": 7,
+   "shot_sizes": [
+    "cu",
+    "fs",
+    "mcu",
+    "ms",
+    "two",
+    "ws"
+   ],
+   "lead_expressions": [
+    "cry",
+    "cry_smile",
+    "determined",
+    "hurt",
+    "neutral",
+    "peaceful",
+    "sad",
+    "scared",
+    "teary",
+    "worried"
+   ],
+   "duration": 66.67,
+   "shots_per_minute": 19.8,
+   "longest_shot": 5.11,
+   "words_per_minute": 110.7
+  }
+ },
+ "voice": {
+  "ok": true,
+  "at": "2026-11-26 12:32:49",
+  "screenplay": "daee97298a86",
+  "kit": "ed047b2acc96",
+  "lines": 17,
+  "unclear": []
+ },
+ "layout": {
+  "ok": true,
+  "at": "2026-11-26 12:44:37",
+  "screenplay": "a7214c3f7734",
+  "kit": "de1f2147cef8",
+  "errors": 0,
+  "warns": 13,
+  "seconds": 32.9
+ },
+ "board": {
+  "ok": true,
+  "at": "2026-11-26 12:45:09",
+  "screenplay": "a7214c3f7734",
+  "kit": "de1f2147cef8",
+  "sheet": "/home/rishabh/D/Codes/Roblox/renders/three-words/board/storyboard.jpg"
+ },
+ "render.preview": {
+  "ok": true,
+  "at": "2026-11-26 12:58:33",
+  "screenplay": "a7214c3f7734",
+  "kit": "47a4d44f5f7d",
+  "frames": 1605,
+  "expected": 1605
+ },
+ "sound.preview": {
+  "ok": true,
+  "at": "2026-11-26 12:59:16",
+  "screenplay": "a7214c3f7734",
+  "kit": "47a4d44f5f7d",
+  "worst_line_match": 1.0
+ },
+ "deliver.preview": {
+  "ok": true,
+  "at": "2026-11-26 12:59:42",
+  "screenplay": "a7214c3f7734",
+  "kit": "04113cbe4e22",
+  "movie": "/home/rishabh/D/Codes/Roblox/renders/three-words/preview/three-words-preview.mp4"
+ }
+}

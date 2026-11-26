@@ -1,0 +1,2044 @@
+{
+ "title": "One Hug Left",
+ "fps": 24,
+ "duration": 63.6367,
+ "frames": 1527,
+ "scratch_timing": false,
+ "shots": [
+  {
+   "id": "sh01",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "t0": 0.0,
+   "t1": 4.01,
+   "f0": 1,
+   "f1": 96,
+   "size": "fs",
+   "ambience": "schoolyard",
+   "subjects": [
+    "lily_dad"
+   ]
+  },
+  {
+   "id": "sh02",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "t0": 4.01,
+   "t1": 6.03,
+   "f0": 97,
+   "f1": 145,
+   "size": "mcu",
+   "ambience": "schoolyard",
+   "subjects": [
+    "lily_dad"
+   ]
+  },
+  {
+   "id": "sh03",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "wound",
+   "t0": 6.03,
+   "t1": 7.63,
+   "f0": 146,
+   "f1": 183,
+   "size": "cu",
+   "ambience": "schoolyard",
+   "subjects": [
+    "kai"
+   ]
+  },
+  {
+   "id": "sh04",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "wound",
+   "t0": 7.63,
+   "t1": 12.64,
+   "f0": 184,
+   "f1": 303,
+   "size": "two",
+   "ambience": "schoolyard",
+   "subjects": [
+    "mom",
+    "kai"
+   ]
+  },
+  {
+   "id": "sh05",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "wound",
+   "t0": 12.64,
+   "t1": 13.99,
+   "f0": 304,
+   "f1": 336,
+   "size": "cu",
+   "ambience": "schoolyard",
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh06",
+   "scene": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "wound",
+   "t0": 13.99,
+   "t1": 18.06,
+   "f0": 337,
+   "f1": 433,
+   "size": "ms",
+   "ambience": "schoolyard",
+   "subjects": [
+    "kai"
+   ]
+  },
+  {
+   "id": "sh07",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 18.06,
+   "t1": 20.26,
+   "f0": 434,
+   "f1": 486,
+   "size": "ws",
+   "ambience": "living_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh08",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 20.26,
+   "t1": 22.99,
+   "f0": 487,
+   "f1": 552,
+   "size": "cu",
+   "ambience": "living_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh09",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 22.99,
+   "t1": 24.7,
+   "f0": 553,
+   "f1": 593,
+   "size": "mcu",
+   "ambience": "living_room",
+   "subjects": [
+    "kai"
+   ]
+  },
+  {
+   "id": "sh10",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 24.7,
+   "t1": 26.5566,
+   "f0": 594,
+   "f1": 637,
+   "size": "cu",
+   "ambience": "living_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh11",
+   "scene": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "t0": 26.5566,
+   "t1": 28.8766,
+   "f0": 638,
+   "f1": 693,
+   "size": "two",
+   "ambience": "living_room",
+   "subjects": [
+    "kai",
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh12",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "turn",
+   "t0": 28.8766,
+   "t1": 32.2166,
+   "f0": 694,
+   "f1": 773,
+   "size": "ws",
+   "ambience": "hospital_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh13",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "turn",
+   "t0": 32.2166,
+   "t1": 34.0732,
+   "f0": 774,
+   "f1": 818,
+   "size": "mcu",
+   "ambience": "hospital_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh14",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "turn",
+   "t0": 34.0732,
+   "t1": 36.2232,
+   "f0": 819,
+   "f1": 869,
+   "size": "ms",
+   "ambience": "hospital_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh15",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "turn",
+   "t0": 36.2232,
+   "t1": 40.2832,
+   "f0": 870,
+   "f1": 967,
+   "size": "two",
+   "ambience": "hospital_room",
+   "subjects": [
+    "kai",
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh16",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "t0": 40.2832,
+   "t1": 42.3232,
+   "f0": 968,
+   "f1": 1016,
+   "size": "mcu",
+   "ambience": "hospital_room",
+   "subjects": [
+    "kai"
+   ]
+  },
+  {
+   "id": "sh17",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "t0": 42.3232,
+   "t1": 44.6132,
+   "f0": 1017,
+   "f1": 1071,
+   "size": "cu",
+   "ambience": "hospital_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh18",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "t0": 44.6132,
+   "t1": 47.8967,
+   "f0": 1072,
+   "f1": 1150,
+   "size": "ecu",
+   "ambience": "hospital_room",
+   "subjects": [
+    "grandpa"
+   ]
+  },
+  {
+   "id": "sh19",
+   "scene": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "choice",
+   "t0": 47.8967,
+   "t1": 50.0967,
+   "f0": 1151,
+   "f1": 1202,
+   "size": "mcu",
+   "ambience": "hospital_room",
+   "subjects": [
+    "kai"
+   ]
+  },
+  {
+   "id": "sh20",
+   "scene": "sc4",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "choice",
+   "t0": 50.0967,
+   "t1": 52.0967,
+   "f0": 1203,
+   "f1": 1250,
+   "size": "ws",
+   "ambience": "corridor",
+   "subjects": [
+    "kai"
+   ]
+  },
+  {
+   "id": "sh21",
+   "scene": "sc4",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "choice",
+   "t0": 52.0967,
+   "t1": 53.4467,
+   "f0": 1251,
+   "f1": 1283,
+   "size": "mcu",
+   "ambience": "corridor",
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh22",
+   "scene": "sc4",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "choice",
+   "t0": 53.4467,
+   "t1": 56.0467,
+   "f0": 1284,
+   "f1": 1345,
+   "size": "ms",
+   "ambience": "corridor",
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh23",
+   "scene": "sc4",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "choice",
+   "t0": 56.0467,
+   "t1": 59.4567,
+   "f0": 1346,
+   "f1": 1427,
+   "size": "cu",
+   "ambience": "corridor",
+   "subjects": [
+    "mom"
+   ]
+  },
+  {
+   "id": "sh24",
+   "scene": "sc4",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "button",
+   "t0": 59.4567,
+   "t1": 63.6367,
+   "f0": 1428,
+   "f1": 1527,
+   "size": "ws",
+   "ambience": "corridor",
+   "subjects": [
+    "mom"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": "n01",
+   "who": "kai",
+   "kind": "vo",
+   "text": "In my town, everyone is born with a number of hugs.",
+   "t0": 0.25,
+   "t1": 3.81,
+   "shot": "sh01",
+   "file": "voice/takes/n01.wav",
+   "words": [
+    {
+     "w": "In",
+     "s": 0.25,
+     "e": 0.41
+    },
+    {
+     "w": "my",
+     "s": 0.41,
+     "e": 0.59
+    },
+    {
+     "w": "town,",
+     "s": 0.59,
+     "e": 0.95
+    },
+    {
+     "w": "everyone",
+     "s": 1.73,
+     "e": 1.93
+    },
+    {
+     "w": "is",
+     "s": 1.93,
+     "e": 2.19
+    },
+    {
+     "w": "born",
+     "s": 2.19,
+     "e": 2.47
+    },
+    {
+     "w": "with",
+     "s": 2.47,
+     "e": 2.75
+    },
+    {
+     "w": "a",
+     "s": 2.75,
+     "e": 2.87
+    },
+    {
+     "w": "number",
+     "s": 2.87,
+     "e": 3.07
+    },
+    {
+     "w": "of",
+     "s": 3.07,
+     "e": 3.29
+    },
+    {
+     "w": "hugs.",
+     "s": 3.29,
+     "e": 3.53
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n02",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Most people get hundreds.",
+   "t0": 4.13,
+   "t1": 5.78,
+   "shot": "sh02",
+   "file": "voice/takes/n02.wav",
+   "words": [
+    {
+     "w": "Most",
+     "s": 4.13,
+     "e": 4.43
+    },
+    {
+     "w": "people",
+     "s": 4.43,
+     "e": 4.71
+    },
+    {
+     "w": "get",
+     "s": 4.71,
+     "e": 5.03
+    },
+    {
+     "w": "hundreds.",
+     "s": 5.03,
+     "e": 5.45
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n03",
+   "who": "kai",
+   "kind": "vo",
+   "text": "I got zero.",
+   "t0": 6.15,
+   "t1": 7.15,
+   "shot": "sh03",
+   "file": "voice/takes/n03.wav",
+   "words": [
+    {
+     "w": "I",
+     "s": 6.15,
+     "e": 6.29
+    },
+    {
+     "w": "got",
+     "s": 6.29,
+     "e": 6.43
+    },
+    {
+     "w": "zero.",
+     "s": 6.43,
+     "e": 6.79
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n04",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Zero means you can't give one. Not even to your mom.",
+   "t0": 7.75,
+   "t1": 12.44,
+   "shot": "sh04",
+   "file": "voice/takes/n04.wav",
+   "words": [
+    {
+     "w": "Zero",
+     "s": 7.75,
+     "e": 8.25
+    },
+    {
+     "w": "means",
+     "s": 8.25,
+     "e": 8.79
+    },
+    {
+     "w": "you",
+     "s": 8.79,
+     "e": 9.15
+    },
+    {
+     "w": "can't",
+     "s": 9.15,
+     "e": 9.57
+    },
+    {
+     "w": "give",
+     "s": 9.57,
+     "e": 9.77
+    },
+    {
+     "w": "one.",
+     "s": 9.77,
+     "e": 10.29
+    },
+    {
+     "w": "Not",
+     "s": 10.69,
+     "e": 10.99
+    },
+    {
+     "w": "even",
+     "s": 10.99,
+     "e": 11.35
+    },
+    {
+     "w": "to",
+     "s": 11.35,
+     "e": 11.67
+    },
+    {
+     "w": "your",
+     "s": 11.67,
+     "e": 11.85
+    },
+    {
+     "w": "mom.",
+     "s": 11.85,
+     "e": 12.15
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n05",
+   "who": "kai",
+   "kind": "vo",
+   "text": "So every morning, she messes up my hair instead.",
+   "t0": 14.11,
+   "t1": 17.76,
+   "shot": "sh06",
+   "file": "voice/takes/n05.wav",
+   "words": [
+    {
+     "w": "So",
+     "s": 14.11,
+     "e": 14.35
+    },
+    {
+     "w": "every",
+     "s": 14.63,
+     "e": 14.95
+    },
+    {
+     "w": "morning,",
+     "s": 14.95,
+     "e": 15.31
+    },
+    {
+     "w": "she",
+     "s": 15.91,
+     "e": 16.05
+    },
+    {
+     "w": "messes",
+     "s": 16.05,
+     "e": 16.45
+    },
+    {
+     "w": "up",
+     "s": 16.45,
+     "e": 16.61
+    },
+    {
+     "w": "my",
+     "s": 16.61,
+     "e": 16.81
+    },
+    {
+     "w": "hair",
+     "s": 16.81,
+     "e": 17.07
+    },
+    {
+     "w": "instead.",
+     "s": 17.07,
+     "e": 17.55
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n06",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Grandpa had one hug left.",
+   "t0": 18.18,
+   "t1": 19.74,
+   "shot": "sh07",
+   "file": "voice/takes/n06.wav",
+   "words": [
+    {
+     "w": "Grandpa",
+     "s": 18.18,
+     "e": 18.52
+    },
+    {
+     "w": "had",
+     "s": 18.52,
+     "e": 18.66
+    },
+    {
+     "w": "one",
+     "s": 18.66,
+     "e": 19.0
+    },
+    {
+     "w": "hug",
+     "s": 19.0,
+     "e": 19.3
+    },
+    {
+     "w": "left.",
+     "s": 19.3,
+     "e": 19.6
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n07",
+   "who": "kai",
+   "kind": "vo",
+   "text": "He'd been saving it for ten years.",
+   "t0": 20.38,
+   "t1": 22.59,
+   "shot": "sh08",
+   "file": "voice/takes/n07.wav",
+   "words": [
+    {
+     "w": "He'd",
+     "s": 20.38,
+     "e": 20.62
+    },
+    {
+     "w": "been",
+     "s": 20.62,
+     "e": 20.8
+    },
+    {
+     "w": "saving",
+     "s": 20.8,
+     "e": 21.14
+    },
+    {
+     "w": "it",
+     "s": 21.14,
+     "e": 21.38
+    },
+    {
+     "w": "for",
+     "s": 21.38,
+     "e": 21.6
+    },
+    {
+     "w": "ten",
+     "s": 21.6,
+     "e": 21.9
+    },
+    {
+     "w": "years.",
+     "s": 21.9,
+     "e": 22.3
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "k01",
+   "who": "kai",
+   "kind": "dialogue",
+   "text": "Who's it for, Grandpa?",
+   "t0": 23.11,
+   "t1": 24.45,
+   "shot": "sh09",
+   "file": "voice/takes/k01.wav",
+   "words": [
+    {
+     "w": "Who's",
+     "s": 23.11,
+     "e": 23.41
+    },
+    {
+     "w": "it",
+     "s": 23.41,
+     "e": 23.57
+    },
+    {
+     "w": "for,",
+     "s": 23.57,
+     "e": 23.81
+    },
+    {
+     "w": "Grandpa?",
+     "s": 24.05,
+     "e": 24.35
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "g01",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Not yet, kiddo.",
+   "t0": 24.82,
+   "t1": 26.0566,
+   "shot": "sh10",
+   "file": "voice/takes/g01.wav",
+   "words": [
+    {
+     "w": "Not",
+     "s": 24.82,
+     "e": 25.12
+    },
+    {
+     "w": "yet,",
+     "s": 25.12,
+     "e": 25.4
+    },
+    {
+     "w": "kiddo.",
+     "s": 25.58,
+     "e": 25.92
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n08",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Everyone said he was just cold.",
+   "t0": 26.6766,
+   "t1": 28.3266,
+   "shot": "sh11",
+   "file": "voice/takes/n08.wav",
+   "words": [
+    {
+     "w": "Everyone",
+     "s": 26.6766,
+     "e": 26.9766
+    },
+    {
+     "w": "said",
+     "s": 26.9766,
+     "e": 27.3366
+    },
+    {
+     "w": "he",
+     "s": 27.3366,
+     "e": 27.5166
+    },
+    {
+     "w": "was",
+     "s": 27.5166,
+     "e": 27.6366
+    },
+    {
+     "w": "just",
+     "s": 27.6366,
+     "e": 27.8166
+    },
+    {
+     "w": "cold.",
+     "s": 27.8166,
+     "e": 28.1366
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n09",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Then, one winter night, Grandpa got sick.",
+   "t0": 28.9966,
+   "t1": 31.9166,
+   "shot": "sh12",
+   "file": "voice/takes/n09.wav",
+   "words": [
+    {
+     "w": "Then,",
+     "s": 28.9966,
+     "e": 29.2966
+    },
+    {
+     "w": "one",
+     "s": 29.6566,
+     "e": 29.9166
+    },
+    {
+     "w": "winter",
+     "s": 29.9166,
+     "e": 30.2766
+    },
+    {
+     "w": "night,",
+     "s": 30.2766,
+     "e": 30.6366
+    },
+    {
+     "w": "Grandpa",
+     "s": 30.8966,
+     "e": 31.2166
+    },
+    {
+     "w": "got",
+     "s": 31.2166,
+     "e": 31.4366
+    },
+    {
+     "w": "sick.",
+     "s": 31.4366,
+     "e": 31.7766
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "g02",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Come here, kiddo.",
+   "t0": 32.3366,
+   "t1": 33.5732,
+   "shot": "sh13",
+   "file": "voice/takes/g02.wav",
+   "words": [
+    {
+     "w": "Come",
+     "s": 32.3366,
+     "e": 32.7566
+    },
+    {
+     "w": "here,",
+     "s": 32.7566,
+     "e": 32.9966
+    },
+    {
+     "w": "kiddo.",
+     "s": 32.9966,
+     "e": 33.4966
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n10",
+   "who": "kai",
+   "kind": "vo",
+   "text": "That's when I learned the rule nobody tells you.",
+   "t0": 37.7732,
+   "t1": 39.9832,
+   "shot": "sh15",
+   "file": "voice/takes/n10.wav",
+   "words": [
+    {
+     "w": "That's",
+     "s": 37.7732,
+     "e": 37.9932
+    },
+    {
+     "w": "when",
+     "s": 37.9932,
+     "e": 38.0932
+    },
+    {
+     "w": "I",
+     "s": 38.0932,
+     "e": 38.2132
+    },
+    {
+     "w": "learned",
+     "s": 38.2132,
+     "e": 38.3732
+    },
+    {
+     "w": "the",
+     "s": 38.3732,
+     "e": 38.5532
+    },
+    {
+     "w": "rule",
+     "s": 38.5532,
+     "e": 38.7932
+    },
+    {
+     "w": "nobody",
+     "s": 38.7932,
+     "e": 39.1132
+    },
+    {
+     "w": "tells",
+     "s": 39.1132,
+     "e": 39.4732
+    },
+    {
+     "w": "you.",
+     "s": 39.4732,
+     "e": 39.7932
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n11",
+   "who": "kai",
+   "kind": "vo",
+   "text": "You can't use your last hug.",
+   "t0": 40.4032,
+   "t1": 41.9732,
+   "shot": "sh16",
+   "file": "voice/takes/n11.wav",
+   "words": [
+    {
+     "w": "You",
+     "s": 40.4032,
+     "e": 40.5632
+    },
+    {
+     "w": "can't",
+     "s": 40.5632,
+     "e": 40.9032
+    },
+    {
+     "w": "use",
+     "s": 40.9032,
+     "e": 41.0432
+    },
+    {
+     "w": "your",
+     "s": 41.0432,
+     "e": 41.2032
+    },
+    {
+     "w": "last",
+     "s": 41.2032,
+     "e": 41.5032
+    },
+    {
+     "w": "hug.",
+     "s": 41.5032,
+     "e": 41.7832
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n12",
+   "who": "kai",
+   "kind": "vo",
+   "text": "You can only give it away.",
+   "t0": 42.4432,
+   "t1": 44.1632,
+   "shot": "sh17",
+   "file": "voice/takes/n12.wav",
+   "words": [
+    {
+     "w": "You",
+     "s": 42.4432,
+     "e": 42.5832
+    },
+    {
+     "w": "can",
+     "s": 42.5832,
+     "e": 42.7632
+    },
+    {
+     "w": "only",
+     "s": 42.7632,
+     "e": 43.1432
+    },
+    {
+     "w": "give",
+     "s": 43.1432,
+     "e": 43.4832
+    },
+    {
+     "w": "it",
+     "s": 43.4832,
+     "e": 43.6032
+    },
+    {
+     "w": "away.",
+     "s": 43.6032,
+     "e": 43.9032
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "g03",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "It was always yours.",
+   "t0": 44.7332,
+   "t1": 47.3467,
+   "shot": "sh18",
+   "file": "voice/takes/g03.wav",
+   "words": [
+    {
+     "w": "It",
+     "s": 44.7332,
+     "e": 45.3932
+    },
+    {
+     "w": "was",
+     "s": 45.3932,
+     "e": 46.1332
+    },
+    {
+     "w": "always",
+     "s": 46.1332,
+     "e": 46.5732
+    },
+    {
+     "w": "yours.",
+     "s": 46.5732,
+     "e": 47.0132
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n13",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Grandpa saved his last hug for ten years.",
+   "t0": 56.1667,
+   "t1": 59.0067,
+   "shot": "sh23",
+   "file": "voice/takes/n13.wav",
+   "words": [
+    {
+     "w": "Grandpa",
+     "s": 56.1667,
+     "e": 56.5667
+    },
+    {
+     "w": "saved",
+     "s": 56.5667,
+     "e": 56.8667
+    },
+    {
+     "w": "his",
+     "s": 56.8667,
+     "e": 57.0867
+    },
+    {
+     "w": "last",
+     "s": 57.0867,
+     "e": 57.4067
+    },
+    {
+     "w": "hug",
+     "s": 57.4067,
+     "e": 57.6867
+    },
+    {
+     "w": "for",
+     "s": 57.6867,
+     "e": 57.9267
+    },
+    {
+     "w": "ten",
+     "s": 57.9267,
+     "e": 58.3667
+    },
+    {
+     "w": "years.",
+     "s": 58.3667,
+     "e": 58.7467
+    }
+   ],
+   "gain": 0.0
+  },
+  {
+   "id": "n14",
+   "who": "kai",
+   "kind": "vo",
+   "text": "I only saved mine for ten seconds.",
+   "t0": 60.0567,
+   "t1": 61.9367,
+   "shot": "sh24",
+   "file": "voice/takes/n14.wav",
+   "words": [
+    {
+     "w": "I",
+     "s": 60.0567,
+     "e": 60.1967
+    },
+    {
+     "w": "only",
+     "s": 60.1967,
+     "e": 60.3767
+    },
+    {
+     "w": "saved",
+     "s": 60.3767,
+     "e": 60.6767
+    },
+    {
+     "w": "mine",
+     "s": 60.6767,
+     "e": 60.9567
+    },
+    {
+     "w": "for",
+     "s": 60.9567,
+     "e": 61.1967
+    },
+    {
+     "w": "ten",
+     "s": 61.1967,
+     "e": 61.4367
+    },
+    {
+     "w": "seconds.",
+     "s": 61.4367,
+     "e": 61.7567
+    }
+   ],
+   "gain": 0.0
+  }
+ ],
+ "events": [
+  {
+   "t": 0.2338,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.4328,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.5,
+   "kind": "cloth",
+   "who": "nina",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.74
+  },
+  {
+   "t": 0.5,
+   "kind": "cloth",
+   "who": "nina_mom",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.96
+  },
+  {
+   "t": 0.6279,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.6577,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 0.8231,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 0.995,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 1.0183,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.2134,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.3317,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 1.4086,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.6,
+   "kind": "cloth",
+   "who": "lily_dad",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 1.0
+  },
+  {
+   "t": 1.6038,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 1.6683,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 1.75,
+   "kind": "badge",
+   "who": "lily_dad",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 1.0
+  },
+  {
+   "t": 1.8028,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.005,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 2.0365,
+   "kind": "run_step",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.3423,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 2.6365,
+   "kind": "cloth",
+   "who": "lily",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.76
+  },
+  {
+   "t": 2.7,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh01",
+   "scale": 0.8
+  },
+  {
+   "t": 4.11,
+   "kind": "badge",
+   "who": "nina_mom",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh02",
+   "scale": 0.96
+  },
+  {
+   "t": 7.9825,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 8.3106,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 8.6377,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 8.9648,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 9.2918,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 9.6189,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 9.946,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 10.2731,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 10.6011,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 10.9537,
+   "kind": "step",
+   "who": "kai",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh04",
+   "scale": 0.8
+  },
+  {
+   "t": 14.44,
+   "kind": "step",
+   "who": "mom",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.97
+  },
+  {
+   "t": 14.89,
+   "kind": "step",
+   "who": "mom",
+   "surface": "concrete",
+   "set": "school_gate",
+   "shot": "sh06",
+   "scale": 0.97
+  },
+  {
+   "t": 18.4118,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.8
+  },
+  {
+   "t": 18.7386,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.8
+  },
+  {
+   "t": 19.0643,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.8
+  },
+  {
+   "t": 19.3901,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.8
+  },
+  {
+   "t": 19.7158,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.8
+  },
+  {
+   "t": 20.0415,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh07",
+   "scale": 0.8
+  },
+  {
+   "t": 20.3673,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh08",
+   "scale": 0.8
+  },
+  {
+   "t": 20.693,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh08",
+   "scale": 0.8
+  },
+  {
+   "t": 21.0198,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh08",
+   "scale": 0.8
+  },
+  {
+   "t": 21.3716,
+   "kind": "step",
+   "who": "kai",
+   "surface": "wood",
+   "set": "grandpa_living",
+   "shot": "sh08",
+   "scale": 0.8
+  },
+  {
+   "t": 29.2381,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 29.5825,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 29.9264,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 30.2703,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 30.6143,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 30.9582,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 31.3021,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 31.646,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 31.9899,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh12",
+   "scale": 0.8
+  },
+  {
+   "t": 32.3339,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh13",
+   "scale": 0.8
+  },
+  {
+   "t": 32.6778,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh13",
+   "scale": 0.8
+  },
+  {
+   "t": 33.0222,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh13",
+   "scale": 0.8
+  },
+  {
+   "t": 33.3837,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh13",
+   "scale": 0.8
+  },
+  {
+   "t": 36.5982,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.8
+  },
+  {
+   "t": 36.9732,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.8
+  },
+  {
+   "t": 37.2232,
+   "kind": "cloth",
+   "who": "grandpa",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.98
+  },
+  {
+   "t": 37.7732,
+   "kind": "cloth",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.8
+  },
+  {
+   "t": 37.8232,
+   "kind": "badge",
+   "who": "grandpa",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh15",
+   "scale": 0.98
+  },
+  {
+   "t": 40.6082,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh16",
+   "scale": 0.8
+  },
+  {
+   "t": 40.8332,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh16",
+   "scale": 0.8
+  },
+  {
+   "t": 40.8832,
+   "kind": "badge",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh16",
+   "scale": 0.8
+  },
+  {
+   "t": 48.4967,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh19",
+   "scale": 0.8
+  },
+  {
+   "t": 48.6967,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh19",
+   "scale": 0.8
+  },
+  {
+   "t": 48.8967,
+   "kind": "step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh19",
+   "scale": 0.8
+  },
+  {
+   "t": 49.5717,
+   "kind": "shuffle",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_room",
+   "shot": "sh19",
+   "scale": 0.8
+  },
+  {
+   "t": 50.3654,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 50.6234,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 50.8811,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 51.1389,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 51.3967,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 51.6545,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 51.9123,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh20",
+   "scale": 0.8
+  },
+  {
+   "t": 52.17,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh21",
+   "scale": 0.8
+  },
+  {
+   "t": 52.428,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh21",
+   "scale": 0.8
+  },
+  {
+   "t": 52.6967,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh21",
+   "scale": 0.8
+  },
+  {
+   "t": 53.6267,
+   "kind": "shuffle",
+   "who": "mom",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh22",
+   "scale": 0.97
+  },
+  {
+   "t": 53.7217,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh22",
+   "scale": 0.8
+  },
+  {
+   "t": 53.9967,
+   "kind": "run_step",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh22",
+   "scale": 0.8
+  },
+  {
+   "t": 54.5467,
+   "kind": "cloth",
+   "who": "mom",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh22",
+   "scale": 0.97
+  },
+  {
+   "t": 54.6467,
+   "kind": "badge",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh22",
+   "scale": 0.8
+  },
+  {
+   "t": 54.9967,
+   "kind": "cloth",
+   "who": "kai",
+   "surface": "vinyl",
+   "set": "hospital_corridor",
+   "shot": "sh22",
+   "scale": 0.8
+  }
+ ],
+ "fx": [
+  {
+   "kind": "ripple",
+   "t": 9.38,
+   "dur": 0.8,
+   "at": [
+    1.97,
+    -1.62,
+    1.05
+   ],
+   "who": "kai",
+   "set": "school_gate",
+   "color": null
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm",
+   "t": 0.0
+  },
+  {
+   "at": "sh07",
+   "mood": "pensive",
+   "t": 18.06
+  },
+  {
+   "at": "sh12",
+   "mood": "sparse",
+   "t": 28.8766
+  },
+  {
+   "at": "sh15",
+   "mood": "swell",
+   "offset": 0.6,
+   "t": 36.8232
+  },
+  {
+   "at": "sh16",
+   "mood": "hush",
+   "t": 40.2832
+  },
+  {
+   "at": "sh19",
+   "mood": "rise",
+   "t": 47.8967
+  },
+  {
+   "at": "sh20",
+   "mood": "drive",
+   "t": 50.0967
+  },
+  {
+   "at": "sh22",
+   "mood": "resolve",
+   "offset": 0.9,
+   "t": 54.3467
+  },
+  {
+   "at": "sh24",
+   "mood": "outro",
+   "offset": 1.0,
+   "t": 60.4567
+  }
+ ],
+ "notes": [
+  "scene sc1 at school_gate morning: 0.00-18.06s",
+  "scene sc2 at grandpa_living afternoon: 18.06-28.88s",
+  "scene sc3 at hospital_room night: 28.88-50.10s",
+  "scene sc4 at hospital_corridor night: 50.10-63.64s"
+ ]
+}

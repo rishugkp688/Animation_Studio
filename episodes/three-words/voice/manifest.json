@@ -1,0 +1,121 @@
+{
+ "n01": {
+  "key": "ccb6da770840",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "In my town, your head shows the last thing you said."
+ },
+ "n02": {
+  "key": "23cda94c6219",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Most of the time, it's something nice."
+ },
+ "n03": {
+  "key": "2d4347989c5e",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Mine said I hate you."
+ },
+ "n04": {
+  "key": "c23b70a346bb",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "I said it to my sister, three weeks ago."
+ },
+ "n05": {
+  "key": "021875cee643",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Then I stopped talking. So it stayed."
+ },
+ "a01": {
+  "key": "63b7b2ebe796",
+  "voice": "ava",
+  "engine": "kokoro",
+  "speaker": "af_heart",
+  "text": "Hurry up, Leo."
+ },
+ "n06": {
+  "key": "ce8a73621892",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Since Mom got sick, Ava did everything."
+ },
+ "a02": {
+  "key": "ac801e0e647f",
+  "voice": "ava",
+  "engine": "kokoro",
+  "speaker": "af_heart",
+  "text": "Eat your dinner. I'll be back late."
+ },
+ "n07": {
+  "key": "cef54c88ec38",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "She never smiled. She never said anything nice."
+ },
+ "n08": {
+  "key": "95d0b030dc7d",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "Every night she left. So one night, I followed her."
+ },
+ "n09": {
+  "key": "db3aaae9c221",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "She went to the hospital. To Mom."
+ },
+ "m01": {
+  "key": "47b0351dc567",
+  "voice": "mom",
+  "engine": "kokoro",
+  "speaker": "af_sarah",
+  "text": "She comes every night. She only ever talks about you."
+ },
+ "n10": {
+  "key": "a676745d5a5a",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "The last thing she said was about me."
+ },
+ "k01": {
+  "key": "967f12615be4",
+  "voice": "leo_child",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "I love you, Ava."
+ },
+ "a03": {
+  "key": "622ce3f10213",
+  "voice": "ava",
+  "engine": "kokoro",
+  "speaker": "af_heart",
+  "text": "Leo? You talked."
+ },
+ "n11": {
+  "key": "83599245e6c8",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "For three weeks, my head said I hate you."
+ },
+ "n12": {
+  "key": "7b8f37e15928",
+  "voice": "leo",
+  "engine": "qwen3",
+  "speaker": "aiden",
+  "text": "It only took three words to fix it."
+ }
+}

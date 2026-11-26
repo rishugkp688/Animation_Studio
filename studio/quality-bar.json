@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "basis": "Measured with scripts/video_audit.py on five reference Roblox story reels (guides/) and the studio's own films, Nov 2026. Reference reels: 13-41 cuts/min, median shot 1.3-4.2 s, mean motion 3.6-10.6, zero frozen seconds. Studio films before this bar: 10-26 cuts/min, mean motion 0.6-2.9, Falling Up froze for 22 s.",
+  "video": {
+    "min_seconds": 30,
+    "max_seconds": 75,
+    "min_cuts_per_minute": 18,
+    "max_median_shot_s": 3.2,
+    "max_longest_shot_s": 6.0,
+    "max_static_shot_ratio": 0.15,
+    "max_frozen_seconds": 1.5,
+    "min_first_second_motion": 1.0,
+    "min_mean_motion": 2.0,
+    "lufs": [-15.5, -12.5],
+    "max_peak_dbfs": -1.0
+  },
+  "scene": {
+    "max_errors": 0,
+    "min_shot_scales": 3,
+    "min_distinct_expressions_per_lead": 6,
+    "note": "Scene audit errors are collisions, hidden faces, camera inside geometry, frozen actors and one-scale films. Warnings need a written disposition in the review note."
+  },
+  "story": {
+    "min_scenes_per_minute": 2.5,
+    "max_words_per_minute": 150,
+    "hook_seconds": 3,
+    "rubric_gate": "studio/story-rubric.json"
+  }
+}

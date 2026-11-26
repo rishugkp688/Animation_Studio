@@ -1,0 +1,73 @@
+{
+ "worst": 1.0,
+ "lines": {
+  "n01": {
+   "match": 1.0,
+   "heard": "In my town, your head shows the last thing you said."
+  },
+  "n02": {
+   "match": 1.0,
+   "heard": "Most of the time, it's something nice."
+  },
+  "n03": {
+   "match": 1.0,
+   "heard": "Mine said, I hate you."
+  },
+  "n04": {
+   "match": 1.0,
+   "heard": "I said it to my sister three weeks ago."
+  },
+  "n05": {
+   "match": 1.0,
+   "heard": "Then I stopped talking, so it stayed."
+  },
+  "a01": {
+   "match": 1.0,
+   "heard": "Hurry up, Leo."
+  },
+  "n06": {
+   "match": 1.0,
+   "heard": "Since mom got sick, Ava did everything."
+  },
+  "a02": {
+   "match": 1.0,
+   "heard": "Eat your dinner, I'll be back late."
+  },
+  "n07": {
+   "match": 1.0,
+   "heard": "She never smiled. She never said anything nice."
+  },
+  "n08": {
+   "match": 1.0,
+   "heard": "Every night she left, so one night I followed her."
+  },
+  "n09": {
+   "match": 1.0,
+   "heard": "She went to the hospital, to mom."
+  },
+  "m01": {
+   "match": 1.0,
+   "heard": "She comes every night. She only ever talks about you."
+  },
+  "n10": {
+   "match": 1.0,
+   "heard": "The last thing she said was about me."
+  },
+  "k01": {
+   "match": 1.0,
+   "heard": "I love you, Ava."
+  },
+  "a03": {
+   "match": 1.0,
+   "heard": "Leo, you talked."
+  },
+  "n11": {
+   "match": 1.0,
+   "heard": "For three weeks, my head said I hate you."
+  },
+  "n12": {
+   "match": 1.0,
+   "heard": "It only took three words to fix it."
+  }
+ }
+}
