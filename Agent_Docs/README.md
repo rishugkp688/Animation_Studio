@@ -10,6 +10,7 @@ Together they hold enough to run the studio, and to rebuild it from nothing if t
 | [03-production.md](03-production.md) | Making a film: brief, story method, screenplay format, staging, gates, delivery, review |
 | [01-blender.md](01-blender.md) | Anything that touches Blender: headless runs, building, materials, faces, baking, cameras, rendering, checking |
 | [02-sound.md](02-sound.md) | Voices, foley, ambience, score, mix and captions (the *One Hug Left* baseline) |
+| [05-gates-reviews-retros.md](05-gates-reviews-retros.md) | What blocks delivery and why, what makes a stage stale, the two visual review checkpoints, the per-film retrospective; the Nov 2026 changes, their tests and their limits |
 
 The department handbooks in `studio/departments/` are the short day-to-day versions; these
 files are the full reference. If they disagree with the code, the code is current: fix the doc.

@@ -5,6 +5,9 @@ slideshow or as animation?" with numbers that can be compared with a reference
 reel or with studio/quality-bar.json.
 
     python3 scripts/video_audit.py MOVIE [--bar studio/quality-bar.json] [--json OUT] [--strict]
+                                       [--plan plan.json --screenplay screenplay.json]
+
+Hard failures (defects) and artistic notes (taste) are reported separately; see judge().
 """
 
 import argparse
@@ -136,35 +139,63 @@ def audit(path):
     return report
 
 
-def judge(report, bar):
-    """Compare a report with the house bar. Returns (failures, warnings)."""
-    fails, warns = [], []
+def _covered(span, holds):
+    """A frozen span (start_s, length_s) is intentional if a declared hold contains it (0.1 s slack)."""
+    start, length = span
+    return any(h0 - 0.1 <= start and start + length <= h1 + 0.1 for h0, h1, _ in holds)
+
+
+def judge(report, bar, holds=()):
+    """Compare a report with the house bar.
+
+    Returns (hard, artistic, excused), each a list of {"code", "msg"}:
+    - hard: defects (frozen picture, flashes, opening on black, clipping). They block delivery.
+    - artistic: misses against the house taste (cutting rate, stillness, length...). They never
+      block delivery, but each needs a written disposition in the picture review.
+    - excused: frozen spans that sit inside a shot the screenplay marks as a deliberate "hold".
+    holds: [(t0, t1, why)] in seconds.
+    """
+    hard, artistic, excused = [], [], []
+    H = lambda code, msg: hard.append(dict(code=code, msg=msg))
+    A = lambda code, msg: artistic.append(dict(code=code, msg=msg))
     limits = bar["video"]
     if report["cuts_per_minute"] < limits["min_cuts_per_minute"]:
-        fails.append(f"only {report['cuts_per_minute']} cuts/min, bar is {limits['min_cuts_per_minute']}")
+        A("cuts_per_minute", f"only {report['cuts_per_minute']} cuts/min, bar is {limits['min_cuts_per_minute']}")
     if report["median_shot_s"] > limits["max_median_shot_s"]:
-        fails.append(f"median shot {report['median_shot_s']}s exceeds {limits['max_median_shot_s']}s")
+        A("median_shot", f"median shot {report['median_shot_s']}s exceeds {limits['max_median_shot_s']}s")
     if report["longest_shot_s"] > limits["max_longest_shot_s"]:
-        warns.append(f"longest shot {report['longest_shot_s']}s exceeds {limits['max_longest_shot_s']}s")
+        A("longest_shot", f"longest shot {report['longest_shot_s']}s exceeds {limits['max_longest_shot_s']}s")
     if report["static_shot_ratio"] > limits["max_static_shot_ratio"]:
-        fails.append(f"{int(report['static_shot_ratio'] * 100)}% of shots are nearly motionless")
-    if report["frozen_seconds"] > limits["max_frozen_seconds"]:
-        fails.append(f"{report['frozen_seconds']}s of frozen picture: {report['frozen_spans'][:4]}")
+        A("static_shots", f"{int(report['static_shot_ratio'] * 100)}% of shots are nearly motionless")
+    spans = [tuple(s) for s in report["frozen_spans"]]
+    unheld = [s for s in spans if not _covered(s, holds)]
+    excused += [dict(code="frozen_picture", msg=f"held still {s[1]}s at {s[0]}s (declared hold)") for s in spans if s not in unheld]
+    frozen = round(sum(length for _, length in unheld), 1)
+    if frozen > limits["max_frozen_seconds"]:
+        H("frozen_picture", f"{frozen}s of frozen picture outside declared holds: {unheld[:4]}")
     if report["mean_motion"] < limits.get("min_mean_motion", 0):
-        warns.append(f"mean motion {report['mean_motion']} is below {limits['min_mean_motion']}; the picture reads as stills")
+        A("mean_motion", f"mean motion {report['mean_motion']} is below {limits['min_mean_motion']}; the picture reads as stills")
     if report["first_second_motion"] < limits["min_first_second_motion"]:
-        warns.append("first second barely moves; the hook needs motion or a strong still image")
+        A("first_second_motion", f"first second motion {report['first_second_motion']} is below {limits['min_first_second_motion']}; "
+          "the hook needs motion or a strong still image")
     if report["flash_frames"]:
-        fails.append(f"single-frame brightness flashes at {report['flash_frames'][:4]}")
+        H("flash_frames", f"single-frame brightness flashes at {report['flash_frames'][:4]}")
     if report["black_frames_s"] and report["black_frames_s"][0] < 0.2:
-        fails.append("opens on black")
-    if not limits["min_seconds"] <= report["duration"] <= limits["max_seconds"]:
-        warns.append(f"duration {report['duration']:.1f}s is outside {limits['min_seconds']}-{limits['max_seconds']}s")
+        H("opens_on_black", "opens on black")
+    lo, hi = bar["duration_s"]["target"]
+    if not lo <= report["duration"] <= hi:
+        A("duration", f"duration {report['duration']:.1f}s is outside the {lo}-{hi}s target")
     if report.get("lufs") is not None and not limits["lufs"][0] <= report["lufs"] <= limits["lufs"][1]:
-        warns.append(f"loudness {report['lufs']} LUFS is outside {limits['lufs']}")
+        A("loudness", f"loudness {report['lufs']} LUFS is outside {limits['lufs']}")
     if report.get("peak_dbfs") is not None and report["peak_dbfs"] > limits["max_peak_dbfs"]:
-        fails.append(f"peak {report['peak_dbfs']} dBFS is above {limits['max_peak_dbfs']}")
-    return fails, warns
+        H("audio_peak", f"peak {report['peak_dbfs']} dBFS is above {limits['max_peak_dbfs']}")
+    return hard, artistic, excused
+
+
+def holds_from(plan, screenplay):
+    """[(t0, t1, why)] for every shot the screenplay marks with "hold": "why"."""
+    why = {sh["id"]: sh["hold"] for sc in screenplay["scenes"] for sh in sc["shots"] if sh.get("hold")}
+    return [(s["t0"], s["t1"], why[s["id"]]) for s in plan["shots"] if s["id"] in why]
 
 
 def main():
@@ -172,7 +203,9 @@ def main():
     parser.add_argument("movie", type=Path)
     parser.add_argument("--bar", type=Path, default=ROOT / "studio/quality-bar.json")
     parser.add_argument("--json", type=Path)
-    parser.add_argument("--strict", action="store_true", help="exit nonzero on any failure")
+    parser.add_argument("--strict", action="store_true", help="exit nonzero on any hard failure")
+    parser.add_argument("--plan", type=Path, help="plan.json, to excuse frozen picture inside declared holds")
+    parser.add_argument("--screenplay", type=Path, help="screenplay.json that declares the holds")
     parser.add_argument("--shots", action="store_true", help="print the per-shot table")
     args = parser.parse_args()
     report = audit(args.movie)
@@ -182,15 +215,20 @@ def main():
         for shot in report["shot_list"]:
             print(f"  {shot['start']:7.2f}s  {shot['length']:5.2f}s  motion {shot['motion']:.2f}")
     if args.bar.is_file():
-        fails, warns = judge(report, json.loads(args.bar.read_text()))
-        report["fails"], report["warnings"] = fails, warns
-        for line in fails:
-            print("FAIL", line)
-        for line in warns:
-            print("WARN", line)
-        if not fails:
-            print("PASS video bar")
-        if args.strict and fails:
+        holds = []
+        if args.plan and args.screenplay:
+            holds = holds_from(json.loads(args.plan.read_text()), json.loads(args.screenplay.read_text()))
+        hard, artistic, excused = judge(report, json.loads(args.bar.read_text()), holds)
+        report.update(hard=hard, artistic=artistic, excused=excused)
+        for f in hard:
+            print("FAIL", f["code"], "-", f["msg"])
+        for f in artistic:
+            print("NOTE", f["code"], "-", f["msg"])
+        for f in excused:
+            print("HELD", f["msg"])
+        if not hard:
+            print("PASS video bar (no hard failures)")
+        if args.strict and hard:
             sys.exit(1)
     if args.json:
         args.json.write_text(json.dumps(report, indent=2))

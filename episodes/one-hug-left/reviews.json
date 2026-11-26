@@ -1,0 +1,46 @@
+[
+ {
+  "kind": "board",
+  "preset": null,
+  "verdict": "approve",
+  "reviewer": "agent (Claude), compatibility check",
+  "at": "2026-11-26 23:38:00",
+  "saw": "Counters carry the story muted: sh01-02 hug numbers 351 and 486 hook, sh03 Kai at 0, sh05 Mom 214, sh07-11 Grandpa with 1 at home, sh12-15 hospital turn, sh16-18 reveal in cu and ecu, sh21-23 Mom 199 to 198 and Kai 0 in the hug, sh24 wide button. Weak: sh06, sh16 and sh19 show Kai from behind, and sh15 two-shot is the back of Grandpa's head, so the rule line plays on no face; sh14 has a blue arm filling the left third. Workbench sheet has no face textures; expressions judged on the preview.",
+  "notes": {},
+  "required": [],
+  "artifacts": {
+   "storyboard.jpg": "574df986c992"
+  }
+ },
+ {
+  "kind": "board",
+  "preset": null,
+  "verdict": "approve",
+  "reviewer": "agent (Claude), compatibility re-check; stills only",
+  "at": "2026-11-27 01:31:41",
+  "saw": "Rebuilt sheet after engine fingerprint change; same 24 compositions as the approved board: sh01 wide street hook with counters 351/486/214 readable, sh03 zero counter over Kai, sh07 grandpa in armchair, sh12 hospital wide, sh16-18 reveal close-ups, sh22 hug in corridor, sh24 wide button. sh10 and sh14 still favour backs/sides of heads, as before.",
+  "notes": {},
+  "required": [],
+  "artifacts": {
+   "storyboard.jpg": "4cd373844de7"
+  }
+ },
+ {
+  "kind": "picture",
+  "preset": "preview",
+  "verdict": "approve",
+  "reviewer": "agent (Claude); frames.jpg and stills only, not listened",
+  "at": "2026-11-27 01:40:16",
+  "saw": "frames.jpg: all 24 shots render with word-timed captions, counters and faces; hook frames 1-36 show the wide street, the man raising his arms and a girl running in for a hug; sh16-18 reveal close-ups and sh24 wide button read. Picture only, sound not listened to (sound gate passed at 1.00).",
+  "notes": {
+   "first_second_motion": "sh01 is a wide establishing hug: the motion is real but small on screen; accepted for the reference cut, a closer opening would raise it."
+  },
+  "required": [
+   "first_second_motion"
+  ],
+  "artifacts": {
+   "one-hug-left-preview.mp4": "885ec32e2be2",
+   "frames.jpg": "bc9dbe75b93f"
+  }
+ }
+]

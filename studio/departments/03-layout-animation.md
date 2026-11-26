@@ -87,8 +87,24 @@ Evaluates every frame exactly as it will render and fails on:
 Warnings (`collision.self` corners of an arm inside its own torso, adjusted cameras,
 `cut.axis`) are listed for the director.
 
+`--quick` checks every 2nd frame and skips `feet.slide` (it needs consecutive frames). Use it
+while restaging; it is never recorded as the gate.
+
 ## Storyboard: `python3 scripts/studio.py board SLUG [--animatic]`
 
 Renders each shot's key moment with Workbench in a few seconds and writes
 `renders/SLUG/board/storyboard.jpg`, labelled with shot id, size, beat and line.
 `--animatic` also renders every frame and cuts a scratch-sound animatic.
+
+**Checkpoint.** The director looks at the sheet with the sound off and records it:
+
+```sh
+python3 scripts/studio.py review SLUG board --verdict approve|revise \
+    --saw "sh01-04 hook reads; sh09 is the back of Ava's head; sh16 crops HE MISSES YOU ..."
+```
+
+Look for: can the story be followed muted, are faces turned to camera on the important
+lines, do counters read, are there backs of heads, foreground blocks or crops. `--saw` needs
+12+ words with shot ids. A full render and `make` stop until an approving review matches the
+current sheet; any change that changes the sheet voids it. `render --unreviewed "why"`
+bypasses it and is logged as a manual intervention for the retrospective.

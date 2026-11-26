@@ -1,138 +1,146 @@
 {
-  "movie": "/home/rishabh/D/Codes/Roblox/renders/three-words/preview/three-words-preview-clean.mp4",
-  "width": 540,
-  "height": 960,
-  "fps": 24.0,
-  "duration": 66.875,
-  "has_audio": true,
-  "shots": 22,
-  "cuts_per_minute": 18.8,
-  "median_shot_s": 2.9,
-  "longest_shot_s": 5.12,
-  "mean_motion": 3.376,
-  "static_shot_ratio": 0.0,
-  "frozen_spans": [],
-  "frozen_seconds": 0,
-  "first_second_motion": 0.741,
-  "flash_frames": [],
-  "black_frames_s": [],
-  "shot_list": [
-    {
-      "start": 0.0,
-      "length": 3.79,
-      "motion": 1.199
-    },
-    {
-      "start": 3.79,
-      "length": 2.83,
-      "motion": 0.975
-    },
-    {
-      "start": 6.62,
-      "length": 2.75,
-      "motion": 1.906
-    },
-    {
-      "start": 9.38,
-      "length": 5.12,
-      "motion": 2.196
-    },
-    {
-      "start": 14.5,
-      "length": 1.71,
-      "motion": 2.426
-    },
-    {
-      "start": 16.21,
-      "length": 3.0,
-      "motion": 1.994
-    },
-    {
-      "start": 19.21,
-      "length": 3.58,
-      "motion": 0.841
-    },
-    {
-      "start": 22.79,
-      "length": 2.33,
-      "motion": 0.946
-    },
-    {
-      "start": 25.12,
-      "length": 3.92,
-      "motion": 1.148
-    },
-    {
-      "start": 29.04,
-      "length": 3.67,
-      "motion": 5.159
-    },
-    {
-      "start": 32.71,
-      "length": 1.88,
-      "motion": 6.923
-    },
-    {
-      "start": 34.58,
-      "length": 2.62,
-      "motion": 8.33
-    },
-    {
-      "start": 37.21,
-      "length": 1.79,
-      "motion": 6.167
-    },
-    {
-      "start": 39.0,
-      "length": 2.58,
-      "motion": 1.76
-    },
-    {
-      "start": 41.58,
-      "length": 4.0,
-      "motion": 1.876
-    },
-    {
-      "start": 45.58,
-      "length": 2.92,
-      "motion": 2.263
-    },
-    {
-      "start": 48.5,
-      "length": 2.0,
-      "motion": 2.273
-    },
-    {
-      "start": 50.5,
-      "length": 2.88,
-      "motion": 3.112
-    },
-    {
-      "start": 53.38,
-      "length": 2.67,
-      "motion": 2.839
-    },
-    {
-      "start": 56.04,
-      "length": 4.88,
-      "motion": 4.7
-    },
-    {
-      "start": 60.92,
-      "length": 2.92,
-      "motion": 0.606
-    },
-    {
-      "start": 63.83,
-      "length": 3.04,
-      "motion": 1.086
-    }
-  ],
-  "silent_gaps": [],
-  "lufs": -14.2,
-  "peak_dbfs": -1.5,
-  "fails": [],
-  "warnings": [
-    "first second barely moves; the hook needs motion or a strong still image"
-  ]
+ "movie": "/home/rishabh/D/Codes/Roblox/renders/three-words/preview/three-words-preview-clean.mp4",
+ "width": 540,
+ "height": 960,
+ "fps": 24.0,
+ "duration": 66.875,
+ "has_audio": true,
+ "shots": 22,
+ "cuts_per_minute": 18.8,
+ "median_shot_s": 2.9,
+ "longest_shot_s": 5.12,
+ "mean_motion": 3.376,
+ "static_shot_ratio": 0.0,
+ "frozen_spans": [],
+ "frozen_seconds": 0,
+ "first_second_motion": 0.741,
+ "flash_frames": [],
+ "black_frames_s": [],
+ "shot_list": [
+  {
+   "start": 0.0,
+   "length": 3.79,
+   "motion": 1.199
+  },
+  {
+   "start": 3.79,
+   "length": 2.83,
+   "motion": 0.975
+  },
+  {
+   "start": 6.62,
+   "length": 2.75,
+   "motion": 1.906
+  },
+  {
+   "start": 9.38,
+   "length": 5.12,
+   "motion": 2.196
+  },
+  {
+   "start": 14.5,
+   "length": 1.71,
+   "motion": 2.426
+  },
+  {
+   "start": 16.21,
+   "length": 3.0,
+   "motion": 1.994
+  },
+  {
+   "start": 19.21,
+   "length": 3.58,
+   "motion": 0.841
+  },
+  {
+   "start": 22.79,
+   "length": 2.33,
+   "motion": 0.946
+  },
+  {
+   "start": 25.12,
+   "length": 3.92,
+   "motion": 1.148
+  },
+  {
+   "start": 29.04,
+   "length": 3.67,
+   "motion": 5.159
+  },
+  {
+   "start": 32.71,
+   "length": 1.88,
+   "motion": 6.923
+  },
+  {
+   "start": 34.58,
+   "length": 2.62,
+   "motion": 8.33
+  },
+  {
+   "start": 37.21,
+   "length": 1.79,
+   "motion": 6.167
+  },
+  {
+   "start": 39.0,
+   "length": 2.58,
+   "motion": 1.76
+  },
+  {
+   "start": 41.58,
+   "length": 4.0,
+   "motion": 1.876
+  },
+  {
+   "start": 45.58,
+   "length": 2.92,
+   "motion": 2.263
+  },
+  {
+   "start": 48.5,
+   "length": 2.0,
+   "motion": 2.273
+  },
+  {
+   "start": 50.5,
+   "length": 2.88,
+   "motion": 3.112
+  },
+  {
+   "start": 53.38,
+   "length": 2.67,
+   "motion": 2.839
+  },
+  {
+   "start": 56.04,
+   "length": 4.88,
+   "motion": 4.7
+  },
+  {
+   "start": 60.92,
+   "length": 2.92,
+   "motion": 0.606
+  },
+  {
+   "start": 63.83,
+   "length": 3.04,
+   "motion": 1.086
+  }
+ ],
+ "silent_gaps": [],
+ "lufs": -14.2,
+ "peak_dbfs": -1.5,
+ "hard": [],
+ "artistic": [
+  {
+   "code": "first_second_motion",
+   "msg": "first second motion 0.741 is below 1.0; the hook needs motion or a strong still image"
+  },
+  {
+   "code": "duration",
+   "msg": "duration 66.9s is outside the 45-65s target"
+  }
+ ],
+ "excused": []
 }

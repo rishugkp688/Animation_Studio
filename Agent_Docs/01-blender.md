@@ -187,7 +187,7 @@ head = new_obj(f"{cid}.head", lathe_mesh(f"{cid}.head", prof, 48, cap=False), ne
 ```python
 cu = bpy.data.curves.new(name, "FONT")
 cu.body = "214"; cu.align_x = "CENTER"; cu.align_y = "CENTER"
-cu.size = 0.2; cu.extrude = 0.006; cu.font = bpy.data.fonts.load("/usr/share/fonts/TTF/FiraSans-ExtraBold.ttf")
+cu.size = 0.2; cu.extrude = 0.006; cu.font = bpy.data.fonts.load(fonts.find("extrabold")[0])  # kit/fonts.py
 o = new_obj(name, cu, parent, coll); o.rotation_euler = (math.pi/2, 0, 0)   # stand the text up, facing -Y
 ```
 
@@ -502,7 +502,7 @@ Frames → H.264 with burned captions and the mix:
 
 ```sh
 ffmpeg -y -framerate 24 -start_number 1 -i frames/f_%04d.png -i sound/mix.wav \
-  -vf "subtitles=captions.ass:fontsdir=/usr/share/fonts/TTF" \
+  -vf "subtitles=captions.ass:fontsdir=/usr/share/fonts/TTF" \   # the folder kit/fonts.py found
   -c:v libx264 -preset slow -crf 17 -pix_fmt yuv420p -profile:v high -movflags +faststart \
   -c:a aac -b:a 192k -ar 48000 -shortest out.mp4
 ```

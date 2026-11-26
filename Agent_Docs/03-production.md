@@ -38,10 +38,12 @@ when its gate passes and the next department can work without asking questions.
 | 3 | **Design** (art director, character/prop/set designers) | cast looks, wardrobe, sets in the library | every character readable at phone size by silhouette + one unique colour; every set has a landmark |
 | 4 | **Voice** (casting, voice actors) | takes + `voice/timing.json` | every take understood by ASR (match ≥ 0.8) |
 | 5 | **Storyboard / layout / animation** (storyboard artist, previs, layout, rigger, animator) | board sheet, solved plan, layout report | **zero** collision/foot/camera errors over **every frame** |
-| 6 | **Lighting & render** (lighting, FX, render wrangler) | PNG frames | every frame present, darkest shot checked |
+| 5b | **Storyboard review** (director) | `episodes/SLUG/reviews.json` | an approving review of the current `storyboard.jpg` (`studio.py review SLUG board`); a full render refuses to start without it |
+| 6 | **Lighting & render** (lighting, FX, render wrangler) | PNG frames + `frames/manifest.json` | frames 1..N exactly, none empty, none extra, all rendered from the current plan; darkest shot checked |
 | 7 | **Sound** (sound designer, composer, mixer) | stems, `mix.wav`, `cues.json` | every line understood through the full mix (worst ≥ 0.6) |
-| 8 | **Post** (editor, compositor/colourist, captions, delivery QC) | captioned mp4, clean mp4, contact sheet | H.264/yuv420p, 1080×1920, 24 fps, AAC, decodes to the end, −14 ± 1.5 LUFS, TP ≤ −1 dBTP, pacing audit |
-| 9 | **Director's review** | notes in `notes.md` | an honest written review of what was seen; human listening/viewing still pending is stated |
+| 8 | **Post** (editor, compositor/colourist, captions, delivery QC) | captioned mp4, clean mp4, contact sheet | H.264/yuv420p, 1080×1920, 24 fps, AAC, decodes to the end, −14 ± 1.5 LUFS, TP ≤ −1 dBTP, no **hard** pacing failure, mix current |
+| 9 | **Picture review** (director) | `reviews.json`, notes in `notes.md` | an approving review of the current movie and `frames.jpg` with a disposition for every artistic pacing note (`studio.py review SLUG picture`); human listening/viewing still pending is stated |
+| 10 | **Retrospective** (producer) | `episodes/SLUG/retrospective.md` | verdict answered: was the film made without engine changes? (`studio.py retro SLUG`) |
 
 Commands (`scripts/studio.py`):
 
@@ -50,12 +52,16 @@ python3 scripts/studio.py new SLUG --title "Title"
 python3 scripts/studio.py story SLUG
 python3 scripts/studio.py voice SLUG [--force LINE_ID ...]
 python3 scripts/studio.py board SLUG [--animatic]
-python3 scripts/studio.py layout SLUG [--quick]
-python3 scripts/studio.py render SLUG --preset preview|final|final_hq [--frames A-B]
+python3 scripts/studio.py layout SLUG [--quick]                  # --quick is informational, never the gate
+python3 scripts/studio.py review SLUG board --verdict approve|revise --saw "..."
+python3 scripts/studio.py render SLUG --preset preview|final|final_hq [--frames A-B] [--unreviewed "why"]
 python3 scripts/studio.py sound SLUG --preset ...
 python3 scripts/studio.py deliver SLUG --preset ...
-python3 scripts/studio.py make SLUG --preset preview|final       # all stages; stops at the first failed gate
-python3 scripts/studio.py status SLUG                            # pass/fail per stage, "stale" if inputs changed
+python3 scripts/studio.py review SLUG picture --preset ... --verdict ... --saw "..." [--note CODE="..."]
+python3 scripts/studio.py make SLUG --preset preview|final       # all stages; stops at the first failed gate (exit 2)
+                                                                 # and at the board review checkpoint (exit 3)
+python3 scripts/studio.py status SLUG                            # pass/fail per stage, what is stale and why, reviews, DONE
+python3 scripts/studio.py retro SLUG                             # refresh the measured part of the retrospective
 ```
 
 Time budget on the GTX 1650 for a 60 s film: voice ~4 min, layout QC ~1 min, build
@@ -184,9 +190,9 @@ scenes); fewer than 3 locations; duplicate shot ids; a line over 14 words; a lin
 fewer than 5 beats; emotional range < 4; first shot not the hook; undeclared beat; fewer
 than 2 setups or a payoff before its setup; a shot without a camera size; fewer than 4
 shot sizes; the lead shows fewer than 6 expressions; a shot where nothing happens;
-duration outside 30–78 s; fewer than 18 shots per minute; more than 165 words per minute;
+duration outside the `duration_s.limit` of `studio/quality-bar.json` (30–78 s); a `hold` that does not say why; fewer than 18 shots per minute; more than 165 words per minute;
 no line in the first 0.6 s. Warnings: unused lines, fewer than 2 emotional flips, a shot
-longer than 6 s, a hook longer than 4.5 s, fewer than 2.5 locations per minute,
+longer than 6 s, a hook longer than 4.5 s, a duration outside the 45–65 s target, fewer than 2.5 locations per minute,
 mispronounced takes.
 
 ### 4.7 Director's read-through (what a script cannot check)
@@ -243,6 +249,7 @@ Everything downstream is generated from `episodes/SLUG/screenplay.json`. Full sc
       "id": "sh01", "beat": "hook",
       "lines": ["n01"],                                     // or [{"id": "n10", "at": 1.55, "gap": 0.2, "spill": true}]
       "pad": 0.2, "min": 1.6, "dur": null, "lead": 0.25,    // shot length: lines + pad, or an explicit dur
+      // optional: "hold": "the room goes still after the news"  -> this shot may freeze on purpose
       "cam": {"size": "fs", "on": "lily_dad", "side": -12, "height": "slight_high", "move": "push", "key": 0.65,
               "relative": "world", "world_yaw": -90, "dist_mul": 1.3},
       "act": [
@@ -390,16 +397,22 @@ adjustments, `face.caption` (eyes near the caption band), `cut.axis`, `cut.jump`
 `studio.py board SLUG` renders each shot's key moment in Workbench in seconds and writes a
 labelled sheet `renders/SLUG/board/storyboard.jpg` (shot id, size, beat, line). The
 director reads it with the sound off: can the story be followed from the pictures?
-`--animatic` also renders every frame and cuts a scratch-sound animatic.
+`--animatic` also renders every frame and cuts a scratch-sound animatic. Then record the
+review: `studio.py review SLUG board --verdict approve|revise --saw "..."` (12+ words, shot
+ids). This is a mandatory checkpoint: a full render and `make` stop until an approving
+review matches the current sheet ([details](05-gates-reviews-retros.md)).
 
 ---
 
 ## 8. Render
 
 Preview first (`--preset preview`, 540×960, ~0.4–0.5 s/frame), review, then final
-(1080×1920, ~3 s/frame). Frames go to `renders/SLUG/<preset>/frames/f_####.png` and are
-skipped if they exist, so a render resumes; **delete the frames of changed shots before
-re-rendering them**. Look at the darkest shot first. Details in `01-blender.md`.
+(1080×1920, ~3 s/frame). Frames go to `renders/SLUG/<preset>/frames/f_####.png` with a
+`manifest.json` recording the plan each frame came from. A full render keeps frames already
+rendered from the plan it is about to build (so an interrupted render resumes) and deletes
+stale, empty and unrecorded ones; `--frames A-B` deletes that range first so it is really
+re-rendered. Any plan change invalidates every frame: delivery refuses a mix of plans.
+Look at the darkest shot first. Details in `01-blender.md`.
 
 ## 9. Sound
 
@@ -417,9 +430,13 @@ then runs the listening gate. Details and recipes in `02-sound.md`.
 3. Checks the actual file: codec h264 + yuv420p, exact dimensions, 24/1 fps, an audio
    stream, a full decode without errors, integrated loudness −14 ± 1.5 LUFS, true peak
    ≤ −1 dBTP, duration within 0.25 s of the plan.
-4. Pacing audit (`scripts/video_audit.py` against `studio/quality-bar.json`): ≥ 18 cuts per
-   minute, median shot ≤ 3.2 s, longest ≤ 6 s, ≤ 15 % static shots, ≤ 1.5 s frozen, first
-   second motion ≥ 1.0, mean motion ≥ 2.0. (Reference reels: 13–41 cuts/min, mean motion
+4. Pacing audit (`scripts/video_audit.py` against `studio/quality-bar.json`). **Hard**
+   failures block delivery: > 1.5 s of frozen picture outside declared holds, single-frame
+   flashes, opening on black, audio peak above −1 dBFS. A shot marked `"hold": "why"` in the
+   screenplay may freeze on purpose. **Artistic** notes never block but each needs a
+   disposition in the picture review: < 18 cuts per minute, median shot > 3.2 s, longest
+   > 6 s, > 15 % static shots, first-second motion < 1.0, mean motion < 2.0, duration outside
+   45–65 s, loudness outside −15.5 to −12.5 LUFS. (Reference reels: 13–41 cuts/min, mean motion
    3.6–10.6. One Hug Left: 21.7 cuts/min, median 2.25 s, mean motion 3.1, first second 0.65
    — below target, the one open pacing miss.)
 5. Contact sheet `frames.jpg`, one frame per shot.
@@ -430,7 +447,9 @@ trim rendered frames by hand.
 
 ## 11. Director's review (always write it)
 
-Look at `frames.jpg`, extract single frames at key moments (hook, reveal, button), and
+Record it with `studio.py review SLUG picture --preset P --verdict approve|revise --saw "..."
+--note CODE="..."` (one note per artistic pacing code `deliver` printed); the long-form notes
+go in `notes.md`. Look at `frames.jpg`, extract single frames at key moments (hook, reveal, button), and
 watch the preview at phone size twice: muted, then eyes closed. Write in `notes.md`, one
 note per issue:
 
@@ -445,9 +464,11 @@ phone). Posting to Instagram is the creator's decision and needs their explicit 
 
 ## 12. Definition of done
 
-All gates pass (story, voice, zero layout errors, every frame rendered, every line
-understood through the mix, delivery QC on the actual file). The director's review is
-written. The report to the creator gives the movie path, the clean version, the contact
+All gates pass (story, voice, zero layout errors, every frame rendered from the current
+plan, every line understood through the mix, delivery QC on the actual file with no hard
+pacing failure). Both review checkpoints approve the current pictures, and `status` prints
+`DONE` for the final. The director's review is written, and the retrospective's verdict
+is answered. The report to the creator gives the movie path, the clean version, the contact
 sheet, the rebuild command (`python3 scripts/studio.py make SLUG --preset final`), the
 measured numbers, and an honest list of open issues.
 

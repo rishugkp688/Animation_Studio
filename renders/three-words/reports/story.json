@@ -1,6 +1,8 @@
 {
  "errors": [],
- "warns": [],
+ "warns": [
+  "duration 66.9s is outside the 45-65 s target; the picture review must justify it"
+ ],
  "facts": {
   "locations": 4,
   "scenes": 4,
@@ -26,9 +28,9 @@
    "teary",
    "worried"
   ],
-  "duration": 66.67,
-  "shots_per_minute": 19.8,
+  "duration": 66.87,
+  "shots_per_minute": 19.7,
   "longest_shot": 5.11,
-  "words_per_minute": 110.7
+  "words_per_minute": 110.4
  }
 }

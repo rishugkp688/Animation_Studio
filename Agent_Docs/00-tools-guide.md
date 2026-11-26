@@ -293,11 +293,13 @@ projects; the jobs do not.
 | **Performance engine** | turns actions ("walk to the door", "hug Mom", "look at the photo") into poses for every frame | — |
 | **Camera solver** | turns shot requests ("close-up on Leo from his left") into lens positions that keep faces visible in a vertical frame | no blocked or cropped faces |
 | **Animation QC** | checks every frame for bodies inside furniture or each other, sliding or sinking feet, cameras inside walls, crossed screen direction | zero errors |
-| **Storyboard** | fast render of one key frame per shot, labelled | a person (or agent looking at it) can follow the story muted |
-| **Builder / renderer** | builds the scene in Blender and renders frames | all frames present |
+| **Storyboard** | fast render of one key frame per shot, labelled | a person (or agent looking at it) can follow the story muted, and records a review before anything is rendered |
+| **Builder / renderer** | builds the scene in Blender and renders frames | every frame present and rendered from the current version of the film (a record of which plan each frame came from) |
 | **Sound stage** | ambience, effects, music, mix, loudness | every line understood through the mix |
-| **Delivery** | captions, encoding, technical and pacing checks, contact sheet | the file meets platform specs |
-| **Review notes** | what was seen, what is still wrong, what nobody checked | written honestly |
+| **Delivery** | captions, encoding, technical and pacing checks, contact sheet | the file meets platform specs; defects (frozen picture, flashes) block it, matters of taste do not |
+| **Picture review** | what was seen, what is still wrong, what nobody checked; a reason for each taste warning | written honestly and tied to the exact file reviewed |
+| **Status / staleness** | remembers what each stage was built from (code, settings, fonts, tools, upstream files) | says which stages are out of date and why |
+| **Retrospective** | per film: engine changes needed, new reusable pieces, failures, manual steps, time | answers "could this film be made without changing the engine?" |
 
 ---
 

@@ -72,7 +72,8 @@ def chunks(words, max_words=3, max_chars=16):
     return out
 
 
-def build(plan, narrator=None, cast=None):
+def build(plan, narrator=None, cast=None, font="Fira Sans"):
+    """font: the family libass should use; pass kit.fonts.find('bold')[1] so it matches the machine."""
     tints = speaker_tints(plan, cast)
     events = []
     for L in plan["lines"]:
@@ -105,7 +106,7 @@ def build(plan, narrator=None, cast=None):
         if cur[0] < prev[1]:
             prev[1] = cur[0]
     out = [f"Dialogue: 0,{ts(a)},{ts(b)},{st},,0,0,0,,{tx}" for a, b, st, tx in events if b - a > 0.02]
-    return HEAD + "\n".join(out) + "\n"
+    return HEAD.replace("Fira Sans", font) + "\n".join(out) + "\n"
 
 
 if __name__ == "__main__":

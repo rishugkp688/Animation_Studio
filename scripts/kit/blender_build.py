@@ -24,6 +24,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from kit import layout as L  # noqa: E402
 from kit import faces  # noqa: E402
+from kit import fonts  # noqa: E402
 from kit.rig import Body, PARTS, ORDER, JOINTS, HEAD_RADIUS, HEAD_HEIGHT  # noqa: E402
 from kit.acting import EYES, MOUTHS, EXTRAS  # noqa: E402
 from kit import camera as camlib  # noqa: E402
@@ -1041,11 +1042,9 @@ def main():
     scene = bpy.context.scene
     scene.name = sp["title"]
     global FONT_BOLD
-    for cand in ("/usr/share/fonts/TTF/FiraSans-ExtraBold.ttf", "/usr/share/fonts/TTF/FiraSans-Bold.ttf",
-                 "/usr/share/fonts/noto/NotoSans-Bold.ttf", "/usr/share/fonts/TTF/DejaVuSans-Bold.ttf"):
-        if Path(cand).exists():
-            FONT_BOLD = bpy.data.fonts.load(cand)
-            break
+    font_path, _ = fonts.find("extrabold")
+    if font_path:
+        FONT_BOLD = bpy.data.fonts.load(font_path)
     fps = plan.fps
     scene.render.fps = fps
     n_frames = plan.frame(plan.duration) - 1

@@ -438,7 +438,8 @@ the main file; a clean file without them is delivered too.
   begins. Overlapping events once rendered as "MOSHUNDREDS".
 - Times come from the aligned word timings, so captions follow the voice exactly.
 
-Burn with `-vf "subtitles=captions.ass:fontsdir=/usr/share/fonts/TTF"`.
+Burn with `-vf "subtitles=captions.ass:fontsdir=/usr/share/fonts/TTF"` (the folder of the font
+`kit/fonts.py` found; `captions.build(..., font=family)` names that family in the styles).
 
 ---
 

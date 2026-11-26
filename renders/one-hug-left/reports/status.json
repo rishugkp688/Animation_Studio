@@ -1,9 +1,16 @@
 {
  "story": {
   "ok": true,
-  "at": "2026-11-26 12:04:58",
-  "screenplay": "cc0dd7d45ad7",
-  "kit": "2d8117892cd6",
+  "at": "2026-11-27 01:31:54",
+  "t": 1795723314.7,
+  "seconds": 13.0,
+  "inputs": {
+   "screenplay": "cc0dd7d45ad7",
+   "voice.timing": "388f01885d1c",
+   "config.quality_bar": "dc12a957f223",
+   "engine.kit": "1b3dd43068a9",
+   "engine.studio": "b8c6df7e6716"
+  },
   "facts": {
    "locations": 4,
    "scenes": 4,
@@ -37,52 +44,109 @@
    "shots_per_minute": 22.6,
    "longest_shot": 5.01,
    "words_per_minute": 106.5
-  }
+  },
+  "n_errors": 0,
+  "n_warns": 0
  },
  "voice": {
   "ok": true,
-  "at": "2026-11-26 03:20:48",
-  "screenplay": "8d16f003acbf",
-  "kit": "09d0f6468b93",
+  "at": "2026-11-27 01:32:27",
+  "t": 1795723347.5,
+  "seconds": 32.8,
+  "inputs": {
+   "screenplay.lines_and_voices": "e1d998c26fff",
+   "tools.tts": "dddde31a800c",
+   "engine.kit": "2048398eed5d"
+  },
   "lines": 18,
   "unclear": []
  },
  "layout": {
   "ok": true,
-  "at": "2026-11-26 03:22:43",
-  "screenplay": "cc0dd7d45ad7",
-  "kit": "09d0f6468b93",
+  "at": "2026-11-27 01:32:58",
+  "t": 1795723378.9,
+  "seconds": 31.4,
+  "inputs": {
+   "screenplay": "cc0dd7d45ad7",
+   "voice.timing": "388f01885d1c",
+   "engine.kit": "8a98df107c65",
+   "engine.studio": "b8c6df7e6716"
+  },
   "errors": 0,
-  "warns": 15,
-  "seconds": 35.3
+  "error_rules": [],
+  "warns": 15
  },
  "render.preview": {
   "ok": true,
-  "at": "2026-11-26 03:36:01",
-  "screenplay": "cc0dd7d45ad7",
-  "kit": "09d0f6468b93",
+  "at": "2026-11-27 01:33:37",
+  "t": 1795723417.4,
+  "seconds": 38.5,
+  "inputs": {
+   "screenplay": "cc0dd7d45ad7",
+   "voice.timing": "388f01885d1c",
+   "assets.fonts": "04a01412a140",
+   "tools.blender": "2002a4b8ca13",
+   "engine.kit": "3fb7b00b07b8"
+  },
   "frames": 1527,
-  "expected": 1527
+  "expected": 1527,
+  "partial": null,
+  "render_seconds": 23.3,
+  "unreviewed": null,
+  "problems": []
  },
  "sound.preview": {
   "ok": true,
-  "at": "2026-11-26 03:36:49",
-  "screenplay": "cc0dd7d45ad7",
-  "kit": "09d0f6468b93",
+  "at": "2026-11-27 01:34:30",
+  "t": 1795723470.2,
+  "seconds": 52.8,
+  "inputs": {
+   "screenplay": "cc0dd7d45ad7",
+   "render.plan": "ecdd3b452ef3",
+   "assets.voice_takes": "445580d7f0ef",
+   "tools.audio": "dddde31a800c",
+   "tools.asr": "172ed25f3205",
+   "engine.kit": "3ad8472877a2"
+  },
   "worst_line_match": 1.0
  },
  "deliver.preview": {
   "ok": true,
-  "at": "2026-11-26 03:38:24",
-  "screenplay": "cc0dd7d45ad7",
-  "kit": "070bbc1cebd8",
-  "movie": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/preview/one-hug-left-preview.mp4"
+  "at": "2026-11-27 01:35:56",
+  "t": 1795723556.6,
+  "seconds": 86.4,
+  "inputs": {
+   "screenplay": "cc0dd7d45ad7",
+   "render.plan": "ecdd3b452ef3",
+   "render.frames": "c553a7d51845",
+   "sound.mix": "8a8f354a37e4",
+   "config.quality_bar": "dc12a957f223",
+   "engine.audit": "adce23550a94",
+   "assets.fonts": "04a01412a140",
+   "tools.ffmpeg": "90f92a73fa5c",
+   "engine.kit": "ff2bb562e2e2",
+   "engine.studio": "b8c6df7e6716"
+  },
+  "movie": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/preview/one-hug-left-preview.mp4",
+  "failed": [],
+  "hard": [],
+  "artistic": [
+   "first_second_motion"
+  ]
  },
  "board": {
   "ok": true,
-  "at": "2026-11-26 03:42:19",
-  "screenplay": "cc0dd7d45ad7",
-  "kit": "d52c541e8962",
+  "at": "2026-11-27 01:29:33",
+  "t": 1795723173.2,
+  "seconds": 40.4,
+  "inputs": {
+   "screenplay": "cc0dd7d45ad7",
+   "voice.timing": "388f01885d1c",
+   "assets.fonts": "04a01412a140",
+   "tools.blender": "2002a4b8ca13",
+   "engine.kit": "3fb7b00b07b8",
+   "engine.studio": "b8c6df7e6716"
+  },
   "sheet": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/board/storyboard.jpg"
  },
  "render.final": {
@@ -106,5 +170,26 @@
   "screenplay": "cc0dd7d45ad7",
   "kit": "2d8117892cd6",
   "movie": "/home/rishabh/D/Codes/Roblox/renders/one-hug-left/final/one-hug-left-final.mp4"
+ },
+ "review.board": {
+  "ok": true,
+  "at": "2026-11-27 01:31:41",
+  "t": 1795723301.3,
+  "seconds": 0.0,
+  "inputs": {
+   "board.sheet": "4cd373844de7"
+  },
+  "verdict": "approve"
+ },
+ "review.picture.preview": {
+  "ok": true,
+  "at": "2026-11-27 01:40:16",
+  "t": 1795723816.1,
+  "seconds": 0.0,
+  "inputs": {
+   "deliver.movie": "885ec32e2be2",
+   "deliver.sheet": "bc9dbe75b93f"
+  },
+  "verdict": "approve"
  }
 }

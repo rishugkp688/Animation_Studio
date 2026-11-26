@@ -19,8 +19,23 @@ set costs a design pass; reuse the library first.
 ## Production manager: tracking
 
 `python3 scripts/studio.py status SLUG` shows each stage's last result and marks a stage
-**stale** when the screenplay or the kit changed after it ran. Reports live in
-`renders/SLUG/reports/`. Notes and decisions live in `episodes/SLUG/notes.md`.
+**stale**, naming the cause, when anything it was built from changed: the screenplay (voice
+only looks at lines, voices and narrator), the engine code that stage runs (its kit modules
+in `studio.KIT_FILES`, `studio.py`, `video_audit.py`), configuration (`studio/quality-bar.json`), assets (fonts, voice takes),
+tools (Blender, FFmpeg, the audio venvs' packages) or an upstream artifact (timing, plan,
+frame manifest, mix, storyboard, movie). Staleness flows downstream. It also shows both
+reviews, the retrospective, and `DONE`. Reports live in `renders/SLUG/reports/`
+(`history.jsonl` logs every stage run). Notes and decisions live in `episodes/SLUG/notes.md`.
+
+## Retrospective
+
+Every film gets `episodes/SLUG/retrospective.md` (created by `new`, template in
+`studio/templates/`): the verdict (made without modifying the core engine: yes/no), engine
+modifications and why, new reusable assets and behaviours, screenplay revisions, QC
+failures, manual interventions, production and rendering time. `studio.py retro SLUG`
+refreshes its measured section from the history, the reviews and git. When the film is
+done, add its row to [the generalization ledger](../generalization.md). The number to watch
+is engine changes per film: it should fall until a film needs only a screenplay.
 
 ## The engine
 
@@ -41,6 +56,7 @@ set costs a design pass; reuse the library first.
 | `align.py`, `listen.py` | word timing; intelligibility through the mix | `.audio-tools/asr` |
 | `sound.py` | ambience, foley from animation events, score, ducking, −14 LUFS master | `.audio-tools/venv` |
 | `captions.py` | word-timed ASS captions | anywhere |
+| `fonts.py` | finds the house font on any distro (overrides `BLOCKY_FONT_*`) | anywhere |
 
 ## Technical director: extending the kit
 
@@ -56,8 +72,12 @@ set costs a design pass; reuse the library first.
 
 Rules: the pure-Python modules (`mathx`, `rig`, `acting`, `sets`, `geom`, `camera`,
 `layout`, `qc`, `story`) must not import `bpy`; they run in tests and in Blender alike.
-Add a test in `tests/test_kit.py` for any new behaviour and run `python3 -m unittest
-tests.test_kit`. Never fix a defect only in a saved `.blend`.
+Add a test in `tests/test_kit.py` for any new engine behaviour (and in `tests/test_studio.py`
+for pipeline behaviour) and run `python3 tests/test_kit.py && python3 tests/test_studio.py`.
+Every finished film is added to `FILMS` in `test_kit.py` so it stays a regression fixture.
+Find fonts through `kit/fonts.py`. A new kit module goes into `studio.KIT_FILES` under every
+stage that runs it. Never fix a defect only in a saved `.blend`. Record each
+engine change in the film's retrospective with the reason the screenplay could not express it.
 
 ## Archive
 

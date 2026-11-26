@@ -81,14 +81,19 @@ Start from `studio/templates/screenplay.json` (created by `studio.py new`). Per 
 set, time of day, ambience, starting marks/seats, starting expressions, looks and counters.
 Per shot: `id`, `beat`, `lines` (ids, optionally `{"id": ..., "at": seconds}`), `cam`, and
 `act`. The full action and camera vocabulary is in [03-layout-animation](03-layout-animation.md).
-`dur` is optional; without it a shot lasts as long as its lines plus `pad`.
+`dur` is optional; without it a shot lasts as long as its lines plus `pad`. A shot that should
+stay completely still on purpose (a held breath, a stunned silence) says why with
+`"hold": "..."`; the pacing audit then accepts frozen picture inside that shot. Use it rarely:
+it is a decision, and the picture review sees it.
 
 ## Gate: `python3 scripts/studio.py story SLUG`
 
 Checks: required sections, ≥ 3 locations (warns below 2.5 per minute), unique shot ids,
 lines ≤ 14 words, voices exist, ≥ 5 beats with emotional range ≥ 4, setups before payoffs,
-≥ 4 shot sizes, ≥ 6 lead expressions, every shot has action or a line, 30–78 s, ≥ 18 shots
-per minute, ≤ 165 words per minute, and a line within the first 0.6 s.
+≥ 4 shot sizes, ≥ 6 lead expressions, every shot has action or a line, a length inside
+`duration_s.limit` in `studio/quality-bar.json` (30–78 s; outside the 45–65 s target is a
+warning the picture review must answer), every `hold` says why, ≥ 18 shots per minute,
+≤ 165 words per minute, and a line within the first 0.6 s.
 
 ## Director's read-through (the part a script cannot check)
 

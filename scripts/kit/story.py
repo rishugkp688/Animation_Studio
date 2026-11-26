@@ -5,11 +5,14 @@ studio/departments/01-story.md. It blocks the failure modes that made earlier fi
 no hook, one location, no turn, no payoff, talking heads, unreadable captions.
 """
 
+import json
 import re
+from pathlib import Path
 
 from .acting import EXPRESSIONS, GESTURES
 from .sets import LIBRARY
 
+QUALITY_BAR = Path(__file__).resolve().parents[2] / "studio/quality-bar.json"
 MOVES = {"walk", "run", "approach", "turn", "sit", "stand", "crouch", "uncrouch"}
 
 
@@ -17,7 +20,12 @@ def words(text):
     return len(re.findall(r"[\w']+", text))
 
 
-def lint(sp, timing=None, plan=None):
+def load_bar(path=QUALITY_BAR):
+    return json.loads(Path(path).read_text())
+
+
+def lint(sp, timing=None, plan=None, bar=None):
+    bar = bar or load_bar()
     errors, warns, facts = [], [], {}
     for k in ("title", "logline", "theme", "cast", "voices", "lines", "beats", "setups", "scenes"):
         if not sp.get(k):
@@ -27,6 +35,9 @@ def lint(sp, timing=None, plan=None):
 
     shots = [sh for sc in sp["scenes"] for sh in sc["shots"]]
     ids = [sh["id"] for sh in shots]
+    for sh in shots:
+        if "hold" in sh and not (isinstance(sh["hold"], str) and len(sh["hold"].split()) >= 3):
+            errors.append(f"{sh['id']}: 'hold' must say why the picture is held still (a sentence, not a flag)")
     if len(set(ids)) != len(ids):
         errors.append("shot ids must be unique")
     lines = {l["id"]: l for l in sp["lines"]}
@@ -128,8 +139,12 @@ def lint(sp, timing=None, plan=None):
         facts["longest_shot"] = round(longest, 2)
         spoken = sum(words(l["text"]) for l in sp["lines"])
         facts["words_per_minute"] = round(spoken / dur * 60, 1)
-        if not 30 <= dur <= 78:
-            errors.append(f"duration {dur:.1f}s is outside 30-78 s")
+        lo, hi = bar["duration_s"]["limit"]
+        t_lo, t_hi = bar["duration_s"]["target"]
+        if not lo <= dur <= hi:
+            errors.append(f"duration {dur:.1f}s is outside {lo}-{hi} s")
+        elif not t_lo <= dur <= t_hi:
+            warns.append(f"duration {dur:.1f}s is outside the {t_lo}-{t_hi} s target; the picture review must justify it")
         if per_min < 18:
             errors.append(f"{per_min:.1f} shots/min; reference reels cut 18-40 times a minute")
         if longest > 6.0:

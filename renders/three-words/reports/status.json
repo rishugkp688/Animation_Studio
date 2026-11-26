@@ -1,9 +1,16 @@
 {
  "story": {
   "ok": true,
-  "at": "2026-11-26 12:33:01",
-  "screenplay": "daee97298a86",
-  "kit": "ed047b2acc96",
+  "at": "2026-11-27 01:36:02",
+  "t": 1795723562.1,
+  "seconds": 5.3,
+  "inputs": {
+   "screenplay": "a7214c3f7734",
+   "voice.timing": "ccbf2b4f2785",
+   "config.quality_bar": "dc12a957f223",
+   "engine.kit": "1b3dd43068a9",
+   "engine.studio": "b8c6df7e6716"
+  },
   "facts": {
    "locations": 4,
    "scenes": 4,
@@ -29,56 +36,135 @@
     "teary",
     "worried"
    ],
-   "duration": 66.67,
-   "shots_per_minute": 19.8,
+   "duration": 66.87,
+   "shots_per_minute": 19.7,
    "longest_shot": 5.11,
-   "words_per_minute": 110.7
-  }
+   "words_per_minute": 110.4
+  },
+  "n_errors": 0,
+  "n_warns": 1
  },
  "voice": {
   "ok": true,
-  "at": "2026-11-26 12:32:49",
-  "screenplay": "daee97298a86",
-  "kit": "ed047b2acc96",
+  "at": "2026-11-27 01:36:35",
+  "t": 1795723595.8,
+  "seconds": 33.7,
+  "inputs": {
+   "screenplay.lines_and_voices": "3f6555803cc7",
+   "tools.tts": "dddde31a800c",
+   "engine.kit": "2048398eed5d"
+  },
   "lines": 17,
   "unclear": []
  },
  "layout": {
   "ok": true,
-  "at": "2026-11-26 12:44:37",
-  "screenplay": "a7214c3f7734",
-  "kit": "de1f2147cef8",
+  "at": "2026-11-27 01:37:10",
+  "t": 1795723630.1,
+  "seconds": 34.3,
+  "inputs": {
+   "screenplay": "a7214c3f7734",
+   "voice.timing": "ccbf2b4f2785",
+   "engine.kit": "8a98df107c65",
+   "engine.studio": "b8c6df7e6716"
+  },
   "errors": 0,
-  "warns": 13,
-  "seconds": 32.9
+  "error_rules": [],
+  "warns": 13
  },
  "board": {
   "ok": true,
-  "at": "2026-11-26 12:45:09",
-  "screenplay": "a7214c3f7734",
-  "kit": "de1f2147cef8",
+  "at": "2026-11-27 01:31:20",
+  "t": 1795723280.6,
+  "seconds": 35.7,
+  "inputs": {
+   "screenplay": "a7214c3f7734",
+   "voice.timing": "ccbf2b4f2785",
+   "assets.fonts": "04a01412a140",
+   "tools.blender": "2002a4b8ca13",
+   "engine.kit": "3fb7b00b07b8",
+   "engine.studio": "b8c6df7e6716"
+  },
   "sheet": "/home/rishabh/D/Codes/Roblox/renders/three-words/board/storyboard.jpg"
  },
  "render.preview": {
   "ok": true,
-  "at": "2026-11-26 12:58:33",
-  "screenplay": "a7214c3f7734",
-  "kit": "47a4d44f5f7d",
+  "at": "2026-11-27 01:37:50",
+  "t": 1795723670.4,
+  "seconds": 40.3,
+  "inputs": {
+   "screenplay": "a7214c3f7734",
+   "voice.timing": "ccbf2b4f2785",
+   "assets.fonts": "04a01412a140",
+   "tools.blender": "2002a4b8ca13",
+   "engine.kit": "3fb7b00b07b8"
+  },
   "frames": 1605,
-  "expected": 1605
+  "expected": 1605,
+  "partial": null,
+  "render_seconds": 24.3,
+  "unreviewed": null,
+  "problems": []
  },
  "sound.preview": {
   "ok": true,
-  "at": "2026-11-26 12:59:16",
-  "screenplay": "a7214c3f7734",
-  "kit": "47a4d44f5f7d",
+  "at": "2026-11-27 01:38:45",
+  "t": 1795723725.3,
+  "seconds": 54.9,
+  "inputs": {
+   "screenplay": "a7214c3f7734",
+   "render.plan": "8e063819ec8a",
+   "assets.voice_takes": "fa1004232445",
+   "tools.audio": "dddde31a800c",
+   "tools.asr": "172ed25f3205",
+   "engine.kit": "3ad8472877a2"
+  },
   "worst_line_match": 1.0
  },
  "deliver.preview": {
   "ok": true,
-  "at": "2026-11-26 12:59:42",
-  "screenplay": "a7214c3f7734",
-  "kit": "04113cbe4e22",
-  "movie": "/home/rishabh/D/Codes/Roblox/renders/three-words/preview/three-words-preview.mp4"
+  "at": "2026-11-27 01:40:06",
+  "t": 1795723806.8,
+  "seconds": 81.5,
+  "inputs": {
+   "screenplay": "a7214c3f7734",
+   "render.plan": "8e063819ec8a",
+   "render.frames": "ce1155f795c5",
+   "sound.mix": "f4ed125d8507",
+   "config.quality_bar": "dc12a957f223",
+   "engine.audit": "adce23550a94",
+   "assets.fonts": "04a01412a140",
+   "tools.ffmpeg": "90f92a73fa5c",
+   "engine.kit": "ff2bb562e2e2",
+   "engine.studio": "b8c6df7e6716"
+  },
+  "movie": "/home/rishabh/D/Codes/Roblox/renders/three-words/preview/three-words-preview.mp4",
+  "failed": [],
+  "hard": [],
+  "artistic": [
+   "first_second_motion",
+   "duration"
+  ]
+ },
+ "review.board": {
+  "ok": true,
+  "at": "2026-11-27 01:31:41",
+  "t": 1795723301.5,
+  "seconds": 0.0,
+  "inputs": {
+   "board.sheet": "8a18c75ecfc3"
+  },
+  "verdict": "approve"
+ },
+ "review.picture.preview": {
+  "ok": true,
+  "at": "2026-11-27 01:40:16",
+  "t": 1795723816.3,
+  "seconds": 0.0,
+  "inputs": {
+   "deliver.movie": "72b12596cafa",
+   "deliver.sheet": "f6ce883b0a79"
+  },
+  "verdict": "approve"
  }
 }

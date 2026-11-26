@@ -1,0 +1,68 @@
+[
+ {
+  "kind": "board",
+  "preset": null,
+  "verdict": "approve",
+  "reviewer": "agent (Claude), compatibility check",
+  "at": "2026-11-26 23:34:48",
+  "saw": "Story reads with the sound off through the head counters: sh01-02 MY BIG GUY hook, sh03 I HATE YOU wound, sh06-08 HURRY UP and Ava doing everything, sh12-14 hospital turn and GOODNIGHT AVA, sh16-18 HE MISSES YOU reveal into I LOVE YOU, sh19-22 YOU TALKED button and hug wide. Weak: sh05, sh08, sh10 and sh19 show Ava from behind or side-on so her face never plays there; sh16 has a foreground blue block across the lower half. Workbench sheet has no face textures, so expressions are judged on the preview, not here. Same staging as the preview approved on 2026-11-26.",
+  "notes": {},
+  "required": [],
+  "artifacts": {
+   "storyboard.jpg": "c18b50f4acf9"
+  }
+ },
+ {
+  "kind": "picture",
+  "preset": "preview",
+  "verdict": "approve",
+  "reviewer": "agent (Claude), compatibility check; picture only, not listened",
+  "at": "2026-11-26 23:38:16",
+  "saw": "Contact sheet and first second checked at 180x320. Counters and captions never cover faces. Leo's arc reads: hurt sh03, worried sh09, stunned sh13, teary sh17; Ava goes stern sh05 to surprised sh19 to a crying smile sh21. Weak: sh10 and sh20 are Ava from behind, sh16 cuts her at the chin behind the bed. Sound not checked by ear; the mix passed the ASR check at 1.00.",
+  "notes": {
+   "first_second_motion": "sh01 opens on a wide hug: Dad's arms open and Sam runs in, small in frame, so measured motion is 0.74; it is a moving image, not a still. Accept for preview; a tighter opening is the fix if the hook tests weak.",
+   "duration": "66.9 s, 1.9 s over target: the extra is the held hug in sh22 under the button line. Accept; trimming the pad on sh21-22 is the fix if the creator wants 65 s."
+  },
+  "required": [
+   "first_second_motion",
+   "duration"
+  ],
+  "artifacts": {
+   "three-words-preview.mp4": "72b12596cafa",
+   "frames.jpg": "f6ce883b0a79"
+  }
+ },
+ {
+  "kind": "board",
+  "preset": null,
+  "verdict": "approve",
+  "reviewer": "agent (Claude), compatibility re-check; stills only",
+  "at": "2026-11-27 01:31:41",
+  "saw": "Rebuilt sheet after engine fingerprint change; same 22 compositions as the approved board: sh01 word counters MY BIG GUY / DAD! readable, sh03 I HATE YOU over Leo, sh06 school wide, sh12 corridor wide, sh16 HE MISSES YOU reveal not cut off, sh20 two-shot hug, sh22 wide button. sh08 is Ava from behind with the sofa filling the lower half, weak but unchanged.",
+  "notes": {},
+  "required": [],
+  "artifacts": {
+   "storyboard.jpg": "8a18c75ecfc3"
+  }
+ },
+ {
+  "kind": "picture",
+  "preset": "preview",
+  "verdict": "approve",
+  "reviewer": "agent (Claude); frames.jpg and stills only, not listened",
+  "at": "2026-11-27 01:40:16",
+  "saw": "Same frames as the 2026-11-26 approved preview (render kept every frame): word counters readable, sh16 HE MISSES YOU reveal uncut, sh20 two-shot hug, sh22 wide button. Picture only, sound not listened to (sound gate passed at 1.00).",
+  "notes": {
+   "first_second_motion": "sh01 is a wide hug with word counters; not frozen, the first read is the counter text.",
+   "duration": "66.9s because sh22 is a 3.0s silent wide hug after the last line; kept as the emotional button."
+  },
+  "required": [
+   "first_second_motion",
+   "duration"
+  ],
+  "artifacts": {
+   "three-words-preview.mp4": "72b12596cafa",
+   "frames.jpg": "f6ce883b0a79"
+  }
+ }
+]

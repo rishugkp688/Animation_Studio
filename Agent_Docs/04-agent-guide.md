@@ -300,16 +300,26 @@ Results are merged into frame ranges (rule, shot, message) with the maximum dept
   consecutive frames at 72×128 (FFmpeg `tblend=difference,signalstats`); a cut is a frame
   whose motion exceeds max(9, 5 × the median of the 6 frames each side), at least 0.25 s
   after the previous cut; frozen = motion < 0.05 for ≥ 0.9 s; static shot = mean motion
-  < 0.18; also flashes, black frames, silent gaps, loudness.
-- `scripts/studio.py`: department commands, gates, reports in `renders/SLUG/reports/`,
-  and `status.json` with SHA-1 fingerprints of the screenplay and the kit, so a stage is
-  marked stale when either changed.
+  < 0.18; also flashes, black frames, silent gaps, loudness. `judge()` splits results into
+  hard failures (block delivery), artistic notes (need a review disposition) and frozen
+  spans excused by a shot's `hold`.
+- `scripts/studio.py`: department commands, gates, review checkpoints, reports in
+  `renders/SLUG/reports/` (`status.json`, `history.jsonl`), per-stage input fingerprints
+  (engine, config, assets, tools, upstream artifacts) so `status` says what is stale and
+  why, the frame manifest, and the retrospective. See `05-gates-reviews-retros.md`.
+- `kit/fonts.py`: finds the house font (Fira Sans, else Noto/DejaVu, else `fc-match`;
+  `BLOCKY_FONT_*` overrides) for sheets, counters and captions.
 
-Tests (`python3 tests/test_kit.py`, no Blender needed): stance feet stay planted while
-walking; feet never sink; every expression resolves; OBB overlap depth; sets are R6 scale;
-the reference story gate passes; the reference layout has no errors; close-ups keep the
-eyes in the upper frame; gestures can target set points; sound and captions follow the
-screenplay's narrator and speakers (no hard-coded cast); every set declares its sound (11 tests). Add a test for every new kit behaviour.
+Tests, no Blender needed. `python3 tests/test_kit.py` (22 tests): stance feet stay
+planted while walking; feet never sink; every expression resolves; OBB overlap depth; sets
+are R6 scale; gestures can target set points; sound and captions follow the screenplay's
+narrator and speakers (no hard-coded cast); every set declares its sound; duration limits
+come from the quality bar; a `hold` must say why; font fallback; and for **both films**
+(One Hug Left, Three Words): story gate passes, no layout errors, close-up eye line,
+narrator, duration within the limit. `python3 tests/test_studio.py` (43 tests): the
+pipeline's gates, including invalid frames, mixes and frozen picture that must stop
+delivery (`05-gates-reviews-retros.md` lists them). Add a test for every new behaviour;
+add every finished film to `FILMS` in `test_kit.py`.
 
 ## 10. Bugs we already hit (do not repeat them)
 
@@ -347,7 +357,8 @@ screenplay's narrator and speakers (no hard-coded cast); every set declares its 
 - Blender's Python: system 3.14 with numpy and Pillow (faces, contact sheets).
 - `.audio-tools/venv` (3.12): numpy, kokoro-onnx, onnxruntime. `.audio-tools/asr` (3.12):
   faster-whisper (`small.en` cached locally).
-- Fonts: Fira Sans in `/usr/share/fonts/TTF/` (captions and counters).
+- Fonts: Fira Sans (Arch: `/usr/share/fonts/TTF/`), found by `kit/fonts.py`, which falls
+  back to Noto Sans, DejaVu Sans or `fc-match`; set `BLOCKY_FONT_BOLD` etc. to override.
 - Long renders: run in the background and wait on a real condition (number of PNGs
   equals the frame count), not on a process name.
 - The reference reels in `guides/` are third-party videos: study them, never reuse them.
@@ -398,10 +409,12 @@ If the code is gone, rebuild in this order; each step has a test before the next
 9. **`faces`** (PIL) and **`blender_build`** (`01-blender.md`): build, bake, `--stills`.
    Look at a CU and a WS of each set.
 10. **`voice` / `align` / `listen` / `sound` / `captions`** (`02-sound.md`).
-11. **`studio.py`**: the commands and gates (`03-production.md` §2), status fingerprints,
-    delivery checks, contact sheet; **`video_audit.py`** and `studio/quality-bar.json`.
-12. Write one screenplay with the method, run `make --preset preview`, review, iterate,
-    then `--preset final`.
+11. **`studio.py`**: the commands and gates (`03-production.md` §2), input fingerprints
+    and staleness, the frame manifest, delivery checks, contact sheet, review checkpoints
+    and the retrospective (`05-gates-reviews-retros.md`); **`video_audit.py`** and
+    `studio/quality-bar.json`. Test it with `tests/test_studio.py`.
+12. Write one screenplay with the method, run `make --preset preview` (it stops for the
+    storyboard review), review, iterate, then `--preset final`; fill the retrospective.
 
 ## 14. Open problems and the best next improvements
 

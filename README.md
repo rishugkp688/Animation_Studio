@@ -22,13 +22,19 @@ python3 scripts/studio.py story   my-story                 # story gate
 python3 scripts/studio.py voice   my-story                 # offline TTS + word timing
 python3 scripts/studio.py board   my-story                 # storyboard sheet (seconds)
 python3 scripts/studio.py layout  my-story                 # animation QC on every frame
+python3 scripts/studio.py review  my-story board --verdict approve --saw "..."  # look at the sheet first
 python3 scripts/studio.py make    my-story --preset preview  # render, sound, deliver (~15 min)
 python3 scripts/studio.py make    my-story --preset final    # 1080x1920 (~75 min per minute of film)
-python3 scripts/studio.py status  my-story                 # what ran, what is stale
+python3 scripts/studio.py review  my-story picture --preset preview --verdict ... --saw "..."
+python3 scripts/studio.py status  my-story                 # what ran, what is stale and why
+python3 scripts/studio.py retro   my-story                 # measured part of the retrospective
 ```
 
-`make` runs story → voice → layout → render → sound → deliver and stops at the first
-failed gate. The finished file lands in `renders/SLUG/<preset>/SLUG-<preset>.mp4`, with a
+`make` runs story → voice → layout → board → render → sound → deliver and stops at the
+first failed gate, and at the storyboard review: a person or agent looks at the sheet and
+records a review before anything is rendered. After delivery the movie gets a picture
+review, and each film gets a short retrospective
+([gates, reviews and retrospectives](Agent_Docs/05-gates-reviews-retros.md)). The finished file lands in `renders/SLUG/<preset>/SLUG-<preset>.mp4`, with a
 clean copy without captions and a contact sheet beside it.
 
 Rebuild the reference episode: `python3 scripts/studio.py make one-hug-left --preset final`
@@ -53,7 +59,9 @@ screenplay.json ─► story gate ─► voice takes + word times ─► layout 
   sound and captions. The module map is in [06-production](studio/departments/06-production.md#the-engine).
 - **`scripts/video_audit.py`** — pacing audit (cuts, motion, frozen stretches) against
   [`studio/quality-bar.json`](studio/quality-bar.json), measured from the reference reels.
-- **`tests/test_kit.py`** — engine tests, no Blender needed: `python3 tests/test_kit.py`.
+  Defects block delivery; matters of taste go to the picture review.
+- **`tests/`** — no Blender needed: `python3 tests/test_kit.py` (engine, both films as
+  fixtures) and `python3 tests/test_studio.py` (pipeline gates).
 
 ## Setup
 
@@ -77,9 +85,10 @@ break Blender's own Python.
 AGENTS.md            instructions for coding agents (Codex): work as the whole studio
 Agent_Docs/          full references: agent guide, production, Blender, sound (enough to rebuild the studio)
 studio/departments/  the handbooks, one per department
-studio/templates/    screenplay template used by `studio.py new`
-studio/*.json        quality bar (pacing) and story rubric (critic pass)
-episodes/SLUG/       screenplay.json, notes.md, voice/ (takes and timing)
+studio/templates/    screenplay and retrospective templates used by `studio.py new`
+studio/*.json        quality bar (length, pacing) and story rubric (critic pass)
+studio/generalization.md  one row per film: engine changes needed (the number should fall)
+episodes/SLUG/       screenplay.json, notes.md, reviews.json, retrospective.md, voice/ (takes and timing)
 renders/SLUG/        board/, preview/, final/ (blend, plan, sound, mp4s), reports/
 guides/              reference reels the format was studied from (videos are git-ignored)
 archive/             old films from before the studio, for comparison only (git-ignored)
