@@ -1,0 +1,87 @@
+{
+  "title": "The Lie Above Me",
+  "logline": "In a town where the last lie floats above your head, a boy who has worn 'I DIDN'T BREAK IT' for months must finally tell the truth to save the person who taught him to hide it.",
+  "theme": "A lie can protect a person for a moment, but truth is how you choose them for good.",
+  "audience": "Instagram Reels / TikTok, phone in hand, captions carry the story.",
+  "style": "roblox-r6",
+  "fps": 24,
+  "narrator": "hero",
+  "cast": {
+    "hero": {"name":"Milo","role":"lead, age 10, narrator","scale":0.8,"look":{"skin":"#E9BE95","hair":{"style":"spiky","color":"#2B211D"},"outfits":{"default":{"top":{"style":"hoodie","color":"#3D72D9","trim":"#E9EEF7"},"pants":"#24272E","shoes":"#F1F1F1"}}},"badge":true},
+    "mom": {"name":"Mom","role":"Milo's mother","scale":0.97,"look":{"skin":"#DDA982","hair":{"style":"long","color":"#5B3A26"},"outfits":{"default":{"top":{"style":"cardigan","color":"#D7A33F","trim":"#F4EEE4"},"pants":"#4A6A9C","shoes":"#7A4E35"}}},"badge":true},
+    "grandpa": {"name":"Grandpa","role":"the person who seems wrong","scale":0.98,"build":1.06,"look":{"skin":"#E3B48F","hair":{"style":"bald_sides","color":"#D4D4D2"},"glasses":"#3B3B3B","mustache":"#D4D4D2","wrinkles":true,"outfits":{"default":{"top":{"style":"cardigan","color":"#7B5A44","trim":"#D9D1C2"},"pants":"#4B4F58","shoes":"#3A2A22"},"gown":{"top":{"style":"gown","color":"#9CC4DA","trim":"#7FA9C2"},"pants":"#9CC4DA","shoes":"#E9E9E9"}}},"badge":true},
+    "friend": {"name":"Tess","role":"classmate","scale":0.76,"look":{"skin":"#C98E68","hair":{"style":"pigtails","color":"#6B3F26"},"outfits":{"default":{"top":{"style":"tee","color":"#E7799F","trim":"#FFFFFF"},"pants":"#6B4C8A","shoes":"#F6D5E2"}}},"badge":true}
+  },
+  "voices": {
+    "hero":{"engine":"qwen3","speaker":"aiden","instruct":"A thoughtful ten-year-old boy remembering a childhood secret, warm, close, honest and quiet.","seed":211,"pitch":2.5},
+    "mom":{"engine":"qwen3","speaker":"aiden","instruct":"A worried mother trying to sound calm, gentle and sincere.","seed":307,"pitch":1.0},
+    "grandpa":{"engine":"qwen3","speaker":"ryan","instruct":"An old grandfather, low and raspy but kind, carrying a difficult truth.","seed":97,"pitch":-2.0,"tempo":0.94}
+  },
+  "lines": [
+    {"id":"n01","who":"hero","kind":"vo","text":"In our town, your last lie floats above your head."},
+    {"id":"n02","who":"hero","kind":"vo","text":"People read each other. So most told the truth."},
+    {"id":"n03","who":"hero","kind":"vo","text":"Mine said I DIDN'T BREAK IT for months."},
+    {"id":"n04","who":"hero","kind":"vo","text":"The music box was Mom's favorite."},
+    {"id":"m01","who":"mom","kind":"dialogue","text":"Milo, did you see what happened?"},
+    {"id":"m02","who":"hero","kind":"dialogue","text":"No, Mom. I didn't."},
+    {"id":"n05","who":"hero","kind":"vo","text":"Grandpa never asked me to explain."},
+    {"id":"g01","who":"grandpa","kind":"dialogue","text":"Some things stay quiet until they are ready."},
+    {"id":"n06","who":"hero","kind":"vo","text":"I thought he helped me hide."},
+    {"id":"n07","who":"hero","kind":"vo","text":"Then his lie changed."},
+    {"id":"n08","who":"hero","kind":"vo","text":"I HAD ONE MORE DAY."},
+    {"id":"g02","who":"grandpa","kind":"dialogue","text":"You cannot carry this for me."},
+    {"id":"n09","who":"hero","kind":"vo","text":"He broke the music box."},
+    {"id":"n10","who":"hero","kind":"vo","text":"He let me take the blame."},
+    {"id":"g03","who":"grandpa","kind":"dialogue","text":"Your mother needed one good day."},
+    {"id":"n11","who":"hero","kind":"vo","text":"That lie was never mine to keep."},
+    {"id":"m03","who":"mom","kind":"dialogue","text":"Milo? Tell me the truth."},
+    {"id":"m04","who":"hero","kind":"dialogue","text":"I broke it. And Grandpa said I should wait."},
+    {"id":"n12","who":"hero","kind":"vo","text":"The words rose above me, then disappeared."},
+    {"id":"n13","who":"hero","kind":"vo","text":"For the first time in four months, there was nothing to hide."}
+  ],
+  "beats": [
+    {"id":"hook","purpose":"Show the town rule working above a child's head immediately.","emotion":1},
+    {"id":"wound","purpose":"Milo's old lie and the cost of protecting the broken music box.","emotion":-2},
+    {"id":"mystery","purpose":"Grandpa seems cold while his own lie appears above him.","emotion":-1},
+    {"id":"turn","purpose":"Grandpa's lie changes and forces Milo to follow him.","emotion":2},
+    {"id":"reveal","purpose":"Grandpa admits he took the blame to buy Mom one good day.","emotion":-3},
+    {"id":"choice","purpose":"Milo tells Mom the truth aloud and loses his old protection.","emotion":4},
+    {"id":"button","purpose":"The badge vanishes; truth leaves Milo visibly lighter.","emotion":5}
+  ],
+  "setups": [
+    {"id":"floating_lie","setup":"sh01","payoff":"sh19","note":"The words above Milo begin as a burden and vanish only when he tells the truth."},
+    {"id":"music_box","setup":"sh04","payoff":"sh17","note":"Mom's silent broken box returns as the object Milo finally faces honestly."},
+    {"id":"grandpa_lie","setup":"sh08","payoff":"sh13","note":"Grandpa's changing badge plants the deadline and pays off in his confession."}
+  ],
+  "music": [
+    {"at":"sh01","mood":"warm"},{"at":"sh08","mood":"pensive"},{"at":"sh12","mood":"sparse"},{"at":"sh16","mood":"swell"},{"at":"sh20","mood":"resolve","offset":0.8}
+  ],
+  "scenes": [
+    {"id":"sc1","set":"school_gate","time":"morning","beat":"hook","ambience":"schoolyard","cast":{"friend":{"at":[-0.9,2.4],"yaw":150},"hero":{"at":[0.55,3.6],"yaw":180},"mom":{"at":[2.0,-2.1],"yaw":175}},"start_badge":{"friend":"I FORGOT","hero":"I DIDN'T BREAK IT","mom":"I'M FINE"},"start_expr":{"friend":"joy","hero":"neutral","mom":"tender"},"start_look":{"friend":"hero","mom":"hero"},"shots":[
+      {"id":"sh01","beat":"hook","lines":["n01"],"pad":0.2,"cam":{"size":"fs","on":"friend","side":-12,"move":"push","height":"slight_high"},"act":[{"who":"friend","t":0,"do":"wave","dur":1.2,"expr":"joy"},{"who":"hero","t":0,"do":"walk","to":[0.7,1.4],"look":"friend","dur":1.6}]},
+      {"id":"sh02","beat":"hook","lines":["n02"],"pad":0.2,"cam":{"size":"two","on":["friend","hero"],"side":40,"move":"drift"},"act":[{"who":"friend","t":0,"do":"point","at":"friend.top","dur":0.8},{"who":"hero","t":0.3,"look":"friend","expr":"worried"}]},
+      {"id":"sh03","beat":"wound","lines":["n03"],"pad":0.25,"cam":{"size":"cu","on":"hero","relative":"face","side":0,"move":"push"},"act":[{"who":"hero","t":0,"do":"head_down","dur":1.4,"amount":0.3,"expr":"sad"}]},
+      {"id":"sh04","beat":"wound","lines":["n04","m01"],"pad":0.2,"cam":{"size":"ms","on":"mom","side":-20,"move":"drift"},"act":[{"who":"hero","t":0,"do":"walk","to":[1.95,-1.15],"face":"mom","look":"mom","expr":"hopeful"},{"who":"mom","t":0,"look":"hero","expr":"worried"}]},
+      {"id":"sh05","beat":"wound","lines":["m02"],"pad":0.3,"cam":{"size":"mcu","on":"hero","side":-25,"move":"push"},"act":[{"who":"hero","t":0,"expr":"hurt","look":"mom"},{"who":"hero","t":0.5,"do":"shake_head","dur":0.6,"expr":"sad"}]},
+      {"id":"sh06","beat":"wound","lines":[],"dur":1.7,"cam":{"size":"ecu","on":"hero","side":20,"move":"pull"},"act":[{"who":"hero","t":0,"do":"look_around","dur":1.2,"expr":"shy"},{"who":"mom","t":0.4,"do":"head_down","dur":0.8,"expr":"hurt"}]}
+    ]},
+    {"id":"sc2","set":"grandpa_living","time":"afternoon","beat":"mystery","ambience":"living_room","cast":{"grandpa":"armchair","hero":{"at":[-2.45,-1.1],"yaw":90}},"start_badge":{"grandpa":"I HAVE ONE MORE DAY","hero":"I DIDN'T BREAK IT"},"start_expr":{"grandpa":"grumpy","hero":"neutral"},"start_look":{"grandpa":"photo"},"shots":[
+      {"id":"sh07","beat":"mystery","lines":["n05"],"pad":0.3,"cam":{"size":"ws","on":"grandpa","side":28,"move":"push","height":"slight_high"},"act":[{"who":"hero","t":0,"do":"walk","to":[0.55,0.15],"face":"grandpa","look":"grandpa","expr":"hopeful"}]},
+      {"id":"sh08","beat":"mystery","lines":["g01"],"pad":0.35,"cam":{"size":"cu","on":"grandpa","side":45,"move":"push"},"act":[{"who":"grandpa","t":0,"look":"photo","expr":"calm"},{"who":"grandpa","t":1.0,"expr":"sad"}]},
+      {"id":"sh09","beat":"mystery","lines":["n06"],"pad":0.25,"cam":{"size":"mcu","on":"hero","side":10,"move":"drift"},"act":[{"who":"hero","t":0,"look":"grandpa","expr":"hopeful"},{"who":"hero","t":0.2,"do":"point","at":"grandpa.top","dur":0.9}]},
+      {"id":"sh10","beat":"turn","lines":["n07","n08"],"pad":0.3,"cam":{"size":"two","on":["hero","grandpa"],"side":-10,"move":"pull"},"act":[{"who":"grandpa","t":0,"do":"badge","text":"I HAVE ONE MORE DAY"},{"who":"grandpa","t":0.2,"look":"hero","expr":"worried"},{"who":"hero","t":0.5,"expr":"surprise"}]},
+      {"id":"sh11","beat":"turn","lines":["g02"],"pad":0.35,"cam":{"size":"cu","on":"grandpa","side":-25,"move":"push"},"act":[{"who":"grandpa","t":0,"look":"hero","expr":"tender"},{"who":"hero","t":0.3,"do":"head_down","dur":1.2,"expr":"sad"}]},
+      {"id":"sh12","beat":"turn","lines":[],"dur":2.0,"cam":{"size":"ms","on":"grandpa","side":35,"move":"rise","height":"low"},"act":[{"who":"grandpa","t":0.1,"look":"hero","expr":"determined"},{"who":"hero","t":0.4,"look":"grandpa","expr":"worried"}]},
+      {"id":"sh13","beat":"reveal","lines":["n09","n10","g03"],"pad":0.35,"cam":{"size":"two","on":["hero","grandpa"],"side":-70,"move":"push"},"act":[{"who":"grandpa","t":0,"do":"hand_chest","dur":1.2,"expr":"cry_smile"},{"who":"hero","t":0.2,"look":"grandpa","expr":"shock"}]},
+      {"id":"sh14","beat":"reveal","lines":["n11"],"pad":0.35,"cam":{"size":"mcu","on":"hero","side":20,"move":"push","height":"high"},"act":[{"who":"hero","t":0,"do":"release","expr":"teary"},{"who":"grandpa","t":0,"do":"release"},{"who":"hero","t":0.45,"do":"badge","text":"I DIDN'T BREAK IT"},{"who":"hero","t":0.8,"look":[-1.3,-1.1,1.2],"expr":"determined"}]}
+    ]},
+    {"id":"sc3","set":"hospital_corridor","time":"night","beat":"choice","ambience":"corridor","cast":{"mom":"mom_seat","hero":{"at":[-5.0,0.3],"yaw":90}},"start_badge":{"mom":"I'M FINE","hero":"I DIDN'T BREAK IT"},"start_expr":{"mom":"worried","hero":"determined"},"start_look":{"mom":"hero"},"shots":[
+      {"id":"sh15","beat":"choice","lines":["n12"],"pad":0.25,"cam":{"size":"ws","on":"hero","side":40,"move":"push","height":"high"},"act":[{"who":"hero","t":0,"do":"run","to":[0.7,0.05],"look":"mom","dur":2.0,"expr":"determined"}]},
+      {"id":"sh16","beat":"choice","lines":["m03"],"pad":0.25,"cam":{"size":"mcu","on":"mom","side":-25,"move":"push"},"act":[{"who":"mom","t":0,"look":"hero","expr":"tender"},{"who":"mom","t":0.5,"do":"stand","to":[1.85,0.36],"dur":0.8,"expr":"worried"}]},
+      {"id":"sh17","beat":"choice","lines":["m04"],"pad":0.4,"cam":{"size":"two","on":["mom","hero"],"side":-70,"move":"push","height":"eye"},"act":[{"who":"hero","t":0,"do":"hand_chest","dur":1.0,"expr":"cry"},{"who":"hero","t":0.8,"do":"badge","text":"I BROKE IT"},{"who":"mom","t":0.8,"expr":"surprise"}]},
+      {"id":"sh18","beat":"button","lines":[],"dur":1.4,"cam":{"size":"cu","on":"mom","side":30,"move":"drift"},"act":[{"who":"mom","t":0,"look":"hero","expr":"tender"},{"who":"hero","t":0,"look":"mom","expr":"teary"}]},
+      {"id":"sh19","beat":"button","lines":["n13"],"pad":0.4,"cam":{"size":"two","on":["mom","hero"],"side":50,"move":"push"},"act":[{"who":"mom","t":0.05,"do":"open_arms","dur":1.2,"spread":0.5,"raise":1.5,"expr":"tender"},{"who":"hero","t":0,"do":"hand_chest","dur":1.0,"expr":"peaceful"},{"who":"hero","t":1.2,"do":"badge","text":""}]},
+      {"id":"sh20","beat":"button","lines":[],"dur":2.2,"hold":"the first honest silence lets the truth settle","cam":{"size":"two","on":["mom","hero"],"side":20,"move":"pull"},"act":[{"who":"hero","t":0,"expr":"happy","look":"mom"},{"who":"mom","t":0,"expr":"teary_smile","look":"hero"}]}
+    ]}
+  ]
+}

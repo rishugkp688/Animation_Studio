@@ -1,0 +1,105 @@
+{
+ "run": "20261127-045309-b2-repair-claude-claude-haiku-5-5-r2-round2",
+ "task": "b2-repair",
+ "kind": "recovery",
+ "harness": "claude",
+ "harness_version": "2.1.332 (Claude Code)",
+ "model": "claude-haiku-5-5",
+ "effort": "harness default",
+ "vision": true,
+ "mode": "operator",
+ "rep": 2,
+ "commit": "0cf102730f74aacb806f6b1f9825f47c4f037779",
+ "tree": "dde523ca553bcf33a29d4f3c6015b3672c1ef668",
+ "frozen_from": "given commit 0cf102730f74aacb806f6b1f9825f47c4f037779",
+ "task_hash": "119439bf994b",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-045309-b2-repair-claude-claude-haiku-5-5-r2-round2",
+ "started": "2026-11-27 04:53:10",
+ "timeout_min": 40,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 1935.4,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "Bash": 30,
+   "Monitor": 4,
+   "Grep": 1,
+   "Edit": 16
+  },
+  "tool_errors": 2,
+  "turns": 52,
+  "tokens": {
+   "input": 86,
+   "output": 31422,
+   "cache_read": 2495829,
+   "cache_write": 77899
+  },
+  "cost_usd": 0.05625769,
+  "model_reported": "claude-haiku-5-5",
+  "final_message": "The layout gate now passes on `bench-repair`: 0 errors, 15 warnings, full run over 1604 frames, exit 0. I changed only `episodes/bench-repair/screenplay.json`, and only staging values.\n\n**Changes (6 edits, 10 insertions, 9 deletions):**\n- **sc2, sh07:** Ava's walk target moved from `[0.75, 1.5]` (on the side table) to `[0.75, 0.8]`. This cleared the side-table collisions in sh08\u2013sh10.\n- **sc2, sh10:** Camera side `60` \u2192 `20`, plus `dist_mul: 1.2`. Ava's face was leaving frame as she walked away. Side 20 needs the `dist_mul` change; without it the shot still fails.\n- **sc4 cast, leo start:** `[1.6, 1.1]` \u2192 `[1.6, 0.35]`, which was inside the bedside table.\n- **sc4, sh18:** Leo's walk target `[-1.45, 0.3]` \u2192 `[-0.4, 0.0]`. The old target was inside Ava's visitor chair; the new one clears her and Mom's leg.\n- **sc4, sh20:** Ava's stand-up target `[-1.0, 0.3]` \u2192 `[-1.2, 0.3]`. Her leg hit the chair at -1.3, so -1.2 is the closest value that works.\n- **sc4, sh20:** Leo's hug on Ava changed from `at: head, lift 0.0, head_turn 1.0` to `at: hips, lift 0.12, head_turn -1.0`. This is the engine's shorter-actor hug, the same pattern as Sam's hug in sh01. The arms had been crossing at head height.\n\n**Unchanged:** lines, voices, cast, scenes, beats, shot list and order, shot sizes and subjects, expressions, badges, and what each action is (walk, stand, hug, camera on the same subject). The hug is still a hug with Ava, only the contact point moved.\n\n**Not done:**\n- `studio.py repair` was too slow to finish: it ran past the 10-minute background limit and was killed without output. I staged by hand instead and did not use `--apply`.\n- I did not run the story, voice or other gates, since only staging changed.\n- I did not view any images. Layout is a plan-level check, so these moves are verified only by the gate, not by eye.\n\n**Concern:** Another `claude -p` agent was running against `bench-repair` when I checked, and its PID was still alive. If it edits `screenplay.json`, the layout result above may no longer hold. The gate re-run at the end was on the current file (md5 `28a0d9c8\u2026`) and passed.",
+  "result": "success",
+  "tool_calls_total": 51
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "intent": true,
+   "minimal": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "warn: duration 66.9s is outside the 45-65 s target; the picture review must justify it",
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 22, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"hurt\", \"neutral\", \"peaceful\", \"sad\", \"scared\", \"teary\", \"worried\"], \"duration\": 66.87, \"shots_per_minute\": 19.7, \"longest_shot\": 5.11, \"words_per_minute\": 110.4}",
+     "PASS [story] 0 errors, 1 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn camera.solve     sh21   60.97- 60.97s  camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+     "warn camera.solve     sh22   63.87- 63.87s  camera adjusted by +0 deg, +0 deg up, distance x0.85 to clear the view",
+     "PASS [layout] 0 errors, 15 warnings over 1604 frames"
+    ],
+    "errors": 0,
+    "warns": 15,
+    "error_rules": [],
+    "duration": 66.87
+   }
+  },
+  "studio_runs": {
+   "layout": {
+    "runs": 15,
+    "fails": 9,
+    "seconds": 570.5
+   }
+  },
+  "intent_violations": [],
+  "faults": {
+   "F1": "changed",
+   "F2": "changed",
+   "F3": "changed",
+   "F4": "restored"
+  },
+  "edits": 9,
+  "edited_paths": [
+   "/scenes[1]/shots[0]/act[0]/to",
+   "/scenes[1]/shots[3]/cam/dist_mul",
+   "/scenes[1]/shots[3]/cam/side",
+   "/scenes[3]/cast/leo/at",
+   "/scenes[3]/shots[4]/act[0]/to",
+   "/scenes[3]/shots[6]/act[0]/to",
+   "/scenes[3]/shots[6]/act[4]/at",
+   "/scenes[3]/shots[6]/act[4]/head_turn",
+   "/scenes[3]/shots[6]/act[4]/lift"
+  ],
+  "passed": true
+ }
+}

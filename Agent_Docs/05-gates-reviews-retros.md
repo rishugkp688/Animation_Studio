@@ -92,8 +92,8 @@ The cross-film ledger is [studio/generalization.md](../studio/generalization.md)
 ## Tests
 
 ```sh
-python3 tests/test_kit.py      # engine, both films as fixtures (~70 s)
-python3 tests/test_studio.py   # pipeline, 43 tests (~20 s; the delivery tests need ffmpeg)
+python3 tests/test_kit.py      # engine, both films as fixtures (~2.5 min)
+python3 tests/test_studio.py   # pipeline, 46 tests (~20 s; the delivery tests need ffmpeg)
 ```
 
 `test_studio.py` builds a throwaway episode and proves each fix in both directions,

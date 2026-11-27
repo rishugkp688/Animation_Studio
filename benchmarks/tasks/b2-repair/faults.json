@@ -1,0 +1,10 @@
+[
+ {"id": "F1", "what": "Ava's walk in sh07 ends inside the side table",
+  "at": ["shot", "sh07", "act", {"who": "ava", "do": "walk"}, "to"], "was": [0.55, 0.15], "set": [0.75, 1.5]},
+ {"id": "F2", "what": "Leo's start mark in sc4 is inside the bedside cabinet",
+  "at": ["scene", "sc4", "cast", "leo"], "was": {"at": [1.7, -1.3], "yaw": -90}, "set": {"at": [1.6, 1.1], "yaw": -90}},
+ {"id": "F3", "what": "Leo's walk in sh18 ends inside seated Ava",
+  "at": ["shot", "sh18", "act", {"who": "leo", "do": "walk"}, "to"], "was": [-1.5, -0.95], "set": [-1.45, 0.3]},
+ {"id": "F4", "what": "Leo's hug in sh20 aims at Ava's head with no lift",
+  "at": ["shot", "sh20", "act", {"who": "leo", "do": "hug"}], "was": {"at": "hips", "lift": 0.12}, "set": {"at": "head", "lift": 0.0}, "merge": true}
+]

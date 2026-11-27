@@ -1,0 +1,97 @@
+{
+ "run": "20261127-024721-b2-repair-codex-gpt-5.6-sol-r1",
+ "task": "b2-repair",
+ "kind": "recovery",
+ "harness": "codex",
+ "harness_version": "codex-cli 0.146.0",
+ "model": "gpt-5.6-sol",
+ "effort": "harness default",
+ "mode": "operator",
+ "rep": 1,
+ "commit": "fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "tree": "96a9bb0ec1c1d5dd4565590da248463c858764e9",
+ "frozen_from": "given commit fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "task_hash": "119439bf994b",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-024721-b2-repair-codex-gpt-5.6-sol-r1",
+ "started": "2026-11-27 02:47:22",
+ "timeout_min": 40,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 604.9,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "command_execution": 22,
+   "file_change": 7
+  },
+  "tool_errors": 10,
+  "turns": 1,
+  "tokens": {
+   "input": 80046,
+   "output": 11831,
+   "cache_read": 7685760,
+   "cache_write": 0
+  },
+  "cost_usd": null,
+  "model_reported": null,
+  "final_message": "Repaired staging in [screenplay.json](/home/rishabh/D/Codes/Roblox-bench/20261127-024721-b2-repair-codex-gpt-5.6-sol-r1/episodes/bench-repair/screenplay.json):\n\n- Moved actors clear of the side table, bedside table, chair, bed, and each other.\n- Corrected Leo\u2019s shorter-partner hug targeting.\n- Preserved the story, dialogue, voices, cast, shots, actions, expressions, and badges.\n\nFinal full gate: `PASS [layout] 0 errors, 14 warnings over 1604 frames`.\n\nCommand: `python3 scripts/studio.py layout bench-repair`\n\nNo storyboard or image review was performed, as requested. Other pipeline stages remain unrun in this checkout.",
+  "result": "success",
+  "tool_calls_total": 29
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "intent": true,
+   "minimal": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "warn: duration 66.9s is outside the 45-65 s target; the picture review must justify it",
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 22, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"hurt\", \"neutral\", \"peaceful\", \"sad\", \"scared\", \"teary\", \"worried\"], \"duration\": 66.87, \"shots_per_minute\": 19.7, \"longest_shot\": 5.11, \"words_per_minute\": 110.4}",
+     "PASS [story] 0 errors, 1 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn camera.solve     sh20   56.10- 56.10s  camera adjusted by +50 deg, +0 deg up, distance x1.0 to clear the view",
+     "warn camera.solve     sh21   60.97- 60.97s  camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+     "PASS [layout] 0 errors, 14 warnings over 1604 frames"
+    ],
+    "errors": 0,
+    "warns": 14,
+    "error_rules": [],
+    "duration": 66.87
+   }
+  },
+  "studio_runs": {
+   "layout": {
+    "runs": 9,
+    "fails": 7,
+    "seconds": 450.6
+   }
+  },
+  "intent_violations": [],
+  "faults": {
+   "F1": "changed",
+   "F2": "changed",
+   "F3": "changed",
+   "F4": "changed"
+  },
+  "edits": 4,
+  "edited_paths": [
+   "/scenes[1]/shots[0]/act[0]/to",
+   "/scenes[3]/cast/leo/at",
+   "/scenes[3]/shots[4]/act[0]/to",
+   "/scenes[3]/shots[6]/act[4]/at"
+  ],
+  "passed": true
+ }
+}

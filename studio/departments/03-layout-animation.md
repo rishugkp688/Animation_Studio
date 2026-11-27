@@ -32,7 +32,7 @@ Timing: `"t": 1.2` (seconds into the shot), `"t": "line:n04+0.3"`, `"t": "end:g0
 | `sit` / `stand` | `seat` / `to` | Walks to the seat first if needed. |
 | `look` | `at`: actor, point name, `[x, y, z]`, `cam`, `none` | Eyes lead, head follows. |
 | `face` | `expr` | See `EXPRESSIONS`: neutral, calm, happy, joy, tender, sad, hurt, teary, cry, sob, cry_smile, teary_smile, shock, surprise, worried, scared, angry, grumpy, determined, sleepy, smirk, shy, hopeful, eyes_closed, peaceful |
-| `hug` | `with`, `at` (`hips` for the shorter actor, `head` for the taller), `lift`, `lean`, `head_turn`, `head_pitch`, `dur` | Taller actor holds high, shorter low; arms never cross the partner. |
+| `hug` | `with`, `dur`; optional `at`, `lift`, `lean`, `head_turn`, `head_pitch` | **Defaults by height** (from the 14 tuned hugs in both films): the taller actor gets `at: head, lift 0.12, lean 0.04, head_pitch -0.08, head_turn 0.45`, the shorter `at: hips, lift 0.12, head_turn -1.0`. State only what you want different (e.g. `head_turn` to pick the cheek side). Actors within 15 cm of the same height get no defaults yet: tune those by hand. |
 | `hold_shoulders` | `with`, `lift`, `head_pitch` | Arm's-length moment after a hug. |
 | `release` | `gesture` (optional) | Ends a long gesture now. Release the child first, step back, then the adult. |
 | `open_arms` | `spread`, `raise` (≥ 1.4 when someone runs in) | Open before closing a hug. |
@@ -90,13 +90,36 @@ Warnings (`collision.self` corners of an arm inside its own torso, adjusted came
 `--quick` checks every 2nd frame and skips `feet.slide` (it needs consecutive frames). Use it
 while restaging; it is never recorded as the gate.
 
+The full gate also writes the **shot report**, `renders/SLUG/reports/shots.txt` (and
+`shots.json`): each shot at its storyboard moment, with who is on screen, how much of the frame
+they fill, which way each face points, what blocks it, expressions and lines, and flags for empty
+frames, hidden faces and backs of heads in close shots. It is the text twin of the storyboard
+for reviewers who cannot see images (`kit/shotreport.py`).
+
+### Repair: `python3 scripts/studio.py repair SLUG [--apply | --undo]`
+
+Searches for small **mechanical** staging fixes for collision and foot errors: it moves a walk
+target or a start mark (rings of 0.1-0.8 m, furniture-free spots only), widens an approach `gap`,
+or changes a hug's contact point and height together. Each candidate is compiled and checked
+over its scene; the smallest change that clears the earliest error group without adding new
+kinds of error wins. It never touches lines, timing, expressions, looks, badges, cameras, the shot
+list or which action happens. It proposes first (`renders/SLUG/reports/repair.json`), applies
+only with `--apply` (logged in `episodes/SLUG/repairs.jsonl` and the history), and `--undo`
+reverts the last repair field by field (fields edited by hand since are kept). The layout gate
+is still the judge: run it after applying. Bounded by `--max-evals` (240 candidate plans); `--workers` (default 2) sets how many CPU processes check candidates in parallel, and `--max-seconds` (default 240) stops the search and proposes what it found. Each candidate is a full compile, so a search takes minutes: fix errors by hand first and use repair when stuck (in the benchmark, agents that waited on it were slower than agents that did not).
+
 ## Storyboard: `python3 scripts/studio.py board SLUG [--animatic]`
 
 Renders each shot's key moment with Workbench in a few seconds and writes
 `renders/SLUG/board/storyboard.jpg`, labelled with shot id, size, beat and line.
 `--animatic` also renders every frame and cuts a scratch-sound animatic.
 
-**Checkpoint.** The director looks at the sheet with the sound off and records it:
+Build the board only after `layout` passes: a sheet from staging that has not passed QC is
+printed with a WARNING and **cannot be approved** (a benchmark agent once judged such a sheet and
+blamed the engine for a blank frame that layout would have flagged).
+
+**Checkpoint.** The director looks at the sheet with the sound off and records it. If you
+cannot view images, review from `reports/shots.txt` and say so in `--saw` and `--reviewer`:
 
 ```sh
 python3 scripts/studio.py review SLUG board --verdict approve|revise \

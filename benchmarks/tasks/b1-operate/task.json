@@ -1,0 +1,9 @@
+{
+ "id": "b1-operate",
+ "kind": "execution",
+ "slug": "bench-operate",
+ "source_episode": "one-hug-left",
+ "hide_episodes": [],
+ "timeout_min": 25,
+ "checks": ["story", "layout", "board", "board_review", "screenplay_unchanged"]
+}

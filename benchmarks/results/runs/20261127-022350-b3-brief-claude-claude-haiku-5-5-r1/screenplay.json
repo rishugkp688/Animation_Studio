@@ -1,0 +1,1217 @@
+{
+ "title": "Not Me",
+ "logline": "In a town where your last lie floats over your head until you tell the truth, a ten-year-old whose lie has hung above him since March learns that his cold grandfather has been reading it the whole time.",
+ "theme": "A lie can only leave when you say it yourself, and the people who love you can see it long before you do.",
+ "audience": "Instagram Reels / TikTok, phone in hand, sound on but captions carry it.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "kit",
+ "cast": {
+  "kit": {
+   "name": "Kit",
+   "role": "lead, age 10, narrator",
+   "scale": 0.8,
+   "look": {
+    "skin": "#D9A27A",
+    "hair": {
+     "style": "short",
+     "color": "#4A2F1E"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#E9B949",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#2F3E5C",
+      "shoes": "#F4F4F4"
+     }
+    }
+   },
+   "badge": true
+  },
+  "mom": {
+   "name": "Mom",
+   "role": "Kit's mother",
+   "scale": 0.97,
+   "look": {
+    "skin": "#DDA982",
+    "hair": {
+     "style": "long",
+     "color": "#3B2A22"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "sweater",
+       "color": "#6C8FA8",
+       "trim": "#E9E9E9"
+      },
+      "pants": "#3D3D4D",
+      "shoes": "#5A3B2A"
+     }
+    }
+   },
+   "badge": false
+  },
+  "grandpa": {
+   "name": "Grandpa",
+   "role": "Kit's grandfather, lives alone since Grandma died",
+   "scale": 0.98,
+   "build": 1.06,
+   "look": {
+    "skin": "#E3B48F",
+    "hair": {
+     "style": "bald_sides",
+     "color": "#D4D4D2"
+    },
+    "glasses": "#3B3B3B",
+    "mustache": "#D4D4D2",
+    "wrinkles": true,
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#5E6B4E",
+       "trim": "#CFC6B0"
+      },
+      "pants": "#4B4F58",
+      "shoes": "#3A2A22"
+     }
+    }
+   },
+   "badge": true
+  },
+  "ruby": {
+   "name": "Ruby",
+   "role": "classmate (hook)",
+   "scale": 0.76,
+   "look": {
+    "skin": "#C98E68",
+    "hair": {
+     "style": "bob",
+     "color": "#9A4B2E"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#7FB069",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#2E4057",
+      "shoes": "#F4F4F4"
+     }
+    }
+   },
+   "badge": true
+  },
+  "ruby_dad": {
+   "name": "Ruby's dad",
+   "role": "parent (hook)",
+   "scale": 1.0,
+   "build": 1.04,
+   "look": {
+    "skin": "#B97A57",
+    "hair": {
+     "style": "short",
+     "color": "#1F1A18"
+    },
+    "beard": "#1F1A18",
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#A34A3C",
+       "trim": "#4A2A24"
+      },
+      "pants": "#5B5F68",
+      "shoes": "#2A2A2A"
+     }
+    }
+   },
+   "badge": false
+  }
+ },
+ "voices": {
+  "kit": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A ten-year-old boy telling his own story, quiet and honest, close to the microphone, never an announcer.",
+   "seed": 401
+  },
+  "grandpa": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "instruct": "An old man who has kept a hard face for four years, low and tired, speaking slowly; softer when it finally breaks.",
+   "seed": 97,
+   "pitch": -2.0,
+   "tempo": 0.94
+  },
+  "mom": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A tired mother at night in a hospital corridor, gentle and careful, low voice, saying hard news kindly.",
+   "seed": 523,
+   "pitch": 1.5
+  },
+  "ruby": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A small girl admitting something small and scary to her father, very quiet, a little wobbly.",
+   "seed": 611,
+   "pitch": 4.0
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "kit",
+   "kind": "vo",
+   "text": "In this town, your last lie floats above your head."
+  },
+  {
+   "id": "n02",
+   "who": "kit",
+   "kind": "vo",
+   "text": "Until you tell the truth."
+  },
+  {
+   "id": "d_ruby",
+   "who": "ruby",
+   "kind": "dialogue",
+   "text": "I broke your bike, Dad."
+  },
+  {
+   "id": "n03",
+   "who": "kit",
+   "kind": "vo",
+   "text": "Mine has floated since March."
+  },
+  {
+   "id": "n04",
+   "who": "kit",
+   "kind": "vo",
+   "text": "Grandpa believed me."
+  },
+  {
+   "id": "n05",
+   "who": "kit",
+   "kind": "vo",
+   "text": "Everybody can read it. Nobody says a word."
+  },
+  {
+   "id": "n06",
+   "who": "kit",
+   "kind": "vo",
+   "text": "Grandpa has floated I'M FINE for four years."
+  },
+  {
+   "id": "g01",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Did you touch her picture?"
+  },
+  {
+   "id": "n07",
+   "who": "kit",
+   "kind": "vo",
+   "text": "He keeps looking at her picture, not at me."
+  },
+  {
+   "id": "n08",
+   "who": "kit",
+   "kind": "vo",
+   "text": "He'd been alone all night."
+  },
+  {
+   "id": "d_mom",
+   "who": "mom",
+   "kind": "dialogue",
+   "text": "He fell. He keeps asking for you."
+  },
+  {
+   "id": "g03",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "I've been reading yours since March."
+  },
+  {
+   "id": "g04",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Nobody can say it for you."
+  },
+  {
+   "id": "k02",
+   "who": "kit",
+   "kind": "dialogue",
+   "text": "It was me. I broke her picture."
+  },
+  {
+   "id": "k03",
+   "who": "kit",
+   "kind": "dialogue",
+   "text": "I said it wasn't me."
+  },
+  {
+   "id": "g05",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "I'm not fine, either."
+  },
+  {
+   "id": "n09",
+   "who": "kit",
+   "kind": "vo",
+   "text": "Mine floated for four months."
+  },
+  {
+   "id": "n10",
+   "who": "kit",
+   "kind": "vo",
+   "text": "His floated for four years."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "The rule is visible at the gate in two seconds: Ruby's lie clears when she tells her dad; Kit's stays.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "Kit's lie to Grandpa about the photo, and the town's silence about it.",
+   "emotion": -2
+  },
+  {
+   "id": "mystery",
+   "purpose": "Grandpa's own I'M FINE floats over his armchair, and he will not look at Kit.",
+   "emotion": -1
+  },
+  {
+   "id": "turn",
+   "purpose": "Grandpa falls. Mom says he keeps asking for Kit. Kit walks to Room 12.",
+   "emotion": 3
+  },
+  {
+   "id": "reveal",
+   "purpose": "Grandpa has been reading Kit's lie since March, and nobody can say it for Kit.",
+   "emotion": -3
+  },
+  {
+   "id": "choice",
+   "purpose": "Kit says the truth out loud at the cost of crying in front of him; both lies clear.",
+   "emotion": 5
+  },
+  {
+   "id": "button",
+   "purpose": "Back at the gate: Kit's badge is gone and his mother ruffles his hair again. His grandfather's lie lasted longer.",
+   "emotion": 4
+  }
+ ],
+ "setups": [
+  {
+   "id": "badge",
+   "setup": "sh01",
+   "payoff": "sh24",
+   "note": "NOT ME floats over Kit at the gate; the next morning the same camera angle shows it gone."
+  },
+  {
+   "id": "believed",
+   "setup": "sh06",
+   "payoff": "sh18",
+   "note": "Kit says Grandpa believed him. Grandpa says he has been reading the lie since March."
+  },
+  {
+   "id": "grandpa_fine",
+   "setup": "sh08",
+   "payoff": "sh22",
+   "note": "Grandpa's I'M FINE floats over his armchair; it clears when he admits he is not fine."
+  },
+  {
+   "id": "ruffle",
+   "setup": "sh07",
+   "payoff": "sh24",
+   "note": "Mom ruffles Kit's hair while the lie floats; she ruffles it again once the lie is gone."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh05",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh13",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh17",
+   "mood": "hush"
+  },
+  {
+   "at": "sh20",
+   "mood": "swell",
+   "offset": 0.4
+  },
+  {
+   "at": "sh23",
+   "mood": "resolve"
+  },
+  {
+   "at": "sh25",
+   "mood": "outro",
+   "offset": 0.8
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "ruby_dad": {
+     "at": [
+      -3.0,
+      -1.7
+     ],
+     "yaw": 160
+    },
+    "ruby": {
+     "at": [
+      -1.5,
+      0.7
+     ],
+     "yaw": 150
+    },
+    "mom": {
+     "mark": "mom_wait"
+    },
+    "kit": {
+     "mark": "kai_exit"
+    }
+   },
+   "start_badge": {
+    "ruby": "I DIDN'T",
+    "kit": "NOT ME"
+   },
+   "start_expr": {
+    "ruby_dad": "happy",
+    "ruby": "worried",
+    "kit": "neutral",
+    "mom": "tender"
+   },
+   "start_look": {
+    "ruby_dad": "ruby",
+    "ruby": "ruby_dad",
+    "kit": "ruby",
+    "mom": "kit"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "fs",
+      "on": "ruby_dad",
+      "side": -12,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "ruby",
+       "t": 0.0,
+       "do": "approach",
+       "run": false,
+       "to": "ruby_dad",
+       "look": "ruby_dad",
+       "gap": 0.95
+      },
+      {
+       "who": "ruby_dad",
+       "t": 0.0,
+       "do": "open_arms",
+       "dur": 1.45,
+       "expr": "happy",
+       "raise": 1.5,
+       "spread": 0.5
+      },
+      {
+       "who": "ruby",
+       "t": "+0.3",
+       "do": "hug",
+       "with": "ruby_dad",
+       "at": "hips",
+       "dur": 30,
+       "lift": 0.12,
+       "head_turn": -1.0
+      },
+      {
+       "who": "ruby_dad",
+       "t": 1.3,
+       "do": "hug",
+       "with": "ruby",
+       "dur": 30,
+       "lean": 0.04,
+       "at": "head",
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      "n02"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "mcu",
+      "on": "kit",
+      "side": 25,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "look": "ruby",
+       "expr": "neutral"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "hook",
+     "lines": [
+      "d_ruby"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "ruby",
+      "relative": "face",
+      "side": -70,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.3
+     },
+     "act": [
+      {
+       "who": "ruby",
+       "t": "end:d_ruby",
+       "do": "badge",
+       "text": " ",
+       "sfx": false,
+       "expr": "teary"
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "hook",
+     "dur": 2.4,
+     "cam": {
+      "size": "mcu",
+      "on": "ruby_dad",
+      "side": 40,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "ruby_dad",
+       "t": 0.0,
+       "expr": "tender"
+      },
+      {
+       "who": "ruby",
+       "t": 0.0,
+       "expr": "teary"
+      }
+     ]
+    },
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "kit",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.3
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "look": "ruby_dad",
+       "expr": "worried"
+      },
+      {
+       "who": "kit",
+       "t": 0.6,
+       "do": "head_down",
+       "dur": 1.2,
+       "amount": 0.25,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "lines": [
+      "n04"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "cu",
+      "on": "kit",
+      "side": -20,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "expr": "hurt"
+      }
+     ]
+    },
+    {
+     "id": "sh07",
+     "beat": "wound",
+     "lines": [
+      "n05"
+     ],
+     "dur": 3.2,
+     "cam": {
+      "size": "two",
+      "on": [
+       "mom",
+       "kit"
+      ],
+      "side": 75,
+      "move": "drift",
+      "height": "eye",
+      "key": 0.75
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "do": "walk",
+       "to": "kai_by_mom",
+       "face": "mom",
+       "expr": "sad"
+      },
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "kit",
+       "expr": "tender"
+      },
+      {
+       "who": "mom",
+       "t": 1.8,
+       "do": "ruffle",
+       "with": "kit",
+       "dur": 1.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "ambience": "living_room",
+   "cast": {
+    "grandpa": "armchair",
+    "kit": {
+     "mark": "door_in"
+    }
+   },
+   "start_badge": {
+    "grandpa": "I'M FINE",
+    "kit": "NOT ME"
+   },
+   "start_expr": {
+    "grandpa": "grumpy",
+    "kit": "worried"
+   },
+   "start_look": {
+    "grandpa": "kit",
+    "kit": "grandpa"
+   },
+   "shots": [
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "lines": [
+      "n06"
+     ],
+     "dur": 3.4,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": 28,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "do": "walk",
+       "to": "near_chair",
+       "look": "grandpa",
+       "expr": "worried"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "kit",
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh09",
+     "beat": "mystery",
+     "lines": [
+      "g01"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": -20,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "kit",
+       "expr": "grumpy"
+      },
+      {
+       "who": "kit",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh10",
+     "beat": "wound",
+     "dur": 1.5,
+     "cam": {
+      "size": "cu",
+      "on": "kit",
+      "relative": "face",
+      "side": 10,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "expr": "scared",
+       "do": "shake_head",
+       "dur": 1.1
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "mystery",
+     "dur": 1.6,
+     "cam": {
+      "size": "mcu",
+      "on": "grandpa",
+      "side": -35,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "photo",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh12",
+     "beat": "mystery",
+     "lines": [
+      "n07"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ws",
+      "on": "kit",
+      "side": -25,
+      "move": "pull",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.9,
+        -0.9
+       ],
+       "look": "grandpa",
+       "expr": "sad"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "ambience": "corridor",
+   "cast": {
+    "mom": "mom_seat",
+    "kit": {
+     "at": [
+      1.85,
+      -0.5
+     ],
+     "yaw": 180
+    }
+   },
+   "start_expr": {
+    "mom": "worried",
+    "kit": "hurt"
+   },
+   "start_look": {
+    "mom": "kit",
+    "kit": "mom"
+   },
+   "shots": [
+    {
+     "id": "sh13",
+     "beat": "turn",
+     "lines": [
+      "d_mom"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "two",
+      "on": [
+       "mom",
+       "kit"
+      ],
+      "side": 60,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "kit",
+       "expr": "worried"
+      },
+      {
+       "who": "kit",
+       "t": 0.0,
+       "look": "mom",
+       "expr": "scared"
+      }
+     ]
+    },
+    {
+     "id": "sh14",
+     "beat": "turn",
+     "lines": [
+      "n08"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "cu",
+      "on": "kit",
+      "side": 25,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "look": "mom",
+       "expr": "hurt"
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "turn",
+     "dur": 4.2,
+     "cam": {
+      "size": "ws",
+      "on": "kit",
+      "side": -40,
+      "move": "drift",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "do": "walk",
+       "to": "room_door",
+       "expr": "determined"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "ambience": "hospital_room",
+   "cast": {
+    "grandpa": "bed_edge",
+    "kit": {
+     "mark": "door_in"
+    }
+   },
+   "start_badge": {
+    "grandpa": "I'M FINE",
+    "kit": "NOT ME"
+   },
+   "start_expr": {
+    "grandpa": "sad",
+    "kit": "worried"
+   },
+   "start_look": {
+    "grandpa": "kit",
+    "kit": "grandpa"
+   },
+   "shots": [
+    {
+     "id": "sh17",
+     "beat": "reveal",
+     "dur": 3.2,
+     "cam": {
+      "size": "ws",
+      "on": "kit",
+      "side": 30,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.35,
+        0.95
+       ],
+       "look": "grandpa",
+       "expr": "worried"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "kit",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh18",
+     "beat": "reveal",
+     "lines": [
+      "g03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": -15,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "kit",
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh19",
+     "beat": "reveal",
+     "lines": [
+      "g04"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": 15,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "expr": "teary"
+      }
+     ]
+    },
+    {
+     "id": "sh20",
+     "beat": "choice",
+     "lines": [
+      "k02"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "kit",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.3
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "expr": "cry"
+      }
+     ]
+    },
+    {
+     "id": "sh21",
+     "beat": "choice",
+     "lines": [
+      "k03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "kit",
+      "side": 0,
+      "move": "drift",
+      "relative": "face"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "expr": "sob"
+      },
+      {
+       "who": "kit",
+       "t": "end:k03",
+       "do": "badge",
+       "text": " ",
+       "sfx": false
+      }
+     ]
+    },
+    {
+     "id": "sh22",
+     "beat": "choice",
+     "lines": [
+      "g05"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": 20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "expr": "cry"
+      },
+      {
+       "who": "grandpa",
+       "t": "end:g05",
+       "do": "badge",
+       "text": " ",
+       "sfx": false
+      }
+     ]
+    },
+    {
+     "id": "sh23",
+     "beat": "choice",
+     "dur": 2.8,
+     "cam": {
+      "size": "mcu",
+      "on": "kit",
+      "relative": "face",
+      "side": 0,
+      "move": "drift",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "teary_smile"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "nod",
+       "dur": 0.9,
+       "expr": "teary_smile"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc5",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "button",
+   "ambience": "schoolyard",
+   "cast": {
+    "ruby_dad": {
+     "at": [
+      -3.0,
+      -1.7
+     ],
+     "yaw": 160
+    },
+    "ruby": {
+     "at": [
+      -1.5,
+      0.7
+     ],
+     "yaw": 150
+    },
+    "mom": {
+     "mark": "mom_wait"
+    },
+    "kit": {
+     "mark": "kai_exit"
+    }
+   },
+   "start_expr": {
+    "ruby_dad": "happy",
+    "ruby": "joy",
+    "mom": "tender",
+    "kit": "hopeful"
+   },
+   "start_look": {
+    "mom": "kit",
+    "kit": "mom"
+   },
+   "shots": [
+    {
+     "id": "sh24",
+     "beat": "button",
+     "lines": [
+      "n09"
+     ],
+     "dur": 3.8,
+     "cam": {
+      "size": "two",
+      "on": [
+       "kit",
+       "mom"
+      ],
+      "side": 75,
+      "move": "drift",
+      "height": "eye",
+      "key": 0.75
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "do": "walk",
+       "to": "kai_by_mom",
+       "look": "mom",
+       "expr": "hopeful"
+      },
+      {
+       "who": "mom",
+       "t": 2.0,
+       "do": "ruffle",
+       "with": "kit",
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "id": "sh25",
+     "beat": "button",
+     "lines": [
+      "n10"
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "cu",
+      "on": "kit",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.3
+     },
+     "act": [
+      {
+       "who": "kit",
+       "t": 0.0,
+       "expr": "hopeful"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

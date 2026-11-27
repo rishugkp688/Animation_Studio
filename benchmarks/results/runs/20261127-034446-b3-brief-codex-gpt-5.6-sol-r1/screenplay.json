@@ -1,0 +1,110 @@
+{
+  "title": "The Lie That Waited",
+  "logline": "In a town where your last lie floats above your head, a boy who claims his school-janitor father is a pilot must choose between his borrowed status and walking home with the man who kept his family together.",
+  "theme": "The truth can lower your status and still let you stand taller.",
+  "audience": "Instagram Reels / TikTok, phone in hand.",
+  "style": "roblox-r6",
+  "fps": 24,
+  "narrator": "milo",
+  "cast": {
+    "milo": {"name":"Milo","role":"lead, age 10, narrator","scale":0.78,"look":{"skin":"#C98E68","hair":{"style":"spiky","color":"#241A16"},"outfits":{"default":{"top":{"style":"hoodie","color":"#2E6FA8","trim":"#E9EEF7"},"pants":"#29313D","shoes":"#F2F2F2"}}},"badge":true},
+    "dad": {"name":"Dad","role":"school janitor, the person who seems wrong","scale":1.0,"build":1.04,"look":{"skin":"#B97A57","hair":{"style":"short","color":"#201815"},"beard":"#201815","outfits":{"default":{"top":{"style":"shirt","color":"#416B59","trim":"#D9E3DC"},"pants":"#454A50","shoes":"#292929"}}},"badge":true},
+    "zoe": {"name":"Zoe","role":"classmate","scale":0.77,"look":{"skin":"#F0C8A8","hair":{"style":"pigtails","color":"#9A6030"},"outfits":{"default":{"top":{"style":"tee","color":"#D9577A","trim":"#FFFFFF"},"pants":"#4B4F68","shoes":"#FFFFFF"}}},"badge":true},
+    "mom": {"name":"Mom","role":"Milo's recovering mother","scale":0.96,"look":{"skin":"#C98E68","hair":{"style":"bob","color":"#35231C"},"outfits":{"default":{"top":{"style":"gown","color":"#9CC4DA","trim":"#7FA9C2"},"pants":"#9CC4DA","shoes":"#E9E9E9"}}},"badge":true}
+  },
+  "voices": {
+    "milo":{"engine":"qwen3","speaker":"aiden","seed":211,"instruct":"A young man remembering a childhood shame, intimate, restrained and warm, natural storytelling, never an announcer."},
+    "milo_child":{"engine":"qwen3","speaker":"aiden","seed":307,"pitch":2.5,"instruct":"A ten-year-old boy forcing himself to admit the truth in front of a friend, quiet but clear."},
+    "dad":{"engine":"qwen3","speaker":"ryan","seed":97,"pitch":-1.5,"tempo":0.96,"instruct":"A tired working father speaking softly to his son, patient, protective, never self-pitying."},
+    "zoe":{"engine":"kokoro","speaker":"af_heart","speed":1.0}
+  },
+  "lines": [
+    {"id":"n01","who":"milo","kind":"vo","text":"In my town, your last lie floats above your head."},
+    {"id":"n02","who":"milo","kind":"vo","text":"Truth makes it disappear."},
+    {"id":"n03","who":"milo","kind":"vo","text":"Mine had been there four months."},
+    {"id":"z01","who":"zoe","kind":"dialogue","text":"Your dad really flies planes?"},
+    {"id":"n04","who":"milo","kind":"vo","text":"My dad cleaned our school every night."},
+    {"id":"d01","who":"dad","kind":"dialogue","text":"Your pilot is running late."},
+    {"id":"n05","who":"milo","kind":"vo","text":"At school, he pretended not to know me."},
+    {"id":"n06","who":"milo","kind":"vo","text":"I thought he was ashamed of me too."},
+    {"id":"n07","who":"milo","kind":"vo","text":"Then I found his night route."},
+    {"id":"n08","who":"milo","kind":"vo","text":"School. Home. Mom's hospital. Every night."},
+    {"id":"d02","who":"dad","kind":"dialogue","text":"She saved every drawing."},
+    {"id":"n09","who":"milo","kind":"vo","text":"He wasn't hiding me. He was carrying us."},
+    {"id":"d03","who":"dad","kind":"dialogue","text":"I'll wait by the side gate."},
+    {"id":"k01","who":"milo","voice":"milo_child","kind":"dialogue","text":"No. He's my dad."},
+    {"id":"z02","who":"zoe","kind":"dialogue","text":"The janitor?"},
+    {"id":"k02","who":"milo","voice":"milo_child","kind":"dialogue","text":"The one who stayed."},
+    {"id":"n10","who":"milo","kind":"vo","text":"My lie floated for four months."},
+    {"id":"n11","who":"milo","kind":"vo","text":"The truth walked me home."}
+  ],
+  "beats": [
+    {"id":"hook","purpose":"A classmate's small lie changes to truth, establishing the visible rule.","emotion":1},
+    {"id":"wound","purpose":"Milo's PILOT lie hangs above him while his janitor father passes.","emotion":-3},
+    {"id":"mystery","purpose":"Dad publicly plays along and leaves nightly with a bundle of drawings.","emotion":-2},
+    {"id":"turn","purpose":"Milo follows Dad's route from school to home to the hospital.","emotion":1},
+    {"id":"reveal","purpose":"Dad gives Mom Milo's saved drawings; he has carried the family quietly.","emotion":-1},
+    {"id":"choice","purpose":"At the crowded gate Milo names Dad, losing the pilot story for good.","emotion":5},
+    {"id":"button","purpose":"The lie floated for months; the truth walks father and son home.","emotion":4}
+  ],
+  "setups": [
+    {"id":"pilot","setup":"sh03","payoff":"sh20","note":"MY DAD IS A PILOT becomes HE'S MY DAD from the same gate angle."},
+    {"id":"side_gate","setup":"sh07","payoff":"sh21","note":"Dad waits away from classmates until Milo chooses the main gate."},
+    {"id":"drawings","setup":"sh10","payoff":"sh15","note":"Dad's mysterious paper bundle is revealed as Milo's saved drawings for Mom."}
+  ],
+  "music": [
+    {"at":"sh01","mood":"warm"},{"at":"sh03","mood":"pensive"},{"at":"sh09","mood":"sparse"},{"at":"sh14","mood":"hush"},{"at":"sh17","mood":"rise"},{"at":"sh20","mood":"resolve"},{"at":"sh23","mood":"outro"}
+  ],
+  "scenes": [
+    {
+      "id":"sc1","set":"school_gate","time":"afternoon","beat":"hook","ambience":"schoolyard",
+      "cast":{"zoe":{"at":[-1.2,1.7],"yaw":170},"milo":{"at":[0.8,2.6],"yaw":175},"dad":{"at":[3.6,-2.4],"yaw":165}},
+      "start_badge":{"zoe":"I DID MY HOMEWORK","milo":"MY DAD IS A PILOT","dad":"I'M FINE"},
+      "start_expr":{"zoe":"worried","milo":"neutral","dad":"sleepy"},"start_look":{"zoe":"milo","milo":"zoe","dad":"milo"},
+      "shots":[
+        {"id":"sh01","beat":"hook","lines":["n01"],"pad":0.15,"cam":{"size":"fs","on":"zoe","side":15,"move":"push","height":"slight_high"},"act":[{"who":"zoe","t":0,"do":"hands_behind","dur":1.8,"expr":"worried"},{"who":"zoe","t":1.1,"do":"badge","text":"I FORGOT IT"}]},
+        {"id":"sh02","beat":"hook","lines":["n02"],"pad":0.2,"cam":{"size":"mcu","on":"zoe","side":8,"move":"drift","height":"slight_high"},"act":[{"who":"zoe","t":0,"do":"hand_chest","dur":1.4,"expr":"shy"},{"who":"zoe","t":0.7,"do":"badge","text":""}]},
+        {"id":"sh03","beat":"wound","lines":["n03"],"pad":0.35,"min":2.0,"cam":{"size":"mcu","on":"milo","side":0,"move":"push","height":"slight_high"},"act":[{"who":"milo","t":0,"look":"zoe","expr":"hurt"},{"who":"milo","t":0.8,"do":"head_down","dur":1.4,"amount":0.22}]},
+        {"id":"sh04","beat":"wound","lines":["z01"],"pad":0.35,"cam":{"size":"two","on":["zoe","milo"],"side":15,"move":"drift","height":"eye"},"act":[{"who":"zoe","t":0,"do":"point","at":"milo","dur":1.2,"expr":"hopeful"},{"who":"milo","t":0.4,"do":"nod","dur":1.0,"expr":"shy"}]},
+        {"id":"sh05","beat":"wound","lines":["n04"],"pad":0.2,"cam":{"size":"ws","on":"dad","side":35,"move":"track","height":"slight_high"},"act":[{"who":"dad","t":0,"do":"walk","to":[3.0,-1.6],"dur":2.6,"look":"milo","expr":"tender"},{"who":"milo","t":0.5,"look":"dad","expr":"scared"}]},
+        {"id":"sh06","beat":"mystery","lines":["d01"],"pad":0.3,"cam":{"size":"ots","on":["milo","dad"],"side":-15,"move":"push","height":"eye"},"act":[{"who":"dad","t":0,"look":"milo","expr":"smirk"},{"who":"dad","t":0.2,"do":"wave","at":"milo","dur":1.2},{"who":"milo","t":0.4,"do":"flinch","dur":0.8,"expr":"hurt"}]},
+        {"id":"sh07","beat":"mystery","lines":["n05"],"pad":0.2,"cam":{"size":"fs","on":"dad","side":-25,"move":"pull","height":"slight_high"},"act":[{"who":"dad","t":0,"do":"walk","to":[4.2,-2.8],"dur":2.5,"expr":"sad"},{"who":"milo","t":0.2,"do":"turn","to":"zoe","dur":0.8,"expr":"grumpy"}]},
+        {"id":"sh08","beat":"mystery","lines":["n06"],"pad":0.25,"cam":{"size":"cu","on":"milo","relative":"face","side":0,"move":"push","height":"eye"},"act":[{"who":"milo","t":0,"look":"dad","expr":"teary"},{"who":"milo","t":0.9,"do":"shake_head","dur":1.1,"expr":"angry"}]}
+      ]
+    },
+    {
+      "id":"sc2","set":"grandpa_living","time":"evening","beat":"mystery","ambience":"living_room",
+      "cast":{"milo":{"at":[-2.3,-1.0],"yaw":90},"dad":{"at":[0.7,0.2],"yaw":-90}},"start_badge":{"milo":"MY DAD IS A PILOT","dad":"I'M FINE"},"start_expr":{"milo":"grumpy","dad":"sleepy"},"start_look":{"milo":"dad","dad":"milo"},
+      "shots":[
+        {"id":"sh09","beat":"mystery","lines":["n07"],"pad":0.2,"cam":{"size":"ws","on":"dad","side":25,"move":"drift","height":"slight_high"},"act":[{"who":"dad","t":0,"do":"walk","to":[-0.6,-0.5],"dur":2.2,"expr":"sleepy"},{"who":"milo","t":0.3,"do":"think","dur":1.7,"expr":"worried"}]},
+        {"id":"sh10","beat":"mystery","dur":2.4,"cam":{"size":"ms","on":"dad","side":-30,"move":"push","height":"eye"},"act":[{"who":"dad","t":0,"do":"hands_behind","dur":1.1,"expr":"tender"},{"who":"dad","t":1.0,"do":"offer","to":"milo","dur":1.2},{"who":"milo","t":0.4,"look":"dad","expr":"surprise"}]},
+        {"id":"sh11","beat":"turn","lines":["n08"],"pad":0.2,"cam":{"size":"two","on":["milo","dad"],"side":20,"move":"pull","height":"eye"},"act":[{"who":"dad","t":0,"do":"walk","to":[2.2,-1.4],"dur":2.5,"expr":"determined"},{"who":"milo","t":0.35,"do":"walk","to":[0.8,-0.6],"dur":2.3,"look":"dad","expr":"worried"}]},
+        {"id":"sh12","beat":"turn","dur":2.2,"cam":{"size":"cu","on":"milo","side":20,"move":"drift","height":"eye"},"act":[{"who":"milo","t":0,"do":"look_around","dur":1.0,"expr":"scared"},{"who":"milo","t":0.8,"do":"nod","dur":0.9,"expr":"determined"}]}
+      ]
+    },
+    {
+      "id":"sc3","set":"hospital_room","time":"night","beat":"reveal","ambience":"hospital_room",
+      "cast":{"mom":"bed_edge","dad":"bedside","milo":{"at":[-1.8,-1.5],"yaw":90}},"start_badge":{"mom":"DON'T WORRY","dad":"I'M FINE","milo":"MY DAD IS A PILOT"},"start_expr":{"mom":"tender","dad":"tender","milo":"shock"},"start_look":{"mom":"dad","dad":"mom","milo":"dad"},
+      "shots":[
+        {"id":"sh13","beat":"turn","dur":2.2,"cam":{"size":"ws","on":"dad","side":35,"move":"push","height":"slight_high"},"act":[{"who":"dad","t":0,"look":"mom","expr":"tender"},{"who":"milo","t":0.3,"do":"crouch","dur":1.5,"expr":"scared"}]},
+        {"id":"sh14","beat":"reveal","lines":["d02"],"pad":0.4,"cam":{"size":"two","on":["dad","mom"],"side":-25,"move":"drift","height":"eye","dist_mul":1.3},"act":[{"who":"dad","t":0,"do":"offer","to":"mom","dur":1.8,"expr":"teary_smile"},{"who":"dad","t":0.2,"do":"badge","text":"MILO'S DRAWINGS"},{"who":"mom","t":0.3,"do":"reach","to":"dad","dur":1.5,"expr":"cry_smile"}]},
+        {"id":"sh15","beat":"reveal","lines":["n09"],"pad":0.4,"cam":{"size":"mcu","on":"mom","side":20,"move":"push","height":"slight_high"},"act":[{"who":"mom","t":0,"look":"dad","expr":"cry_smile"},{"who":"dad","t":0.5,"do":"nod","dur":1.4,"expr":"teary_smile"}]},
+        {"id":"sh16","beat":"reveal","dur":2.2,"cam":{"size":"cu","on":"milo","relative":"face","side":0,"move":"push","height":"eye"},"act":[{"who":"milo","t":0,"look":"dad","expr":"shock"},{"who":"milo","t":0.7,"do":"hands_face","dur":1.3,"expr":"cry"}]}
+      ]
+    },
+    {
+      "id":"sc4","set":"school_gate","time":"afternoon","beat":"choice","ambience":"schoolyard",
+      "cast":{"zoe":{"at":[-1.2,1.7],"yaw":170},"milo":{"at":[0.8,2.6],"yaw":175},"dad":{"at":[3.0,-1.6],"yaw":165}},"start_badge":{"zoe":"THE JANITOR?","milo":"MY DAD IS A PILOT","dad":"I'M FINE"},"start_expr":{"zoe":"surprise","milo":"worried","dad":"sad"},"start_look":{"zoe":"milo","milo":"dad","dad":"milo"},
+      "shots":[
+        {"id":"sh17","beat":"choice","lines":["d03"],"pad":0.25,"cam":{"size":"ms","on":"dad","side":30,"move":"pull","height":"eye"},"act":[{"who":"dad","t":0,"do":"wave","at":"milo","dur":1.2,"expr":"tender"},{"who":"dad","t":0.8,"do":"turn","to":[4.4,-3.0],"dur":0.9,"expr":"sad"}]},
+        {"id":"sh18","beat":"choice","dur":1.8,"cam":{"size":"cu","on":"milo","side":0,"move":"push_fast","height":"eye"},"act":[{"who":"milo","t":0,"look":"dad","expr":"worried"},{"who":"milo","t":0.6,"do":"nod","dur":0.8,"expr":"determined"}]},
+        {"id":"sh19","beat":"choice","lines":["k01"],"pad":0.3,"cam":{"size":"two","on":["milo","zoe"],"side":10,"move":"push","height":"eye"},"act":[{"who":"milo","t":0,"do":"point","at":"dad","dur":1.4,"expr":"determined"},{"who":"milo","t":0.7,"do":"badge","text":"HE'S MY DAD"},{"who":"zoe","t":0.3,"look":"dad","expr":"surprise"}]},
+        {"id":"sh20","beat":"choice","lines":["z02","k02"],"pad":0.4,"cam":{"size":"mcu","on":"milo","side":-12,"move":"drift","height":"slight_high"},"act":[{"who":"milo","t":0,"look":"zoe","expr":"shy"},{"who":"milo","t":"line:k02","do":"hand_chest","dur":1.4,"expr":"hopeful"},{"who":"zoe","t":0.3,"do":"shrug","dur":1.0,"expr":"surprise"}]},
+        {"id":"sh21","beat":"choice","dur":2.4,"cam":{"size":"fs","on":"milo","side":25,"move":"track","height":"slight_high"},"act":[{"who":"dad","t":0,"do":"open_arms","dur":2.0,"raise":1.45,"spread":0.45,"expr":"cry_smile"},{"who":"milo","t":0,"do":"approach","run":false,"to":"dad","gap":0.5,"look":"dad","expr":"joy"}]},
+        {"id":"sh22","beat":"choice","lines":["n10"],"pad":0.25,"cam":{"size":"mcu","on":"dad","side":35,"move":"push","height":"slight_high"},"act":[{"who":"milo","t":0,"look":"dad","expr":"cry_smile"},{"who":"dad","t":0,"do":"ruffle","with":"milo","hand":"r","dur":30,"expr":"cry_smile"}]},
+        {"id":"sh23","beat":"button","lines":["n11"],"pad":0.45,"cam":{"size":"ws","on":"dad","side":-25,"move":"pull","height":"slight_high"},"act":[{"who":"milo","t":0,"look":"dad","expr":"cry_smile"},{"who":"dad","t":0,"look":"milo","expr":"cry_smile"}]},
+        {"id":"sh24","beat":"button","dur":2.0,"hold":"Hold on the empty space above Milo where the lie used to float.","cam":{"size":"two","on":["milo","dad"],"side":25,"move":"drift","height":"slight_high"},"act":[{"who":"milo","t":0,"look":"dad","expr":"peaceful"},{"who":"dad","t":0,"look":"milo","expr":"tender"}]}
+      ]
+    }
+  ]
+}

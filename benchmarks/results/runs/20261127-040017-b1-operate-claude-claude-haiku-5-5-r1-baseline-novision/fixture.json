@@ -1,0 +1,1602 @@
+{
+ "title": "One Hug Left",
+ "logline": "In a town where everyone is born with a number of hugs, a boy born with zero learns why his 'cold' grandfather saved his last one for ten years.",
+ "theme": "Love that looks cold can be love that is waiting. A gift only counts when you give it away.",
+ "audience": "Instagram Reels / TikTok, phone in hand, sound on but captions carry it.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "kai",
+ "cast": {
+  "kai": {
+   "name": "Kai",
+   "role": "lead, age 10, narrator",
+   "scale": 0.8,
+   "look": {
+    "skin": "#E9BE95",
+    "hair": {
+     "style": "spiky",
+     "color": "#2B211D"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#3D72D9",
+       "trim": "#E9EEF7"
+      },
+      "pants": "#24272E",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  },
+  "mom": {
+   "name": "Mom",
+   "role": "Kai's mother",
+   "scale": 0.97,
+   "look": {
+    "skin": "#DDA982",
+    "hair": {
+     "style": "long",
+     "color": "#5B3A26"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#D7A33F",
+       "trim": "#F4EEE4"
+      },
+      "pants": "#4A6A9C",
+      "shoes": "#7A4E35"
+     }
+    }
+   },
+   "badge": true
+  },
+  "grandpa": {
+   "name": "Grandpa",
+   "role": "Kai's grandfather",
+   "scale": 0.98,
+   "build": 1.06,
+   "look": {
+    "skin": "#E3B48F",
+    "hair": {
+     "style": "bald_sides",
+     "color": "#D4D4D2"
+    },
+    "glasses": "#3B3B3B",
+    "mustache": "#D4D4D2",
+    "wrinkles": true,
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#7B5A44",
+       "trim": "#D9D1C2"
+      },
+      "pants": "#4B4F58",
+      "shoes": "#3A2A22"
+     },
+     "gown": {
+      "top": {
+       "style": "gown",
+       "color": "#9CC4DA",
+       "trim": "#7FA9C2"
+      },
+      "pants": "#9CC4DA",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": true
+  },
+  "lily": {
+   "name": "Lily",
+   "role": "classmate (hook)",
+   "scale": 0.76,
+   "look": {
+    "skin": "#C98E68",
+    "hair": {
+     "style": "pigtails",
+     "color": "#6B3F26"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#E7799F",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#6B4C8A",
+      "shoes": "#F6D5E2"
+     }
+    }
+   },
+   "badge": true
+  },
+  "lily_dad": {
+   "name": "Lily's dad",
+   "role": "parent (hook)",
+   "scale": 1.0,
+   "build": 1.04,
+   "look": {
+    "skin": "#B97A57",
+    "hair": {
+     "style": "short",
+     "color": "#1F1A18"
+    },
+    "beard": "#1F1A18",
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#4F7A4E",
+       "trim": "#2F4A2F"
+      },
+      "pants": "#5B5F68",
+      "shoes": "#2A2A2A"
+     }
+    }
+   },
+   "badge": true
+  },
+  "nina": {
+   "name": "Nina",
+   "role": "background kid",
+   "scale": 0.74,
+   "look": {
+    "skin": "#F0C8A8",
+    "hair": {
+     "style": "bob",
+     "color": "#C9883E"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#5DB37E",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#2E4057",
+      "shoes": "#FFFFFF"
+     }
+    }
+   },
+   "badge": true
+  },
+  "nina_mom": {
+   "name": "Nina's mom",
+   "role": "background parent",
+   "scale": 0.96,
+   "look": {
+    "skin": "#F0C8A8",
+    "hair": {
+     "style": "bun",
+     "color": "#B87A38"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "sweater",
+       "color": "#8E6BB5",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#2B2B33",
+      "shoes": "#4A3328"
+     }
+    }
+   },
+   "badge": true
+  }
+ },
+ "voices": {
+  "kai": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A young man remembering his childhood, warm and gentle, quiet, close to the microphone, natural storytelling, never an announcer.",
+   "seed": 211
+  },
+  "kai_child": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A curious ten-year-old boy asking his grandfather a quiet question, soft and young.",
+   "seed": 307,
+   "pitch": 2.5
+  },
+  "grandpa": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "instruct": "A tired old grandfather in a hospital bed, gentle, low and slightly raspy, speaking slowly with love.",
+   "seed": 97,
+   "pitch": -2.0,
+   "tempo": 0.94
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "kai",
+   "kind": "vo",
+   "text": "In my town, everyone is born with a number of hugs."
+  },
+  {
+   "id": "n02",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Most people get hundreds."
+  },
+  {
+   "id": "n03",
+   "who": "kai",
+   "kind": "vo",
+   "text": "I got zero."
+  },
+  {
+   "id": "n04",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Zero means you can't give one. Not even to your mom."
+  },
+  {
+   "id": "n05",
+   "who": "kai",
+   "kind": "vo",
+   "text": "So every morning, she messes up my hair instead."
+  },
+  {
+   "id": "n06",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Grandpa had one hug left."
+  },
+  {
+   "id": "n07",
+   "who": "kai",
+   "kind": "vo",
+   "text": "He'd been saving it for ten years."
+  },
+  {
+   "id": "k01",
+   "who": "kai",
+   "voice": "kai_child",
+   "kind": "dialogue",
+   "text": "Who's it for, Grandpa?",
+   "say": "Who is it for, Grandpa?"
+  },
+  {
+   "id": "g01",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Not yet, kiddo."
+  },
+  {
+   "id": "n08",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Everyone said he was just cold."
+  },
+  {
+   "id": "n09",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Then, one winter night, Grandpa got sick."
+  },
+  {
+   "id": "g02",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Come here, kiddo."
+  },
+  {
+   "id": "n10",
+   "who": "kai",
+   "kind": "vo",
+   "text": "That's when I learned the rule nobody tells you."
+  },
+  {
+   "id": "n11",
+   "who": "kai",
+   "kind": "vo",
+   "text": "You can't use your last hug."
+  },
+  {
+   "id": "n12",
+   "who": "kai",
+   "kind": "vo",
+   "text": "You can only give it away."
+  },
+  {
+   "id": "g03",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "It was always yours."
+  },
+  {
+   "id": "n13",
+   "who": "kai",
+   "kind": "vo",
+   "text": "Grandpa saved his last hug for ten years."
+  },
+  {
+   "id": "n14",
+   "who": "kai",
+   "kind": "vo",
+   "text": "I only saved mine for ten seconds."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "Show the world rule in the first two seconds: a hug makes a number tick down.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "Kai has zero; even his mom's hug is blocked. Their workaround shows love.",
+   "emotion": -2
+  },
+  {
+   "id": "mystery",
+   "purpose": "Grandpa has kept one hug for ten years and won't say who it is for. Plant 'ten years'.",
+   "emotion": -1
+  },
+  {
+   "id": "turn",
+   "purpose": "Grandpa, sick, stands and gives Kai the hug. Kai's zero becomes one.",
+   "emotion": 3
+  },
+  {
+   "id": "reveal",
+   "purpose": "The rule: a last hug can only be given away. It was always Kai's.",
+   "emotion": -3
+  },
+  {
+   "id": "choice",
+   "purpose": "Kai spends his only hug on Mom at once.",
+   "emotion": 5
+  },
+  {
+   "id": "button",
+   "purpose": "Ten years vs ten seconds. Bittersweet smile.",
+   "emotion": 4
+  }
+ ],
+ "setups": [
+  {
+   "id": "zero",
+   "setup": "sh03",
+   "payoff": "sh16",
+   "note": "Kai's 0 is the first thing we learn about him; it becomes 1."
+  },
+  {
+   "id": "mom_blocked",
+   "setup": "sh04",
+   "payoff": "sh22",
+   "note": "The blocked hug at the gate is finally completed."
+  },
+  {
+   "id": "ten_years",
+   "setup": "sh08",
+   "payoff": "sh18",
+   "note": "'Ten years' is Kai's age: it was always his."
+  },
+  {
+   "id": "not_yet",
+   "setup": "sh10",
+   "payoff": "sh14",
+   "note": "'Not yet' becomes 'Come here'."
+  },
+  {
+   "id": "hair",
+   "setup": "sh06",
+   "payoff": "sh23",
+   "note": "Mom's hand that used to ruffle his hair now holds him."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh07",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh12",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh15",
+   "mood": "swell",
+   "offset": 0.6
+  },
+  {
+   "at": "sh16",
+   "mood": "hush"
+  },
+  {
+   "at": "sh19",
+   "mood": "rise"
+  },
+  {
+   "at": "sh20",
+   "mood": "drive"
+  },
+  {
+   "at": "sh22",
+   "mood": "resolve",
+   "offset": 0.9
+  },
+  {
+   "at": "sh24",
+   "mood": "outro",
+   "offset": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "lily_dad": {
+     "at": [
+      -3.0,
+      -1.7
+     ],
+     "yaw": 160
+    },
+    "lily": {
+     "at": [
+      -0.9,
+      2.4
+     ],
+     "yaw": 150
+    },
+    "nina_mom": {
+     "at": [
+      4.4,
+      -2.7
+     ],
+     "yaw": 175
+    },
+    "nina": {
+     "contact": "nina_mom"
+    },
+    "kai": {
+     "at": [
+      0.55,
+      3.6
+     ],
+     "yaw": 180
+    },
+    "mom": {
+     "at": [
+      2.0,
+      -2.1
+     ],
+     "yaw": 175
+    }
+   },
+   "start_badge": {
+    "lily_dad": "352",
+    "lily": "487",
+    "kai": "0",
+    "mom": "214",
+    "nina": "390",
+    "nina_mom": "268"
+   },
+   "start_expr": {
+    "lily_dad": "happy",
+    "lily": "joy",
+    "kai": "neutral",
+    "mom": "tender",
+    "nina": "joy",
+    "nina_mom": "happy"
+   },
+   "start_look": {
+    "lily_dad": "lily",
+    "nina_mom": "nina",
+    "nina": "nina_mom",
+    "mom": "kai"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "fs",
+      "on": "lily_dad",
+      "relative": "world",
+      "world_yaw": -90,
+      "side": -12,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.65,
+      "dist_mul": 1.3
+     },
+     "act": [
+      {
+       "who": "lily_dad",
+       "t": 0.0,
+       "do": "open_arms",
+       "dur": 1.45,
+       "expr": "joy",
+       "raise": 1.5,
+       "spread": 0.5
+      },
+      {
+       "who": "lily",
+       "t": 0.0,
+       "do": "approach",
+       "run": true,
+       "to": "lily_dad",
+       "look": "lily_dad"
+      },
+      {
+       "who": "nina_mom",
+       "t": 0.2,
+       "do": "hug",
+       "with": "nina",
+       "dur": 5.0,
+       "lean": 0.04,
+       "at": "head",
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45
+      },
+      {
+       "who": "nina",
+       "t": 0.2,
+       "do": "hug",
+       "with": "nina_mom",
+       "at": "hips",
+       "dur": 5.0,
+       "lift": 0.12,
+       "head_turn": -1.0
+      },
+      {
+       "who": "nina_mom",
+       "t": 1.0,
+       "do": "badge",
+       "text": "268",
+       "sfx": false
+      },
+      {
+       "who": "lily",
+       "t": "+0.3",
+       "do": "hug",
+       "with": "lily_dad",
+       "at": "hips",
+       "lift": 0.12,
+       "dur": 30,
+       "expr": "joy",
+       "head_turn": -1.0
+      },
+      {
+       "who": "lily_dad",
+       "t": 1.3,
+       "do": "hug",
+       "with": "lily",
+       "dur": 30,
+       "lean": 0.04,
+       "at": "head",
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45
+      },
+      {
+       "who": "lily_dad",
+       "t": 1.75,
+       "do": "badge",
+       "text": "351"
+      },
+      {
+       "who": "lily",
+       "t": 1.8,
+       "do": "badge",
+       "text": "486",
+       "sfx": false
+      },
+      {
+       "who": "kai",
+       "t": 0.3,
+       "do": "walk",
+       "to": [
+        0.7,
+        1.4
+       ],
+       "look": "lily",
+       "dur": 2.4
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      "n02"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "mcu",
+      "on": "lily_dad",
+      "side": 40,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "lily_dad",
+       "t": 0.0,
+       "expr": "peaceful"
+      },
+      {
+       "who": "nina_mom",
+       "t": 0.1,
+       "do": "badge",
+       "text": "267"
+      },
+      {
+       "who": "lily",
+       "t": "end:n02-0.35",
+       "do": "release"
+      },
+      {
+       "who": "lily_dad",
+       "t": "end:n02+0.35",
+       "do": "release"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "wound",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.45,
+     "min": 1.6,
+     "cam": {
+      "size": "cu",
+      "on": "kai",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.3
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "look": "lily",
+       "expr": "neutral"
+      },
+      {
+       "who": "kai",
+       "t": 0.6,
+       "do": "head_down",
+       "dur": 1.2,
+       "amount": 0.25,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "wound",
+     "lines": [
+      "n04"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "two",
+      "on": [
+       "mom",
+       "kai"
+      ],
+      "side": 75,
+      "move": "drift",
+      "height": "eye",
+      "key": 0.75
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        1.95,
+        -1.15
+       ],
+       "face": "mom",
+       "look": "mom",
+       "expr": "hopeful"
+      },
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "kai",
+       "expr": "happy"
+      },
+      {
+       "who": "mom",
+       "t": 1.35,
+       "do": "blocked_hug",
+       "dur": 1.5,
+       "stop": 0.45,
+       "expr": "worried",
+       "expr_delay": 0.5
+      },
+      {
+       "who": "kai",
+       "t": 1.75,
+       "do": "fx",
+       "kind": "ripple",
+       "at": [
+        1.97,
+        -1.62,
+        1.05
+       ]
+      },
+      {
+       "who": "kai",
+       "t": 1.8,
+       "do": "flinch",
+       "dur": 0.6,
+       "expr": "hurt"
+      }
+     ]
+    },
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "dur": 1.35,
+     "cam": {
+      "size": "cu",
+      "on": "mom",
+      "side": 18,
+      "move": "push",
+      "lead": 0.05
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "expr": "hurt",
+       "look": "kai"
+      },
+      {
+       "who": "mom",
+       "t": 0.9,
+       "expr": "teary_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "lines": [
+      "n05"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ms",
+      "on": "kai",
+      "side": -55,
+      "move": "arc",
+      "arc": 14,
+      "height": "slight_high",
+      "dist_mul": 1.15
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "do": "walk",
+       "to": "kai",
+       "gap": 0.62,
+       "face_offset": 32,
+       "dur": 0.9
+      },
+      {
+       "who": "mom",
+       "t": "+0.05",
+       "do": "ruffle",
+       "with": "kai",
+       "dur": 1.7,
+       "expr": "joy"
+      },
+      {
+       "who": "kai",
+       "t": 0.9,
+       "expr": "joy",
+       "do": "nod",
+       "dur": 0.5
+      },
+      {
+       "who": "kai",
+       "t": 2.0,
+       "expr": "happy",
+       "look": "mom"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "ambience": "living_room",
+   "cast": {
+    "grandpa": "armchair",
+    "kai": {
+     "at": [
+      -2.45,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "grandpa": "1",
+    "kai": "0"
+   },
+   "start_expr": {
+    "grandpa": "grumpy",
+    "kai": "neutral"
+   },
+   "start_look": {
+    "grandpa": "photo"
+   },
+   "shots": [
+    {
+     "id": "sh07",
+     "beat": "mystery",
+     "lines": [
+      "n06"
+     ],
+     "pad": 0.4,
+     "min": 2.2,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": 28,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.55,
+        0.15
+       ],
+       "face": "grandpa",
+       "look": "grandpa",
+       "expr": "happy"
+      }
+     ]
+    },
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "lines": [
+      "n07"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": 45,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "photo",
+       "expr": "calm"
+      },
+      {
+       "who": "grandpa",
+       "t": 1.2,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh09",
+     "beat": "mystery",
+     "lines": [
+      "k01"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "mcu",
+      "on": "kai",
+      "side": 10,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "hopeful"
+      },
+      {
+       "who": "kai",
+       "t": 0.2,
+       "do": "point",
+       "at": "grandpa.top",
+       "dur": 1.0
+      }
+     ]
+    },
+    {
+     "id": "sh10",
+     "beat": "mystery",
+     "lines": [
+      "g01"
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": -25,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "kai",
+       "expr": "tender"
+      },
+      {
+       "who": "grandpa",
+       "t": "end:g01-0.2",
+       "look": "photo",
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "mystery",
+     "lines": [
+      "n08"
+     ],
+     "pad": 0.55,
+     "cam": {
+      "size": "two",
+      "on": [
+       "kai",
+       "grandpa"
+      ],
+      "side": -10,
+      "move": "pull",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "photo"
+      },
+      {
+       "who": "kai",
+       "t": 0.2,
+       "do": "head_down",
+       "dur": 1.8,
+       "expr": "sad"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "turn",
+   "ambience": "hospital_room",
+   "wardrobe": {
+    "grandpa": "gown"
+   },
+   "cast": {
+    "grandpa": "bed_edge",
+    "kai": {
+     "at": [
+      1.7,
+      -1.3
+     ],
+     "yaw": -90
+    }
+   },
+   "start_badge": {
+    "grandpa": "1",
+    "kai": "0"
+   },
+   "start_expr": {
+    "grandpa": "sleepy",
+    "kai": "worried"
+   },
+   "shots": [
+    {
+     "id": "sh12",
+     "beat": "turn",
+     "lines": [
+      "n09"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": 40,
+      "move": "push",
+      "height": "high",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 2.6,
+       "amount": 0.35
+      },
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.02,
+        0.95
+       ],
+       "face": 90,
+       "look": "grandpa",
+       "speed": 1.1
+      }
+     ]
+    },
+    {
+     "id": "sh13",
+     "beat": "turn",
+     "lines": [
+      "g02"
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "mcu",
+      "on": "grandpa",
+      "side": -25,
+      "move": "push",
+      "lead": 0.05
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "kai",
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh14",
+     "beat": "turn",
+     "dur": 2.15,
+     "cam": {
+      "size": "ms",
+      "on": "grandpa",
+      "side": 35,
+      "move": "rise",
+      "height": "low"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.1,
+       "do": "stand",
+       "to": [
+        -0.16,
+        0.95
+       ],
+       "dur": 1.0,
+       "expr": "determined"
+      },
+      {
+       "who": "grandpa",
+       "t": 1.15,
+       "do": "open_arms",
+       "dur": 1.3,
+       "spread": 0.45,
+       "raise": 1.05,
+       "expr": "tender"
+      },
+      {
+       "who": "kai",
+       "t": 0.4,
+       "look": "grandpa",
+       "expr": "surprise"
+      }
+     ]
+    },
+    {
+     "id": "sh15",
+     "beat": "turn",
+     "lines": [
+      {
+       "id": "n10",
+       "at": 1.55
+      }
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "two",
+      "on": [
+       "kai",
+       "grandpa"
+      ],
+      "side": -70,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "approach",
+       "to": "grandpa",
+       "dur": 0.75,
+       "expr": "teary"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "open_arms",
+       "dur": 1.3,
+       "spread": 0.5,
+       "raise": 1.5
+      },
+      {
+       "who": "kai",
+       "t": "+0.5",
+       "do": "hug",
+       "with": "grandpa",
+       "at": "hips",
+       "dur": 40,
+       "lift": 0.12,
+       "head_turn": 1.05
+      },
+      {
+       "who": "grandpa",
+       "t": 0.7,
+       "do": "hug",
+       "with": "kai",
+       "at": "head",
+       "dur": 40,
+       "lean": 0.04,
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": -0.45,
+       "expr": "peaceful"
+      },
+      {
+       "who": "grandpa",
+       "t": 1.6,
+       "do": "badge",
+       "text": "0"
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "reveal",
+     "lines": [
+      "n11"
+     ],
+     "pad": 0.35,
+     "cam": {
+      "size": "mcu",
+      "on": "kai",
+      "side": -25,
+      "move": "push",
+      "height": "high",
+      "key": 0.85
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "release"
+      },
+      {
+       "who": "kai",
+       "t": 0.1,
+       "do": "walk",
+       "to": "grandpa",
+       "gap": 0.6,
+       "backward": true,
+       "dur": 0.45
+      },
+      {
+       "who": "grandpa",
+       "t": 0.15,
+       "do": "release"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.15,
+       "do": "hold_shoulders",
+       "with": "kai",
+       "dur": 40,
+       "head_pitch": 0.3
+      },
+      {
+       "who": "kai",
+       "t": 0.1,
+       "look": "grandpa",
+       "expr": "teary"
+      },
+      {
+       "who": "kai",
+       "t": 0.6,
+       "do": "badge",
+       "text": "1"
+      },
+      {
+       "who": "kai",
+       "t": 0.85,
+       "look": [
+        -0.75,
+        0.95,
+        2.4
+       ],
+       "expr": "shock"
+      }
+     ]
+    },
+    {
+     "id": "sh17",
+     "beat": "reveal",
+     "lines": [
+      "n12"
+     ],
+     "pad": 0.45,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": 40,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "expr": "peaceful"
+      }
+     ]
+    },
+    {
+     "id": "sh18",
+     "beat": "reveal",
+     "lines": [
+      "g03"
+     ],
+     "pad": 0.55,
+     "cam": {
+      "size": "ecu",
+      "on": "grandpa",
+      "side": 30,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "expr": "cry_smile"
+      },
+      {
+       "who": "kai",
+       "t": "end:g03+0.2",
+       "do": "release"
+      }
+     ]
+    },
+    {
+     "id": "sh19",
+     "beat": "choice",
+     "dur": 2.2,
+     "cam": {
+      "size": "mcu",
+      "on": "kai",
+      "side": -70,
+      "move": "push_fast"
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "expr": "cry",
+       "look": "grandpa"
+      },
+      {
+       "who": "grandpa",
+       "t": 1.05,
+       "do": "release"
+      },
+      {
+       "who": "kai",
+       "t": 0.4,
+       "do": "walk",
+       "to": [
+        -1.1,
+        0.95
+       ],
+       "backward": true,
+       "dur": 0.6,
+       "expr": "determined"
+      },
+      {
+       "who": "kai",
+       "t": 1.15,
+       "look": [
+        1.9,
+        -1.5,
+        1.0
+       ]
+      },
+      {
+       "who": "kai",
+       "t": 1.45,
+       "do": "turn",
+       "to": [
+        1.9,
+        -1.5
+       ],
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "choice",
+   "ambience": "corridor",
+   "cast": {
+    "mom": "mom_seat",
+    "kai": {
+     "at": [
+      -5.0,
+      0.3
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "mom": "199",
+    "kai": "1"
+   },
+   "start_expr": {
+    "mom": "sad",
+    "kai": "determined"
+   },
+   "shots": [
+    {
+     "id": "sh20",
+     "beat": "choice",
+     "dur": 2.0,
+     "cam": {
+      "size": "ws",
+      "on": "kai",
+      "side": 0,
+      "move": "track",
+      "world_yaw": 0,
+      "relative": "world",
+      "lens": 26
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 2.0,
+       "amount": 0.4
+      },
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "run",
+       "to": [
+        0.7,
+        0.05
+       ],
+       "dur": 2.6,
+       "expr": "determined"
+      }
+     ]
+    },
+    {
+     "id": "sh21",
+     "beat": "choice",
+     "dur": 1.35,
+     "cam": {
+      "size": "mcu",
+      "on": "mom",
+      "side": -30,
+      "move": "push_fast"
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "kai",
+       "expr": "surprise"
+      },
+      {
+       "who": "mom",
+       "t": 0.5,
+       "do": "stand",
+       "to": [
+        1.85,
+        0.36
+       ],
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "sh22",
+     "beat": "choice",
+     "dur": 2.6,
+     "cam": {
+      "size": "ms",
+      "on": "mom",
+      "side": 60,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.85
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "do": "turn",
+       "to": "kai",
+       "dur": 0.4
+      },
+      {
+       "who": "mom",
+       "t": 0.05,
+       "do": "open_arms",
+       "dur": 1.2,
+       "spread": 0.5,
+       "raise": 1.5
+      },
+      {
+       "who": "kai",
+       "t": 0.0,
+       "do": "approach",
+       "to": "mom",
+       "side": 0,
+       "dur": 0.55,
+       "run": true
+      },
+      {
+       "who": "kai",
+       "t": "+0.7",
+       "do": "hug",
+       "with": "mom",
+       "at": "hips",
+       "dur": 40,
+       "lift": 0.12,
+       "head_turn": -1.05,
+       "expr": "cry_smile"
+      },
+      {
+       "who": "mom",
+       "t": 0.8,
+       "do": "hug",
+       "with": "kai",
+       "at": "head",
+       "dur": 40,
+       "lean": 0.04,
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45,
+       "expr": "shock"
+      },
+      {
+       "who": "kai",
+       "t": 1.2,
+       "do": "badge",
+       "text": "0"
+      },
+      {
+       "who": "mom",
+       "t": 1.25,
+       "do": "badge",
+       "text": "198",
+       "sfx": false
+      }
+     ]
+    },
+    {
+     "id": "sh23",
+     "beat": "choice",
+     "lines": [
+      "n13"
+     ],
+     "pad": 0.45,
+     "cam": {
+      "size": "cu",
+      "on": "mom",
+      "side": 35,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "expr": "teary"
+      },
+      {
+       "who": "mom",
+       "t": 0.9,
+       "expr": "cry_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh24",
+     "beat": "button",
+     "lines": [
+      {
+       "id": "n14",
+       "at": 0.6
+      }
+     ],
+     "pad": 1.7,
+     "cam": {
+      "size": "ws",
+      "on": "mom",
+      "side": 75,
+      "move": "pull",
+      "height": "slight_high",
+      "lens": 24
+     },
+     "act": [
+      {
+       "who": "kai",
+       "t": 0.0,
+       "expr": "cry_smile"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

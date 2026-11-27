@@ -388,7 +388,31 @@ class Reviews(Sandbox):
             self.review(saw="looks fine")
         self.assertEqual(studio.load_reviews("ep"), [])
 
+    def staged(self, ok=True):
+        for st in ("story", "voice"):
+            studio.stamp("ep", st, True, {})
+        studio.stamp("ep", "layout", ok, dict(errors=0 if ok else 4))
+
+    def test_board_approval_needs_a_current_passing_layout(self):
+        with self.assertRaises(SystemExit):           # layout never ran
+            self.review()
+        self.staged(ok=False)
+        with self.assertRaises(SystemExit):           # layout failed
+            self.review()
+        self.staged()
+        sp = self.ep / "screenplay.json"
+        d = json.loads(sp.read_text())
+        d["logline"] = "edited after the layout gate passed"
+        sp.write_text(json.dumps(d))
+        with self.assertRaises(SystemExit):           # screenplay changed since layout passed
+            self.review()
+        self.assertEqual(self.gate_code(self.review, "board", "revise"), 2)   # revise is always allowed
+        self.staged()
+        self.review()
+        self.assertTrue(studio.review_status("ep", "board")[0])
+
     def test_approval_is_tied_to_the_pictures_reviewed(self):
+        self.staged()
         self.review()
         self.assertTrue(studio.review_status("ep", "board")[0])
         self.assertTrue((self.ep / "reviews.json").exists())
@@ -476,6 +500,21 @@ class Retrospective(Sandbox):
         studio.cmd_retro(argparse.Namespace(slug="fresh"))       # refreshing keeps the written part
         self.assertEqual(p.read_text().count("## Measured"), 1)
         self.assertIn("Produced without modifying the core engine: yes", p.read_text())
+
+
+class Headless(unittest.TestCase):
+    """Studio commands must work inside agent sandboxes, containers and CI (no audio device)."""
+
+    def test_blender_gets_the_null_audio_driver(self):
+        self.assertEqual(studio.clean_env().get("ALSOFT_DRIVERS"), "null")
+
+    def test_an_explicit_audio_driver_is_kept(self):
+        old = os.environ.get("ALSOFT_DRIVERS")
+        os.environ["ALSOFT_DRIVERS"] = "pulse"
+        try:
+            self.assertEqual(studio.clean_env()["ALSOFT_DRIVERS"], "pulse")
+        finally:
+            os.environ.pop("ALSOFT_DRIVERS") if old is None else os.environ.__setitem__("ALSOFT_DRIVERS", old)
 
 
 if __name__ == "__main__":

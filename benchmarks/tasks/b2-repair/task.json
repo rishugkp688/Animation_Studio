@@ -1,0 +1,10 @@
+{
+ "id": "b2-repair",
+ "kind": "recovery",
+ "slug": "bench-repair",
+ "source_episode": "three-words",
+ "hide_episodes": ["three-words"],
+ "faults": "faults.json",
+ "timeout_min": 40,
+ "checks": ["story", "layout", "intent", "minimal"]
+}

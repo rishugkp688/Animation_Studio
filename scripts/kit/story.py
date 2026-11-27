@@ -111,10 +111,11 @@ def lint(sp, timing=None, plan=None, bar=None):
             acts = sh.get("act", [])
             for a in acts:
                 do = a.get("do")
-                if do and do not in MOVES | set(GESTURES) | {"look", "face", "expr", "badge", "fx", "sfx", "release"}:
-                    errors.append(f"{sh['id']}: unknown action '{do}'")
+                verbs = MOVES | set(GESTURES) | {"look", "face", "expr", "badge", "fx", "sfx", "release"}
+                if do and do not in verbs:
+                    errors.append(f"{sh['id']}: unknown action '{do}' (valid: {', '.join(sorted(verbs))})")
                 if "expr" in a and a["expr"] not in EXPRESSIONS:
-                    errors.append(f"{sh['id']}: unknown expression '{a['expr']}'")
+                    errors.append(f"{sh['id']}: unknown expression '{a['expr']}' (valid: {', '.join(sorted(EXPRESSIONS))})")
                 if a.get("who") == lead and "expr" in a:
                     lead_exprs.add(a["expr"])
             moving = any(a.get("do") in MOVES | set(GESTURES) for a in acts)

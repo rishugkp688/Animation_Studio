@@ -57,6 +57,15 @@ class Locomotion(unittest.TestCase):
 
 
 class Geometry(unittest.TestCase):
+    def test_route_to_a_blocked_point_beside_the_actor_is_never_empty(self):
+        from kit.geom import Nav
+        s = sets.load("grandpa_living")
+        nav = Nav(s, [b for b in (element_obb(e, s.offset) for e in s.elements if e.get("nav")) if b is not None])
+        a, b = (-2.5, -2.5), (-2.6, -2.5)      # free spot; target 10 cm into the wall's clearance
+        self.assertTrue(nav.free(a))
+        self.assertFalse(nav.free(b))
+        self.assertEqual(nav.route(a, b), [b])  # used to be [], which crashed the walk
+
     def test_overlap_depth(self):
         from kit.rig import OBB
         ax = [(1, 0, 0), (0, 1, 0), (0, 0, 1)]
@@ -190,6 +199,15 @@ class StoryGate(unittest.TestCase):
         sh["hold"] = "the silence after the news lands"
         self.assertFalse([e for e in story.lint(sp, self.timing, self.plan)["errors"] if "hold" in e])
 
+    def test_unknown_names_list_the_valid_ones(self):
+        sp = json.loads(json.dumps(self.sp))
+        sp["scenes"][0]["shots"][0]["act"].append({"who": "kai", "t": 0.0, "do": "cartwheel", "expr": "smug"})
+        errs = story.lint(sp, self.timing, self.plan)["errors"]
+        act = next(e for e in errs if "cartwheel" in e)
+        expr = next(e for e in errs if "smug" in e)
+        self.assertIn("walk", act)
+        self.assertIn("teary", expr)
+
 
 class Fonts(unittest.TestCase):
     def test_prefers_fira_then_falls_back(self):
@@ -208,6 +226,196 @@ class Fonts(unittest.TestCase):
     def test_captions_use_the_font_found(self):
         plan = {"lines": [], "shots": []}
         self.assertIn("Style: VO,Noto Sans,", captions.build(plan, font="Noto Sans"))
+
+
+# The style seam (Agent_Docs/06-style-seam.md). Modules that are not part of the R6 style
+# implementation may reach it only through these names: dimensions, posed geometry, named
+# points and the expression/gesture vocabulary. Raw tables, atlas layouts and stud constants
+# stay inside the style modules.
+STYLE_MODULES = {"rig", "acting", "faces", "blender_build"}
+SEAM = {
+    "rig": {"Body", "part_boxes", "points", "joint_matrices", "OBB"},
+    "acting": {"Performer", "Stage", "EXPRESSIONS", "GESTURES"},
+    "faces": set(),
+    "blender_build": set(),
+}
+
+
+class StyleSeam(unittest.TestCase):
+    def test_body_dimensions_come_only_from_the_rig_tables(self):
+        from kit import rig
+        old = dict(rig.PARTS), dict(rig.JOINTS)
+        try:
+            for k in ("leg_r", "leg_l"):
+                j, c, sz = rig.PARTS[k]
+                rig.PARTS[k] = (j, (0, 0, -1.3), (sz[0], sz[1], 2.6))
+            rig.JOINTS["pelvis"] = ("root", (0, 0, 2.6))
+            b = Body()
+            self.assertAlmostEqual(b.leg / b.s, 2.6)
+            self.assertAlmostEqual(b.hip_height / b.s, 2.6)
+            self.assertAlmostEqual(b.height / b.s, 2.6 + 2.0 + rig.NECK_GAP + rig.HEAD_HEIGHT)
+        finally:
+            rig.PARTS.clear(); rig.PARTS.update(old[0])
+            rig.JOINTS.clear(); rig.JOINTS.update(old[1])
+
+    def test_r6_dimensions_are_unchanged(self):
+        b = Body()
+        self.assertEqual([round(v / b.s, 4) for v in (b.leg, b.arm, b.hip_height, b.height, b.eye_height, b.lateral, b.half_depth)],
+                         [2.0, 1.55, 2.0, 5.26, 4.66, 0.5, 0.5])
+
+    def test_shared_modules_use_only_the_seam(self):
+        import ast
+        kit = ROOT / "scripts" / "kit"
+        leaks = []
+        for f in sorted(kit.glob("*.py")):
+            if f.stem in STYLE_MODULES or f.stem == "__init__":
+                continue
+            for node in ast.walk(ast.parse(f.read_text())):
+                if isinstance(node, ast.ImportFrom) and node.module:
+                    mod = node.module.split(".")[-1]
+                    if mod in SEAM:
+                        leaks += [f"{f.stem} imports {mod}.{a.name}" for a in node.names if a.name not in SEAM[mod]]
+                elif isinstance(node, ast.Import):
+                    leaks += [f"{f.stem} imports {a.name}" for a in node.names if a.name.split(".")[-1] in SEAM]
+        self.assertEqual(leaks, [], "shared modules reaching past the style seam")
+
+
+class Catalog(unittest.TestCase):
+    """The catalog and schema are read from the engine; both films must validate."""
+
+    def test_both_films_validate_against_the_schema(self):
+        from kit import catalog
+        sch = catalog.schema()
+        for film in FILMS:
+            sp = json.loads((ROOT / "episodes" / film / "screenplay.json").read_text())
+            self.assertEqual(catalog.validate(sp, sch), [], film)
+
+    def test_schema_errors_name_the_path_and_the_valid_values(self):
+        from kit import catalog
+        sp = json.loads((EP / "screenplay.json").read_text())
+        sp["scenes"][0]["set"] = "moon_base"
+        sp["scenes"][0]["shots"][0]["cam"]["size"] = "closeup"
+        errs = catalog.validate(sp, catalog.schema())
+        self.assertTrue(any(e.startswith("$.scenes[0].set") and "school_gate" in e for e in errs), errs)
+        self.assertTrue(any(e.startswith("$.scenes[0].shots[0].cam.size") and "mcu" in e for e in errs), errs)
+
+    def test_catalog_comes_from_the_engine(self):
+        from kit import catalog, camera
+        c = catalog.catalog()
+        self.assertEqual(set(c["sets"]), set(sets.LIBRARY))
+        self.assertEqual(set(c["expressions"]), set(EXPRESSIONS))
+        self.assertTrue(set(camera.SIZE_STUDS) <= set(c["camera"]["sizes"]))
+        used = {cm["look"]["hair"]["style"] for film in FILMS
+                for cm in json.loads((ROOT / "episodes" / film / "screenplay.json").read_text())["cast"].values()
+                if isinstance(cm.get("look", {}).get("hair"), dict)}
+        self.assertTrue(used <= set(c["looks"]["hair"]), used - set(c["looks"]["hair"]))
+        self.assertIn("warm", c["sound"]["music_moods"])
+
+
+class ShotReport(unittest.TestCase):
+    """Text review for models without vision (kit/shotreport.py)."""
+
+    @classmethod
+    def setUpClass(cls):
+        from kit import shotreport
+        sp = json.loads((EP / "screenplay.json").read_text())
+        # The camera a benchmark agent tried on sh16 (Sonnet, 2026-11-27): Grandpa's back fills the frame.
+        for sc in sp["scenes"]:
+            for sh in sc["shots"]:
+                if sh["id"] == "sh16":
+                    sh["cam"].update(side=30, height="eye")
+        cls.shots = {s["id"]: s for s in shotreport.describe(compile_plan(sp, load_timing(EP)), sp)}
+        cls.text = shotreport.to_text(list(cls.shots.values()))
+
+    def test_a_face_hidden_behind_another_actor_is_flagged(self):
+        flags = self.shots["sh16"]["flags"]
+        self.assertTrue(any("kai's face is behind grandpa" in f for f in flags), flags)
+
+    def test_a_clean_close_up_reads_front_on_and_unflagged(self):
+        sh = self.shots["sh03"]
+        kai = next(a for a in sh["actors"] if a["id"] == "kai")
+        self.assertEqual(kai["facing"], "front")
+        self.assertTrue(kai["face_in_frame"])
+        self.assertEqual(sh["flags"], [])
+
+    def test_text_lists_lines_and_flags(self):
+        self.assertIn('says  kai: "I got zero."', self.text)
+        self.assertIn("!  subject kai's face is behind grandpa", self.text)
+
+
+class Repair(unittest.TestCase):
+    """Deterministic staging repair (kit/repair.py): bounded, minimal, reversible."""
+
+    def test_knobs_are_mechanical_staging_fields_only(self):
+        from kit import repair
+        sp = json.loads((ROOT / "episodes/three-words/screenplay.json").read_text())
+        for g in (dict(scene="sc4", actor="leo", other="ava", shot="sh20"), dict(scene="sc2", actor="ava", other=None, shot="sh08")):
+            for k in repair.knobs(sp, g, at_scene_start=True):
+                self.assertIn(k["kind"], ("point", "gap", "hug_contact"))
+                if k["kind"] == "hug_contact":
+                    self.assertEqual(repair.get(sp, k["path"])["do"], "hug")
+                    vals = [v for v, _ in repair.candidates(sp, k)]
+                    self.assertTrue(all(set(v) == {"at", "lift"} for v in vals))
+                else:
+                    self.assertIn(k["path"][-1], ("to", "at", "gap"), k)
+
+    def test_candidates_are_bounded_and_nearest_first(self):
+        from kit import repair
+        sp = {"scenes": [{"id": "s", "cast": {"a": {"at": [0.0, 0.0]}}, "shots": []}]}
+        c = list(repair.candidates(sp, dict(kind="point", path=["scenes", 0, "cast", "a", "at"])))
+        self.assertEqual(len(c), len(repair.RINGS) * repair.DIRS)
+        self.assertEqual([r for _, r in c], sorted(r for _, r in c))
+
+    def test_apply_and_undo_are_exact_and_refuse_a_changed_screenplay(self):
+        from kit import repair
+        sp = json.loads((ROOT / "episodes/three-words/screenplay.json").read_text())
+        path = ["scenes", 3, "cast", "leo", "at"]
+        prop = dict(base=repair.sp_hash(sp), changes=[dict(path=path, old=repair.get(sp, path), new=[1.0, -1.0], absent=False),
+                                                      dict(path=["scenes", 3, "shots", 6, "act", 3, "gap"], old=None, new=0.2, absent=True)])
+        new, rec = repair.apply(sp, prop)
+        self.assertEqual(repair.get(new, path), [1.0, -1.0])
+        back, kept = repair.undo(new, rec)
+        self.assertEqual(back, sp)
+        self.assertEqual(kept, [])
+        edited = json.loads(json.dumps(new))
+        edited["scenes"][3]["cast"]["leo"]["at"] = [2.0, 2.0]     # a hand edit after the repair is kept
+        back, kept = repair.undo(edited, rec)
+        self.assertEqual(kept, [path])
+        with self.assertRaises(ValueError):
+            repair.apply(edited, prop)
+
+    def test_a_start_mark_inside_furniture_is_repaired(self):
+        from kit import repair
+        sp = json.loads((ROOT / "episodes/three-words/screenplay.json").read_text())
+        sp["scenes"][3]["cast"]["leo"] = {"at": [1.6, 1.1], "yaw": -90}    # inside the bedside cabinet
+        timing = json.loads((ROOT / "episodes/three-words/voice/timing.json").read_text())
+        p = repair.propose(sp, timing, max_evals=48, log=lambda m: None)
+        self.assertTrue(p["ok"], p)
+        self.assertEqual([c["path"] for c in p["changes"]], [["scenes", 3, "cast", "leo", "at"]])
+        self.assertLessEqual(p["changes"][0]["size"], 0.8)
+
+
+class HugDefaults(unittest.TestCase):
+    """Hug contact defaults by height (kit/layout.py); stated values always win."""
+
+    def test_taller_holds_high_shorter_holds_low_equal_is_left_to_the_screenplay(self):
+        from kit.layout import hug_defaults, HUG_TALLER, HUG_SHORTER
+        adult, child, twin = (Performer(n, scale=k) for n, k in (("a", 1.0), ("c", 0.76), ("t", 0.98)))
+        self.assertEqual(hug_defaults(adult, child), HUG_TALLER)
+        self.assertEqual(hug_defaults(child, adult), HUG_SHORTER)
+        self.assertEqual(hug_defaults(adult, twin), {})
+
+    def test_three_words_passes_with_every_hug_value_removed(self):
+        sp = json.loads((ROOT / "episodes/three-words/screenplay.json").read_text())
+        for sc in sp["scenes"]:
+            for sh in sc["shots"]:
+                for a in sh.get("act", []):
+                    if a.get("do") == "hug":
+                        for k in ("at", "lift", "lean", "head_pitch", "head_turn"):
+                            a.pop(k, None)
+        plan = compile_plan(sp, load_timing(ROOT / "episodes/three-words"), solve_cameras=False)
+        errs = [i for i in qc.run(plan, step=2, shot_checks=False).merged() if i["severity"] == "error"]
+        self.assertEqual(errs, [])
 
 
 if __name__ == "__main__":

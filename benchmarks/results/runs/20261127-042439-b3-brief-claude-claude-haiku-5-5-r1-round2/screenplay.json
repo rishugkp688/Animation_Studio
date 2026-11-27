@@ -1,0 +1,843 @@
+{
+ "title": "The Truth Above",
+ "logline": "In my town, your last lie floats over your head until you tell the truth. Milo's has hung there since March: 'Not me.' Then his grandfather is taken to hospital, and the only one who can take it down is the one he lied to.",
+ "theme": "A lie comes down only in front of the person you told it to.",
+ "audience": "Instagram Reels / TikTok, phone in hand.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "hero",
+ "cast": {
+  "hero": {
+   "name": "Milo",
+   "role": "lead, narrator; a boy with a lie above his head",
+   "scale": 0.8,
+   "look": {
+    "skin": "#E9BE95",
+    "hair": {
+     "style": "spiky",
+     "color": "#2B211D"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#D9534F",
+       "trim": "#F4E9E4"
+      },
+      "pants": "#24272E",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  },
+  "other": {
+   "name": "Grandpa Abe",
+   "role": "grandfather who seems cold; picks Milo up from school",
+   "scale": 0.98,
+   "build": 1.06,
+   "look": {
+    "skin": "#E3B48F",
+    "hair": {
+     "style": "short",
+     "color": "#C9C9C6"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#7B5A44",
+       "trim": "#D9D1C2"
+      },
+      "pants": "#4B4F58",
+      "shoes": "#3A2A22"
+     }
+    }
+   },
+   "badge": true
+  }
+ },
+ "voices": {
+  "hero": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A boy of about ten, remembering, quiet and honest, close to the microphone, natural storytelling, never an announcer.",
+   "seed": 211
+  },
+  "other": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "instruct": "An older man, gruff and tired, short sentences, low voice, speaking to a boy he loves but will not show it; never cruel.",
+   "seed": 97
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "hero",
+   "kind": "vo",
+   "text": "In my town, your last lie floats over your head."
+  },
+  {
+   "id": "n02",
+   "who": "hero",
+   "kind": "vo",
+   "text": "Mine has been up there since March."
+  },
+  {
+   "id": "d01",
+   "who": "other",
+   "kind": "dialogue",
+   "text": "Come on. I haven't got all day."
+  },
+  {
+   "id": "n03",
+   "who": "hero",
+   "kind": "vo",
+   "text": "In March he asked who broke it. I said, not me."
+  },
+  {
+   "id": "n04",
+   "who": "hero",
+   "kind": "vo",
+   "text": "He never asked again. He kept the radio on the shelf."
+  },
+  {
+   "id": "n05",
+   "who": "hero",
+   "kind": "vo",
+   "text": "The night he went into hospital, I ran."
+  },
+  {
+   "id": "d02",
+   "who": "hero",
+   "kind": "dialogue",
+   "text": "It was me."
+  },
+  {
+   "id": "d03",
+   "who": "other",
+   "kind": "dialogue",
+   "text": "Hey, kiddo. I'll be home Saturday."
+  },
+  {
+   "id": "d04",
+   "who": "hero",
+   "kind": "dialogue",
+   "text": "It was me. I broke the radio."
+  },
+  {
+   "id": "d05",
+   "who": "other",
+   "kind": "dialogue",
+   "text": "I know. I heard it hit the floor."
+  },
+  {
+   "id": "d06",
+   "who": "other",
+   "kind": "dialogue",
+   "text": "I won't be home Saturday."
+  },
+  {
+   "id": "n06",
+   "who": "hero",
+   "kind": "vo",
+   "text": "Nobody told me that. Only in front of the one you lied to."
+  },
+  {
+   "id": "n07",
+   "who": "hero",
+   "kind": "vo",
+   "text": "Mine floated for months. It came down in one sentence."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "The rule is visible over Milo's head in the first two seconds.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "The lie is told; Milo carries it alone.",
+   "emotion": -2
+  },
+  {
+   "id": "mystery",
+   "purpose": "Grandpa knows and says nothing; his own card says SATURDAY.",
+   "emotion": -1
+  },
+  {
+   "id": "turn",
+   "purpose": "The hospital call forces Milo to go; he tries the truth on the empty corridor and the card stays.",
+   "emotion": 3
+  },
+  {
+   "id": "reveal",
+   "purpose": "Said to the one he lied to, the card falls; grandpa's card falls with his own truth.",
+   "emotion": -3
+  },
+  {
+   "id": "choice",
+   "purpose": "Milo goes to the bed and holds on, with no lie left to hide behind.",
+   "emotion": 5
+  },
+  {
+   "id": "button",
+   "purpose": "One line reframes the whole film.",
+   "emotion": 4
+  }
+ ],
+ "setups": [
+  {
+   "id": "card",
+   "setup": "sh01",
+   "payoff": "sh13",
+   "note": "Milo's card over his head: it falls only when he says the truth to Grandpa."
+  },
+  {
+   "id": "saturday",
+   "setup": "sh05",
+   "payoff": "sh15",
+   "note": "Grandpa's card reads SATURDAY from the first shot; it falls when he admits he won't be home."
+  },
+  {
+   "id": "it_was_me",
+   "setup": "sh10",
+   "payoff": "sh13",
+   "note": "'It was me' said to the empty corridor does nothing; said to Grandpa it works."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh05",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh09",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh12",
+   "mood": "hush"
+  },
+  {
+   "at": "sh17",
+   "mood": "swell",
+   "offset": 0.6
+  },
+  {
+   "at": "sh19",
+   "mood": "outro",
+   "offset": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "hero": {
+     "at": [
+      0.6,
+      1.2
+     ],
+     "yaw": 180
+    },
+    "other": {
+     "at": [
+      1.9,
+      -2.0
+     ],
+     "yaw": 175
+    }
+   },
+   "start_badge": {
+    "hero": "NOT ME",
+    "other": "SATURDAY"
+   },
+   "start_expr": {
+    "hero": "worried",
+    "other": "grumpy"
+   },
+   "start_look": {
+    "other": "hero"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "ws",
+      "on": "hero",
+      "side": 20,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "expr": "worried"
+      },
+      {
+       "who": "other",
+       "t": 0.0,
+       "look": "hero"
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      "n02"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": -15,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "hook",
+     "lines": [
+      "d01"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "other",
+      "side": 30,
+      "move": "static"
+     },
+     "act": [
+      {
+       "who": "other",
+       "t": 0.0,
+       "expr": "grumpy",
+       "look": "hero"
+      },
+      {
+       "who": "hero",
+       "t": 0.2,
+       "do": "walk",
+       "to": [
+        0.9,
+        -0.6
+       ],
+       "face": "other",
+       "look": "other",
+       "expr": "hopeful",
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "hook",
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": -10,
+      "move": "push"
+     },
+     "min": 1.6,
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.2,
+       "look": "other",
+       "expr": "determined"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "wound",
+   "ambience": "living_room",
+   "cast": {
+    "other": "armchair",
+    "hero": {
+     "at": [
+      -2.45,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "other": "SATURDAY",
+    "hero": "NOT ME"
+   },
+   "start_expr": {
+    "other": "grumpy",
+    "hero": "neutral"
+   },
+   "start_look": {
+    "other": "photo"
+   },
+   "shots": [
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ws",
+      "on": "other",
+      "side": 25,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "other",
+       "t": 0.0,
+       "look": "photo",
+       "expr": "grumpy"
+      },
+      {
+       "who": "hero",
+       "t": 0.5,
+       "look": "other",
+       "expr": "shy"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": -25,
+      "move": "push"
+     },
+     "min": 1.8,
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "expr": "shy"
+      }
+     ]
+    },
+    {
+     "id": "sh07",
+     "beat": "mystery",
+     "lines": [
+      "n04"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "other",
+      "side": 35,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "other",
+       "t": 0.6,
+       "look": "photo",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": -20,
+      "move": "push"
+     },
+     "min": 1.8,
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "look": "photo",
+       "expr": "worried"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "ambience": "corridor",
+   "cast": {
+    "hero": {
+     "at": [
+      -5.0,
+      0.15
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "hero": "NOT ME"
+   },
+   "start_expr": {
+    "hero": "worried"
+   },
+   "shots": [
+    {
+     "id": "sh09",
+     "beat": "turn",
+     "lines": [
+      "n05"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ws",
+      "on": "hero",
+      "side": 0,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "do": "walk",
+       "to": "mid",
+       "expr": "worried",
+       "dur": 2.4
+      }
+     ]
+    },
+    {
+     "id": "sh10",
+     "beat": "turn",
+     "lines": [
+      "d02"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": 10,
+      "move": "static"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "look": [
+        -5.0,
+        0.7,
+        1.2
+       ],
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "turn",
+     "cam": {
+      "size": "ms",
+      "on": "hero",
+      "side": 0,
+      "move": "track"
+     },
+     "min": 2.0,
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "do": "walk",
+       "to": "room_door",
+       "face": "room_door",
+       "expr": "determined",
+       "dur": 2.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "ambience": "hospital_room",
+   "cast": {
+    "other": "bed_edge",
+    "hero": {
+     "at": [
+      2.3,
+      -1.5
+     ],
+     "yaw": -90
+    }
+   },
+   "start_badge": {
+    "other": "SATURDAY",
+    "hero": "NOT ME"
+   },
+   "start_expr": {
+    "other": "tender",
+    "hero": "worried"
+   },
+   "start_look": {
+    "other": "hero"
+   },
+   "shots": [
+    {
+     "id": "sh12",
+     "beat": "reveal",
+     "lines": [
+      "d03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ws",
+      "on": "other",
+      "side": 28,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -0.95,
+        0.75
+       ],
+       "face": "other",
+       "look": "other",
+       "expr": "worried",
+       "dur": 2.4
+      },
+      {
+       "who": "other",
+       "t": 0.0,
+       "look": "hero",
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh13",
+     "beat": "reveal",
+     "lines": [
+      "d04"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": -20,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "expr": "teary"
+      },
+      {
+       "who": "hero",
+       "t": "end:d04",
+       "do": "badge",
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "sh14",
+     "beat": "reveal",
+     "lines": [
+      "d05"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "other",
+      "side": 45,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "other",
+       "t": 0.0,
+       "expr": "calm"
+      }
+     ]
+    },
+    {
+     "id": "sh15",
+     "beat": "reveal",
+     "lines": [
+      "d06"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "other",
+      "side": -15,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "other",
+       "t": 0.0,
+       "expr": "sad"
+      },
+      {
+       "who": "other",
+       "t": "end:d06",
+       "do": "badge",
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "reveal",
+     "lines": [
+      "n06"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "mcu",
+      "on": "hero",
+      "side": 20,
+      "move": "static"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "expr": "hopeful"
+      },
+      {
+       "who": "other",
+       "t": 0.0,
+       "look": "hero"
+      }
+     ]
+    },
+    {
+     "id": "sh17",
+     "beat": "choice",
+     "cam": {
+      "size": "ws",
+      "on": "hero",
+      "side": 10,
+      "move": "push"
+     },
+     "min": 4.0,
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.2,
+       "do": "hug",
+       "with": "other",
+       "dur": 5.0,
+       "lean": 0.04,
+       "at": "head",
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45,
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh18",
+     "beat": "choice",
+     "cam": {
+      "size": "ecu",
+      "on": "other",
+      "side": 20,
+      "move": "drift"
+     },
+     "min": 2.0,
+     "act": [
+      {
+       "who": "other",
+       "t": 0.2,
+       "expr": "tender",
+       "look": "hero"
+      }
+     ]
+    },
+    {
+     "id": "sh19",
+     "beat": "button",
+     "lines": [
+      "n07"
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "cu",
+      "on": "hero",
+      "side": -10,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "hero",
+       "t": 0.0,
+       "expr": "hopeful"
+      }
+     ]
+    },
+    {
+     "id": "sh20",
+     "beat": "button",
+     "cam": {
+      "size": "ws",
+      "on": "other",
+      "side": 20,
+      "move": "static"
+     },
+     "min": 2.5,
+     "act": [
+      {
+       "who": "other",
+       "t": 0.0,
+       "look": "hero",
+       "expr": "tender"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

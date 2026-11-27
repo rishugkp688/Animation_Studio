@@ -310,15 +310,26 @@ Results are merged into frame ranges (rule, shot, message) with the maximum dept
 - `kit/fonts.py`: finds the house font (Fira Sans, else Noto/DejaVu, else `fc-match`;
   `BLOCKY_FONT_*` overrides) for sheets, counters and captions.
 
-Tests, no Blender needed. `python3 tests/test_kit.py` (22 tests): stance feet stay
+- `kit/shotreport.py`: the text shot report (`reports/shots.txt`) written by the layout gate,
+  for reviewers that cannot see images.
+- `kit/repair.py`: bounded deterministic staging repair (`studio.py repair`).
+- `kit/catalog.py`: the catalog and screenplay schema, read from the engine (`studio.py catalog`,
+  `studio.py schema`); the story gate validates against the schema first.
+
+Tests, no Blender needed. `python3 tests/test_kit.py` (39 tests, ~2.5 min): stance feet stay
 planted while walking; feet never sink; every expression resolves; OBB overlap depth; sets
 are R6 scale; gestures can target set points; sound and captions follow the screenplay's
 narrator and speakers (no hard-coded cast); every set declares its sound; duration limits
 come from the quality bar; a `hold` must say why; font fallback; and for **both films**
 (One Hug Left, Three Words): story gate passes, no layout errors, close-up eye line,
-narrator, duration within the limit. `python3 tests/test_studio.py` (43 tests): the
+narrator, duration within the limit; the style seam (`06-style-seam.md`); unknown names list
+the valid ones; catalog and schema (both films validate); the shot report flags a hidden face;
+repair is bounded, mechanical, exact to undo and fixes a start mark inside furniture; hug
+defaults by height (Three Words passes with every hug value removed); a route to a blocked
+point beside the actor is never empty. `python3 tests/test_studio.py` (46 tests): the
 pipeline's gates, including invalid frames, mixes and frozen picture that must stop
-delivery (`05-gates-reviews-retros.md` lists them). Add a test for every new behaviour;
+delivery (`05-gates-reviews-retros.md` lists them), a board cannot be approved before layout
+passes, and headless Blender gets the null audio driver. Add a test for every new behaviour;
 add every finished film to `FILMS` in `test_kit.py`.
 
 ## 10. Bugs we already hit (do not repeat them)
@@ -350,6 +361,12 @@ add every finished film to `FILMS` in `test_kit.py`.
 | `point at "photo"` crashed at layout | gestures could only target actors | layout resolves set points/marks to world points when compiling |
 | Story gate said 80 s, real film 67 s | word-count estimate too slow (2.55 words/s) | refit: 0.26 + 0.30 × words (3.3 words/s) |
 | Hug between near-equal heights interpenetrated | hug assumes tall-high/short-low | keep scales ≥ 0.15 apart or use hold_shoulders |
+| Wait loop never ended (again, 2026-11-27) | `pgrep -f PATTERN` inside a shell whose own command line contains PATTERN | wait on the background task's own exit, or an output file, never on `pgrep -f` |
+| Headless Blender hung on exit in agent sandboxes | OpenAL blocks without an audio device | `ALSOFT_DRIVERS=null` in Blender's environment (`studio.clean_env`) |
+| Walk crashed with `IndexError` | `Nav.route` returned `[]` when start and goal snapped to the same free cell with the line blocked | return `[goal]`; QC reports the collision instead |
+| Longer legs (rig experiment) left walking on the old length | `Body` hard-coded leg/arm/height apart from `PARTS`/`JOINTS` | every dimension derived from the tables; `StyleSeam` tests |
+| Hug gap sized from an R6 constant in layout | `layout` imported `rig.HEAD_RADIUS` | `Body.head_radius`; import-boundary test |
+| Agent judged a storyboard built from staging that failed layout, blamed the engine | `board` did not check the layout gate | board warns; a board review cannot approve until layout passes |
 
 ## 11. Environment facts
 

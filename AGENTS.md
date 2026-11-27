@@ -7,6 +7,10 @@ language model, so re-rendering costs nothing.
 
 ## How to work: you are the whole studio
 
+**Only operating the studio (making a film, not changing the engine)?** [OPERATOR.md](OPERATOR.md)
+is the one page you need: the command loop, what each layout error means and what to change,
+the screenplay quick reference, and how to review without vision.
+
 New here? Read [Agent_Docs/04-agent-guide.md](Agent_Docs/04-agent-guide.md) first: it explains how the
 engine works, the mistakes already made, and how to behave. [Agent_Docs/](Agent_Docs/README.md) also has the
 full Blender, sound and production references, and [a plain-language tools guide](Agent_Docs/00-tools-guide.md).
@@ -21,7 +25,8 @@ python3 scripts/studio.py new SLUG --title "Title"     # producer
 python3 scripts/studio.py story SLUG                   # writer + story editor gate
 python3 scripts/studio.py voice SLUG                   # casting and recording (offline TTS)
 python3 scripts/studio.py board SLUG                   # storyboard sheet (Workbench, seconds)
-python3 scripts/studio.py layout SLUG                  # layout + animation QC on every frame
+python3 scripts/studio.py layout SLUG                  # layout + animation QC on every frame; writes reports/shots.txt
+python3 scripts/studio.py repair SLUG [--apply|--undo]  # propose small mechanical fixes for layout errors
 python3 scripts/studio.py review SLUG board --verdict approve|revise --saw "..."   # CHECKPOINT: look at the sheet
 python3 scripts/studio.py render SLUG --preset preview # ~0.4–0.5 s/frame
 python3 scripts/studio.py sound SLUG --preset preview  # ambience, foley, score, mix + listening gate

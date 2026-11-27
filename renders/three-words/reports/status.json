@@ -1,15 +1,15 @@
 {
  "story": {
   "ok": true,
-  "at": "2026-11-27 01:36:02",
-  "t": 1795723562.1,
-  "seconds": 5.3,
+  "at": "2026-11-27 03:10:00",
+  "t": 1795729200.9,
+  "seconds": 7.2,
   "inputs": {
    "screenplay": "a7214c3f7734",
    "voice.timing": "ccbf2b4f2785",
    "config.quality_bar": "dc12a957f223",
-   "engine.kit": "1b3dd43068a9",
-   "engine.studio": "b8c6df7e6716"
+   "engine.kit": "bd6054490f62",
+   "engine.studio": "505c6061985d"
   },
   "facts": {
    "locations": 4,

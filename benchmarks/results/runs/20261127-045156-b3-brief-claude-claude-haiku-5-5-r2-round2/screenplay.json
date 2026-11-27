@@ -1,0 +1,1239 @@
+{
+ "title": "The Last Lie",
+ "logline": "In a town where your last lie floats over your head until you tell the truth, a boy whose 'Dad's away' has hung above him since March learns what the lie was covering.",
+ "theme": "A lie costs more to keep than the truth costs to say.",
+ "audience": "Instagram Reels / TikTok, phone in hand, sound on but captions carry it.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "milo",
+ "cast": {
+  "milo": {
+   "name": "Milo",
+   "role": "lead, age 10, narrator",
+   "scale": 0.8,
+   "look": {
+    "skin": "#E9BE95",
+    "hair": {
+     "style": "spiky",
+     "color": "#2B211D"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#3D72D9",
+       "trim": "#E9EEF7"
+      },
+      "pants": "#24272E",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  },
+  "lily": {
+   "name": "Lily",
+   "role": "classmate",
+   "scale": 0.76,
+   "look": {
+    "skin": "#C98E68",
+    "hair": {
+     "style": "pigtails",
+     "color": "#6B3F26"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#E7799F",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#6B4C8A",
+      "shoes": "#F6D5E2"
+     }
+    }
+   },
+   "badge": true
+  },
+  "nina": {
+   "name": "Nina",
+   "role": "background kid",
+   "scale": 0.74,
+   "look": {
+    "skin": "#F0C8A8",
+    "hair": {
+     "style": "bob",
+     "color": "#C9883E"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#5DB37E",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#2E4057",
+      "shoes": "#FFFFFF"
+     }
+    }
+   },
+   "badge": true
+  },
+  "grandpa": {
+   "name": "Grandpa",
+   "role": "Milo's grandfather, the one who seems cold",
+   "scale": 0.98,
+   "build": 1.06,
+   "look": {
+    "skin": "#E3B48F",
+    "hair": {
+     "style": "bald_sides",
+     "color": "#D4D4D2"
+    },
+    "glasses": "#3B3B3B",
+    "mustache": "#D4D4D2",
+    "wrinkles": true,
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#7B5A44",
+       "trim": "#D9D1C2"
+      },
+      "pants": "#4B4F58",
+      "shoes": "#3A2A22"
+     },
+     "gown": {
+      "top": {
+       "style": "gown",
+       "color": "#9CC4DA",
+       "trim": "#7FA9C2"
+      },
+      "pants": "#9CC4DA",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": true
+  },
+  "mom": {
+   "name": "Mom",
+   "role": "Milo's mother",
+   "scale": 0.97,
+   "look": {
+    "skin": "#DDA982",
+    "hair": {
+     "style": "long",
+     "color": "#5B3A26"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#D7A33F",
+       "trim": "#F4EEE4"
+      },
+      "pants": "#4A6A9C",
+      "shoes": "#7A4E35"
+     }
+    }
+   },
+   "badge": false
+  },
+  "dad": {
+   "name": "Dad",
+   "role": "Milo's father, in hospital",
+   "scale": 1.0,
+   "build": 1.04,
+   "look": {
+    "skin": "#B97A57",
+    "hair": {
+     "style": "short",
+     "color": "#1F1A18"
+    },
+    "beard": "#1F1A18",
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#4F7A4E",
+       "trim": "#2F4A2F"
+      },
+      "pants": "#5B5F68",
+      "shoes": "#2A2A2A"
+     },
+     "gown": {
+      "top": {
+       "style": "gown",
+       "color": "#9CC4DA",
+       "trim": "#7FA9C2"
+      },
+      "pants": "#9CC4DA",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": false
+  }
+ },
+ "voices": {
+  "milo": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A young man remembering his childhood, warm and gentle, quiet, close to the microphone, natural storytelling, never an announcer.",
+   "seed": 211
+  },
+  "milo_child": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A ten-year-old boy, scared and trying to sound brave, soft and young.",
+   "seed": 307,
+   "pitch": 2.5
+  },
+  "lily": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "instruct": "A ten-year-old girl, curious and a little teasing, bright and young.",
+   "seed": 409,
+   "pitch": 3.0
+  },
+  "grandpa": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "instruct": "A tired old grandfather, gruff and hurt underneath, low, speaking slowly.",
+   "seed": 97,
+   "pitch": -2.0,
+   "tempo": 0.94
+  },
+  "mom": {
+   "engine": "kokoro",
+   "speaker": "af_sarah",
+   "seed": 11
+  },
+  "dad": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "instruct": "A tired dad in a hospital bed, soft, hoarse and loving, speaking slowly.",
+   "seed": 150,
+   "tempo": 0.94
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "milo",
+   "kind": "vo",
+   "text": "In this town, the last lie you tell floats over your head."
+  },
+  {
+   "id": "n02",
+   "who": "milo",
+   "kind": "vo",
+   "text": "Until you tell the truth."
+  },
+  {
+   "id": "n03",
+   "who": "milo",
+   "kind": "vo",
+   "text": "Mine has floated for months."
+  },
+  {
+   "id": "d01",
+   "who": "lily",
+   "voice": "lily",
+   "kind": "dialogue",
+   "text": "Where's your dad, Milo?"
+  },
+  {
+   "id": "d02",
+   "who": "milo",
+   "voice": "milo_child",
+   "kind": "dialogue",
+   "text": "He's away on a job."
+  },
+  {
+   "id": "n04",
+   "who": "milo",
+   "kind": "vo",
+   "text": "Everyone believed me."
+  },
+  {
+   "id": "n05",
+   "who": "milo",
+   "kind": "vo",
+   "text": "Grandpa's tag says FINE. Mine says AWAY.",
+   "say": "Grandpa's tag says fine. Mine says away."
+  },
+  {
+   "id": "d03",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Did you see him today?"
+  },
+  {
+   "id": "d04",
+   "who": "milo",
+   "voice": "milo_child",
+   "kind": "dialogue",
+   "text": "He's away, Grandpa."
+  },
+  {
+   "id": "d05",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Go do your homework.",
+   "say": "Go. Do your homework."
+  },
+  {
+   "id": "d06",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Get your shoes. Now."
+  },
+  {
+   "id": "d07",
+   "who": "mom",
+   "kind": "dialogue",
+   "text": "He's been asking for you, Milo."
+  },
+  {
+   "id": "n07",
+   "who": "milo",
+   "kind": "vo",
+   "text": "Dad fell off a roof in March. I said he was away."
+  },
+  {
+   "id": "d08",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "I'm not fine, kiddo."
+  },
+  {
+   "id": "d09",
+   "who": "dad",
+   "kind": "dialogue",
+   "text": "You came, buddy."
+  },
+  {
+   "id": "d10",
+   "who": "milo",
+   "voice": "milo_child",
+   "kind": "dialogue",
+   "text": "You're not away. You're here."
+  },
+  {
+   "id": "d11",
+   "who": "dad",
+   "kind": "dialogue",
+   "text": "I was scared too.",
+   "say": "I was scared, too."
+  },
+  {
+   "id": "d12",
+   "who": "milo",
+   "voice": "milo_child",
+   "kind": "dialogue",
+   "text": "My dad's in the hospital."
+  },
+  {
+   "id": "d13",
+   "who": "lily",
+   "voice": "lily",
+   "kind": "dialogue",
+   "text": "I didn't do my homework."
+  },
+  {
+   "id": "n09",
+   "who": "milo",
+   "kind": "vo",
+   "text": "It floated for months. The truth took one sentence."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "Show the rule in 2 s: a word floats over Milo's head and Lily's and Nina's.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "Milo tells the lie out loud to a friend; everyone believes it and the tag still floats.",
+   "emotion": -2
+  },
+  {
+   "id": "mystery",
+   "purpose": "Grandpa seems cold and says FINE on his own tag. Milo cannot get a straight answer.",
+   "emotion": -1
+  },
+  {
+   "id": "turn",
+   "purpose": "Mom says Dad has been asking; Grandpa admits he is not fine and his tag clears.",
+   "emotion": 3
+  },
+  {
+   "id": "reveal",
+   "purpose": "Dad is in the bed. Milo tells him the truth and his own tag falls.",
+   "emotion": -3
+  },
+  {
+   "id": "choice",
+   "purpose": "Milo lets the fear out in front of Dad instead of hiding behind the tag.",
+   "emotion": 4
+  },
+  {
+   "id": "button",
+   "purpose": "At the gate Milo says the truth to Lily in one sentence; the tag is gone.",
+   "emotion": 4
+  }
+ ],
+ "setups": [
+  {
+   "id": "away_tag",
+   "setup": "sh01",
+   "payoff": "sh21",
+   "note": "The AWAY tag floats over Milo from the first shot; it falls when he tells Dad the truth."
+  },
+  {
+   "id": "not_away",
+   "setup": "sh05",
+   "payoff": "sh21",
+   "note": "'He's away on a job' is said at the gate; 'You're not away. You're here' is said in the room."
+  },
+  {
+   "id": "grandpa_fine",
+   "setup": "sh07",
+   "payoff": "sh17",
+   "note": "Grandpa's FINE tag is planted in the armchair room; it clears when he says 'I'm not fine'."
+  },
+  {
+   "id": "homework_tag",
+   "setup": "sh01",
+   "payoff": "sh25",
+   "note": "Lily's DONE tag floats from the first shot; it clears when she says she did not do her homework."
+  },
+  {
+   "id": "floats",
+   "setup": "sh02",
+   "payoff": "sh26",
+   "note": "'Floated for months' in the hook pays off as 'It floated for months' at the end."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh08",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh12",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh16",
+   "mood": "hush"
+  },
+  {
+   "at": "sh19",
+   "mood": "rise"
+  },
+  {
+   "at": "sh22",
+   "mood": "resolve",
+   "offset": 0.9
+  },
+  {
+   "at": "sh24",
+   "mood": "outro",
+   "offset": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "lily": {
+     "at": [
+      -2.6,
+      4.4
+     ],
+     "yaw": 70
+    },
+    "milo": {
+     "at": [
+      0.55,
+      3.6
+     ],
+     "yaw": 180
+    },
+    "nina": {
+     "at": [
+      3.4,
+      4.4
+     ],
+     "yaw": 180
+    }
+   },
+   "start_badge": {
+    "milo": "AWAY",
+    "lily": "DONE",
+    "nina": "SURE"
+   },
+   "start_expr": {
+    "milo": "neutral",
+    "lily": "joy",
+    "nina": "joy"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.1,
+     "cam": {
+      "size": "ws",
+      "on": "milo",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "lily",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -0.5,
+        3.4
+       ],
+       "face": "milo",
+       "look": "milo",
+       "expr": "hopeful"
+      },
+      {
+       "who": "milo",
+       "t": 0.2,
+       "look": "lily",
+       "expr": "neutral"
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      "n02"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "mcu",
+      "on": "milo",
+      "side": 25,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "hook",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "milo",
+      "side": -20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "expr": "sad",
+       "look": "lily"
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "wound",
+     "lines": [
+      "d01"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "lily",
+      "side": -30,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "lily",
+       "t": 0.0,
+       "expr": "hopeful",
+       "look": "milo"
+      }
+     ]
+    },
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "lines": [
+      "d02"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "milo",
+      "side": 15,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "look": "lily",
+       "expr": "shy"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "lines": [
+      "n04"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "two",
+      "on": [
+       "lily",
+       "milo"
+      ],
+      "side": 0,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "lily",
+       "t": 0.4,
+       "expr": "sad"
+      },
+      {
+       "who": "milo",
+       "t": 0.0,
+       "expr": "sad"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "ambience": "living_room",
+   "cast": {
+    "grandpa": "armchair",
+    "milo": {
+     "at": [
+      -2.45,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "grandpa": "FINE",
+    "milo": "AWAY"
+   },
+   "start_expr": {
+    "grandpa": "grumpy",
+    "milo": "worried"
+   },
+   "shots": [
+    {
+     "id": "sh07",
+     "beat": "mystery",
+     "lines": [
+      "n05"
+     ],
+     "pad": 0.2,
+     "min": 2.2,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": 28,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.55,
+        0.15
+       ],
+       "face": "grandpa",
+       "look": "grandpa",
+       "expr": "hopeful"
+      }
+     ]
+    },
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "lines": [
+      "d03"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "grandpa",
+      "side": -25,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "milo",
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh09",
+     "beat": "mystery",
+     "lines": [
+      "d04"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "cu",
+      "on": "milo",
+      "side": 10,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh10",
+     "beat": "mystery",
+     "dur": 1.3,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": 35,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 1.2,
+       "amount": 0.25,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "mystery",
+     "lines": [
+      "d05"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": -25,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh12",
+     "beat": "turn",
+     "dur": 2.0,
+     "cam": {
+      "size": "ms",
+      "on": "grandpa",
+      "side": 35,
+      "move": "rise",
+      "height": "low"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.1,
+       "do": "stand",
+       "to": [
+        -0.9,
+        0.3
+       ],
+       "dur": 1.0,
+       "expr": "determined"
+      },
+      {
+       "who": "milo",
+       "t": 0.2,
+       "look": "grandpa",
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh13",
+     "beat": "turn",
+     "lines": [
+      "d06"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "mcu",
+      "on": "grandpa",
+      "side": -25,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "milo",
+       "expr": "determined"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "ambience": "corridor",
+   "cast": {
+    "milo": {
+     "at": [
+      -3.0,
+      0.5
+     ],
+     "yaw": 90
+    },
+    "grandpa": {
+     "at": [
+      -6.2,
+      -0.5
+     ],
+     "yaw": 90
+    },
+    "mom": "mom_seat"
+   },
+   "start_badge": {
+    "milo": "AWAY",
+    "grandpa": "FINE"
+   },
+   "start_expr": {
+    "milo": "worried",
+    "grandpa": "grumpy",
+    "mom": "sad"
+   },
+   "shots": [
+    {
+     "id": "sh14",
+     "beat": "turn",
+     "dur": 2.6,
+     "cam": {
+      "size": "ws",
+      "on": "milo",
+      "side": 0,
+      "move": "track",
+      "relative": "world",
+      "world_yaw": 0,
+      "lens": 26
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.6,
+        0.5
+       ],
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh15",
+     "beat": "turn",
+     "lines": [
+      "d07"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "mom",
+      "side": -30,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "milo",
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "turn",
+     "lines": [
+      "n07"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "milo",
+      "side": 20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "look": "mom",
+       "expr": "worried"
+      },
+      {
+       "who": "milo",
+       "t": 1.0,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh17",
+     "beat": "turn",
+     "lines": [
+      "d08"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": -20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "milo",
+       "expr": "sad"
+      },
+      {
+       "who": "grandpa",
+       "t": "end:d08-0.1",
+       "do": "badge",
+       "text": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "ambience": "hospital_room",
+   "wardrobe": {
+    "dad": "gown"
+   },
+   "cast": {
+    "dad": "bed_edge",
+    "milo": {
+     "at": [
+      2.0,
+      -1.0
+     ],
+     "yaw": -90
+    }
+   },
+   "start_badge": {
+    "milo": "AWAY"
+   },
+   "start_expr": {
+    "dad": "sleepy",
+    "milo": "worried"
+   },
+   "shots": [
+    {
+     "id": "sh19",
+     "beat": "reveal",
+     "dur": 2.4,
+     "cam": {
+      "size": "ws",
+      "on": "dad",
+      "side": 40,
+      "move": "push",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.0,
+        0.95
+       ],
+       "dur": 2.4,
+       "face": "dad",
+       "look": "dad",
+       "expr": "worried"
+      },
+      {
+       "who": "dad",
+       "t": 0.5,
+       "look": "milo",
+       "expr": "sleepy"
+      }
+     ]
+    },
+    {
+     "id": "sh20",
+     "beat": "reveal",
+     "lines": [
+      "d09"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "dad",
+      "side": 30,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "look": "milo",
+       "expr": "teary"
+      },
+      {
+       "who": "dad",
+       "t": 0.6,
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh21",
+     "beat": "reveal",
+     "lines": [
+      "d10"
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "cu",
+      "on": "milo",
+      "side": -20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "look": "dad",
+       "expr": "cry"
+      },
+      {
+       "who": "milo",
+       "t": "end:d10-0.1",
+       "do": "badge",
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "sh22",
+     "beat": "choice",
+     "lines": [
+      "d11"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "dad",
+      "side": 30,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "expr": "cry_smile"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc5",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "button",
+   "ambience": "schoolyard",
+   "cast": {
+    "lily": {
+     "at": [
+      -2.0,
+      2.0
+     ],
+     "yaw": 70
+    },
+    "milo": {
+     "at": [
+      0.55,
+      3.6
+     ],
+     "yaw": 180
+    }
+   },
+   "start_badge": {
+    "lily": "DONE"
+   },
+   "start_expr": {
+    "lily": "joy",
+    "milo": "sad"
+   },
+   "shots": [
+    {
+     "id": "sh24",
+     "beat": "button",
+     "lines": [
+      "d12"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "mcu",
+      "on": "milo",
+      "side": -20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "lily",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -0.9,
+        2.4
+       ],
+       "face": "milo",
+       "dur": 1.2,
+       "expr": "joy"
+      },
+      {
+       "who": "milo",
+       "t": 0.0,
+       "look": "lily",
+       "expr": "teary"
+      }
+     ]
+    },
+    {
+     "id": "sh25",
+     "beat": "button",
+     "lines": [
+      "d13"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "lily",
+      "side": 30,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "lily",
+       "t": 0.0,
+       "look": "milo",
+       "expr": "sad"
+      },
+      {
+       "who": "lily",
+       "t": "end:d13-0.1",
+       "do": "badge",
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "sh26",
+     "beat": "button",
+     "lines": [
+      "n09"
+     ],
+     "pad": 1.0,
+     "cam": {
+      "size": "ws",
+      "on": "milo",
+      "side": 0,
+      "move": "pull",
+      "lens": 24
+     },
+     "act": [
+      {
+       "who": "milo",
+       "t": 0.0,
+       "expr": "cry_smile"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

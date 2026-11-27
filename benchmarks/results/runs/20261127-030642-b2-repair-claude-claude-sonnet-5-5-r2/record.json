@@ -1,0 +1,109 @@
+{
+ "run": "20261127-030642-b2-repair-claude-claude-sonnet-5-5-r2",
+ "task": "b2-repair",
+ "kind": "recovery",
+ "harness": "claude",
+ "harness_version": "2.1.332 (Claude Code)",
+ "model": "claude-sonnet-5-5",
+ "effort": "harness default",
+ "mode": "operator",
+ "rep": 2,
+ "commit": "fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "tree": "96a9bb0ec1c1d5dd4565590da248463c858764e9",
+ "frozen_from": "given commit fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "task_hash": "119439bf994b",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-030642-b2-repair-claude-claude-sonnet-5-5-r2",
+ "started": "2026-11-27 03:06:43",
+ "timeout_min": 40,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 721.3,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "Bash": 24,
+   "Read": 4
+  },
+  "tool_errors": 0,
+  "turns": 29,
+  "tokens": {
+   "input": 56,
+   "output": 11985,
+   "cache_read": 1478549,
+   "cache_write": 62948
+  },
+  "cost_usd": 0.5196089,
+  "model_reported": "claude-sonnet-5-5",
+  "final_message": "The layout gate now passes: 0 errors over all 1604 frames, from a full run (not `--quick`). It started at 82 errors. `studio.py status` shows story, voice and layout as PASS and current.\n\n**What I changed** (only `episodes/bench-repair/screenplay.json`, plus director's notes in `notes.md`):\n\nAll the damage was positions that put people inside furniture or inside each other:\n\n- **sh07:** Ava's walk ended inside the side table at (0.75, 1.5). She now stops at the set's `by_table` mark (0.95, 0.75), still next to the photo she points at in sh08. This also cleared the two \"Ava's face out of frame\" camera errors in sh08 and sh10.\n- **Hospital room (sc4):** Leo's starting spot (1.6, 1.1) was inside the bedside table. It is now (1.6, -1.1), on the door side of the room.\n- **sh18:** Leo's walk ended inside Ava's visitor chair at (-1.45, 0.3). He now stops at (-0.4, -0.05), in front of her and clear of Mom's legs.\n- **sh20:**\n  - Ava now stands up to (-1.15, 0.3) instead of (-1.0, 0.3). That keeps her legs off Leo as she rises without putting her leg into the chair once she turns.\n  - Leo's hug is now `at: hips` with `lift: 0.12` instead of `at: head` with `lift: 0.0`. The production guide says the shorter actor holds low, and with both holding high their arms crossed through sh20\u2013sh22.\n\nLines, voices, cast, scenes, beats, the shot list and its order, shot sizes and subjects, expressions and badges are unchanged. Every action is still the same kind of action; the hug only got the guide's standard values.\n\n**Gate results**\n- Story: PASS (0 errors). One warning: the film runs 66.9 s, over the 45\u201365 s target. The runtime comes from the recorded voice takes, not from my changes, and a future picture review will need to justify it.\n- Voice: PASS, 17 takes, all clear. It reused the recorded takes and nothing was re-recorded.\n- Layout: PASS, 0 errors and 15 warnings. The warnings are three brief moments of an arm passing into the actor's own body, two moments of Leo's face leaving the frame in sh04, and automatic camera adjustments. None of them block the gate.\n\n**Not done:** As the task said, I didn't build the storyboard. I also didn't render, mix sound, deliver or record either review, so I haven't looked at any frames. I changed nothing outside `episodes/bench-repair/` (the studio commands wrote their own reports under `renders/bench-repair/`), and I found nothing that looked wrong in the engine.",
+  "result": "success",
+  "tool_calls_total": 28
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "intent": true,
+   "minimal": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "warn: duration 66.9s is outside the 45-65 s target; the picture review must justify it",
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 22, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"hurt\", \"neutral\", \"peaceful\", \"sad\", \"scared\", \"teary\", \"worried\"], \"duration\": 66.87, \"shots_per_minute\": 19.7, \"longest_shot\": 5.11, \"words_per_minute\": 110.4}",
+     "PASS [story] 0 errors, 1 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn camera.solve     sh21   60.97- 60.97s  camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+     "warn camera.solve     sh22   63.87- 63.87s  camera adjusted by +0 deg, +0 deg up, distance x0.85 to clear the view",
+     "PASS [layout] 0 errors, 15 warnings over 1604 frames"
+    ],
+    "errors": 0,
+    "warns": 15,
+    "error_rules": [],
+    "duration": 66.87
+   }
+  },
+  "studio_runs": {
+   "layout": {
+    "runs": 12,
+    "fails": 10,
+    "seconds": 574.5
+   },
+   "story": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 9.8
+   },
+   "voice": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 60.0
+   }
+  },
+  "intent_violations": [],
+  "faults": {
+   "F1": "changed",
+   "F2": "changed",
+   "F3": "changed",
+   "F4": "restored"
+  },
+  "edits": 6,
+  "edited_paths": [
+   "/scenes[1]/shots[0]/act[0]/to",
+   "/scenes[3]/cast/leo/at",
+   "/scenes[3]/shots[4]/act[0]/to",
+   "/scenes[3]/shots[6]/act[0]/to",
+   "/scenes[3]/shots[6]/act[4]/at",
+   "/scenes[3]/shots[6]/act[4]/lift"
+  ],
+  "passed": true
+ }
+}

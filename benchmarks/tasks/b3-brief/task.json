@@ -1,0 +1,9 @@
+{
+ "id": "b3-brief",
+ "kind": "creative",
+ "slug": "bench-brief",
+ "source_episode": null,
+ "hide_episodes": [],
+ "timeout_min": 75,
+ "checks": ["story", "voice", "layout", "board", "board_review", "shape"]
+}

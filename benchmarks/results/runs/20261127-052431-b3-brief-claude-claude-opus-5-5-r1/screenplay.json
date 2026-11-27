@@ -1,0 +1,1387 @@
+{
+ "title": "I Like It Here",
+ "logline": "In a town where your last lie floats over your head until you tell the truth, a girl whose lie has hung there for five months finally sees one over the grandfather who has never lied.",
+ "theme": "Sometimes the lie is the only way a person can say what they need.",
+ "audience": "Instagram Reels / TikTok, phone in hand.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "ivy",
+ "cast": {
+  "ivy": {
+   "name": "Ivy",
+   "role": "lead, age 10, narrator",
+   "scale": 0.78,
+   "look": {
+    "skin": "#B07A55",
+    "hair": {
+     "style": "pigtails",
+     "color": "#2A1C16"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "sweater",
+       "color": "#4C8C6A",
+       "trim": "#EFE6D2"
+      },
+      "pants": "#2E3440",
+      "shoes": "#C8453B"
+     }
+    },
+    "freckles": true
+   },
+   "badge": true
+  },
+  "grandpa": {
+   "name": "Grandpa Ray",
+   "role": "Ivy's grandfather, night cleaner at the hospital, seems cold",
+   "scale": 0.98,
+   "build": 1.06,
+   "look": {
+    "skin": "#A8704C",
+    "hair": {
+     "style": "short",
+     "color": "#CFCFCB"
+    },
+    "beard": "#D8D8D4",
+    "wrinkles": true,
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#3F5468",
+       "trim": "#C9D3DC"
+      },
+      "pants": "#2F3640",
+      "shoes": "#2A2220"
+     }
+    }
+   },
+   "badge": true
+  },
+  "theo": {
+   "name": "Theo",
+   "role": "classmate (hook)",
+   "scale": 0.74,
+   "look": {
+    "skin": "#F0C8A8",
+    "hair": {
+     "style": "spiky",
+     "color": "#C9883E"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#D9534F",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#33363F",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  },
+  "theo_dad": {
+   "name": "Theo's dad",
+   "role": "parent (hook)",
+   "scale": 1.0,
+   "build": 1.04,
+   "look": {
+    "skin": "#F0C8A8",
+    "hair": {
+     "style": "short",
+     "color": "#B87A38"
+    },
+    "beard": "#B87A38",
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#5E7FA8",
+       "trim": "#E8EEF6"
+      },
+      "pants": "#3B3B44",
+      "shoes": "#2A2220"
+     }
+    }
+   },
+   "badge": true
+  },
+  "nurse": {
+   "name": "Night nurse",
+   "role": "extra, hospital corridor",
+   "scale": 0.95,
+   "look": {
+    "skin": "#8D5A3B",
+    "hair": {
+     "style": "bun",
+     "color": "#1E1612"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#6FB7B0",
+       "trim": "#E6F4F2"
+      },
+      "pants": "#6FB7B0",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  }
+ },
+ "voices": {
+  "ivy": {
+   "engine": "qwen3",
+   "speaker": "serena",
+   "seed": 512,
+   "instruct": "A young woman remembering her childhood, warm and quiet but clearly spoken, every word distinct, natural storytelling, never an announcer."
+  },
+  "ivy_child": {
+   "engine": "qwen3",
+   "speaker": "serena",
+   "seed": 233,
+   "pitch": 2.5,
+   "instruct": "A ten-year-old girl talking to her grandfather, small and shaky voice, trying not to cry."
+  },
+  "grandpa": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "seed": 97,
+   "pitch": -2.5,
+   "tempo": 0.94,
+   "instruct": "A gruff old grandfather who hardly ever talks, low, flat and slow, hiding his feelings."
+  },
+  "theo": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "seed": 307,
+   "pitch": 2.5,
+   "instruct": "A cheeky eight-year-old boy caught out by his dad, giving up with a grin."
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "In my town, your last lie floats over your head.",
+   "say": "In my town... your last lie floats over your head."
+  },
+  {
+   "id": "t01",
+   "who": "theo",
+   "kind": "dialogue",
+   "text": "Fine. I didn't eat my lunch."
+  },
+  {
+   "id": "n02",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "Until you tell the truth."
+  },
+  {
+   "id": "n03",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "Mine has been up there for five months."
+  },
+  {
+   "id": "n04",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "I said it the day Mom left me at Grandpa's."
+  },
+  {
+   "id": "n05",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "Every day, he read it before he looked at me."
+  },
+  {
+   "id": "n06",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "At night he cleans the hospital. I wait."
+  },
+  {
+   "id": "n07",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "Grandpa never lied. Not even to be nice."
+  },
+  {
+   "id": "g01",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Your aunt can take you. Back to the city."
+  },
+  {
+   "id": "k01",
+   "who": "ivy",
+   "voice": "ivy_child",
+   "kind": "dialogue",
+   "text": "Do you want me to go?"
+  },
+  {
+   "id": "g02",
+   "who": "grandpa",
+   "kind": "dialogue",
+   "text": "Go. I'm fine alone."
+  },
+  {
+   "id": "k02",
+   "who": "ivy",
+   "voice": "ivy_child",
+   "kind": "dialogue",
+   "text": "I lied. I hated it here."
+  },
+  {
+   "id": "k03",
+   "who": "ivy",
+   "voice": "ivy_child",
+   "kind": "dialogue",
+   "text": "I like it here."
+  },
+  {
+   "id": "n08",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "Grandpa told one lie in his whole life."
+  },
+  {
+   "id": "n09",
+   "who": "ivy",
+   "kind": "vo",
+   "text": "He never took it back."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "The rule on screen at once: I ATE MY LUNCH floats over Theo until he owns up and it pops.",
+   "emotion": 2
+  },
+  {
+   "id": "wound",
+   "purpose": "I LIKE IT HERE has floated over Ivy for five months. Grandpa reads it, looks away and walks ahead of her.",
+   "emotion": -3
+  },
+  {
+   "id": "mystery",
+   "purpose": "Night shift: Grandpa mops the corridor while Ivy waits on a plastic chair. Everyone's head carries a little lie; his is empty.",
+   "emotion": -2
+  },
+  {
+   "id": "turn",
+   "purpose": "Grandpa has arranged for her aunt to take her back to the city: the thing her lie hid is what she wanted.",
+   "emotion": -4
+  },
+  {
+   "id": "reveal",
+   "purpose": "He says Go, I'm fine alone, and the first lie of his life appears over his head: I'M FINE ALONE.",
+   "emotion": -1
+  },
+  {
+   "id": "choice",
+   "purpose": "Ivy tells the truth that hurts him (I hated it here), her lie pops, then says the same words again and nothing floats.",
+   "emotion": 4
+  },
+  {
+   "id": "button",
+   "purpose": "At the gate he waits for her and looks at her face, his lie still up; they walk out side by side.",
+   "emotion": 3
+  }
+ ],
+ "setups": [
+  {
+   "id": "lie_words",
+   "setup": "sh04",
+   "payoff": "sh17",
+   "note": "I LIKE IT HERE floats as a lie for five months; the same words spoken at the end make no badge."
+  },
+  {
+   "id": "never_lied",
+   "setup": "sh09",
+   "payoff": "sh12",
+   "note": "Grandpa's empty head next to the nurse's I'M NOT TIRED; then his first lie appears."
+  },
+  {
+   "id": "reads_first",
+   "setup": "sh06",
+   "payoff": "sh19",
+   "note": "He reads her head before her face and looks away; at the end, same angle, he looks at her face and smiles."
+  },
+  {
+   "id": "walks_ahead",
+   "setup": "sh07",
+   "payoff": "sh20",
+   "note": "He walks ahead of her out of the gate; at the end they walk out together."
+  },
+  {
+   "id": "pop",
+   "setup": "sh02",
+   "payoff": "sh15",
+   "note": "Theo's lie pops when he owns up; Ivy's pops the same way, but her truth costs Grandpa a flinch."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh04",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh08",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh10",
+   "mood": "hush"
+  },
+  {
+   "at": "sh12",
+   "mood": "swell",
+   "offset": 0.5
+  },
+  {
+   "at": "sh15",
+   "mood": "hush"
+  },
+  {
+   "at": "sh18",
+   "mood": "resolve",
+   "offset": 0.4
+  },
+  {
+   "at": "sh20",
+   "mood": "outro",
+   "offset": 0.4
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "theo_dad": {
+     "at": [
+      -3.0,
+      -1.7
+     ],
+     "yaw": 160
+    },
+    "theo": {
+     "at": [
+      -0.9,
+      2.4
+     ],
+     "yaw": 150
+    },
+    "ivy": {
+     "at": [
+      0.55,
+      3.6
+     ],
+     "yaw": 180
+    },
+    "grandpa": {
+     "at": [
+      2.0,
+      -2.1
+     ],
+     "yaw": 175
+    }
+   },
+   "start_badge": {
+    "theo": "I ATE MY LUNCH",
+    "ivy": "I LIKE IT HERE"
+   },
+   "start_expr": {
+    "theo_dad": "happy",
+    "theo": "joy",
+    "ivy": "neutral",
+    "grandpa": "grumpy"
+   },
+   "start_look": {
+    "theo_dad": "theo",
+    "grandpa": "ivy"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "fs",
+      "on": "theo_dad",
+      "relative": "world",
+      "world_yaw": -90,
+      "side": -12,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.85,
+      "dist_mul": 1.45
+     },
+     "act": [
+      {
+       "who": "theo",
+       "t": 0.0,
+       "do": "run",
+       "to": "theo_dad",
+       "gap": 0.8,
+       "face": "theo_dad",
+       "look": "theo_dad"
+      },
+      {
+       "who": "theo_dad",
+       "t": 0.0,
+       "do": "wave",
+       "dur": 1.0,
+       "expr": "happy"
+      },
+      {
+       "who": "ivy",
+       "t": 0.3,
+       "do": "walk",
+       "to": [
+        0.7,
+        1.4
+       ],
+       "look": "theo",
+       "dur": 2.4
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      {
+       "id": "t01",
+       "at": 0.35
+      }
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ms",
+      "on": "theo",
+      "side": 50,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.6
+     },
+     "act": [
+      {
+       "who": "theo_dad",
+       "t": 0.0,
+       "look": "theo.top",
+       "expr": "smirk"
+      },
+      {
+       "who": "theo",
+       "t": 0.0,
+       "look": "theo_dad",
+       "expr": "shy"
+      },
+      {
+       "who": "theo",
+       "t": "line:t01",
+       "do": "shrug",
+       "dur": 0.9
+      },
+      {
+       "who": "theo",
+       "t": "end:t01-0.1",
+       "do": "badge",
+       "text": ""
+      },
+      {
+       "who": "theo",
+       "t": "end:t01+0.1",
+       "expr": "happy"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "hook",
+     "lines": [
+      "n02"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "ws",
+      "on": "theo",
+      "side": 60,
+      "move": "drift",
+      "height": "slight_high",
+      "key": 0.7
+     },
+     "act": [
+      {
+       "who": "theo_dad",
+       "t": 0.0,
+       "look": "theo",
+       "expr": "joy"
+      },
+      {
+       "who": "theo_dad",
+       "t": 0.0,
+       "do": "walk",
+       "to": "theo",
+       "gap": 0.62,
+       "face_offset": 32,
+       "dur": 0.7
+      },
+      {
+       "who": "theo_dad",
+       "t": "+0.05",
+       "do": "ruffle",
+       "with": "theo",
+       "dur": 1.2
+      },
+      {
+       "who": "theo",
+       "t": 0.6,
+       "expr": "joy"
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "wound",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.5,
+     "min": 2.0,
+     "cam": {
+      "size": "mcu",
+      "on": "ivy",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.4,
+      "dist_mul": 1.15
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "look": "theo",
+       "expr": "neutral"
+      },
+      {
+       "who": "ivy",
+       "t": 0.9,
+       "do": "head_down",
+       "dur": 1.4,
+       "amount": 0.2,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "lines": [
+      "n04"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "two",
+      "on": [
+       "ivy",
+       "grandpa"
+      ],
+      "side": 0,
+      "move": "drift",
+      "height": "eye",
+      "key": 0.95
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        1.95,
+        -1.15
+       ],
+       "face": "grandpa",
+       "look": "grandpa",
+       "expr": "worried",
+       "dur": 1.5
+      },
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "ivy",
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "lines": [
+      "n05"
+     ],
+     "pad": 0.35,
+     "cam": {
+      "size": "mcu",
+      "on": "grandpa",
+      "side": -40,
+      "move": "push",
+      "height": "slight_low"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "ivy.top",
+       "expr": "calm"
+      },
+      {
+       "who": "grandpa",
+       "t": "line:n05+1.2",
+       "look": "ivy",
+       "expr": "hurt"
+      },
+      {
+       "who": "grandpa",
+       "t": "end:n05-0.2",
+       "look": [
+        1.0,
+        -3.6,
+        1.2
+       ],
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh07",
+     "beat": "wound",
+     "dur": 2.2,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": 30,
+      "move": "pull",
+      "height": "slight_high",
+      "key": 0.5
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        3.0,
+        -5.6
+       ],
+       "expr": "grumpy"
+      },
+      {
+       "who": "ivy",
+       "t": 0.7,
+       "do": "walk",
+       "to": [
+        2.2,
+        -4.0
+       ],
+       "look": "grandpa",
+       "expr": "sad",
+       "speed": 0.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "mystery",
+   "ambience": "corridor",
+   "cast": {
+    "grandpa": {
+     "at": [
+      2.2,
+      -0.75
+     ],
+     "yaw": -90
+    },
+    "ivy": "wait2",
+    "nurse": {
+     "at": [
+      -2.8,
+      -0.3
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "ivy": "I LIKE IT HERE",
+    "nurse": "I'M NOT TIRED"
+   },
+   "start_expr": {
+    "grandpa": "calm",
+    "ivy": "sad",
+    "nurse": "sleepy"
+   },
+   "start_look": {
+    "ivy": [
+     2.85,
+     0.6,
+     0.3
+    ]
+   },
+   "shots": [
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "lines": [
+      "n06"
+     ],
+     "pad": 0.3,
+     "min": 3.0,
+     "cam": {
+      "size": "ws",
+      "on": "ivy",
+      "relative": "world",
+      "world_yaw": 0,
+      "side": -10,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 24
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.2,
+        -0.75
+       ],
+       "face": -90,
+       "dur": 3.0
+      },
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 3.0,
+       "amount": 0.3
+      },
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 3.2,
+       "amount": 0.25
+      }
+     ]
+    },
+    {
+     "id": "sh09",
+     "beat": "mystery",
+     "lines": [
+      "n07"
+     ],
+     "pad": 0.35,
+     "cam": {
+      "size": "two",
+      "on": [
+       "grandpa",
+       "nurse"
+      ],
+      "side": 0,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.6
+     },
+     "act": [
+      {
+       "who": "nurse",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "sleepy"
+      },
+      {
+       "who": "nurse",
+       "t": 0.3,
+       "do": "wave",
+       "dur": 0.9
+      },
+      {
+       "who": "grandpa",
+       "t": 0.2,
+       "do": "turn",
+       "to": "nurse",
+       "dur": 0.6
+      },
+      {
+       "who": "grandpa",
+       "t": 0.4,
+       "look": "nurse.top",
+       "expr": "calm"
+      },
+      {
+       "who": "grandpa",
+       "t": "line:n07+1.3",
+       "do": "shake_head",
+       "dur": 0.8,
+       "expr": "smirk"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "turn",
+   "ambience": "living_room",
+   "cast": {
+    "grandpa": "armchair",
+    "ivy": {
+     "at": [
+      -2.45,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "ivy": "I LIKE IT HERE"
+   },
+   "start_expr": {
+    "grandpa": "grumpy",
+    "ivy": "neutral"
+   },
+   "start_look": {
+    "grandpa": "photo"
+   },
+   "shots": [
+    {
+     "id": "sh10",
+     "beat": "turn",
+     "lines": [
+      {
+       "id": "g01",
+       "at": 0.9
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 22,
+      "key": 0.9
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.55,
+        0.15
+       ],
+       "face": "grandpa",
+       "look": "grandpa",
+       "expr": "neutral"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.8,
+       "look": "ivy",
+       "expr": "calm"
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "turn",
+     "lines": [
+      {
+       "id": "k01",
+       "at": 0.3
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "mcu",
+      "on": "ivy",
+      "side": 10,
+      "move": "drift",
+      "height": "slight_low",
+      "dist_mul": 1.15
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "worried"
+      },
+      {
+       "who": "ivy",
+       "t": 0.2,
+       "do": "hand_chest",
+       "dur": 1.4
+      }
+     ]
+    },
+    {
+     "id": "sh12",
+     "beat": "reveal",
+     "lines": [
+      {
+       "id": "g02",
+       "at": 0.4
+      }
+     ],
+     "pad": 0.6,
+     "cam": {
+      "size": "ms",
+      "on": "grandpa",
+      "side": -25,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.8
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "photo",
+       "expr": "grumpy"
+      },
+      {
+       "who": "grandpa",
+       "t": "end:g02+0.15",
+       "do": "badge",
+       "text": "I'M FINE ALONE"
+      },
+      {
+       "who": "grandpa",
+       "t": "end:g02+0.5",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh13",
+     "beat": "reveal",
+     "dur": 1.9,
+     "cam": {
+      "size": "cu",
+      "on": "ivy",
+      "side": 15,
+      "move": "push",
+      "height": "slight_low"
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "look": "grandpa.top",
+       "expr": "shock"
+      },
+      {
+       "who": "ivy",
+       "t": 1.0,
+       "look": "grandpa",
+       "expr": "teary"
+      }
+     ]
+    },
+    {
+     "id": "sh14",
+     "beat": "reveal",
+     "dur": 2.2,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "side": -40,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 24
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 2.6,
+       "amount": 0.35,
+       "expr": "sad"
+      },
+      {
+       "who": "ivy",
+       "t": 0.3,
+       "look": "grandpa.top",
+       "expr": "teary"
+      }
+     ]
+    },
+    {
+     "id": "sh15",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "k02",
+       "at": 0.45
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "ms",
+      "on": "ivy",
+      "side": 20,
+      "move": "push",
+      "height": "eye",
+      "key": 0.7
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.5,
+        -0.35
+       ],
+       "face": "grandpa",
+       "look": "grandpa",
+       "dur": 0.6,
+       "expr": "determined"
+      },
+      {
+       "who": "ivy",
+       "t": "line:k02+0.8",
+       "expr": "cry"
+      },
+      {
+       "who": "ivy",
+       "t": "end:k02",
+       "do": "badge",
+       "text": ""
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "choice",
+     "dur": 1.7,
+     "cam": {
+      "size": "cu",
+      "on": "grandpa",
+      "side": -30,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "look": "ivy",
+       "expr": "hurt"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.1,
+       "do": "flinch",
+       "dur": 0.6
+      },
+      {
+       "who": "grandpa",
+       "t": 0.9,
+       "look": "ivy.top",
+       "expr": "surprise"
+      }
+     ]
+    },
+    {
+     "id": "sh17",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "k03",
+       "at": 0.5
+      }
+     ],
+     "pad": 1.0,
+     "cam": {
+      "size": "ms",
+      "on": "ivy",
+      "side": 20,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.75
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "look": "grandpa",
+       "expr": "teary"
+      },
+      {
+       "who": "ivy",
+       "t": "end:k03+0.2",
+       "expr": "cry_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh18",
+     "beat": "choice",
+     "dur": 3.9,
+     "cam": {
+      "size": "ms",
+      "on": "grandpa",
+      "side": 20,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.78
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "stand",
+       "to": [
+        -0.35,
+        0.35
+       ],
+       "dur": 0.9,
+       "expr": "teary"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.95,
+       "do": "turn",
+       "to": "ivy",
+       "dur": 0.4
+      },
+      {
+       "who": "grandpa",
+       "t": 1.3,
+       "do": "open_arms",
+       "dur": 1.2,
+       "spread": 0.55,
+       "raise": 1.5
+      },
+      {
+       "who": "ivy",
+       "t": 1.4,
+       "do": "approach",
+       "to": "grandpa",
+       "dur": 0.75,
+       "expr": "cry_smile"
+      },
+      {
+       "who": "ivy",
+       "t": "+0.1",
+       "do": "hug",
+       "with": "grandpa",
+       "at": "hips",
+       "dur": 40,
+       "lift": 0.12,
+       "head_turn": -1.0
+      },
+      {
+       "who": "grandpa",
+       "t": 2.4,
+       "do": "hug",
+       "with": "ivy",
+       "at": "head",
+       "dur": 40,
+       "lean": 0.04,
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45,
+       "expr": "cry_smile"
+      },
+      {
+       "who": "ivy",
+       "t": 3.3,
+       "do": "release"
+      },
+      {
+       "who": "grandpa",
+       "t": 3.4,
+       "do": "release"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "button",
+   "ambience": "schoolyard",
+   "cast": {
+    "grandpa": {
+     "at": [
+      1.9,
+      -2.0
+     ],
+     "yaw": 175
+    },
+    "ivy": {
+     "at": [
+      0.9,
+      4.2
+     ],
+     "yaw": 180
+    },
+    "theo_dad": {
+     "at": [
+      -4.6,
+      -2.6
+     ],
+     "yaw": 160
+    },
+    "theo": {
+     "at": [
+      -4.35,
+      -1.85
+     ],
+     "yaw": -20
+    }
+   },
+   "start_badge": {
+    "grandpa": "I'M FINE ALONE",
+    "ivy": "",
+    "theo": "I WASHED MY HANDS"
+   },
+   "start_expr": {
+    "grandpa": "calm",
+    "ivy": "happy",
+    "theo_dad": "smirk",
+    "theo": "shy"
+   },
+   "start_look": {
+    "grandpa": [
+     0.9,
+     4.2,
+     1.0
+    ],
+    "theo_dad": "theo.top",
+    "theo": "theo_dad"
+   },
+   "shots": [
+    {
+     "id": "sh19",
+     "beat": "button",
+     "lines": [
+      {
+       "id": "n08",
+       "at": 0.4
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "ms",
+      "on": "grandpa",
+      "side": -30,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "ivy",
+       "t": 0.0,
+       "do": "run",
+       "to": [
+        1.05,
+        -1.5
+       ],
+       "face": "grandpa",
+       "look": "grandpa",
+       "expr": "joy"
+      },
+      {
+       "who": "grandpa",
+       "t": 0.6,
+       "look": "ivy",
+       "expr": "happy"
+      }
+     ]
+    },
+    {
+     "id": "sh20",
+     "beat": "button",
+     "lines": [
+      {
+       "id": "n09",
+       "at": 0.4
+      }
+     ],
+     "pad": 1.2,
+     "cam": {
+      "size": "ws",
+      "on": "grandpa",
+      "relative": "world",
+      "world_yaw": 180,
+      "side": -20,
+      "move": "pull",
+      "height": "slight_high",
+      "key": 0.5,
+      "lens": 24
+     },
+     "act": [
+      {
+       "who": "grandpa",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        2.7,
+        -5.4
+       ],
+       "expr": "peaceful",
+       "speed": 0.8
+      },
+      {
+       "who": "ivy",
+       "t": 0.15,
+       "do": "walk",
+       "to": [
+        1.2,
+        -5.2
+       ],
+       "expr": "peaceful",
+       "speed": 0.85
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

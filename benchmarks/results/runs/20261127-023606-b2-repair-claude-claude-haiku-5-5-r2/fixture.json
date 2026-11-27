@@ -1,0 +1,1440 @@
+{
+ "title": "Three Words",
+ "logline": "In a town where your last words float above your head, a boy who stopped talking after telling his sister he hates her follows her one night and learns where she goes.",
+ "theme": "The people who never say it are often the ones saying it about you.",
+ "audience": "Instagram Reels / TikTok, phone in hand.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "leo",
+ "cast": {
+  "leo": {
+   "name": "Leo",
+   "role": "lead, age 9, narrator",
+   "scale": 0.76,
+   "look": {
+    "skin": "#F0C9A2",
+    "hair": {
+     "style": "short",
+     "color": "#5A3A22"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#E8B23A",
+       "trim": "#FFF4D6"
+      },
+      "pants": "#2E3440",
+      "shoes": "#E9E9E9"
+     }
+    },
+    "freckles": true
+   },
+   "badge": true
+  },
+  "ava": {
+   "name": "Ava",
+   "role": "big sister, 16, seems cold",
+   "scale": 0.95,
+   "look": {
+    "skin": "#F0C9A2",
+    "hair": {
+     "style": "long",
+     "color": "#3B2418"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "sweater",
+       "color": "#8E3B46",
+       "trim": "#F2E6E0"
+      },
+      "pants": "#2B2F3A",
+      "shoes": "#3A2A22"
+     }
+    }
+   },
+   "badge": true
+  },
+  "mom": {
+   "name": "Mom",
+   "role": "in hospital",
+   "scale": 0.97,
+   "look": {
+    "skin": "#EAC3A0",
+    "hair": {
+     "style": "bob",
+     "color": "#4A2E1E"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "gown",
+       "color": "#9CC4DA",
+       "trim": "#7FA9C2"
+      },
+      "pants": "#9CC4DA",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": true
+  },
+  "sam": {
+   "name": "Sam",
+   "role": "extra, kid",
+   "scale": 0.76,
+   "look": {
+    "skin": "#8D5A3B",
+    "hair": {
+     "style": "spiky",
+     "color": "#1E1612"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#3E9B5A",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#33363F",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  },
+  "sam_dad": {
+   "name": "Sam's dad",
+   "role": "extra",
+   "scale": 1.0,
+   "build": 1.05,
+   "look": {
+    "skin": "#8D5A3B",
+    "hair": {
+     "style": "short",
+     "color": "#1E1612"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#4A6FA5",
+       "trim": "#E8EEF6"
+      },
+      "pants": "#3B3B44",
+      "shoes": "#2A2220"
+     }
+    },
+    "beard": "#1E1612"
+   },
+   "badge": true
+  },
+  "mia": {
+   "name": "Mia",
+   "role": "extra, kid",
+   "scale": 0.74,
+   "look": {
+    "skin": "#F3D2B5",
+    "hair": {
+     "style": "pigtails",
+     "color": "#C9893A"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#D9577A",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#3A3F55",
+      "shoes": "#F1F1F1"
+     }
+    }
+   },
+   "badge": true
+  },
+  "mia_mom": {
+   "name": "Mia's mom",
+   "role": "extra",
+   "scale": 0.96,
+   "look": {
+    "skin": "#F3D2B5",
+    "hair": {
+     "style": "bun",
+     "color": "#C9893A"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#6C8F6A",
+       "trim": "#F0EADF"
+      },
+      "pants": "#45434F",
+      "shoes": "#3A2A22"
+     }
+    }
+   },
+   "badge": true
+  }
+ },
+ "voices": {
+  "leo": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "seed": 211,
+   "instruct": "A young man remembering his childhood, warm and gentle, quiet, close to the microphone, natural storytelling, never an announcer."
+  },
+  "leo_child": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "seed": 307,
+   "pitch": 2.5,
+   "instruct": "A nine-year-old boy speaking for the first time in weeks, very quiet, voice shaking, to his sleeping sister."
+  },
+  "ava": {
+   "engine": "kokoro",
+   "speaker": "af_heart",
+   "speed": 0.95
+  },
+  "mom": {
+   "engine": "kokoro",
+   "speaker": "af_sarah",
+   "speed": 0.88
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "leo",
+   "kind": "vo",
+   "text": "In my town, your head shows the last thing you said."
+  },
+  {
+   "id": "n02",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Most of the time, it's something nice."
+  },
+  {
+   "id": "n03",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Mine said I hate you.",
+   "say": "Mine said... I hate you."
+  },
+  {
+   "id": "n04",
+   "who": "leo",
+   "kind": "vo",
+   "text": "I said it to my sister, three weeks ago."
+  },
+  {
+   "id": "n05",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Then I stopped talking. So it stayed."
+  },
+  {
+   "id": "a01",
+   "who": "ava",
+   "kind": "dialogue",
+   "text": "Hurry up, Leo."
+  },
+  {
+   "id": "n06",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Since Mom got sick, Ava did everything."
+  },
+  {
+   "id": "a02",
+   "who": "ava",
+   "kind": "dialogue",
+   "text": "Eat your dinner. I'll be back late."
+  },
+  {
+   "id": "n07",
+   "who": "leo",
+   "kind": "vo",
+   "text": "She never smiled. She never said anything nice."
+  },
+  {
+   "id": "n08",
+   "who": "leo",
+   "kind": "vo",
+   "text": "Every night she left. So one night, I followed her."
+  },
+  {
+   "id": "n09",
+   "who": "leo",
+   "kind": "vo",
+   "text": "She went to the hospital. To Mom."
+  },
+  {
+   "id": "m01",
+   "who": "mom",
+   "kind": "dialogue",
+   "text": "She comes every night. She only ever talks about you."
+  },
+  {
+   "id": "n10",
+   "who": "leo",
+   "kind": "vo",
+   "text": "The last thing she said was about me."
+  },
+  {
+   "id": "k01",
+   "who": "leo",
+   "voice": "leo_child",
+   "kind": "dialogue",
+   "text": "I love you, Ava."
+  },
+  {
+   "id": "a03",
+   "who": "ava",
+   "kind": "dialogue",
+   "text": "Leo? You talked."
+  },
+  {
+   "id": "n11",
+   "who": "leo",
+   "kind": "vo",
+   "text": "For three weeks, my head said I hate you."
+  },
+  {
+   "id": "n12",
+   "who": "leo",
+   "kind": "vo",
+   "text": "It only took three words to fix it."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "The rule on screen at once: a boy's greeting and his dad's reply float above their heads.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "Leo's head says I HATE YOU; he has not spoken since. Ava only ever says orders.",
+   "emotion": -3
+  },
+  {
+   "id": "mystery",
+   "purpose": "Ava, cold and tired, leaves every night. Where does she go?",
+   "emotion": -2
+  },
+  {
+   "id": "turn",
+   "purpose": "Leo follows her to the hospital: she visits Mom every night.",
+   "emotion": 1
+  },
+  {
+   "id": "reveal",
+   "purpose": "Asleep in the chair, Ava's last words read HE MISSES YOU. She talks about Leo every night.",
+   "emotion": -2
+  },
+  {
+   "id": "choice",
+   "purpose": "Leo speaks for the first time: I love you, Ava. His words change.",
+   "emotion": 4
+  },
+  {
+   "id": "button",
+   "purpose": "Three weeks of the wrong words; three words to fix it.",
+   "emotion": 3
+  }
+ ],
+ "setups": [
+  {
+   "id": "hate",
+   "setup": "sh03",
+   "payoff": "sh18",
+   "note": "I HATE YOU above Leo becomes I LOVE YOU."
+  },
+  {
+   "id": "orders",
+   "setup": "sh05",
+   "payoff": "sh16",
+   "note": "Ava's words are only orders (HURRY UP, BACK LATE) until we read what she says when he isn't there."
+  },
+  {
+   "id": "silence",
+   "setup": "sh04",
+   "payoff": "sh19",
+   "note": "He stopped talking; 'You talked.'"
+  },
+  {
+   "id": "walks_ahead",
+   "setup": "sh06",
+   "payoff": "sh20",
+   "note": "She always walked ahead of him; now she holds him."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh03",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh07",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh12",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh14",
+   "mood": "hush"
+  },
+  {
+   "at": "sh16",
+   "mood": "swell",
+   "offset": 0.4
+  },
+  {
+   "at": "sh18",
+   "mood": "hush"
+  },
+  {
+   "at": "sh20",
+   "mood": "resolve",
+   "offset": 0.5
+  },
+  {
+   "at": "sh22",
+   "mood": "outro",
+   "offset": 0.6
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "afternoon",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "sam_dad": {
+     "at": [
+      -3.0,
+      -1.7
+     ],
+     "yaw": 160
+    },
+    "sam": {
+     "at": [
+      -0.9,
+      2.4
+     ],
+     "yaw": 150
+    },
+    "mia_mom": {
+     "at": [
+      4.4,
+      -2.7
+     ],
+     "yaw": 175
+    },
+    "mia": {
+     "contact": "mia_mom"
+    },
+    "leo": {
+     "at": [
+      0.55,
+      3.6
+     ],
+     "yaw": 180
+    },
+    "ava": {
+     "at": [
+      2.0,
+      -2.1
+     ],
+     "yaw": 175
+    }
+   },
+   "start_badge": {
+    "sam_dad": "THERE HE IS",
+    "sam": "BYE MISS K",
+    "mia_mom": "PROUD OF YOU",
+    "mia": "I MISSED YOU",
+    "leo": "I HATE YOU",
+    "ava": "WE'RE LATE"
+   },
+   "start_expr": {
+    "sam_dad": "happy",
+    "sam": "joy",
+    "mia": "joy",
+    "mia_mom": "happy",
+    "leo": "neutral",
+    "ava": "grumpy"
+   },
+   "start_look": {
+    "sam_dad": "sam",
+    "mia_mom": "mia",
+    "mia": "mia_mom",
+    "ava": "leo"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "fs",
+      "on": "sam_dad",
+      "relative": "world",
+      "world_yaw": -90,
+      "side": -12,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.65,
+      "dist_mul": 1.3
+     },
+     "act": [
+      {
+       "who": "sam_dad",
+       "t": 0.0,
+       "do": "open_arms",
+       "dur": 1.45,
+       "expr": "joy",
+       "raise": 1.5,
+       "spread": 0.5
+      },
+      {
+       "who": "sam",
+       "t": 0.0,
+       "do": "approach",
+       "run": true,
+       "to": "sam_dad",
+       "look": "sam_dad"
+      },
+      {
+       "who": "mia_mom",
+       "t": 0.2,
+       "do": "hug",
+       "with": "mia",
+       "dur": 5.0,
+       "lean": 0.04,
+       "at": "head",
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45
+      },
+      {
+       "who": "mia",
+       "t": 0.2,
+       "do": "hug",
+       "with": "mia_mom",
+       "at": "hips",
+       "dur": 5.0,
+       "lift": 0.12,
+       "head_turn": -1.0
+      },
+      {
+       "who": "sam",
+       "t": "+0.3",
+       "do": "hug",
+       "with": "sam_dad",
+       "at": "hips",
+       "lift": 0.12,
+       "dur": 30,
+       "expr": "joy",
+       "head_turn": -1.0
+      },
+      {
+       "who": "sam",
+       "t": 1.2,
+       "do": "badge",
+       "text": "DAD!"
+      },
+      {
+       "who": "sam_dad",
+       "t": 1.3,
+       "do": "hug",
+       "with": "sam",
+       "dur": 30,
+       "lean": 0.04,
+       "at": "head",
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": 0.45
+      },
+      {
+       "who": "sam_dad",
+       "t": 1.8,
+       "do": "badge",
+       "text": "MY BIG GUY"
+      },
+      {
+       "who": "leo",
+       "t": 0.3,
+       "do": "walk",
+       "to": [
+        0.7,
+        1.4
+       ],
+       "look": "sam",
+       "dur": 2.4
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      "n02"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "mcu",
+      "on": "sam_dad",
+      "side": 40,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "sam_dad",
+       "t": 0.0,
+       "expr": "peaceful"
+      },
+      {
+       "who": "mia",
+       "t": 0.3,
+       "do": "badge",
+       "text": "LOVE YOU"
+      },
+      {
+       "who": "sam",
+       "t": "end:n02-0.35",
+       "do": "release"
+      },
+      {
+       "who": "sam_dad",
+       "t": "end:n02+0.35",
+       "do": "release"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "wound",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.5,
+     "min": 1.8,
+     "cam": {
+      "size": "mcu",
+      "on": "leo",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high",
+      "key": 0.35
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "look": "sam",
+       "expr": "neutral"
+      },
+      {
+       "who": "leo",
+       "t": 0.7,
+       "do": "head_down",
+       "dur": 1.3,
+       "amount": 0.25,
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "wound",
+     "lines": [
+      "n04",
+      "n05"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "two",
+      "on": [
+       "leo",
+       "ava"
+      ],
+      "side": 0,
+      "move": "drift",
+      "height": "eye",
+      "key": 0.7
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        1.95,
+        -1.15
+       ],
+       "face": "ava",
+       "look": "ava",
+       "expr": "worried"
+      },
+      {
+       "who": "ava",
+       "t": 0.0,
+       "look": "leo",
+       "expr": "grumpy"
+      },
+      {
+       "who": "leo",
+       "t": "line:n05",
+       "look": [
+        1.6,
+        -1.5,
+        0.2
+       ],
+       "expr": "hurt"
+      }
+     ]
+    },
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "lines": [
+      "a01"
+     ],
+     "pad": 0.45,
+     "cam": {
+      "size": "mcu",
+      "on": "ava",
+      "side": -30,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "look": "leo",
+       "expr": "grumpy"
+      },
+      {
+       "who": "ava",
+       "t": "line:a01",
+       "do": "badge",
+       "text": "HURRY UP"
+      },
+      {
+       "who": "ava",
+       "t": "end:a01+0.1",
+       "expr": "sleepy"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "dur": 3.0,
+     "cam": {
+      "size": "ws",
+      "on": "ava",
+      "side": 30,
+      "move": "pull",
+      "height": "slight_high",
+      "key": 0.5
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        3.0,
+        -5.6
+       ],
+       "expr": "sleepy"
+      },
+      {
+       "who": "leo",
+       "t": 0.7,
+       "do": "walk",
+       "to": [
+        2.2,
+        -4.0
+       ],
+       "look": "ava",
+       "expr": "sad",
+       "speed": 0.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "ambience": "living_room",
+   "cast": {
+    "leo": "armchair",
+    "ava": {
+     "at": [
+      -2.45,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "leo": "I HATE YOU",
+    "ava": "HURRY UP"
+   },
+   "start_expr": {
+    "leo": "sad",
+    "ava": "sleepy"
+   },
+   "start_look": {
+    "leo": "photo"
+   },
+   "shots": [
+    {
+     "id": "sh07",
+     "beat": "mystery",
+     "lines": [
+      "n06"
+     ],
+     "pad": 0.4,
+     "min": 2.4,
+     "cam": {
+      "size": "ws",
+      "on": "leo",
+      "side": 28,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.75,
+        1.5
+       ],
+       "face": "leo",
+       "look": "leo"
+      }
+     ]
+    },
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "lines": [
+      "a02"
+     ],
+     "pad": 0.35,
+     "cam": {
+      "size": "mcu",
+      "on": "ava",
+      "side": -20,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "look": "leo",
+       "expr": "calm"
+      },
+      {
+       "who": "ava",
+       "t": 0.1,
+       "do": "point",
+       "at": "photo",
+       "dur": 0.9
+      },
+      {
+       "who": "ava",
+       "t": "end:a02",
+       "do": "badge",
+       "text": "BACK LATE"
+      }
+     ]
+    },
+    {
+     "id": "sh09",
+     "beat": "mystery",
+     "lines": [
+      "n07"
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "leo",
+      "relative": "face",
+      "side": 0,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "look": "ava",
+       "expr": "hurt"
+      },
+      {
+       "who": "leo",
+       "t": 1.4,
+       "look": "photo",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh10",
+     "beat": "mystery",
+     "lines": [
+      "n08"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "ms",
+      "on": "ava",
+      "side": 60,
+      "move": "drift",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -2.45,
+        -1.1
+       ],
+       "expr": "sleepy"
+      },
+      {
+       "who": "leo",
+       "t": 0.3,
+       "look": "ava",
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "mystery",
+     "dur": 1.9,
+     "cam": {
+      "size": "mcu",
+      "on": "leo",
+      "side": -20,
+      "move": "push_fast",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.1,
+       "do": "stand",
+       "dur": 0.9,
+       "expr": "determined",
+       "to": [
+        -0.4,
+        0.55
+       ]
+      },
+      {
+       "who": "leo",
+       "t": 0.2,
+       "look": [
+        -2.6,
+        -1.1,
+        1.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "ambience": "corridor",
+   "cast": {
+    "leo": {
+     "at": [
+      5.5,
+      0.0
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "leo": "I HATE YOU"
+   },
+   "start_expr": {
+    "leo": "worried"
+   },
+   "shots": [
+    {
+     "id": "sh12",
+     "beat": "turn",
+     "lines": [
+      "n09"
+     ],
+     "pad": 0.4,
+     "min": 2.6,
+     "cam": {
+      "size": "ws",
+      "on": "leo",
+      "side": 0,
+      "move": "track",
+      "world_yaw": 0,
+      "relative": "world",
+      "lens": 26
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -3.9,
+        0.1
+       ],
+       "dur": 3.4,
+       "speed": 0.9,
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh13",
+     "beat": "turn",
+     "dur": 1.8,
+     "cam": {
+      "size": "mcu",
+      "on": "leo",
+      "side": -35,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "look": [
+        -5.0,
+        0.9,
+        1.1
+       ],
+       "expr": "scared"
+      },
+      {
+       "who": "leo",
+       "t": 0.6,
+       "do": "turn",
+       "to": [
+        -5.0,
+        0.7
+       ],
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "hospital_room",
+   "time": "night",
+   "beat": "reveal",
+   "ambience": "hospital_room",
+   "cast": {
+    "mom": "bed_edge",
+    "ava": "visitor_chair",
+    "leo": {
+     "at": [
+      1.6,
+      1.1
+     ],
+     "yaw": -90
+    }
+   },
+   "start_badge": {
+    "mom": "GOODNIGHT, AVA",
+    "ava": "HE MISSES YOU",
+    "leo": "I HATE YOU"
+   },
+   "start_expr": {
+    "mom": "sleepy",
+    "ava": "eyes_closed",
+    "leo": "worried"
+   },
+   "start_look": {
+    "mom": "ava"
+   },
+   "shots": [
+    {
+     "id": "sh14",
+     "beat": "turn",
+     "dur": 2.6,
+     "cam": {
+      "size": "ws",
+      "on": "mom",
+      "side": 40,
+      "move": "push",
+      "height": "high",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 40,
+       "amount": 0.18
+      },
+      {
+       "who": "leo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -0.55,
+        -0.6
+       ],
+       "face": "mom",
+       "look": "mom",
+       "speed": 0.9
+      },
+      {
+       "who": "mom",
+       "t": 1.2,
+       "look": "leo",
+       "expr": "surprise"
+      }
+     ]
+    },
+    {
+     "id": "sh15",
+     "beat": "reveal",
+     "lines": [
+      "m01"
+     ],
+     "pad": 0.45,
+     "cam": {
+      "size": "mcu",
+      "on": "mom",
+      "side": -25,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "leo",
+       "expr": "tender"
+      },
+      {
+       "who": "mom",
+       "t": "line:m01+1.2",
+       "look": "ava"
+      },
+      {
+       "who": "mom",
+       "t": "end:m01",
+       "do": "badge",
+       "text": "ABOUT YOU",
+       "sfx": false
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "reveal",
+     "lines": [
+      "n10"
+     ],
+     "pad": 0.6,
+     "cam": {
+      "size": "ms",
+      "on": "ava",
+      "side": 20,
+      "move": "push",
+      "height": "eye",
+      "key": 0.5,
+      "dist_mul": 1.4
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "expr": "eyes_closed"
+      }
+     ]
+    },
+    {
+     "id": "sh17",
+     "beat": "reveal",
+     "dur": 2.0,
+     "cam": {
+      "size": "cu",
+      "on": "leo",
+      "side": 20,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "look": "ava",
+       "expr": "teary"
+      },
+      {
+       "who": "leo",
+       "t": 1.1,
+       "expr": "cry"
+      }
+     ]
+    },
+    {
+     "id": "sh18",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "k01",
+       "at": 1.2
+      }
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "two",
+      "on": [
+       "leo",
+       "ava"
+      ],
+      "side": -40,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.45,
+        0.3
+       ],
+       "face": "ava",
+       "look": "ava",
+       "dur": 1.1,
+       "expr": "teary"
+      },
+      {
+       "who": "leo",
+       "t": "line:k01",
+       "do": "badge",
+       "text": "I LOVE YOU"
+      }
+     ]
+    },
+    {
+     "id": "sh19",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "a03",
+       "at": 1.0
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "cu",
+      "on": "ava",
+      "side": -30,
+      "move": "push"
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "do": "release"
+      },
+      {
+       "who": "ava",
+       "t": 0.2,
+       "expr": "surprise",
+       "look": "leo"
+      },
+      {
+       "who": "ava",
+       "t": "line:a03",
+       "do": "badge",
+       "text": "YOU TALKED"
+      },
+      {
+       "who": "ava",
+       "t": "end:a03+0.1",
+       "expr": "teary_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh20",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "n11",
+       "at": 1.8
+      }
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "two",
+      "on": [
+       "leo",
+       "ava"
+      ],
+      "side": 60,
+      "move": "push",
+      "height": "eye",
+      "key": 0.8
+     },
+     "act": [
+      {
+       "who": "ava",
+       "t": 0.0,
+       "do": "stand",
+       "to": [
+        -1.0,
+        0.3
+       ],
+       "dur": 0.8,
+       "expr": "teary_smile"
+      },
+      {
+       "who": "ava",
+       "t": 0.85,
+       "do": "turn",
+       "to": "leo",
+       "dur": 0.4
+      },
+      {
+       "who": "ava",
+       "t": 1.2,
+       "do": "open_arms",
+       "dur": 1.3,
+       "spread": 0.6,
+       "raise": 1.55
+      },
+      {
+       "who": "leo",
+       "t": 1.35,
+       "do": "approach",
+       "to": "ava",
+       "dur": 0.75,
+       "expr": "cry_smile"
+      },
+      {
+       "who": "leo",
+       "t": "+0.1",
+       "do": "hug",
+       "with": "ava",
+       "at": "head",
+       "dur": 40,
+       "lift": 0.0,
+       "head_turn": 1.0
+      },
+      {
+       "who": "ava",
+       "t": 2.35,
+       "do": "hug",
+       "with": "leo",
+       "at": "head",
+       "dur": 40,
+       "lean": 0.04,
+       "lift": 0.12,
+       "head_pitch": -0.08,
+       "head_turn": -0.45,
+       "expr": "cry_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh21",
+     "beat": "button",
+     "lines": [
+      "n12"
+     ],
+     "pad": 0.5,
+     "cam": {
+      "size": "cu",
+      "on": "mom",
+      "side": 30,
+      "move": "drift"
+     },
+     "act": [
+      {
+       "who": "mom",
+       "t": 0.0,
+       "look": "ava",
+       "expr": "teary_smile"
+      },
+      {
+       "who": "mom",
+       "t": 1.2,
+       "expr": "cry_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh22",
+     "beat": "button",
+     "dur": 3.0,
+     "cam": {
+      "size": "ws",
+      "on": "ava",
+      "side": 70,
+      "move": "pull",
+      "height": "slight_high",
+      "lens": 24
+     },
+     "act": [
+      {
+       "who": "leo",
+       "t": 0.0,
+       "expr": "peaceful"
+      },
+      {
+       "who": "ava",
+       "t": 0.0,
+       "expr": "peaceful"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

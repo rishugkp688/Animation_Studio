@@ -1,0 +1,115 @@
+{
+ "run": "20261127-034446-b3-brief-codex-gpt-5.6-sol-r1",
+ "task": "b3-brief",
+ "kind": "creative",
+ "harness": "codex",
+ "harness_version": "codex-cli 0.146.0",
+ "model": "gpt-5.6-sol",
+ "effort": "harness default",
+ "vision": true,
+ "mode": "operator",
+ "rep": 1,
+ "commit": "fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "tree": "96a9bb0ec1c1d5dd4565590da248463c858764e9",
+ "frozen_from": "given commit fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "task_hash": "16ea74592055",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-034446-b3-brief-codex-gpt-5.6-sol-r1",
+ "started": "2026-11-27 03:44:46",
+ "timeout_min": 75,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 1054.0,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "command_execution": 35,
+   "file_change": 13
+  },
+  "tool_errors": 9,
+  "turns": 1,
+  "tokens": {
+   "input": 107741,
+   "output": 24967,
+   "cache_read": 7881984,
+   "cache_write": 0
+  },
+  "cost_usd": null,
+  "model_reported": null,
+  "final_message": "Created and staged episode `bench-brief`, titled \u201cThe Lie That Waited.\u201d\n\n- Story: PASS \u2014 64.0 s, 24 shots, 3 locations\n- Voice: PASS \u2014 18/18 takes intelligible by offline ASR\n- Layout: PASS \u2014 0 errors across 1,536 frames; 12 non-blocking warnings\n- Storyboard: PASS and visually inspected\n- Board review: APPROVED\n- Storyboard: [storyboard.jpg](/home/rishabh/D/Codes/Roblox-bench/20261127-034446-b3-brief-codex-gpt-5.6-sol-r1/renders/bench-brief/board/storyboard.jpg)\n\nNo film render was started, as requested. I could not assess voice performance by ear; only the automated intelligibility gate was verified.",
+  "result": "success",
+  "tool_calls_total": 48
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "voice": true,
+   "layout": true,
+   "board": true,
+   "board_review": true,
+   "shape": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "{\"locations\": 3, \"scenes\": 4, \"shots\": 24, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"ots\", \"two\", \"ws\"], \"lead_expressions\": [\"angry\", \"cry\", \"cry_smile\", \"determined\", \"grumpy\", \"hopeful\", \"hurt\", \"joy\", \"neutral\", \"peaceful\", \"scared\", \"shock\", \"shy\", \"surprise\", \"teary\", \"worried\"], \"duration\": 64.0, \"shots_per_minute\": 22.5, \"longest_shot\": 5.08, \"words_per_minute\": 97.5}",
+     "PASS [story] 0 errors, 0 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn collision.self   sh22   58.00- 58.04s  dad.arm_r inside own torso  (depth 0.226 m)",
+     "warn cut.axis         sh24   62.00- 62.00s  milo and dad swap screen sides across the cut from sh23",
+     "PASS [layout] 0 errors, 12 warnings over 1536 frames"
+    ],
+    "errors": 0,
+    "warns": 12,
+    "error_rules": [],
+    "duration": 64.0
+   }
+  },
+  "studio_runs": {
+   "story": {
+    "runs": 12,
+    "fails": 2,
+    "seconds": 71.4
+   },
+   "voice": {
+    "runs": 2,
+    "fails": 1,
+    "seconds": 185.9
+   },
+   "board": {
+    "runs": 4,
+    "fails": 0,
+    "seconds": 166.7
+   },
+   "layout": {
+    "runs": 7,
+    "fails": 5,
+    "seconds": 138.4
+   },
+   "review.board": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 0.0
+   }
+  },
+  "review": {
+   "saw": "sh01-sh03 clearly show a lie appearing then disappearing; sh14 reads MILO'S DRAWINGS at Mom's bed; sh19-sh24 show HE'S MY DAD, Dad's affectionate ruffle, and both faces in the final two-shot.",
+   "reviewer": "director"
+  },
+  "shape": {
+   "shots": 24,
+   "locations": 3,
+   "lines": 18,
+   "duration": 64.0
+  },
+  "passed": true
+ }
+}

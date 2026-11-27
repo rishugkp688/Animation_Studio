@@ -45,6 +45,9 @@ ORDER = ["pelvis", "neck", "arm_r", "arm_l", "leg_r", "leg_l"]
 LIMBS = ["arm_r", "arm_l", "leg_r", "leg_l"]
 HEAD_RADIUS = 0.65  # studs; the rendered head is a rounded cylinder
 HEAD_HEIGHT = 1.22
+NECK_GAP = 0.04        # studs between the torso top and the head
+EYE_ABOVE_NECK = 0.62  # studs; eye line used for standing eye height
+HAND_AT = 0.775        # fraction of the arm length from the shoulder pivot to the hand point
 
 
 class Body:
@@ -54,13 +57,18 @@ class Body:
         self.k = scale
         self.s = STUD * scale
         self.build = build  # torso width multiplier for heavier or slimmer builds
-        self.leg = 2.0 * self.s
-        self.arm = 2.0 * self.s * 0.775  # shoulder pivot to the bottom of the hand
-        self.hip_height = self.leg
-        self.height = (4.0 + 0.04 + HEAD_HEIGHT) * self.s
-        self.eye_height = (4.0 + 0.04 + 0.62) * self.s
-        self.lateral = 0.5 * self.s * build
-        self.half_depth = 0.5 * self.s
+        # Every dimension comes from PARTS/JOINTS, so a different body is a change to those
+        # tables only (see Agent_Docs/06-style-seam.md).
+        hip = JOINTS["pelvis"][1][2]
+        torso = JOINTS["neck"][1][2]
+        self.leg = PARTS["leg_r"][2][2] * self.s
+        self.arm = PARTS["arm_r"][2][2] * HAND_AT * self.s  # shoulder pivot to the bottom of the hand
+        self.hip_height = hip * self.s
+        self.height = (hip + torso + NECK_GAP + HEAD_HEIGHT) * self.s
+        self.eye_height = (hip + torso + NECK_GAP + EYE_ABOVE_NECK) * self.s
+        self.lateral = abs(JOINTS["leg_l"][1][0]) * self.s * build
+        self.half_depth = PARTS["torso"][2][1] / 2 * self.s
+        self.head_radius = HEAD_RADIUS * self.s
 
     def joint_offset(self, joint):
         parent, off = JOINTS[joint]
@@ -148,10 +156,10 @@ def points(body, mats):
         "hips": transform(mats["pelvis"], (0, 0, 0.1 * s)),
         "shoulder_r": transform(mats["arm_r"], (0, 0, 0.3 * s)),
         "shoulder_l": transform(mats["arm_l"], (0, 0, 0.3 * s)),
-        "hand_r": transform(mats["arm_r"], (0, 0, -1.55 * s)),
-        "hand_l": transform(mats["arm_l"], (0, 0, -1.55 * s)),
-        "foot_r": transform(mats["leg_r"], (0, 0, -2.0 * s)),
-        "foot_l": transform(mats["leg_l"], (0, 0, -2.0 * s)),
+        "hand_r": transform(mats["arm_r"], (0, 0, -body.arm)),
+        "hand_l": transform(mats["arm_l"], (0, 0, -body.arm)),
+        "foot_r": transform(mats["leg_r"], (0, 0, -body.leg)),
+        "foot_l": transform(mats["leg_l"], (0, 0, -body.leg)),
         "face_dir": rotate(head, (0, -1, 0)),
     }
 

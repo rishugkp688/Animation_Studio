@@ -300,12 +300,11 @@ def _yaw_toward(plan, set_, p, target, t):
 def _contact_gap(a, b):
     """Root distance for a front-to-front embrace.
 
-    The shorter actor's head (radius 0.65 studs) protrudes past their torso and meets the
-    taller actor's chest, which also tilts forward in the hug; size the gap for that.
+    The shorter actor's head protrudes past their torso and meets the taller actor's chest,
+    which also tilts forward in the hug; size the gap for that.
     """
-    from .rig import HEAD_RADIUS
     short, tall = (a, b) if a.body.height < b.body.height else (b, a)
-    head = HEAD_RADIUS * short.body.s
+    head = short.body.head_radius
     gap = max(a.body.half_depth + b.body.half_depth, head + tall.body.half_depth)
     if tall.body.height - short.body.height > 0.15:
         gap += 0.07
@@ -411,6 +410,9 @@ def _action(plan, set_, shot, a, line_times, last_end):
             params = {k: v for k, v in a.items() if k not in ("who", "do", "t", "dur", "expr", "look", "expr_delay", "hold")}
             if "with" in params:
                 params["who"] = params.pop("with")
+            if do == "hug" and params.get("who") in plan.stage.performers:
+                for k, v in hug_defaults(p, plan.stage.performers[params["who"]]).items():
+                    params.setdefault(k, v)
             # Targets that name set points, marks or coordinates become world points now;
             # actor targets ("mom", "mom.head") stay symbolic so they follow the actor.
             for key in ("at", "to"):
@@ -428,6 +430,24 @@ def _action(plan, set_, shot, a, line_times, last_end):
         else:
             raise CompileError(f"{shot['id']}: unknown action '{do}'. Gestures: {sorted(GESTURES)}")
         last_end[who] = end
+
+
+# Hug contact by relative height, from the 14 hugs in One Hug Left and Three Words (every one
+# tuned by hand to these values): the taller actor holds high, around the head and shoulders,
+# leaning in and looking down; the shorter holds low, around the hips, head turned to the side.
+# Anything the screenplay states wins. Similar heights (no film has one yet) keep the old
+# generic defaults, so that case is still the screenplay's to tune.
+HUG_TALLER = dict(at="head", lift=0.12, lean=0.04, head_pitch=-0.08, head_turn=0.45)
+HUG_SHORTER = dict(at="hips", lift=0.12, head_turn=-1.0)
+HUG_HEIGHT_GAP = 0.15  # metres; below this the pair counts as the same height
+
+
+def hug_defaults(me, partner):
+    """Mechanical defaults for a hug's contact, chosen by the two bodies' heights."""
+    dh = me.body.height - partner.body.height
+    if abs(dh) < HUG_HEIGHT_GAP:
+        return {}
+    return dict(HUG_TALLER if dh > 0 else HUG_SHORTER)
 
 
 def load_screenplay(path):

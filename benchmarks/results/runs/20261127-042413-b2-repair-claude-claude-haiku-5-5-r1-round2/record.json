@@ -1,0 +1,104 @@
+{
+ "run": "20261127-042413-b2-repair-claude-claude-haiku-5-5-r1-round2",
+ "task": "b2-repair",
+ "kind": "recovery",
+ "harness": "claude",
+ "harness_version": "2.1.332 (Claude Code)",
+ "model": "claude-haiku-5-5",
+ "effort": "harness default",
+ "vision": true,
+ "mode": "operator",
+ "rep": 1,
+ "commit": "0cf102730f74aacb806f6b1f9825f47c4f037779",
+ "tree": "dde523ca553bcf33a29d4f3c6015b3672c1ef668",
+ "frozen_from": "given commit 0cf102730f74aacb806f6b1f9825f47c4f037779",
+ "task_hash": "119439bf994b",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-042413-b2-repair-claude-claude-haiku-5-5-r1-round2",
+ "started": "2026-11-27 04:24:15",
+ "timeout_min": 40,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 1691.6,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "Bash": 62,
+   "Read": 1,
+   "Monitor": 1,
+   "Edit": 33
+  },
+  "tool_errors": 4,
+  "turns": 98,
+  "tokens": {
+   "input": 164,
+   "output": 67912,
+   "cache_read": 7945101,
+   "cache_write": 143453
+  },
+  "cost_usd": 0.4647909300000001,
+  "model_reported": "claude-haiku-5-5",
+  "final_message": "The layout gate passes on the full run with 0 errors. I changed only staging in `episodes/bench-repair/screenplay.json`.\n\n**Final gate:** `python3 scripts/studio.py layout bench-repair` \u2192 `PASS [layout] 0 errors, 17 warnings over 1604 frames`, with the gate recorded. The 17 warnings are unchanged in kind from before (self-collision and camera-adjust notes) and do not block the gate.\n\n**What I changed (all staging):**\n- **sc4 (hospital room):** Leo's start moved from (1.6, 1.1), inside the bedside table, to (1.6, 0.3). This cleared the sh14 errors.\n- **sh07:** Ava's walk stop moved from (0.75, 1.5), inside the side table, to (0.75, 0.95).\n- **sh10:** Ava's walk stop moved from (-2.45, -1.1) to (-1.2, -0.6). Camera side 60 \u2192 45 and height `slight_high` \u2192 `eye`, which cleared the face-out-of-frame error. Shot size stays `ms`.\n- **sh18:** Leo's walk stop moved from (-1.45, 0.3), inside Ava's seated legs and the visitor chair, to (-0.35, -0.1).\n- **sh20:** Ava's stand point moved from (-1.0, 0.3) to (-1.15, 0.3), clear of the chair.\n- **sh20\u201322 hug:** Leo's hug contact changed from `at: head` to `at: hips`, so the arms no longer cross Ava's arms at the same height. Lift and everything else in the hug are unchanged.\n\nLines, voices, cast, scenes, beats, shot list and order, shot sizes and subjects, expressions, badges and actions are untouched. I checked this with `git diff`.\n\n**Not done / caveats:**\n- **Repair tool:** I ran `repair bench-repair` to propose mechanical fixes. Its search did not return within about 15 minutes (240 bounded evaluations), so I staged by hand. Nothing was applied, and no undo record exists.\n- **Not verified by eye:** I did not look at any frames or the storyboard. The hug's visual quality is unchecked, and the shot report flags one shot for storyboard review, which I did not inspect.\n- **Status shows layout as STALE:** `status` reports the layout record as stale because the story and voice gates are not current in this workspace. I did not run `story` or `voice`, since they were outside this task and the voice takes were not to be re-recorded. Running them is the next step before the storyboard.",
+  "result": "success",
+  "tool_calls_total": 97
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "intent": true,
+   "minimal": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "warn: duration 66.9s is outside the 45-65 s target; the picture review must justify it",
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 22, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"hurt\", \"neutral\", \"peaceful\", \"sad\", \"scared\", \"teary\", \"worried\"], \"duration\": 66.87, \"shots_per_minute\": 19.7, \"longest_shot\": 5.11, \"words_per_minute\": 110.4}",
+     "PASS [story] 0 errors, 1 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn camera.solve     sh21   60.97- 60.97s  camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+     "warn camera.solve     sh22   63.87- 63.87s  camera adjusted by +0 deg, +0 deg up, distance x0.85 to clear the view",
+     "PASS [layout] 0 errors, 17 warnings over 1604 frames"
+    ],
+    "errors": 0,
+    "warns": 17,
+    "error_rules": [],
+    "duration": 66.87
+   }
+  },
+  "studio_runs": {
+   "layout": {
+    "runs": 3,
+    "fails": 2,
+    "seconds": 152.6
+   }
+  },
+  "intent_violations": [],
+  "faults": {
+   "F1": "changed",
+   "F2": "changed",
+   "F3": "changed",
+   "F4": "changed"
+  },
+  "edits": 8,
+  "edited_paths": [
+   "/scenes[1]/shots[0]/act[0]/to",
+   "/scenes[1]/shots[3]/act[0]/to",
+   "/scenes[1]/shots[3]/cam/height",
+   "/scenes[1]/shots[3]/cam/side",
+   "/scenes[3]/cast/leo/at",
+   "/scenes[3]/shots[4]/act[0]/to",
+   "/scenes[3]/shots[6]/act[0]/to",
+   "/scenes[3]/shots[6]/act[4]/at"
+  ],
+  "passed": true
+ }
+}

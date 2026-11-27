@@ -1,0 +1,109 @@
+{
+ "run": "20261127-025347-b2-repair-claude-claude-sonnet-5-5-r1",
+ "task": "b2-repair",
+ "kind": "recovery",
+ "harness": "claude",
+ "harness_version": "2.1.332 (Claude Code)",
+ "model": "claude-sonnet-5-5",
+ "effort": "harness default",
+ "mode": "operator",
+ "rep": 1,
+ "commit": "fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "tree": "96a9bb0ec1c1d5dd4565590da248463c858764e9",
+ "frozen_from": "given commit fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "task_hash": "119439bf994b",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-025347-b2-repair-claude-claude-sonnet-5-5-r1",
+ "started": "2026-11-27 02:53:48",
+ "timeout_min": 40,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 722.0,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "Bash": 21,
+   "Write": 1
+  },
+  "tool_errors": 0,
+  "turns": 23,
+  "tokens": {
+   "input": 46,
+   "output": 9731,
+   "cache_read": 1042321,
+   "cache_write": 51404
+  },
+  "cost_usd": 0.40725009999999995,
+  "model_reported": "claude-sonnet-5-5",
+  "final_message": "The layout gate for `bench-repair` now passes on a full run (not `--quick`): **0 errors and 16 warnings over 1604 frames**, down from 82 errors. I fixed it with five staging changes in `episodes/bench-repair/screenplay.json`.\n\n**What I changed:**\n1. **sh07:** Ava's walk ended inside the side table at (0.75, 1.5). She now stops in front of Leo's armchair at (0.45, 0.5).\n2. **sc4 (hospital room):** Leo started inside the bedside table at (1.6, 1.1). He now starts at the door, (2.3, \u22121.5).\n3. **sh18:** Leo walked onto Ava's chair at (\u22121.45, 0.3). He now stops facing her at (\u22120.35, 0.0), clear of Mom's and Ava's legs.\n4. **sh20, Ava stands:** she moved 0.7 m forward to (\u22121.0, 0.3) and passed through Leo. She now stands to (\u22121.15, 0.3).\n5. **sh20, Leo's hug:** it was aimed at Ava's head with no lift, which put his arms through hers. It now uses `at: hips` and `lift: 0.12`, the same child-to-adult hug Sam uses in sh01 and the One Hug Left film uses.\n\nLines, voices, cast, scenes, beats, shot list and order, shot sizes and subjects, expressions, badges and action types are all unchanged. The repair is written up in `episodes/bench-repair/notes.md`.\n\n**Gate results:**\n- **Story:** PASS. Its one warning is that the film runs 66.9 s, just over the 45\u201365 s target. That was already true before my edits, and the picture review will need to justify it.\n- **Voice:** PASS, 17 takes, none unclear. I ran this stage only so the layout result would count as current; it reused the existing takes, and the files in `voice/` did not change.\n- **Layout:** PASS, 0 errors. The 16 warnings are camera adjustments and brief arm-into-own-torso contacts on extras.\n\n**What I didn't do:**\n- I didn't look at any images. I didn't build the storyboard or render anything, so I haven't seen how the new positions look on screen, for example whether the sh18 two-shot frames well.\n- I recorded no reviews. The film isn't delivered, so `status` does not say `DONE`.\n- I found nothing wrong with the engine and changed nothing outside `episodes/bench-repair/`. The stage commands also created `renders/bench-repair/` themselves.",
+  "result": "success",
+  "tool_calls_total": 22
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "intent": true,
+   "minimal": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "warn: duration 66.9s is outside the 45-65 s target; the picture review must justify it",
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 22, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"hurt\", \"neutral\", \"peaceful\", \"sad\", \"scared\", \"teary\", \"worried\"], \"duration\": 66.87, \"shots_per_minute\": 19.7, \"longest_shot\": 5.11, \"words_per_minute\": 110.4}",
+     "PASS [story] 0 errors, 1 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn camera.solve     sh21   60.97- 60.97s  camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+     "warn camera.solve     sh22   63.87- 63.87s  camera adjusted by +0 deg, +0 deg up, distance x0.85 to clear the view",
+     "PASS [layout] 0 errors, 16 warnings over 1604 frames"
+    ],
+    "errors": 0,
+    "warns": 16,
+    "error_rules": [],
+    "duration": 66.87
+   }
+  },
+  "studio_runs": {
+   "layout": {
+    "runs": 11,
+    "fails": 8,
+    "seconds": 598.3
+   },
+   "story": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 6.9
+   },
+   "voice": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 33.6
+   }
+  },
+  "intent_violations": [],
+  "faults": {
+   "F1": "changed",
+   "F2": "changed",
+   "F3": "changed",
+   "F4": "restored"
+  },
+  "edits": 6,
+  "edited_paths": [
+   "/scenes[1]/shots[0]/act[0]/to",
+   "/scenes[3]/cast/leo/at",
+   "/scenes[3]/shots[4]/act[0]/to",
+   "/scenes[3]/shots[6]/act[0]/to",
+   "/scenes[3]/shots[6]/act[4]/at",
+   "/scenes[3]/shots[6]/act[4]/lift"
+  ],
+  "passed": true
+ }
+}

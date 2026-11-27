@@ -203,7 +203,10 @@ class Nav:
                 nxt -= 1
             out.append(pts[nxt])
             k = nxt
-        return out[1:]
+        # Start and goal on the same free cell with the straight line blocked (e.g. a target
+        # inside furniture right beside the actor): go straight there and let QC report it,
+        # instead of returning an empty path that crashes the walk.
+        return out[1:] or [tuple(b)]
 
     def _line_free(self, a, b):
         n = int(math.hypot(b[0] - a[0], b[1] - a[1]) / (self.cell * 0.5)) + 1

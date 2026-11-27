@@ -98,7 +98,10 @@ def _allowed(perf, t, my_part, other_cid, other_part, depth):
     return False
 
 
-def run(plan, step=1):
+def run(plan, step=1, window=None, shot_checks=True):
+    """QC every `step`-th frame. `window=(t0, t1)` limits the frame checks to that span and
+    `shot_checks=False` skips the camera/cutting checks (used by kit/repair.py to test
+    candidates quickly; the layout gate always runs everything)."""
     rep = Report()
     perf = plan.stage.performers
     fps = plan.fps
@@ -114,8 +117,9 @@ def run(plan, step=1):
         solids[sid] = lst
 
     n_frames = int(plan.duration * fps)
+    f0, f1 = (0, n_frames) if window is None else (max(0, int(window[0] * fps)), min(n_frames, int(window[1] * fps) + 1))
     prev_feet = {}
-    for f in range(0, n_frames, step):
+    for f in range(f0, f1, step):
         t = f / fps
         shot = plan.shot_at(t)
         sid = shot["set"] if shot else None
@@ -198,7 +202,8 @@ def run(plan, step=1):
                             rep.add("feet.slide", "error", shot["id"] if shot else None, t, f"{cid} {side} foot slides", depth=round(dxy, 3))
             prev_feet[cid] = (corners, dict(pose["feet_planted"]))
 
-    _shot_checks(plan, rep)
+    if shot_checks:
+        _shot_checks(plan, rep)
     return rep
 
 

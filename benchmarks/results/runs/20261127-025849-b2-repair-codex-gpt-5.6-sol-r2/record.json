@@ -1,0 +1,100 @@
+{
+ "run": "20261127-025849-b2-repair-codex-gpt-5.6-sol-r2",
+ "task": "b2-repair",
+ "kind": "recovery",
+ "harness": "codex",
+ "harness_version": "codex-cli 0.146.0",
+ "model": "gpt-5.6-sol",
+ "effort": "harness default",
+ "mode": "operator",
+ "rep": 2,
+ "commit": "fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "tree": "96a9bb0ec1c1d5dd4565590da248463c858764e9",
+ "frozen_from": "given commit fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "task_hash": "119439bf994b",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-025849-b2-repair-codex-gpt-5.6-sol-r2",
+ "started": "2026-11-27 02:58:50",
+ "timeout_min": 40,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 536.5,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "command_execution": 25,
+   "file_change": 6
+  },
+  "tool_errors": 10,
+  "turns": 1,
+  "tokens": {
+   "input": 84065,
+   "output": 11887,
+   "cache_read": 5483904,
+   "cache_write": 0
+  },
+  "cost_usd": null,
+  "model_reported": null,
+  "final_message": "Repaired staging in [screenplay.json](/home/rishabh/D/Codes/Roblox-bench/20261127-025849-b2-repair-codex-gpt-5.6-sol-r2/episodes/bench-repair/screenplay.json).\n\n- Full layout run: **PASS**\n- Frames checked: 1,604\n- Errors: 0\n- Warnings: 14\n- Story, dialogue, voices, cast, shot order, sizes, subjects, expressions, badges, and action types remain unchanged.\n- No storyboard was built or images reviewed.\n- Overall status notes story/voice as unstamped upstream stages, but the requested layout gate itself passes.",
+  "result": "success",
+  "tool_calls_total": 31
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "intent": true,
+   "minimal": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "warn: duration 66.9s is outside the 45-65 s target; the picture review must justify it",
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 22, \"beats\": 7, \"shot_sizes\": [\"cu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"hurt\", \"neutral\", \"peaceful\", \"sad\", \"scared\", \"teary\", \"worried\"], \"duration\": 66.87, \"shots_per_minute\": 19.7, \"longest_shot\": 5.11, \"words_per_minute\": 110.4}",
+     "PASS [story] 0 errors, 1 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn camera.solve     sh20   56.10- 56.10s  camera adjusted by +50 deg, +0 deg up, distance x1.0 to clear the view",
+     "warn camera.solve     sh21   60.97- 60.97s  camera adjusted by +12 deg, +0 deg up, distance x1.0 to clear the view",
+     "PASS [layout] 0 errors, 14 warnings over 1604 frames"
+    ],
+    "errors": 0,
+    "warns": 14,
+    "error_rules": [],
+    "duration": 66.87
+   }
+  },
+  "studio_runs": {
+   "layout": {
+    "runs": 7,
+    "fails": 6,
+    "seconds": 412.0
+   }
+  },
+  "intent_violations": [],
+  "faults": {
+   "F1": "changed",
+   "F2": "changed",
+   "F3": "changed",
+   "F4": "changed"
+  },
+  "edits": 7,
+  "edited_paths": [
+   "/scenes[1]/shots[0]/act[0]/to",
+   "/scenes[1]/shots[3]/cam/move",
+   "/scenes[1]/shots[3]/cam/side",
+   "/scenes[3]/cast/leo/at",
+   "/scenes[3]/shots[4]/act[0]/direct",
+   "/scenes[3]/shots[4]/act[0]/to",
+   "/scenes[3]/shots[6]/act[4]/at"
+  ],
+  "passed": true
+ }
+}

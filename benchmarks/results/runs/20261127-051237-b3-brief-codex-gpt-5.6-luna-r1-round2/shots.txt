@@ -1,0 +1,137 @@
+SHOT REPORT bench-brief
+Measured from the plan at each shot's key moment (the storyboard frame).
+It cannot judge lighting, composition or emotion: look at the storyboard if you can.
+
+22 shots, 6 flagged.
+
+sh01  fs   on lina  [hook]  0.0-4.4s  side -12  push
+    says  milo: "In our town, your last lie floats above your head."
+    lina       centre 0.50,0.58     fills 20% (height 53%), face back of head, happy
+    milo       right 0.80,0.62      fills 8% (height 31%), face three-quarter, neutral
+    off screen: mom
+
+sh02  mcu  on lina  [hook]  4.4-7.6s  side 40  drift
+    says  milo: "Tell the truth, and it falls away."
+    lina       centre 0.50,0.66     fills 75% (height 80%), face profile, joy
+    mom        face off screen      fills 2% (height 36%), face front, tender
+    off screen: milo
+    !  subject lina seen profile in a mcu
+
+sh03  cu   on milo  [wound]  7.6-10.2s  side 0  push
+    says  milo: "Mine had been there since spring."
+    milo       centre 0.50,0.59     fills 74% (height 80%), face front, sad
+    off screen: mom, lina
+
+sh04  cu   on milo  [wound]  10.2-12.9s  side 25  drift
+    says  milo: "I told everyone, I'm fine."
+    milo       centre 0.50,0.60     fills 83% (height 83%), face profile, worried
+    lina       face off screen      fills 7% (height 61%), face three-quarter, joy
+    off screen: mom
+    !  subject milo seen profile in a cu
+
+sh05  two  on mom+milo  [wound]  12.9-15.3s  side 70  drift
+    says  mom: "You don't have to be fine with me."
+    mom        centre 0.64,0.65     fills 8% (height 24%), face back of head, peaceful
+    milo       centre 0.40,0.63     fills 2% (height 13%), face front, scared
+    lina       left 0.18,0.63       fills 2% (height 11%), face profile, joy
+
+sh06  mcu  on milo  [wound]  15.3-18.8s  side -35  pull
+    says  milo: "But the lie was easier to carry than the truth."
+    milo       centre 0.50,0.65     fills 74% (height 78%), face profile, sad
+    off screen: mom, lina
+    !  subject milo seen profile in a mcu
+
+sh07  ws   on grandpa  [mystery]  18.8-23.1s  side 28  push
+    says  milo: "Grandpa was the only person who never looked up."
+    milo       centre 0.36,0.31     fills 28% (height 37%), face back of head, hopeful
+    mom        right 0.83,0.42      fills 20% (height 52%), face three-quarter, worried
+    grandpa    centre 0.50,0.47     fills 17% (height 33%), face three-quarter, grumpy
+
+sh08  two  on grandpa+milo  [mystery]  23.1-25.4s  side -30  drift
+    says  milo: "He just asked me to sit beside him."
+    mom        centre 0.54,0.65     fills 8% (height 33%), face profile, worried
+    milo       left 0.24,0.62       fills 6% (height 25%), face front, shy
+    grandpa    right 0.72,0.66      fills 5% (height 19%), face three-quarter, calm
+
+sh09  mcu  on grandpa  [mystery]  25.4-28.1s  side 25  drift
+    says  grandpa: "Still carrying that one?"
+    grandpa    centre 0.50,0.66     fills 81% (height 81%), face front, tender
+    off screen: milo, mom
+
+sh10  cu   on milo  [mystery]  28.1-30.7s  side -20  push
+    says  milo: "I thought he was pretending not to see it."
+    milo       centre 0.50,0.60     fills 78% (height 78%), face profile, worried
+    grandpa    centre 0.46,0.77     fills 60% (height 67%), face front, sad
+    mom        face off screen      fills 30% (height 99%), face front, worried
+    !  subject milo seen profile in a cu
+
+sh11  two  on grandpa+milo  [mystery]  30.7-33.5s  side -10  pull
+    says  milo: "Then his own lie appeared."
+    mom        centre 0.49,0.66     fills 10% (height 30%), face back of head, worried
+    grandpa    right 0.75,0.64      fills 5% (height 19%), face three-quarter, hurt
+    milo       left 0.24,0.62       fills 4% (height 22%), face front, scared
+
+sh12  cu   on grandpa  [turn]  33.5-35.2s  side 20  push
+    says  milo: "I don't need help."
+    grandpa    centre 0.50,0.60     fills 100% (height 100%), face three-quarter, worried
+    off screen: milo, mom
+
+sh13  mcu  on grandpa  [turn]  35.2-37.3s  side -25  drift
+    says  grandpa: "Milo, come here."
+    grandpa    centre 0.50,0.66     fills 82% (height 82%), face three-quarter, tender
+    off screen: milo, mom
+
+sh14  cu   on milo  [turn]  37.3-40.2s  side 15  push
+    says  milo: "That was the first time I saw his hands shake."
+    milo       centre 0.50,0.60     fills 80% (height 80%), face three-quarter, scared
+    grandpa    face off screen      fills 14% (height 66%), face front, sad
+    off screen: mom
+
+sh15  two  on grandpa+milo  [turn]  40.2-42.7s  side 116  rise
+    says  milo: "He wasn't hiding his lie from me."
+    grandpa    centre 0.36,0.59     fills 9% (height 25%), face back of head, hurt
+    milo       centre 0.61,0.65     fills 5% (height 20%), face back of head, shock
+    mom        centre 0.37,0.66     fills 4% (height 26%), face profile, worried
+
+sh16  mcu  on milo  [turn]  42.7-45.8s  side -35  drift
+    says  milo: "He was saving me from having to name mine."
+    milo       centre 0.50,0.66     fills 78% (height 80%), face profile, worried
+    mom        right 0.82,0.80      fills 57% (height 86%), face front, worried
+    grandpa    face off screen      fills 23% (height 53%), face front, tender
+    !  subject milo seen profile in a mcu
+
+sh17  two  on grandpa+milo  [reveal]  45.8-48.0s  side 48  drift
+    says  grandpa: "You can say it here."
+    mom        centre 0.47,0.64     fills 8% (height 21%), face profile, sad
+    milo       right 0.72,0.61      fills 6% (height 23%), face back of head, scared
+    grandpa    left 0.33,0.66       fills 5% (height 16%), face profile, tender
+
+sh18  cu   on milo  [reveal]  48.0-49.7s  side -10  push
+    says  milo: "I miss Dad."
+    mom        right 0.66,0.80      fills 86% (height 90%), face front, sad
+    milo       centre 0.50,0.59     fills 76% (height 76%), face profile, teary
+    off screen: grandpa
+    !  subject milo seen profile in a cu
+
+sh19  mcu  on milo  [choice]  49.7-53.0s  side 35  pull
+    says  milo: "The words fell. The room stayed."
+    milo       centre 0.50,0.65     fills 78% (height 78%), face front, sad
+    mom        face off screen      fills 18% (height 83%), face three-quarter, sad
+    off screen: grandpa
+
+sh20  mcu  on grandpa  [choice]  53.0-55.5s  side -25  push
+    says  milo: "And Grandpa finally looked up."
+    grandpa    centre 0.50,0.66     fills 84% (height 84%), face three-quarter, joy
+    off screen: milo, mom
+
+sh21  two  on grandpa+milo  [button]  55.5-58.4s  side 70  drift
+    says  milo: "The truth was heavier than my lie."
+    grandpa    centre 0.62,0.67     fills 11% (height 24%), face back of head, peaceful
+    mom        centre 0.63,0.64     fills 6% (height 18%), face profile, face blocked by grandpa's head, sad
+    milo       centre 0.41,0.61     fills 2% (height 19%), face front, sad
+
+sh22  ws   on milo  [button]  58.4-61.6s  side 45  pull
+    says  milo: "But I wasn't carrying it alone anymore."
+    milo       centre 0.50,0.49     fills 22% (height 38%), face profile, joy
+    mom        right 0.95,0.56      fills 9% (height 34%), face three-quarter, teary_smile
+    off screen: grandpa

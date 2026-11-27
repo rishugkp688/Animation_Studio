@@ -1,0 +1,107 @@
+{
+ "run": "20261127-024421-b1-operate-codex-gpt-5.6-sol-r1",
+ "task": "b1-operate",
+ "kind": "execution",
+ "harness": "codex",
+ "harness_version": "codex-cli 0.146.0",
+ "model": "gpt-5.6-sol",
+ "effort": "harness default",
+ "mode": "operator",
+ "rep": 1,
+ "commit": "fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "tree": "96a9bb0ec1c1d5dd4565590da248463c858764e9",
+ "frozen_from": "given commit fd229634490b5d5f0fccbd95a0271b8790fe300c",
+ "task_hash": "1af76eb03586",
+ "workspace": "/home/rishabh/D/Codes/Roblox-bench/20261127-024421-b1-operate-codex-gpt-5.6-sol-r1",
+ "started": "2026-11-27 02:44:22",
+ "timeout_min": 25,
+ "human_interventions": 0,
+ "interventions_note": "headless run; no human input possible",
+ "timed_out": false,
+ "elapsed_s": 289.4,
+ "exit_code": 0,
+ "metrics": {
+  "tool_calls": {
+   "command_execution": 13
+  },
+  "tool_errors": 1,
+  "turns": 1,
+  "tokens": {
+   "input": 46337,
+   "output": 3386,
+   "cache_read": 955008,
+   "cache_write": 0
+  },
+  "cost_usd": null,
+  "model_reported": null,
+  "final_message": "Took `bench-operate` through the approved storyboard checkpoint without changing the screenplay.\n\n- Story: PASS \u2014 24 shots, four locations, 63.64 seconds.\n- Voice: PASS \u2014 all 18 takes intelligible; lowest ASR match 0.857.\n- Layout: PASS \u2014 zero blocking errors; 15 non-blocking warnings.\n- Storyboard: PASS \u2014 24-shot sheet generated.\n- Board review: APPROVED after visual inspection of the full sheet.\n\nReviewed storyboard stills without audio, as recorded in the review. No film render was started.",
+  "result": "success",
+  "tool_calls_total": 13
+ },
+ "score": {
+  "checks": {
+   "story": true,
+   "layout": true,
+   "board": true,
+   "board_review": true,
+   "screenplay_unchanged": null
+  },
+  "forged_stamps": [],
+  "protected_changed": [],
+  "integrity_ok": true,
+  "trusted": {
+   "story": {
+    "ok": true,
+    "tail": [
+     "{\"locations\": 4, \"scenes\": 4, \"shots\": 24, \"beats\": 7, \"shot_sizes\": [\"cu\", \"ecu\", \"fs\", \"mcu\", \"ms\", \"two\", \"ws\"], \"lead_expressions\": [\"cry\", \"cry_smile\", \"determined\", \"happy\", \"hopeful\", \"hurt\", \"joy\", \"neutral\", \"sad\", \"shock\", \"surprise\", \"teary\", \"worried\"], \"duration\": 63.64, \"shots_per_minute\": 22.6, \"longest_shot\": 5.01, \"words_per_minute\": 106.5}",
+     "PASS [story] 0 errors, 0 warnings"
+    ]
+   },
+   "layout": {
+    "ok": true,
+    "tail": [
+     "warn collision.self   sh19   49.21- 49.21s  grandpa.arm_l inside own torso  (depth 0.211 m)",
+     "warn camera.solve     sh22   53.45- 53.45s  camera adjusted by +36 deg, +0 deg up, distance x1.0 to clear the view",
+     "PASS [layout] 0 errors, 15 warnings over 1527 frames"
+    ],
+    "errors": 0,
+    "warns": 15,
+    "error_rules": [],
+    "duration": 63.64
+   }
+  },
+  "studio_runs": {
+   "story": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 11.6
+   },
+   "voice": {
+    "runs": 2,
+    "fails": 0,
+    "seconds": 74.9
+   },
+   "layout": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 48.9
+   },
+   "board": {
+    "runs": 2,
+    "fails": 0,
+    "seconds": 154.2
+   },
+   "review.board": {
+    "runs": 1,
+    "fails": 0,
+    "seconds": 0.0
+   }
+  },
+  "review": {
+   "saw": "Viewed the full storyboard sheet without audio: sh01-sh06 clearly establish hug counters, Kai's zero, the blocked hug, and Mom's hair ruffle; sh07-sh11 plant Grandpa's saved one; sh12-sh18 show the hospital hug and Kai receiving one; sh19-sh24 clearly show his immediate choice and completed hug with Mom. Faces, counters, and the reveal remain readable, including the adjusted sh16 angle.",
+   "reviewer": "Codex operator, storyboard stills only, no audio"
+  },
+  "screenplay_changes": [],
+  "passed": true
+ }
+}

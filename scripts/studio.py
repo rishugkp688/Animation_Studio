@@ -73,6 +73,9 @@ def clean_env():
     system interpreter it was built against (with its own site-packages, e.g. Pillow)."""
     env = {k: v for k, v in os.environ.items() if not k.startswith(("PYENV", "_PYENV", "PYTHON", "VIRTUAL_ENV"))}
     env["PATH"] = ":".join(p for p in env.get("PATH", "").split(":") if ".pyenv" not in p and "/pyenv/" not in p)
+    # Headless builds never play sound. Without an audio device (agent sandboxes, containers, CI)
+    # Blender's OpenAL backend blocks on exit, so give it the null driver.
+    env.setdefault("ALSOFT_DRIVERS", "null")
     return env
 
 
@@ -141,12 +144,14 @@ def split_stage(stage):
 # the stage stale, so editing the story gate never asks for a 75-minute re-render.
 _LAYOUT = ["__init__.py", "mathx.py", "rig.py", "acting.py", "sets.py", "geom.py", "camera.py", "layout.py"]
 KIT_FILES = {
-    "story": _LAYOUT + ["story.py"],
+    "story": _LAYOUT + ["story.py", "catalog.py"],
     "voice": ["voice.py", "align.py"],
-    "layout": _LAYOUT + ["qc.py"],
+    "layout": _LAYOUT + ["qc.py", "shotreport.py"],
     "render": _LAYOUT + ["faces.py", "fonts.py", "blender_build.py"],
     "sound": ["sound.py", "listen.py"],
     "deliver": ["captions.py", "fonts.py"],
+    # Not a stage: `repair` proposes screenplay edits, which the layout gate then validates.
+    "repair": _LAYOUT + ["qc.py", "repair.py"],
 }
 
 
@@ -263,7 +268,9 @@ def stamp(slug, stage, ok, data):
                seconds=round(time.time() - T0[0], 1), inputs=stage_inputs(slug, stage), **data)
     st[stage] = rec
     p.write_text(json.dumps(st, indent=1))
-    history(slug, dict(stage=stage, **{k: v for k, v in rec.items() if k not in ("errors", "warns", "cameras")}))
+    # Keep counts in the history, drop the long lists (they stay in the stage's own report).
+    history(slug, dict(stage=stage, **{k: v for k, v in rec.items()
+                                       if not (k in ("errors", "warns", "cameras") and isinstance(v, (list, dict)))}))
 
 
 def manual(slug, what, why):
@@ -441,6 +448,17 @@ def pacing_notes(slug, preset):
     return json.loads(p.read_text()).get("artistic", []) if p.exists() else []
 
 
+def layout_current(slug):
+    """(ok, why): has the layout gate passed on the current screenplay, timing and engine?"""
+    rec = load_status(slug).get("layout")
+    if not rec:
+        return False, "the layout gate has not run"
+    if not rec.get("ok"):
+        return False, f"the last layout gate failed ({(rec.get('data') or {}).get('errors', '?')} errors)"
+    ok, reasons = freshness(slug, "layout")
+    return (True, "") if ok else (False, "the layout gate is out of date: " + "; ".join(reasons))
+
+
 def cmd_review(a):
     """Record a visual review. The reviewer looks at the pictures; this only writes it down."""
     begin()
@@ -449,6 +467,11 @@ def cmd_review(a):
     for name, p in arts.items():
         if not p.exists():
             sys.exit(f"{p} does not exist; run `studio.py {'board' if kind == 'board' else 'deliver'}` first")
+    if kind == "board" and a.verdict == "approve":
+        ok, why = layout_current(a.slug)
+        if not ok:
+            sys.exit(f"cannot approve the storyboard: {why}. The sheet may show staging that fails QC; "
+                     f"run `studio.py layout {a.slug}` (and `board` again if the screenplay changed), then review.")
     if kind == "picture":
         rec = load_status(a.slug).get(f"deliver.{preset}")
         if not rec or not rec["ok"]:
@@ -494,14 +517,19 @@ def cmd_story(a):
     begin()
     from kit.story import lint
     from kit.layout import compile_plan
+    from kit import catalog
     sp, timing = load(a.slug)
     plan = None
-    try:
-        plan = compile_plan(sp, timing, solve_cameras=False)
-    except Exception as e:  # compile problems are story problems at this stage
-        r = dict(errors=[f"compile: {e}"], warns=[], facts={})
+    bad = catalog.validate(sp, catalog.schema())
+    if bad:  # structure and vocabulary first: a precise path beats a compile traceback
+        r = dict(errors=[f"schema: {e}" for e in bad], warns=[], facts={})
     else:
-        r = lint(sp, timing, plan, QUALITY)
+        try:
+            plan = compile_plan(sp, timing, solve_cameras=False)
+        except Exception as e:  # compile problems are story problems at this stage
+            r = dict(errors=[f"compile: {type(e).__name__}: {e}"], warns=[], facts={})
+        else:
+            r = lint(sp, timing, plan, QUALITY)
     (reports(a.slug) / "story.json").write_text(json.dumps(r, indent=1))
     for w in r["warns"]:
         print("warn:", w)
@@ -535,6 +563,13 @@ def cmd_layout(a):
     out = dict(duration=plan.duration, shots=len(plan.shots), errors=errors, warns=[i for i in merged if i["severity"] != "error"],
                cameras={s["id"]: dict(size=s["camera"]["size"], side=s["camera"]["side"], report=s["camera"]["report"], hide=s["camera"]["hide"]) for s in plan.shots})
     (reports(a.slug) / "layout.json").write_text(json.dumps(out, indent=1))
+    if not a.quick:
+        from kit import shotreport
+        shots = shotreport.describe(plan, sp)
+        (reports(a.slug) / "shots.json").write_text(json.dumps(shots, indent=1))
+        (reports(a.slug) / "shots.txt").write_text(shotreport.to_text(shots, a.slug))
+        flagged = sum(1 for x in shots if x["flags"])
+        print(f"shot report: {reports(a.slug) / 'shots.txt'} ({flagged} of {len(shots)} shots flagged for the storyboard review)")
     for i in merged:
         print(f"{i['severity'][:4]:4} {i['rule']:16} {i['shot'] or '-':5} {i['t0']:6.2f}-{i['t1']:6.2f}s  {i['msg']}" + (f"  (depth {i['depth']} m)" if i.get("depth") else ""))
     msg = f"{len(errors)} errors, {len(out['warns'])} warnings over {int(plan.duration * plan.fps)} frames"
@@ -600,12 +635,100 @@ sheet.save('{out}/storyboard.jpg', quality=88)
         mix = scratch_mix(a.slug, out)
         encode(out / "frames", mix, out / "animatic.mp4", plan.fps, None, crf=26)
     ok = sheet.exists()
-    stamp(a.slug, "board", ok, dict(sheet=str(sheet)))
+    lay_ok, lay_why = layout_current(a.slug)
+    stamp(a.slug, "board", ok, dict(sheet=str(sheet), layout_current=lay_ok))
     gate(ok, "board", f"storyboard: {sheet}")
+    if not lay_ok:
+        print(f"WARNING [board] {lay_why}: this sheet shows staging that has not passed QC. "
+              f"Run `studio.py layout {a.slug}` before judging it; a board review cannot approve until layout passes.")
     rv_ok, why = review_status(a.slug, "board")
     if not rv_ok:
-        print(f"CHECKPOINT [review.board] {why}. Look at {sheet}, then record it:\n"
-              f'  python3 scripts/studio.py review {a.slug} board --verdict approve|revise --saw "what you saw"')
+        shots = reports(a.slug) / "shots.txt"
+        print(f"CHECKPOINT [review.board] {why}. Look at {sheet}"
+              + (f" (and read {shots}; if you cannot view images, review from it and say so)" if shots.exists() else "")
+              + f', then record it:\n  python3 scripts/studio.py review {a.slug} board --verdict approve|revise --saw "what you saw"')
+
+
+def cmd_repair(a):
+    """Propose, apply or undo a deterministic staging repair (kit/repair.py)."""
+    begin()
+    from kit import repair
+    sp_path = ep_dir(a.slug) / "screenplay.json"
+    prop_path = reports(a.slug) / "repair.json"
+    log_path = ep_dir(a.slug) / "repairs.jsonl"
+    sp, timing = load(a.slug)
+    if a.undo:
+        recs = [json.loads(x) for x in log_path.read_text().splitlines()] if log_path.exists() else []
+        live = [r for r in recs if r.get("action") == "apply" and not any(u.get("undoes") == r["id"] for u in recs)]
+        if not live:
+            sys.exit("no applied repair to undo")
+        last = live[-1]
+        new, kept = repair.undo(sp, last)
+        sp_path.write_text(json.dumps(new, indent=1, ensure_ascii=False) + "\n")
+        with open(log_path, "a") as f:
+            f.write(json.dumps(dict(action="undo", undoes=last["id"], at=time.strftime("%Y-%m-%d %H:%M:%S"), kept=kept)) + "\n")
+        history(a.slug, dict(stage="repair", what="undo", id=last["id"], at=time.strftime("%Y-%m-%d %H:%M:%S"), t=round(time.time(), 1)))
+        print(f"reverted repair {last['id']} ({len(last['changes']) - len(kept)} fields)"
+              + (f"; left {len(kept)} fields edited since: {kept}" if kept else "") + f". Run `studio.py layout {a.slug}`.")
+        return
+    if a.apply:
+        if not prop_path.exists():
+            sys.exit(f"no proposal; run `studio.py repair {a.slug}` first")
+        prop = json.loads(prop_path.read_text())
+        if not prop["changes"]:
+            sys.exit("the proposal has no changes")
+        try:
+            new, rec = repair.apply(sp, prop)
+        except ValueError as e:
+            sys.exit(str(e))
+        rec.update(action="apply", id=f"r{int(time.time())}", errors_before=prop["errors_before"], errors_after=prop["errors_after"])
+        sp_path.write_text(json.dumps(new, indent=1, ensure_ascii=False) + "\n")
+        with open(log_path, "a") as f:
+            f.write(json.dumps(rec) + "\n")
+        history(a.slug, dict(stage="repair", what="apply", id=rec["id"], changes=len(rec["changes"]),
+                             at=time.strftime("%Y-%m-%d %H:%M:%S"), t=round(time.time(), 1)))
+        print(f"applied repair {rec['id']}: {len(rec['changes'])} staging fields changed (undo: `studio.py repair {a.slug} --undo`).\n"
+              f"Now run `studio.py layout {a.slug}`: the layout gate is the judge, not the repair.")
+        return
+    if timing is None:
+        sys.exit("record the voice first (`studio.py voice`); repairs are searched against real timing")
+    print(f"searching for mechanical staging repairs (at most {a.max_evals} candidate plans or {a.max_seconds} s; "
+          f"each candidate is a full compile, so this takes minutes)...", flush=True)
+    prop = repair.propose(sp, timing, max_evals=a.max_evals, workers=a.workers, max_seconds=a.max_seconds,
+                          log=lambda m: print(m, flush=True))
+    prop_path.write_text(json.dumps(prop, indent=1))
+    for c in prop.get("changes", []):
+        print(f"  {'/'.join(map(str, c['path']))}: {c['old'] if not c.get('absent') else '(default)'} -> {c['new']}   [{c['why']}]")
+    for u in prop.get("unresolved", []):
+        print(f"  unresolved: {' '.join(u['group'])}: {u['errors']} errors, e.g. {u['examples'][0]}")
+    if not prop.get("changes"):
+        gate(False, "repair", prop.get("reason") or "no mechanical repair found; restage by hand")
+    print(f"collision/foot errors {prop['errors_before']} -> {prop['errors_after']} in {prop['evaluations']} candidate plans, {prop['seconds']} s"
+          + (" (stopped at the time limit; the proposal is partial)" if prop.get("stopped") else "") + ".")
+    print(f"Proposal written to {prop_path}. Apply with `studio.py repair {a.slug} --apply`, then run the layout gate.")
+
+
+def cmd_catalog(a):
+    """What a screenplay can use, read from the engine (kit/catalog.py)."""
+    from kit import catalog
+    data = catalog.catalog(a.section)
+    if a.json or a.section in (None, "actions", "sets"):
+        print(json.dumps(data, indent=1, ensure_ascii=False))
+    else:
+        print(json.dumps(data, ensure_ascii=False))
+
+
+def cmd_schema(a):
+    """JSON Schema for screenplay.json; with a slug, validate that episode against it."""
+    from kit import catalog
+    sch = catalog.schema()
+    if not a.slug:
+        print(json.dumps(sch, indent=1))
+        return
+    errs = catalog.validate(load(a.slug)[0], sch)
+    for e in errs:
+        print("ERROR:", e)
+    gate(not errs, "schema", f"{len(errs)} problems in episodes/{a.slug}/screenplay.json")
 
 
 def scratch_mix(slug, out):
@@ -920,6 +1043,18 @@ def main():
     p = sub.add_parser("layout")
     p.add_argument("slug")
     p.add_argument("--quick", action="store_true", help="every 2nd frame, no foot-slide check; informational, not recorded as the gate")
+    p = sub.add_parser("catalog", help="what a screenplay can use: sets, actions, expressions, camera, sound, looks, voices")
+    p.add_argument("section", nargs="?", choices=["sets", "actions", "expressions", "camera", "sound", "looks", "voices"])
+    p.add_argument("--json", action="store_true")
+    p = sub.add_parser("schema", help="print the screenplay JSON Schema, or validate SLUG against it")
+    p.add_argument("slug", nargs="?")
+    p = sub.add_parser("repair", help="propose / apply / undo mechanical staging fixes for layout errors")
+    p.add_argument("slug")
+    p.add_argument("--apply", action="store_true", help="apply the last proposal to the screenplay")
+    p.add_argument("--undo", action="store_true", help="revert the last applied repair")
+    p.add_argument("--max-evals", type=int, default=240, help="bound on candidate plans tried")
+    p.add_argument("--workers", type=int, default=2, help="parallel candidate checks (CPU processes)")
+    p.add_argument("--max-seconds", type=int, default=240, help="stop searching after this long and propose what was found")
     p = sub.add_parser("board")
     p.add_argument("slug")
     p.add_argument("--animatic", action="store_true")

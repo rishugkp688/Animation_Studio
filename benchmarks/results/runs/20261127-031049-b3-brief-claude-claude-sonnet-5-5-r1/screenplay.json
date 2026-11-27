@@ -1,0 +1,1500 @@
+{
+ "title": "Kept in the Air",
+ "logline": "In a town where your last lie floats over your head until you tell the truth, a boy who has told everyone his dad is a pilot learns why his honest dad never comes to the school gate.",
+ "theme": "A lie someone keeps up for you is still a weight; putting it down costs you, and frees them.",
+ "audience": "Instagram Reels / TikTok, phone in hand.",
+ "style": "roblox-r6",
+ "fps": 24,
+ "narrator": "jun",
+ "cast": {
+  "jun": {
+   "name": "Jun",
+   "role": "lead, age 10, narrator (as an adult)",
+   "scale": 0.78,
+   "look": {
+    "skin": "#D9A47A",
+    "hair": {
+     "style": "short",
+     "color": "#1E1612"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "hoodie",
+       "color": "#3F7FD6",
+       "trim": "#EAF1FB"
+      },
+      "pants": "#2E3440",
+      "shoes": "#E9E9E9"
+     }
+    },
+    "freckles": true
+   },
+   "badge": true
+  },
+  "dad": {
+   "name": "Dad (Ray)",
+   "role": "hospital night cleaner, seems cold",
+   "scale": 1.0,
+   "build": 1.05,
+   "look": {
+    "skin": "#D9A47A",
+    "hair": {
+     "style": "short",
+     "color": "#2A211C"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "shirt",
+       "color": "#5E8C86",
+       "trim": "#D8E6E2"
+      },
+      "pants": "#3E4A4C",
+      "shoes": "#2A2220"
+     }
+    },
+    "beard": "#2A211C"
+   },
+   "badge": true
+  },
+  "theo": {
+   "name": "Theo",
+   "role": "Jun's best friend, 10",
+   "scale": 0.76,
+   "look": {
+    "skin": "#8D5A3B",
+    "hair": {
+     "style": "spiky",
+     "color": "#1E1612"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#E0823A",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#33363F",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": true
+  },
+  "bea": {
+   "name": "Bea",
+   "role": "extra, kid (the hook)",
+   "scale": 0.72,
+   "look": {
+    "skin": "#F3D2B5",
+    "hair": {
+     "style": "pigtails",
+     "color": "#C9893A"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#D9577A",
+       "trim": "#FFFFFF"
+      },
+      "pants": "#3A3F55",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": true
+  },
+  "bea_mom": {
+   "name": "Bea's mom",
+   "role": "extra",
+   "scale": 0.96,
+   "look": {
+    "skin": "#F3D2B5",
+    "hair": {
+     "style": "bun",
+     "color": "#C9893A"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "cardigan",
+       "color": "#6C8F6A",
+       "trim": "#F0EADF"
+      },
+      "pants": "#45434F",
+      "shoes": "#3A2A22"
+     }
+    }
+   },
+   "badge": true
+  },
+  "nurse": {
+   "name": "Nurse Ada",
+   "role": "night nurse, Dad's friend",
+   "scale": 0.95,
+   "look": {
+    "skin": "#8D5A3B",
+    "hair": {
+     "style": "bob",
+     "color": "#1E1612"
+    },
+    "outfits": {
+     "default": {
+      "top": {
+       "style": "tee",
+       "color": "#6FAFC4",
+       "trim": "#E8F4F8"
+      },
+      "pants": "#6FAFC4",
+      "shoes": "#E9E9E9"
+     }
+    }
+   },
+   "badge": true
+  }
+ },
+ "voices": {
+  "jun": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "seed": 211,
+   "instruct": "A young man remembering his childhood, warm and gentle, quiet, close to the microphone, natural storytelling, never an announcer."
+  },
+  "jun_child": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "seed": 313,
+   "pitch": 2.5,
+   "instruct": "A ten-year-old boy telling the truth to his best friend, quiet but steady, a little scared."
+  },
+  "theo": {
+   "engine": "qwen3",
+   "speaker": "aiden",
+   "seed": 419,
+   "pitch": 3.5,
+   "instruct": "An excited ten-year-old boy, bright and curious, talking fast to his friend."
+  },
+  "bea": {
+   "engine": "kokoro",
+   "speaker": "af_bella",
+   "speed": 1.0,
+   "pitch": 2.0
+  },
+  "nurse": {
+   "engine": "kokoro",
+   "speaker": "af_sarah",
+   "speed": 0.95
+  },
+  "dad": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "seed": 97,
+   "tempo": 0.96,
+   "instruct": "A tired father at the end of a night shift, low, gentle and warm, speaking simply."
+  },
+  "dad_quiet": {
+   "engine": "qwen3",
+   "speaker": "ryan",
+   "seed": 131,
+   "tempo": 0.96,
+   "instruct": "A father speaking three quiet words to his son, low, gentle and warm, then silence."
+  }
+ },
+ "lines": [
+  {
+   "id": "n01",
+   "who": "jun",
+   "kind": "vo",
+   "text": "In my town, your last lie floats over your head."
+  },
+  {
+   "id": "b01",
+   "who": "bea",
+   "kind": "dialogue",
+   "text": "Fine. I didn't do it."
+  },
+  {
+   "id": "n02",
+   "who": "jun",
+   "kind": "vo",
+   "text": "Until you tell the truth."
+  },
+  {
+   "id": "n03",
+   "who": "jun",
+   "kind": "vo",
+   "text": "Mine's been up there since March."
+  },
+  {
+   "id": "t01",
+   "who": "theo",
+   "kind": "dialogue",
+   "text": "Is he flying today?"
+  },
+  {
+   "id": "n05",
+   "who": "jun",
+   "kind": "vo",
+   "text": "Nothing has ever floated over Dad's head."
+  },
+  {
+   "id": "n06",
+   "who": "jun",
+   "kind": "vo",
+   "text": "He reads mine every day. He never says a word."
+  },
+  {
+   "id": "r01",
+   "who": "nurse",
+   "kind": "dialogue",
+   "text": "Parents' day at his school tomorrow. You going?"
+  },
+  {
+   "id": "d02",
+   "who": "dad",
+   "kind": "dialogue",
+   "text": "Can't. I'm busy."
+  },
+  {
+   "id": "n08",
+   "who": "jun",
+   "kind": "vo",
+   "text": "My dad had never told a lie."
+  },
+  {
+   "id": "t02",
+   "who": "theo",
+   "kind": "dialogue",
+   "text": "Is that the pilot?"
+  },
+  {
+   "id": "j01",
+   "who": "jun",
+   "kind": "dialogue",
+   "text": "No. He cleans the hospital.",
+   "voice": "jun_child"
+  },
+  {
+   "id": "d03",
+   "who": "dad",
+   "kind": "dialogue",
+   "text": "I wasn't busy.",
+   "voice": "dad_quiet"
+  },
+  {
+   "id": "n09",
+   "who": "jun",
+   "kind": "vo",
+   "text": "My dad doesn't fly planes. He just kept my lie in the air."
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "purpose": "The rule on screen at once: HOMEWORK'S DONE floats over Bea until she admits it and it pops.",
+   "emotion": 1
+  },
+  {
+   "id": "wound",
+   "purpose": "Jun walks in alone under MY DAD FLIES PLANES; Theo looks up at it in awe; Jun only nods.",
+   "emotion": -2
+  },
+  {
+   "id": "mystery",
+   "purpose": "Dad, asleep in his cleaner's shirt, reads Jun's lie every day and says nothing; nothing ever floats over him.",
+   "emotion": -3
+  },
+  {
+   "id": "turn",
+   "purpose": "Night corridor: Jun brings Dad's forgotten dinner and watches the nurse invite Dad to parents' morning.",
+   "emotion": -1
+  },
+  {
+   "id": "reveal",
+   "purpose": "Dad says he's busy; I'M BUSY appears over the man who never lied. Jun sees it.",
+   "emotion": -4
+  },
+  {
+   "id": "choice",
+   "purpose": "At the gate with Dad, Jun tells Theo the truth; his lie pops and Theo walks away.",
+   "emotion": 2
+  },
+  {
+   "id": "button",
+   "purpose": "Dad's lie pops too; Jun takes his hand; Theo looks back from the yard.",
+   "emotion": 4
+  }
+ ],
+ "setups": [
+  {
+   "id": "planes",
+   "setup": "sh04",
+   "payoff": "sh19",
+   "note": "MCU of Jun under MY DAD FLIES PLANES; same framing, the lie pops when he tells the truth."
+  },
+  {
+   "id": "clear_head",
+   "setup": "sh07",
+   "payoff": "sh12",
+   "note": "Nothing has ever floated over Dad's head; his first lie appears for Jun's sake."
+  },
+  {
+   "id": "busy",
+   "setup": "sh12",
+   "payoff": "sh22",
+   "note": "CAN'T. I'M BUSY. -> I WASN'T BUSY: his lie pops at the gate."
+  },
+  {
+   "id": "theo_looks_up",
+   "setup": "sh05",
+   "payoff": "sh24",
+   "note": "Theo looks up at the lie in awe; at the end he looks back at a clear head."
+  }
+ ],
+ "music": [
+  {
+   "at": "sh01",
+   "mood": "warm"
+  },
+  {
+   "at": "sh03",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh07",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh10",
+   "mood": "pensive"
+  },
+  {
+   "at": "sh12",
+   "mood": "hush"
+  },
+  {
+   "at": "sh17",
+   "mood": "sparse"
+  },
+  {
+   "at": "sh19",
+   "mood": "hush"
+  },
+  {
+   "at": "sh22",
+   "mood": "swell",
+   "offset": 0.4
+  },
+  {
+   "at": "sh24",
+   "mood": "outro",
+   "offset": 0.3
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc1",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "hook",
+   "ambience": "schoolyard",
+   "cast": {
+    "bea_mom": {
+     "at": [
+      2.9,
+      -1.9
+     ],
+     "yaw": 60
+    },
+    "bea": {
+     "at": [
+      3.7,
+      -2.05
+     ],
+     "yaw": -60
+    },
+    "theo": {
+     "at": [
+      1.45,
+      2.05
+     ],
+     "yaw": -70
+    },
+    "jun": {
+     "at": [
+      0.2,
+      -3.0
+     ],
+     "yaw": 180
+    }
+   },
+   "start_badge": {
+    "bea": "HOMEWORK'S DONE",
+    "jun": "MY DAD FLIES PLANES"
+   },
+   "start_expr": {
+    "bea_mom": "smirk",
+    "bea": "shy",
+    "theo": "happy",
+    "jun": "neutral"
+   },
+   "start_look": {
+    "bea_mom": "bea",
+    "bea": "bea_mom",
+    "theo": "jun"
+   },
+   "shots": [
+    {
+     "id": "sh01",
+     "beat": "hook",
+     "lines": [
+      "n01"
+     ],
+     "pad": 0.2,
+     "cam": {
+      "size": "two",
+      "on": [
+       "bea_mom",
+       "bea"
+      ],
+      "side": 0,
+      "move": "push",
+      "height": "eye",
+      "key": 0.5,
+      "dist_mul": 1.45
+     },
+     "act": [
+      {
+       "who": "bea_mom",
+       "t": 0.0,
+       "do": "point",
+       "at": "bea.top",
+       "dur": 2.2,
+       "hand": "r"
+      },
+      {
+       "who": "bea",
+       "t": 0.3,
+       "do": "look",
+       "at": "bea.top"
+      },
+      {
+       "who": "bea",
+       "t": 0.9,
+       "do": "flinch",
+       "dur": 0.6,
+       "look": "bea_mom",
+       "expr": "worried"
+      },
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.1,
+        -1.2
+       ],
+       "dur": 3.6
+      }
+     ]
+    },
+    {
+     "id": "sh02",
+     "beat": "hook",
+     "lines": [
+      "b01"
+     ],
+     "pad": 0.45,
+     "cam": {
+      "size": "ms",
+      "on": "bea",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "eye",
+      "dist_mul": 1.15
+     },
+     "act": [
+      {
+       "who": "bea",
+       "t": 0.0,
+       "do": "shrug",
+       "dur": 0.9,
+       "expr": "shy"
+      },
+      {
+       "who": "bea",
+       "t": "end:b01",
+       "do": "badge",
+       "text": " "
+      },
+      {
+       "who": "bea",
+       "t": "end:b01+0.15",
+       "do": "face",
+       "expr": "joy",
+       "look": "bea.top"
+      },
+      {
+       "who": "bea_mom",
+       "t": "end:b01+0.2",
+       "do": "nod",
+       "dur": 0.8,
+       "expr": "happy"
+      }
+     ]
+    },
+    {
+     "id": "sh03",
+     "beat": "wound",
+     "lines": [
+      {
+       "id": "n02",
+       "at": 0.25
+      }
+     ],
+     "dur": 2.4,
+     "cam": {
+      "size": "ws",
+      "on": "jun",
+      "side": -15,
+      "move": "pull",
+      "height": "slight_high",
+      "key": 0.55
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.2,
+        1.6
+       ],
+       "face": 60,
+       "dur": 2.4,
+       "expr": "neutral",
+       "look": "theo"
+      },
+      {
+       "who": "theo",
+       "t": 0.6,
+       "do": "wave",
+       "dur": 1.0,
+       "expr": "joy"
+      }
+     ]
+    },
+    {
+     "id": "sh04",
+     "beat": "wound",
+     "lines": [
+      "n03"
+     ],
+     "pad": 0.4,
+     "min": 2.4,
+     "cam": {
+      "size": "mcu",
+      "on": "jun",
+      "relative": "face",
+      "side": -30,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.5
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "theo",
+       "expr": "neutral"
+      },
+      {
+       "who": "jun",
+       "t": 0.8,
+       "do": "look",
+       "at": "jun.top",
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh05",
+     "beat": "wound",
+     "lines": [
+      {
+       "id": "t01",
+       "at": 0.3
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "ots",
+      "on": [
+       "jun",
+       "theo"
+      ],
+      "side": 0,
+      "move": "drift",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "theo",
+       "t": 0.0,
+       "do": "look",
+       "at": "jun.top",
+       "expr": "hopeful"
+      },
+      {
+       "who": "theo",
+       "t": "end:t01+0.1",
+       "do": "look",
+       "at": "jun",
+       "expr": "happy"
+      }
+     ]
+    },
+    {
+     "id": "sh06",
+     "beat": "wound",
+     "dur": 1.9,
+     "cam": {
+      "size": "cu",
+      "on": "jun",
+      "relative": "face",
+      "side": -35,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "theo",
+       "expr": "smirk"
+      },
+      {
+       "who": "jun",
+       "t": 0.3,
+       "do": "nod",
+       "dur": 0.7
+      },
+      {
+       "who": "jun",
+       "t": 1.1,
+       "do": "look",
+       "at": [
+        0.0,
+        0.4,
+        0.0
+       ],
+       "expr": "sad"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc2",
+   "set": "grandpa_living",
+   "time": "afternoon",
+   "beat": "mystery",
+   "ambience": "living_room",
+   "cast": {
+    "dad": "armchair",
+    "jun": {
+     "at": [
+      -2.55,
+      -1.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "jun": "MY DAD FLIES PLANES"
+   },
+   "start_expr": {
+    "dad": "eyes_closed",
+    "jun": "sad"
+   },
+   "start_look": {
+    "jun": "dad"
+   },
+   "shots": [
+    {
+     "id": "sh07",
+     "beat": "mystery",
+     "lines": [
+      "n05"
+     ],
+     "pad": 0.4,
+     "min": 2.8,
+     "cam": {
+      "size": "ws",
+      "on": "dad",
+      "side": -30,
+      "move": "push",
+      "height": "slight_high",
+      "lens": 22
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "do": "head_down",
+       "dur": 3.0,
+       "amount": 0.2
+      },
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.6,
+        -0.45
+       ],
+       "face": "dad",
+       "dur": 2.6,
+       "look": "dad",
+       "speed": 0.9
+      }
+     ]
+    },
+    {
+     "id": "sh08",
+     "beat": "mystery",
+     "lines": [
+      "n06"
+     ],
+     "pad": 0.3,
+     "cam": {
+      "size": "mcu",
+      "on": "dad",
+      "side": -15,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "do": "face",
+       "expr": "sleepy",
+       "look": "jun"
+      },
+      {
+       "who": "dad",
+       "t": 0.9,
+       "do": "look",
+       "at": "jun.top",
+       "expr": "sad"
+      },
+      {
+       "who": "dad",
+       "t": "line:n06+1.4",
+       "do": "look",
+       "at": [
+        -1.8,
+        -1.6,
+        0.9
+       ],
+       "expr": "grumpy"
+      }
+     ]
+    },
+    {
+     "id": "sh09",
+     "beat": "mystery",
+     "dur": 2.9,
+     "cam": {
+      "size": "ws",
+      "on": "dad",
+      "side": 40,
+      "move": "drift",
+      "height": "slight_high",
+      "key": 0.5
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "do": "stand",
+       "to": [
+        -0.4,
+        0.55
+       ],
+       "dur": 0.9,
+       "expr": "grumpy",
+       "look": "none"
+      },
+      {
+       "who": "dad",
+       "t": 1.0,
+       "do": "walk",
+       "to": [
+        -2.55,
+        -1.1
+       ],
+       "dur": 1.9
+      },
+      {
+       "who": "jun",
+       "t": 0.5,
+       "do": "look",
+       "at": "dad",
+       "expr": "hurt"
+      },
+      {
+       "who": "jun",
+       "t": 1.5,
+       "do": "head_down",
+       "dur": 1.2,
+       "amount": 0.25
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc3",
+   "set": "hospital_corridor",
+   "time": "night",
+   "beat": "turn",
+   "ambience": "corridor",
+   "cast": {
+    "dad": {
+     "at": [
+      0.75,
+      0.05
+     ],
+     "yaw": 60
+    },
+    "nurse": "mom_seat",
+    "jun": {
+     "at": [
+      -5.9,
+      -0.1
+     ],
+     "yaw": 90
+    }
+   },
+   "start_badge": {
+    "jun": "MY DAD FLIES PLANES"
+   },
+   "start_expr": {
+    "dad": "calm",
+    "nurse": "happy",
+    "jun": "neutral"
+   },
+   "start_look": {
+    "dad": "nurse",
+    "nurse": "dad"
+   },
+   "shots": [
+    {
+     "id": "sh10",
+     "beat": "turn",
+     "dur": 3.4,
+     "cam": {
+      "size": "ws",
+      "on": "jun",
+      "relative": "world",
+      "world_yaw": 0,
+      "side": 0,
+      "move": "track",
+      "lens": 26
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        -1.2,
+        0.05
+       ],
+       "face": "dad",
+       "dur": 3.6,
+       "speed": 0.9,
+       "expr": "hopeful"
+      }
+     ]
+    },
+    {
+     "id": "sh11",
+     "beat": "turn",
+     "lines": [
+      "r01"
+     ],
+     "pad": 0.25,
+     "cam": {
+      "size": "mcu",
+      "on": "nurse",
+      "relative": "face",
+      "side": 15,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "nurse",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad",
+       "expr": "happy"
+      },
+      {
+       "who": "nurse",
+       "t": 0.3,
+       "do": "nod",
+       "dur": 0.6
+      },
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad",
+       "expr": "worried"
+      }
+     ]
+    },
+    {
+     "id": "sh12",
+     "beat": "reveal",
+     "lines": [
+      {
+       "id": "d02",
+       "at": 0.35
+      }
+     ],
+     "pad": 0.9,
+     "cam": {
+      "size": "mcu",
+      "on": "dad",
+      "relative": "face",
+      "side": -10,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.7
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "do": "look",
+       "at": "nurse",
+       "expr": "calm"
+      },
+      {
+       "who": "dad",
+       "t": "end:d02",
+       "do": "badge",
+       "text": "I'M BUSY"
+      },
+      {
+       "who": "dad",
+       "t": "end:d02+0.3",
+       "do": "face",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh13",
+     "beat": "reveal",
+     "dur": 1.8,
+     "cam": {
+      "size": "cu",
+      "on": "jun",
+      "relative": "face",
+      "side": 0,
+      "move": "push_fast",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad.top",
+       "expr": "shock"
+      }
+     ]
+    },
+    {
+     "id": "sh14",
+     "beat": "reveal",
+     "lines": [
+      {
+       "id": "n08",
+       "at": 0.5
+      }
+     ],
+     "pad": 0.5,
+     "min": 2.6,
+     "cam": {
+      "size": "two",
+      "on": [
+       "nurse",
+       "dad"
+      ],
+      "side": 0,
+      "move": "drift",
+      "height": "slight_low"
+     },
+     "act": [
+      {
+       "who": "nurse",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad.top",
+       "expr": "surprise"
+      },
+      {
+       "who": "dad",
+       "t": 0.6,
+       "do": "shrug",
+       "dur": 1.0,
+       "expr": "tender"
+      },
+      {
+       "who": "nurse",
+       "t": 1.6,
+       "do": "look",
+       "at": "dad",
+       "expr": "tender"
+      }
+     ]
+    },
+    {
+     "id": "sh15",
+     "beat": "reveal",
+     "dur": 2.0,
+     "cam": {
+      "size": "cu",
+      "on": "jun",
+      "relative": "face",
+      "side": 15,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad",
+       "expr": "teary"
+      },
+      {
+       "who": "jun",
+       "t": 0.9,
+       "do": "hand_chest",
+       "dur": 1.1
+      }
+     ]
+    },
+    {
+     "id": "sh16",
+     "beat": "reveal",
+     "dur": 2.0,
+     "cam": {
+      "size": "ots",
+      "on": [
+       "jun",
+       "dad"
+      ],
+      "side": 0,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.75
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.1,
+       "do": "look",
+       "at": "jun",
+       "expr": "surprise"
+      },
+      {
+       "who": "dad",
+       "t": 0.9,
+       "do": "turn",
+       "to": "jun",
+       "dur": 0.6
+      },
+      {
+       "who": "dad",
+       "t": 1.4,
+       "do": "face",
+       "expr": "worried"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sc4",
+   "set": "school_gate",
+   "time": "morning",
+   "beat": "choice",
+   "ambience": "schoolyard",
+   "cast": {
+    "dad": {
+     "at": [
+      -0.6,
+      -3.0
+     ],
+     "yaw": 180
+    },
+    "jun": {
+     "at": [
+      0.62,
+      -3.0
+     ],
+     "yaw": 180
+    },
+    "theo": {
+     "at": [
+      1.0,
+      3.7
+     ],
+     "yaw": 0
+    }
+   },
+   "start_badge": {
+    "jun": "MY DAD FLIES PLANES",
+    "dad": "I'M BUSY"
+   },
+   "start_expr": {
+    "dad": "calm",
+    "jun": "determined",
+    "theo": "happy"
+   },
+   "start_look": {
+    "theo": "jun",
+    "jun": "theo"
+   },
+   "shots": [
+    {
+     "id": "sh17",
+     "beat": "choice",
+     "dur": 2.7,
+     "cam": {
+      "size": "ws",
+      "on": "jun",
+      "side": 10,
+      "move": "pull",
+      "height": "slight_high",
+      "key": 0.6
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "walk",
+       "to": [
+        0.62,
+        1.5
+       ],
+       "dur": 2.8,
+       "expr": "determined",
+       "look": "theo"
+      },
+      {
+       "who": "dad",
+       "t": 0.1,
+       "do": "walk",
+       "to": [
+        -0.6,
+        1.45
+       ],
+       "dur": 2.8,
+       "look": "theo"
+      },
+      {
+       "who": "theo",
+       "t": 1.2,
+       "do": "look",
+       "at": "dad",
+       "expr": "surprise"
+      }
+     ]
+    },
+    {
+     "id": "sh18",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "t02",
+       "at": 0.3
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "mcu",
+      "on": "theo",
+      "relative": "face",
+      "side": 0,
+      "move": "push",
+      "height": "slight_high"
+     },
+     "act": [
+      {
+       "who": "theo",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad",
+       "expr": "hopeful"
+      },
+      {
+       "who": "theo",
+       "t": "end:t02+0.1",
+       "do": "look",
+       "at": "jun"
+      }
+     ]
+    },
+    {
+     "id": "sh19",
+     "beat": "choice",
+     "lines": [
+      {
+       "id": "j01",
+       "at": 0.45
+      }
+     ],
+     "pad": 0.7,
+     "cam": {
+      "size": "mcu",
+      "on": "jun",
+      "relative": "face",
+      "side": -30,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.5
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "theo",
+       "expr": "scared"
+      },
+      {
+       "who": "jun",
+       "t": "line:j01+0.4",
+       "do": "face",
+       "expr": "determined"
+      },
+      {
+       "who": "jun",
+       "t": "end:j01",
+       "do": "badge",
+       "text": " "
+      }
+     ]
+    },
+    {
+     "id": "sh20",
+     "beat": "choice",
+     "dur": 2.6,
+     "cam": {
+      "size": "ws",
+      "on": "theo",
+      "side": -20,
+      "move": "drift",
+      "height": "slight_high",
+      "key": 0.4
+     },
+     "act": [
+      {
+       "who": "theo",
+       "t": 0.0,
+       "do": "look",
+       "at": "jun",
+       "expr": "neutral"
+      },
+      {
+       "who": "theo",
+       "t": 0.5,
+       "do": "walk",
+       "to": [
+        -0.4,
+        6.4
+       ],
+       "dur": 2.2,
+       "look": "none",
+       "expr": "sad"
+      }
+     ]
+    },
+    {
+     "id": "sh21",
+     "beat": "choice",
+     "dur": 2.0,
+     "cam": {
+      "size": "cu",
+      "on": "jun",
+      "relative": "face",
+      "side": -15,
+      "move": "push",
+      "height": "eye"
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": [
+        -0.4,
+        6.4,
+        1.0
+       ],
+       "expr": "hurt"
+      },
+      {
+       "who": "jun",
+       "t": 1.0,
+       "do": "head_down",
+       "dur": 1.0,
+       "amount": 0.2
+      }
+     ]
+    },
+    {
+     "id": "sh22",
+     "beat": "button",
+     "lines": [
+      {
+       "id": "d03",
+       "at": 0.4
+      }
+     ],
+     "pad": 0.8,
+     "cam": {
+      "size": "mcu",
+      "on": "dad",
+      "relative": "face",
+      "side": -15,
+      "move": "push",
+      "height": "slight_low",
+      "key": 0.6
+     },
+     "act": [
+      {
+       "who": "dad",
+       "t": 0.0,
+       "do": "look",
+       "at": "jun",
+       "expr": "tender"
+      },
+      {
+       "who": "dad",
+       "t": "end:d03",
+       "do": "badge",
+       "text": " "
+      },
+      {
+       "who": "dad",
+       "t": "end:d03+0.2",
+       "do": "face",
+       "expr": "teary_smile"
+      }
+     ]
+    },
+    {
+     "id": "sh23",
+     "beat": "button",
+     "lines": [
+      {
+       "id": "n09",
+       "at": 0.4
+      }
+     ],
+     "pad": 0.4,
+     "cam": {
+      "size": "two",
+      "on": [
+       "jun",
+       "dad"
+      ],
+      "side": 0,
+      "move": "push",
+      "height": "eye",
+      "key": 0.7
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "look",
+       "at": "dad",
+       "expr": "teary_smile"
+      },
+      {
+       "who": "dad",
+       "t": 0.0,
+       "do": "walk",
+       "to": "jun",
+       "gap": 0.85,
+       "dur": 0.9,
+       "face": "jun",
+       "look": "jun"
+      },
+      {
+       "who": "dad",
+       "t": 1.0,
+       "do": "ruffle",
+       "with": "jun",
+       "hand": "l",
+       "dur": 2.2
+      }
+     ]
+    },
+    {
+     "id": "sh24",
+     "beat": "button",
+     "dur": 2.6,
+     "cam": {
+      "size": "ws",
+      "on": "jun",
+      "side": 0,
+      "move": "pull",
+      "height": "slight_high",
+      "key": 0.5
+     },
+     "act": [
+      {
+       "who": "jun",
+       "t": 0.0,
+       "do": "face",
+       "expr": "peaceful"
+      },
+      {
+       "who": "theo",
+       "t": 0.6,
+       "do": "turn",
+       "to": "jun",
+       "dur": 0.7
+      },
+      {
+       "who": "theo",
+       "t": 0.6,
+       "do": "look",
+       "at": "jun",
+       "expr": "worried"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

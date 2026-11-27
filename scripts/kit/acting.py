@@ -857,8 +857,7 @@ def g_hug(ctx, lt, dur, p):
     nx, ny = math.cos(yaw), math.sin(yaw)
     fx, fy = math.sin(yaw), -math.cos(yaw)
     partner = ctx.p.stage.performers[p["who"]].body
-    from .rig import HEAD_RADIUS
-    partner_half = HEAD_RADIUS * partner.s if at in ("head", "top", "eyes", "face") else 1.0 * partner.s * partner.build
+    partner_half = partner.head_radius if at in ("head", "top", "eyes", "face") else 1.0 * partner.s * partner.build
     arm_half = 0.47 * s
     shoulder = 1.52 * s * ctx.p.body.build
     width = max(partner_half + arm_half + 0.035, shoulder * 0.95) + p.get("extra_width", 0.0)
